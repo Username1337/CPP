@@ -15,30 +15,30 @@ using namespace std;
 
 int main()
 {   
-    // C-Strings und Zeiger
-    
-    // als C++-string und C-String im string
-    string s = "sample text with new line constant -> '\\n'";
-    tools_log(); printf("%s\n",s.c_str());
-    tools_log(); cout << s << endl;
-    tools_log(); cout << "sizeof(string)=" << sizeof(string) << endl;
+	// C-Strings und Zeiger
 
-    // ein Zeiger
-    const char* pc = "sample text with new line constant -> '\\n'";
-    tools_log(); printf("%s\n",pc);
-    tools_log(); cout << pc << endl;
-    tools_log(); cout << "sizeof(char*)=" << sizeof(char*) << endl;
+	// als C++-string und C-String im string
+	string s = "sample text with new line constant -> '\\n'";
+	tools_log(); printf("%s\n",s.c_str());
+	tools_log(); cout << s << endl;
+	tools_log(); cout << "sizeof(string)=" << sizeof(string) << endl;
 
-    // ein Feld
-    char ca[] = "sample text with new line constant -> '\\n'";
-    tools_log(); printf("%s\n",ca);
-    tools_log(); cout << ca << endl;
-    tools_log(); cout << "sizeof(char[])=" << sizeof(ca) << endl;
+	// ein Zeiger
+	const char* pc = "sample text with new line constant -> '\\n'";
+	tools_log(); printf("%s\n",pc);
+	tools_log(); cout << pc << endl;
+	tools_log(); cout << "sizeof(char*)=" << sizeof(char*) << endl;
 
-    // nochmal als Feld, Laenge?
-    char a[] = "12345";
-    tools_log(); cout << "sizeof(char[])=" << sizeof(a) << endl;
-    
-    return EXIT_SUCCESS;
+	// ein Feld
+	char ca[] = "sample text with new line constant -> '\\n'";
+	tools_log(); printf("%s\n",ca);
+	tools_log(); cout << ca << endl;
+	tools_log(); cout << "sizeof(char[])=" << sizeof(ca) << endl;
+
+	// nochmal als Feld, Laenge?
+	char a[] = "12345";
+	tools_log(); cout << "sizeof(char[])=" << sizeof(a) << endl;
+
+	return EXIT_SUCCESS;
 }
 
