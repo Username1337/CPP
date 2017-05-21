@@ -17,40 +17,40 @@ void myCopy(const char* m, char** pp);
 
 int main()
 {
-    const char *msg1 = "Dies ist ein Satz.";	// 18 chars, ohne \0
+	const char *msg1 = "Dies ist ein Satz.";	// 18 chars, ohne \0
 
-    tools_log(); cout << "msg1=\"" << msg1 << "\"" << endl;
-    tools_log(); cout << "myLen=" << myLen(msg1) << ", strlen=" << strlen(msg1) << endl;
+	tools_log(); cout << "msg1=\"" << msg1 << "\"" << endl;
+	tools_log(); cout << "myLen=" << myLen(msg1) << ", strlen=" << strlen(msg1) << endl;
 
-    // reserviere ein Speicherbereich und kopiere
-    char* msg2;
-    myCopy(msg1,&msg2);
-    tools_log(); cout << "msg2=\"" << msg2 << "\"" << endl;
-    // nicht vergessen!
-    free(msg2);
-    
+	// reserviere ein Speicherbereich und kopiere
+	char* msg2;
+	myCopy(msg1,&msg2);
+	tools_log(); cout << "msg2=\"" << msg2 << "\"" << endl;
+	// nicht vergessen!
+	free(msg2);
+
 	// jetzt analoge C-string Funktionen
 
-    // Platz reservieren fuer 2* den Text + 0-char 
+	// Platz reservieren fuer 2* den Text + 0-char 
 	char* p = (char*)malloc( strlen(msg1)*2*sizeof(char)+1 );
-	
-    // aneinanderhaengen; Vorsicht, Quelle und Ziel duerfen sich nicht ueberlappen
+
+	// aneinanderhaengen; Vorsicht, Quelle und Ziel duerfen sich nicht ueberlappen
 	strcat(strcpy(p,msg1),msg2);
-    tools_log(); cout << "p=\"" << p << "\"" << endl;	
-	
+	tools_log(); cout << "p=\"" << p << "\"" << endl;	
+
 	// Zeichen suchen, alternativ mit strstr fuer C-strings
 	const char *pos = strchr(msg1,'S');
-    tools_log(); cout << "pos. of 'S'=" << (pos-msg1) << endl;	
-    
-    free(p);
-    
-    return EXIT_SUCCESS;
+	tools_log(); cout << "pos. of 'S'=" << (pos-msg1) << endl;	
+
+	free(p);
+
+	return EXIT_SUCCESS;
 }
 
 // wie strlen
 size_t myLen(const char* m)
 {
-    const char* p  = m;
+	const char* p  = m;
 	while (*(p++)) ;    // suche 0-char
 	return (p-m-1);     // pointer Arithmetik
 }
@@ -58,13 +58,13 @@ size_t myLen(const char* m)
 // strcpy mit malloc
 void myCopy(const char* m, char** pp)
 {
-    size_t len = myLen(m);
+	size_t len = myLen(m);
 	*pp = (char*)malloc( (len+1)*sizeof(char) );    // +1 fuer abschl. 0-char
-    const char* pcSrc = m;
-    char* pcDst = *pp;
+	const char* pcSrc = m;
+	char* pcDst = *pp;
 
-    // kopieren
+	// kopieren
 	while ( (*(pcDst++)=*(pcSrc++)) )
-        ;
+		;
 }
 
