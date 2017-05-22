@@ -18,6 +18,9 @@
 - & in funktion
 - buffer overrun
 - was bringen zeiger
+- funktionen
+- klassen
+- structs
 
 - notizen
 typedef double (*func_t)(double);
