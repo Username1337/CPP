@@ -16,36 +16,31 @@ class C {
 	public:
 		int n;
 
-		C() : n(-1) 
-	{ 
-		tools_log(); cout << "cstr C() n=" << n << endl; 
-	}
+		C() : n(-1) {
+			tools_log(); cout << "cstr C() n=" << n << endl;
+		}
 
-		C(int _n) : n(_n) 
-	{ 
-		tools_log(); cout << "cstr C(n) n=" << n << endl; 
-	}
+		C(int _n) : n(_n) {
+			tools_log(); cout << "cstr C(n) n=" << n << endl;
+		}
 
-		C(const C& c) : n(c.n) 
-	{ 
-		tools_log(); cout << "cstr C(c) n=" << n << endl; 
-	}
+		C(const C& c) : n(c.n) {
+			tools_log(); cout << "cstr C(c) n=" << n << endl;
+		}
 
-		~C() { 
-			tools_log(); cout << "dstr ~C() n=" << n << endl; 
-		} 
+		~C() {
+			tools_log(); cout << "dstr ~C() n=" << n << endl;
+		}
 
 		// try C c
-		friend ostream& operator<<(ostream& os, const C& c)
-		{
-			os << c.n; 
-			return os; 
+		friend ostream& operator<<(ostream& os, const C& c){
+			os << c.n;
+			return os;
 		}
 
 		// add some objects
-		friend C operator+(const C& c1, const C& c2) 
-		{ 
-			return C(c1.n+c2.n); 
+		friend C operator+(const C& c1, const C& c2) {
+			return C(c1.n+c2.n);
 		}
 
 };
