@@ -1,0 +1,16 @@
+friend List& operator+=(List& l, string s){
+	Node* n = createNode(s);
+	/* Node n(s); */
+	/* cout<<n; */
+	n->setNext(l.root);
+	l.root = n;
+	return l;
+}
+
+warum kommen da komische sachen raus wenn man auskommentiert?
+- objekt landet auf den stack und lebt nur solange wie die funktion
+
+List & operator+=
+- damit man das verketten kann?
+- damit die liste nicht kopiert wird?
+

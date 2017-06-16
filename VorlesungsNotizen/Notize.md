@@ -1,0 +1,5 @@
+- {} operator
+- iterator
+	- G23\_range\_base\_for
+	- for(auto x: v){}
+- !=operator

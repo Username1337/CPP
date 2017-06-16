@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <math.h>
 
 using namespace std;
 
@@ -23,8 +24,17 @@ class Bruch {
 			this->normalisiere();
 		}
 
-		Bruch(Bruch& bruch): zaehler(bruch.zaehler), nenner(bruch.nenner){
-			this->normalisiere();
+		Bruch(double komma){
+			for(int nenner = 1; fmod(komma,10)==0; komma*=10, nenner*=10){
+				this->nenner = nenner;
+				this->zaehler = static_cast<int>(komma);
+			}
+		}
+
+		Bruch(Bruch& bruch): Bruch(bruch.zaehler, bruch.nenner){
+		}
+
+		Bruch(const initializer_list<int>& l): Bruch(*(l.begin()),*(l.end()-1)){
 		}
 
 		~Bruch(){

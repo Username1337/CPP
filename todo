@@ -23,6 +23,7 @@
 - structs
 
 - notizen
+- funktionspointer
 typedef double (*func_t)(double);
 
 double quad(doubble x){
