@@ -73,7 +73,7 @@ class Punkt{
 		this->x = x1;
 	}
 
-	int setY(int x2){
+	void setY(int x2){
 		this->y = x2;
 	}
 
@@ -87,6 +87,13 @@ class Punkt{
 };
 
 int main(){
+	string x;
+	string y;
+	cout << "z: ";
+	cin >> y;
+	cout << "y: ";
+	cin >> z;
+	cout << "z: "<<z<<" y: " << y << endl;
 	Punkt p(3,4);
 	Punkt p1(p);
 	cout << p << endl;
@@ -104,5 +111,6 @@ int main(){
 	/* Punkte e; */
 	/* e.x = 14; */
 	/* e.y = 13; */
+	return 0;
 }
 
