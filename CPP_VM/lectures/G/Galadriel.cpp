@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 struct Punkte{
@@ -9,7 +10,8 @@ struct Punkte{
 class Punkt{
 	int x;
 	int y;
-	public :
+
+	public:
 
 	Punkt() : x(0), y(0){}
 
@@ -87,7 +89,7 @@ class Punkt{
 };
 
 int main(){
-	string x;
+	string z;
 	string y;
 	cout << "z: ";
 	cin >> y;

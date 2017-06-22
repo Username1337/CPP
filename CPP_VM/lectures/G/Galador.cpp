@@ -38,7 +38,7 @@ class Bruch {
 		int getNenner(){
 			return this->nenner;
 		}
-			
+
 		void setNenner(int nenner){
 			this->nenner = nenner;
 		}

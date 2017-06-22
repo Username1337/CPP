@@ -1,0 +1,433 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Amphibie	Gilraen.cpp	/^		Amphibie(): BefoerderungsMittel(), Auto(), Boot(){$/;"	f	class:Amphibie	access:public	signature:()
+Amphibie	Gilraen.cpp	/^class Amphibie: public Auto, public Boot {$/;"	c	file:	inherits:Auto,Boot
+Amphibie::Amphibie	Gilraen.cpp	/^		Amphibie(): BefoerderungsMittel(), Auto(), Boot(){$/;"	f	class:Amphibie	access:public	signature:()
+Amphibie::Auto::topSpeed	Gilraen.cpp	/^			Auto::topSpeed = topSpeed;$/;"	m	class:Amphibie::Auto	file:
+Amphibie::Boot::topSpeed	Gilraen.cpp	/^			Boot::topSpeed = topSpeed;$/;"	m	class:Amphibie::Boot	file:
+Amphibie::endl	Gilraen.cpp	/^			cout << "new Amphibie" << endl;$/;"	l
+Amphibie::getAnzahlSitzplaetze	Gilraen.cpp	/^		int getAnzahlSitzplaetze(){$/;"	f	class:Amphibie	access:public	signature:()
+Amphibie::getTopSpeedAuto	Gilraen.cpp	/^		float getTopSpeedAuto(){$/;"	f	class:Amphibie	access:public	signature:()
+Amphibie::getTopSpeedBoot	Gilraen.cpp	/^		float getTopSpeedBoot(){$/;"	f	class:Amphibie	access:public	signature:()
+Amphibie::setAnzahlSitzplaetze	Gilraen.cpp	/^		void setAnzahlSitzplaetze(int anzahlSitzplaetze){$/;"	f	class:Amphibie	access:public	signature:(int anzahlSitzplaetze)
+Amphibie::setTopSpeedAuto	Gilraen.cpp	/^		void setTopSpeedAuto(float topSpeed){$/;"	f	class:Amphibie	access:public	signature:(float topSpeed)
+Amphibie::setTopSpeedBoot	Gilraen.cpp	/^		void setTopSpeedBoot(float topSpeed){$/;"	f	class:Amphibie	access:public	signature:(float topSpeed)
+Auto	Gilraen.cpp	/^		Auto(): BefoerderungsMittel(), Fahrzeug() {$/;"	f	class:Auto	access:public	signature:()
+Auto	Gilraen.cpp	/^class Auto: public virtual BefoerderungsMittel, public Fahrzeug {$/;"	c	file:	inherits:BefoerderungsMittel,Fahrzeug
+Auto::Auto	Gilraen.cpp	/^		Auto(): BefoerderungsMittel(), Fahrzeug() {$/;"	f	class:Auto	access:public	signature:()
+Auto::anzahlRaeder	Gilraen.cpp	/^		int anzahlRaeder = 4;$/;"	m	class:Auto	file:	access:public
+Auto::endl	Gilraen.cpp	/^			cout << "new Auto" << endl;$/;"	l
+Auto::~Auto	Gilraen.cpp	/^		~Auto(){$/;"	f	class:Auto	access:public	signature:()
+BefoerderungsMittel	Gilraen.cpp	/^		BefoerderungsMittel(){$/;"	f	class:BefoerderungsMittel	access:public	signature:()
+BefoerderungsMittel	Gilraen.cpp	/^class BefoerderungsMittel {$/;"	c	file:
+BefoerderungsMittel::BefoerderungsMittel	Gilraen.cpp	/^		BefoerderungsMittel(){$/;"	f	class:BefoerderungsMittel	access:public	signature:()
+BefoerderungsMittel::anzahlSitzplaetze	Gilraen.cpp	/^		int anzahlSitzplaetze = 0;$/;"	m	class:BefoerderungsMittel	file:	access:public
+BefoerderungsMittel::endl	Gilraen.cpp	/^			cout << "new BefoerderungsMittel" << endl;$/;"	l
+BefoerderungsMittel::~BefoerderungsMittel	Gilraen.cpp	/^		~BefoerderungsMittel(){$/;"	f	class:BefoerderungsMittel	access:public	signature:()
+Boot	Gilraen.cpp	/^		Boot(): BefoerderungsMittel(), Fahrzeug(){$/;"	f	class:Boot	access:public	signature:()
+Boot	Gilraen.cpp	/^class Boot: public virtual BefoerderungsMittel, public Fahrzeug {$/;"	c	file:	inherits:BefoerderungsMittel,Fahrzeug
+Boot::Boot	Gilraen.cpp	/^		Boot(): BefoerderungsMittel(), Fahrzeug(){$/;"	f	class:Boot	access:public	signature:()
+Boot::anzahlSchiffsschrauben	Gilraen.cpp	/^		int anzahlSchiffsschrauben = 1;$/;"	m	class:Boot	file:	access:public
+Boot::endl	Gilraen.cpp	/^			cout << "new Boot" << endl;$/;"	l
+Boot::~Boot	Gilraen.cpp	/^		~Boot(){$/;"	f	class:Boot	access:public	signature:()
+Bruch	Galador.cpp	/^		Bruch(): zaehler(1), nenner(1){$/;"	f	class:Bruch	access:public	signature:()
+Bruch	Galador.cpp	/^		Bruch(Bruch& bruch): zaehler(bruch.zaehler), nenner(bruch.nenner){$/;"	f	class:Bruch	access:public	signature:(Bruch& bruch)
+Bruch	Galador.cpp	/^		Bruch(int zaehler, int nenner): zaehler(zaehler), nenner(nenner){$/;"	f	class:Bruch	access:public	signature:(int zaehler, int nenner)
+Bruch	Galador.cpp	/^class Bruch {$/;"	c	file:
+Bruch	Galathil.cpp	/^		Bruch(): zaehler(1), nenner(1){$/;"	f	class:Bruch	access:public	signature:()
+Bruch	Galathil.cpp	/^		Bruch(Bruch& bruch): Bruch(bruch.zaehler, bruch.nenner){$/;"	f	class:Bruch	access:public	signature:(Bruch& bruch)
+Bruch	Galathil.cpp	/^		Bruch(const initializer_list<int>& l): Bruch(*(l.begin()),*(l.end()-1)){$/;"	f	class:Bruch	access:public	signature:(const initializer_list<int>& l)
+Bruch	Galathil.cpp	/^		Bruch(double komma){$/;"	f	class:Bruch	access:public	signature:(double komma)
+Bruch	Galathil.cpp	/^		Bruch(int zaehler, int nenner): zaehler(zaehler), nenner(nenner){$/;"	f	class:Bruch	access:public	signature:(int zaehler, int nenner)
+Bruch	Galathil.cpp	/^class Bruch {$/;"	c	file:
+Bruch::Bruch	Galador.cpp	/^		Bruch(): zaehler(1), nenner(1){$/;"	f	class:Bruch	access:public	signature:()
+Bruch::Bruch	Galador.cpp	/^		Bruch(Bruch& bruch): zaehler(bruch.zaehler), nenner(bruch.nenner){$/;"	f	class:Bruch	access:public	signature:(Bruch& bruch)
+Bruch::Bruch	Galador.cpp	/^		Bruch(int zaehler, int nenner): zaehler(zaehler), nenner(nenner){$/;"	f	class:Bruch	access:public	signature:(int zaehler, int nenner)
+Bruch::Bruch	Galathil.cpp	/^		Bruch(): zaehler(1), nenner(1){$/;"	f	class:Bruch	access:public	signature:()
+Bruch::Bruch	Galathil.cpp	/^		Bruch(Bruch& bruch): Bruch(bruch.zaehler, bruch.nenner){$/;"	f	class:Bruch	access:public	signature:(Bruch& bruch)
+Bruch::Bruch	Galathil.cpp	/^		Bruch(const initializer_list<int>& l): Bruch(*(l.begin()),*(l.end()-1)){$/;"	f	class:Bruch	access:public	signature:(const initializer_list<int>& l)
+Bruch::Bruch	Galathil.cpp	/^		Bruch(double komma){$/;"	f	class:Bruch	access:public	signature:(double komma)
+Bruch::Bruch	Galathil.cpp	/^		Bruch(int zaehler, int nenner): zaehler(zaehler), nenner(nenner){$/;"	f	class:Bruch	access:public	signature:(int zaehler, int nenner)
+Bruch::getGGT	Galathil.cpp	/^		int getGGT(){$/;"	f	class:Bruch	access:public	signature:()
+Bruch::getNenner	Galador.cpp	/^		int getNenner(){$/;"	f	class:Bruch	access:public	signature:()
+Bruch::getNenner	Galathil.cpp	/^		int getNenner(){$/;"	f	class:Bruch	access:public	signature:()
+Bruch::getZaehler	Galador.cpp	/^		int getZaehler(){$/;"	f	class:Bruch	access:public	signature:()
+Bruch::getZaehler	Galathil.cpp	/^		int getZaehler(){$/;"	f	class:Bruch	access:public	signature:()
+Bruch::ggt	Galathil.cpp	/^			int ggt = this->getGGT();$/;"	l
+Bruch::ggt	Galathil.cpp	/^			int ggt=1;$/;"	l
+Bruch::max	Galathil.cpp	/^			int max;$/;"	l
+Bruch::nenner	Galador.cpp	/^		int nenner;$/;"	m	class:Bruch	file:	access:private
+Bruch::nenner	Galathil.cpp	/^			int nenner = this->nenner;$/;"	l
+Bruch::nenner	Galathil.cpp	/^		int nenner;$/;"	m	class:Bruch	file:	access:private
+Bruch::normalisiere	Galathil.cpp	/^			out.normalisiere();$/;"	p	file:	signature:()
+Bruch::normalisiere	Galathil.cpp	/^		void normalisiere(){$/;"	f	class:Bruch	file:	access:private	signature:()
+Bruch::operator *	Galathil.cpp	/^		friend Bruch operator*(Bruch& b1, Bruch& b2){$/;"	f	class:Bruch	access:friend	signature:(Bruch& b1, Bruch& b2)
+Bruch::operator +	Galathil.cpp	/^		friend Bruch operator+(Bruch& b1, Bruch& b2){$/;"	f	class:Bruch	access:friend	signature:(Bruch& b1, Bruch& b2)
+Bruch::operator -	Galathil.cpp	/^		friend Bruch operator-(Bruch& b1, Bruch& b2){$/;"	f	class:Bruch	access:friend	signature:(Bruch& b1, Bruch& b2)
+Bruch::operator /	Galathil.cpp	/^		friend Bruch operator\/(Bruch& b1, Bruch& b2){$/;"	f	class:Bruch	access:friend	signature:(Bruch& b1, Bruch& b2)
+Bruch::operator <<	Galador.cpp	/^		friend ostream& operator<<(ostream& os, const Bruch& b){$/;"	f	class:Bruch	access:friend	signature:(ostream& os, const Bruch& b)
+Bruch::operator <<	Galathil.cpp	/^		friend ostream& operator<<(ostream& os, const Bruch& b){$/;"	f	class:Bruch	access:friend	signature:(ostream& os, const Bruch& b)
+Bruch::out	Galathil.cpp	/^			Bruch out(b1);$/;"	p	file:	signature:(b1)
+Bruch::out	Galathil.cpp	/^			Bruch out(b2);$/;"	p	file:	signature:(b2)
+Bruch::setNenner	Galador.cpp	/^		void setNenner(int nenner){$/;"	f	class:Bruch	access:public	signature:(int nenner)
+Bruch::setNenner	Galathil.cpp	/^		void setNenner(int nenner){$/;"	f	class:Bruch	access:public	signature:(int nenner)
+Bruch::setZaehler	Galador.cpp	/^		void setZaehler(int zaehler){$/;"	f	class:Bruch	access:public	signature:(int zaehler)
+Bruch::setZaehler	Galathil.cpp	/^		void setZaehler(int zaehler){$/;"	f	class:Bruch	access:public	signature:(int zaehler)
+Bruch::zaehler	Galador.cpp	/^		int zaehler;$/;"	m	class:Bruch	file:	access:private
+Bruch::zaehler	Galathil.cpp	/^			int zaehler = this->zaehler;$/;"	l
+Bruch::zaehler	Galathil.cpp	/^		int zaehler;$/;"	m	class:Bruch	file:	access:private
+Bruch::~Bruch	Galador.cpp	/^		~Bruch(){$/;"	f	class:Bruch	access:public	signature:()
+Bruch::~Bruch	Galathil.cpp	/^		~Bruch(){$/;"	f	class:Bruch	access:public	signature:()
+CC	makefile	/^CC = gcc$/;"	m
+CEXAMPLES	makefile	/^CEXAMPLES = $(shell find . -name '*.c' -print -type f)$/;"	m
+CFLAGS	makefile	/^CFLAGS = -ansi -pedantic -Wall -Wextra -Wconversion -O3$/;"	m
+CTARGETS	makefile	/^CTARGETS = $(CEXAMPLES:.c=.out)$/;"	m
+CXX	makefile	/^CXX = g++$/;"	m
+CXXEXAMPLES	makefile	/^CXXEXAMPLES = $(shell find . -name '*.cpp' -print -type f)$/;"	m
+CXXFLAGS	makefile	/^CXXFLAGS = -ansi -pedantic -Wall -Wextra -Wconversion$/;"	m
+CXXTARGETS	makefile	/^CXXTARGETS = $(CXXEXAMPLES:.cpp=.out) $/;"	m
+Complex	Galdor.cpp	/^		Complex(): x(0), y(0){$/;"	f	class:Complex	access:public	signature:()
+Complex	Galdor.cpp	/^		Complex(const Complex& c): x(c.x), y(c.y){$/;"	f	class:Complex	access:public	signature:(const Complex& c)
+Complex	Galdor.cpp	/^		Complex(double x, double y): x(x), y(y){$/;"	f	class:Complex	access:public	signature:(double x, double y)
+Complex	Galdor.cpp	/^class Complex {$/;"	c	file:
+Complex::Complex	Galdor.cpp	/^		Complex(): x(0), y(0){$/;"	f	class:Complex	access:public	signature:()
+Complex::Complex	Galdor.cpp	/^		Complex(const Complex& c): x(c.x), y(c.y){$/;"	f	class:Complex	access:public	signature:(const Complex& c)
+Complex::Complex	Galdor.cpp	/^		Complex(double x, double y): x(x), y(y){$/;"	f	class:Complex	access:public	signature:(double x, double y)
+Complex::konjugiere	Galdor.cpp	/^		void konjugiere(){$/;"	f	class:Complex	access:public	signature:()
+Complex::operator *	Galdor.cpp	/^		friend Complex operator*(const Complex& a, const Complex& b){$/;"	f	class:Complex	access:friend	signature:(const Complex& a, const Complex& b)
+Complex::operator *=	Galdor.cpp	/^		Complex& operator*=(const Complex& c){$/;"	f	class:Complex	access:public	signature:(const Complex& c)
+Complex::operator +	Galdor.cpp	/^		friend Complex operator+(const Complex& a, const Complex& b){$/;"	f	class:Complex	access:friend	signature:(const Complex& a, const Complex& b)
+Complex::operator +=	Galdor.cpp	/^		Complex& operator+=(const Complex& c){$/;"	f	class:Complex	access:public	signature:(const Complex& c)
+Complex::operator -	Galdor.cpp	/^		friend Complex operator-(const Complex& a, const Complex& b){$/;"	f	class:Complex	access:friend	signature:(const Complex& a, const Complex& b)
+Complex::operator -=	Galdor.cpp	/^		Complex& operator-=(const Complex& c){$/;"	f	class:Complex	access:public	signature:(const Complex& c)
+Complex::operator <<	Galdor.cpp	/^		friend ostream& operator<<(ostream& os, const Complex& c){$/;"	f	class:Complex	access:friend	signature:(ostream& os, const Complex& c)
+Complex::out	Galdor.cpp	/^			Complex out(a);$/;"	p	file:	signature:(a)
+Complex::x	Galdor.cpp	/^		double x;$/;"	m	class:Complex	file:	access:private
+Complex::y	Galdor.cpp	/^		double y;$/;"	m	class:Complex	file:	access:private
+Fahrzeug	Gilraen.cpp	/^		Fahrzeug(){$/;"	f	class:Fahrzeug	access:public	signature:()
+Fahrzeug	Gilraen.cpp	/^class Fahrzeug {$/;"	c	file:
+Fahrzeug::Fahrzeug	Gilraen.cpp	/^		Fahrzeug(){$/;"	f	class:Fahrzeug	access:public	signature:()
+Fahrzeug::endl	Gilraen.cpp	/^			cout << "new Fahrzeug" << endl;$/;"	l
+Fahrzeug::topSpeed	Gilraen.cpp	/^		float topSpeed = 0;$/;"	m	class:Fahrzeug	file:	access:public
+Fahrzeug::~Fahrzeug	Gilraen.cpp	/^		~Fahrzeug(){$/;"	f	class:Fahrzeug	access:public	signature:()
+FahrzeugVerwaltung	Gilraen.cpp	/^class FahrzeugVerwaltung {$/;"	c	file:
+IReport	Guthlaf.cpp	/^		IReport(){}$/;"	f	class:IReport	access:public	signature:()
+IReport	Guthlaf.cpp	/^class IReport {$/;"	c	file:
+IReport::IReport	Guthlaf.cpp	/^		IReport(){}$/;"	f	class:IReport	access:public	signature:()
+IReport::MonatsReport	Guthlaf.cpp	/^		virtual string MonatsReport() = 0;$/;"	p	class:IReport	file:	access:public	signature:()
+IReport::~IReport	Guthlaf.cpp	/^		~IReport(){}$/;"	f	class:IReport	access:public	signature:()
+Kontakt	Golasgil.cpp	/^		Kontakt(){}$/;"	f	class:Kontakt	access:public	signature:()
+Kontakt	Golasgil.cpp	/^		Kontakt(Kontakt& kontakt): name(kontakt.name), alter(kontakt.alter){}$/;"	f	class:Kontakt	access:public	signature:(Kontakt& kontakt)
+Kontakt	Golasgil.cpp	/^		Kontakt(string name, float alter): name(name), alter(alter){}$/;"	f	class:Kontakt	access:public	signature:(string name, float alter)
+Kontakt	Golasgil.cpp	/^class Kontakt{$/;"	c	file:
+Kontakt	Grima.cpp	/^		Kontakt(const Kontakt& kontakt){$/;"	f	class:Kontakt	access:public	signature:(const Kontakt& kontakt)
+Kontakt	Grima.cpp	/^		Kontakt(string name, int alter){$/;"	f	class:Kontakt	access:public	signature:(string name, int alter)
+Kontakt	Grima.cpp	/^class Kontakt {$/;"	c	file:
+Kontakt	Guthlaf.cpp	/^		Kontakt(const Kontakt& kontakt){$/;"	f	class:Kontakt	access:public	signature:(const Kontakt& kontakt)
+Kontakt	Guthlaf.cpp	/^		Kontakt(string name, int alter): IReport() {$/;"	f	class:Kontakt	access:public	signature:(string name, int alter)
+Kontakt	Guthlaf.cpp	/^class Kontakt: public IReport {$/;"	c	file:	inherits:IReport
+Kontakt::Kontakt	Golasgil.cpp	/^		Kontakt(){}$/;"	f	class:Kontakt	access:public	signature:()
+Kontakt::Kontakt	Golasgil.cpp	/^		Kontakt(Kontakt& kontakt): name(kontakt.name), alter(kontakt.alter){}$/;"	f	class:Kontakt	access:public	signature:(Kontakt& kontakt)
+Kontakt::Kontakt	Golasgil.cpp	/^		Kontakt(string name, float alter): name(name), alter(alter){}$/;"	f	class:Kontakt	access:public	signature:(string name, float alter)
+Kontakt::Kontakt	Grima.cpp	/^		Kontakt(const Kontakt& kontakt){$/;"	f	class:Kontakt	access:public	signature:(const Kontakt& kontakt)
+Kontakt::Kontakt	Grima.cpp	/^		Kontakt(string name, int alter){$/;"	f	class:Kontakt	access:public	signature:(string name, int alter)
+Kontakt::Kontakt	Guthlaf.cpp	/^		Kontakt(const Kontakt& kontakt){$/;"	f	class:Kontakt	access:public	signature:(const Kontakt& kontakt)
+Kontakt::Kontakt	Guthlaf.cpp	/^		Kontakt(string name, int alter): IReport() {$/;"	f	class:Kontakt	access:public	signature:(string name, int alter)
+Kontakt::MonatsReport	Grima.cpp	/^		virtual string MonatsReport() = 0;$/;"	p	class:Kontakt	file:	access:public	signature:()
+Kontakt::alter	Golasgil.cpp	/^		float alter;$/;"	m	class:Kontakt	file:	access:private
+Kontakt::alter	Grima.cpp	/^		int alter;$/;"	m	class:Kontakt	file:	access:private
+Kontakt::alter	Guthlaf.cpp	/^		int alter;$/;"	m	class:Kontakt	file:	access:private
+Kontakt::getAlter	Golasgil.cpp	/^		float getAlter(){$/;"	f	class:Kontakt	access:public	signature:()
+Kontakt::getAlter	Grima.cpp	/^		int getAlter(){$/;"	f	class:Kontakt	access:public	signature:()
+Kontakt::getAlter	Guthlaf.cpp	/^		int getAlter(){$/;"	f	class:Kontakt	access:public	signature:()
+Kontakt::getName	Golasgil.cpp	/^		string getName(){$/;"	f	class:Kontakt	access:public	signature:()
+Kontakt::getName	Grima.cpp	/^		string getName(){$/;"	f	class:Kontakt	access:public	signature:()
+Kontakt::getName	Guthlaf.cpp	/^		string getName(){$/;"	f	class:Kontakt	access:public	signature:()
+Kontakt::name	Golasgil.cpp	/^		string name;$/;"	m	class:Kontakt	file:	access:private
+Kontakt::name	Grima.cpp	/^		string name;$/;"	m	class:Kontakt	file:	access:private
+Kontakt::name	Guthlaf.cpp	/^		string name;$/;"	m	class:Kontakt	file:	access:private
+Kontakt::operator <<	Golasgil.cpp	/^		friend ostream& operator<<(ostream& os, Kontakt& kontakt){$/;"	f	class:Kontakt	access:friend	signature:(ostream& os, Kontakt& kontakt)
+Kontakt::setAlter	Golasgil.cpp	/^		void setAlter(float alter){$/;"	f	class:Kontakt	access:public	signature:(float alter)
+Kontakt::setName	Golasgil.cpp	/^		void setName(string name){$/;"	f	class:Kontakt	access:public	signature:(string name)
+Kontakt::~Kontakt	Golasgil.cpp	/^		~Kontakt(){}$/;"	f	class:Kontakt	access:public	signature:()
+Kontakt::~Kontakt	Grima.cpp	/^		~Kontakt(){$/;"	f	class:Kontakt	access:public	signature:()
+Kontakt::~Kontakt	Guthlaf.cpp	/^		~Kontakt(){$/;"	f	class:Kontakt	access:public	signature:()
+KontaktVerwaltung	Grima.cpp	/^class KontaktVerwaltung {$/;"	c	file:
+KontaktVerwaltung	Guthlaf.cpp	/^class KontaktVerwaltung {$/;"	c	file:
+Kunde	Grima.cpp	/^		Kunde(string name, int alter, int kontostand): Kontakt(name,alter){$/;"	f	class:Kunde	access:public	signature:(string name, int alter, int kontostand)
+Kunde	Grima.cpp	/^class Kunde: public Kontakt {$/;"	c	file:	inherits:Kontakt
+Kunde	Guthlaf.cpp	/^		Kunde(string name, int alter, int kontostand): Kontakt(name,alter){$/;"	f	class:Kunde	access:public	signature:(string name, int alter, int kontostand)
+Kunde	Guthlaf.cpp	/^class Kunde: public Kontakt {$/;"	c	file:	inherits:Kontakt
+Kunde::Kunde	Grima.cpp	/^		Kunde(string name, int alter, int kontostand): Kontakt(name,alter){$/;"	f	class:Kunde	access:public	signature:(string name, int alter, int kontostand)
+Kunde::Kunde	Guthlaf.cpp	/^		Kunde(string name, int alter, int kontostand): Kontakt(name,alter){$/;"	f	class:Kunde	access:public	signature:(string name, int alter, int kontostand)
+Kunde::MonatsReport	Grima.cpp	/^		string MonatsReport(){$/;"	f	class:Kunde	access:public	signature:()
+Kunde::MonatsReport	Guthlaf.cpp	/^		string MonatsReport(){$/;"	f	class:Kunde	access:public	signature:()
+Kunde::getKontostand	Grima.cpp	/^		int getKontostand(){$/;"	f	class:Kunde	access:public	signature:()
+Kunde::getKontostand	Guthlaf.cpp	/^		int getKontostand(){$/;"	f	class:Kunde	access:public	signature:()
+Kunde::kontostand	Grima.cpp	/^		int kontostand;$/;"	m	class:Kunde	file:	access:private
+Kunde::kontostand	Guthlaf.cpp	/^		int kontostand;$/;"	m	class:Kunde	file:	access:private
+Kunde::setKontostand	Grima.cpp	/^		void setKontostand(int kontostand){$/;"	f	class:Kunde	access:public	signature:(int kontostand)
+Kunde::setKontostand	Guthlaf.cpp	/^		void setKontostand(int kontostand){$/;"	f	class:Kunde	access:public	signature:(int kontostand)
+LDFLAGS	makefile	/^LDFLAGS = -lm$/;"	m
+Lieferant	Grima.cpp	/^		Lieferant(string name, int alter, string bankverbindung): Kontakt(name,alter){$/;"	f	class:Lieferant	access:public	signature:(string name, int alter, string bankverbindung)
+Lieferant	Grima.cpp	/^class Lieferant: public Kontakt {$/;"	c	file:	inherits:Kontakt
+Lieferant	Guthlaf.cpp	/^		Lieferant(string name, int alter, string bankverbindung): Kontakt(name,alter){$/;"	f	class:Lieferant	access:public	signature:(string name, int alter, string bankverbindung)
+Lieferant	Guthlaf.cpp	/^class Lieferant: public Kontakt {$/;"	c	file:	inherits:Kontakt
+Lieferant::Lieferant	Grima.cpp	/^		Lieferant(string name, int alter, string bankverbindung): Kontakt(name,alter){$/;"	f	class:Lieferant	access:public	signature:(string name, int alter, string bankverbindung)
+Lieferant::Lieferant	Guthlaf.cpp	/^		Lieferant(string name, int alter, string bankverbindung): Kontakt(name,alter){$/;"	f	class:Lieferant	access:public	signature:(string name, int alter, string bankverbindung)
+Lieferant::MonatsReport	Grima.cpp	/^		string MonatsReport(){$/;"	f	class:Lieferant	access:public	signature:()
+Lieferant::MonatsReport	Guthlaf.cpp	/^		string MonatsReport(){$/;"	f	class:Lieferant	access:public	signature:()
+Lieferant::bankverbindung	Grima.cpp	/^		string bankverbindung;$/;"	m	class:Lieferant	file:	access:private
+Lieferant::bankverbindung	Guthlaf.cpp	/^		string bankverbindung;$/;"	m	class:Lieferant	file:	access:private
+Lieferant::getBankverbindung	Grima.cpp	/^		string getBankverbindung(){$/;"	f	class:Lieferant	access:public	signature:()
+Lieferant::getBankverbindung	Guthlaf.cpp	/^		string getBankverbindung(){$/;"	f	class:Lieferant	access:public	signature:()
+MonatsReport	Grima.cpp	/^		string MonatsReport(){$/;"	f	class:Kunde	access:public	signature:()
+MonatsReport	Grima.cpp	/^		string MonatsReport(){$/;"	f	class:Lieferant	access:public	signature:()
+MonatsReport	Grima.cpp	/^		virtual string MonatsReport() = 0;$/;"	p	class:Kontakt	file:	access:public	signature:()
+MonatsReport	Guthlaf.cpp	/^		string MonatsReport(){$/;"	f	class:Kunde	access:public	signature:()
+MonatsReport	Guthlaf.cpp	/^		string MonatsReport(){$/;"	f	class:Lieferant	access:public	signature:()
+MonatsReport	Guthlaf.cpp	/^		virtual string MonatsReport() = 0;$/;"	p	class:IReport	file:	access:public	signature:()
+Punkt	Galadriel.cpp	/^	Punkt (const Punkt& p): x(p.x), y(p.y){}$/;"	f	class:Punkt	access:public	signature:(const Punkt& p)
+Punkt	Galadriel.cpp	/^	Punkt (int x1, int x2): x(x1), y(x2){}$/;"	f	class:Punkt	access:public	signature:(int x1, int x2)
+Punkt	Galadriel.cpp	/^	Punkt (struct Punkte p) : x(p.x), y(p.y){}$/;"	f	class:Punkt	access:public	signature:(struct Punkte p)
+Punkt	Galadriel.cpp	/^	Punkt() : x(0), y(0){}$/;"	f	class:Punkt	access:public	signature:()
+Punkt	Galadriel.cpp	/^class Punkt{$/;"	c	file:
+Punkt	Gamling.cpp	/^	Punkt (const Punkt& p): x(p.x), y(p.y){}$/;"	f	class:Punkt	access:public	signature:(const Punkt& p)
+Punkt	Gamling.cpp	/^	Punkt (int x1, int x2): x(x1), y(x2){}$/;"	f	class:Punkt	access:public	signature:(int x1, int x2)
+Punkt	Gamling.cpp	/^	Punkt (struct Punkte p) : x(p.x), y(p.y){}$/;"	f	class:Punkt	access:public	signature:(struct Punkte p)
+Punkt	Gamling.cpp	/^	Punkt() : x(0), y(0){}$/;"	f	class:Punkt	access:public	signature:()
+Punkt	Gamling.cpp	/^class Punkt{$/;"	c	file:
+Punkt::Punkt	Galadriel.cpp	/^	Punkt (const Punkt& p): x(p.x), y(p.y){}$/;"	f	class:Punkt	access:public	signature:(const Punkt& p)
+Punkt::Punkt	Galadriel.cpp	/^	Punkt (int x1, int x2): x(x1), y(x2){}$/;"	f	class:Punkt	access:public	signature:(int x1, int x2)
+Punkt::Punkt	Galadriel.cpp	/^	Punkt (struct Punkte p) : x(p.x), y(p.y){}$/;"	f	class:Punkt	access:public	signature:(struct Punkte p)
+Punkt::Punkt	Galadriel.cpp	/^	Punkt() : x(0), y(0){}$/;"	f	class:Punkt	access:public	signature:()
+Punkt::Punkt	Gamling.cpp	/^	Punkt (const Punkt& p): x(p.x), y(p.y){}$/;"	f	class:Punkt	access:public	signature:(const Punkt& p)
+Punkt::Punkt	Gamling.cpp	/^	Punkt (int x1, int x2): x(x1), y(x2){}$/;"	f	class:Punkt	access:public	signature:(int x1, int x2)
+Punkt::Punkt	Gamling.cpp	/^	Punkt (struct Punkte p) : x(p.x), y(p.y){}$/;"	f	class:Punkt	access:public	signature:(struct Punkte p)
+Punkt::Punkt	Gamling.cpp	/^	Punkt() : x(0), y(0){}$/;"	f	class:Punkt	access:public	signature:()
+Punkt::endl	Galadriel.cpp	/^		cout << "deine Klasse wird eliminiert " << endl;$/;"	l
+Punkt::endl	Gamling.cpp	/^		cout << "deine Klasse wird eliminiert " << endl;$/;"	l
+Punkt::getMaxNorm	Galadriel.cpp	/^	int getMaxNorm(){$/;"	f	class:Punkt	access:public	signature:()
+Punkt::getMaxNorm	Gamling.cpp	/^	int getMaxNorm(){$/;"	f	class:Punkt	access:public	signature:()
+Punkt::getX	Galadriel.cpp	/^	int getX()const{$/;"	f	class:Punkt	access:public	signature:() const
+Punkt::getX	Gamling.cpp	/^	int getX()const{$/;"	f	class:Punkt	access:public	signature:() const
+Punkt::getY	Galadriel.cpp	/^	int getY() const {$/;"	f	class:Punkt	access:public	signature:() const
+Punkt::getY	Gamling.cpp	/^	int getY() const {$/;"	f	class:Punkt	access:public	signature:() const
+Punkt::operator *	Galadriel.cpp	/^	friend int operator*(const Punkt& p1, const Punkt& p2){$/;"	f	class:Punkt	access:friend	signature:(const Punkt& p1, const Punkt& p2)
+Punkt::operator +	Galadriel.cpp	/^	friend Punkt operator+(const Punkt& p1, const Punkt& p2){$/;"	f	class:Punkt	access:friend	signature:(const Punkt& p1, const Punkt& p2)
+Punkt::operator +=	Galadriel.cpp	/^	Punkt& operator+=(const Punkt& p){$/;"	f	class:Punkt	access:public	signature:(const Punkt& p)
+Punkt::operator -	Galadriel.cpp	/^	friend Punkt operator-(const Punkt& p1, const Punkt& p2){$/;"	f	class:Punkt	access:friend	signature:(const Punkt& p1, const Punkt& p2)
+Punkt::operator -=	Galadriel.cpp	/^	Punkt& operator-=(const Punkt& p){$/;"	f	class:Punkt	access:public	signature:(const Punkt& p)
+Punkt::operator <<	Galadriel.cpp	/^	friend ostream& operator<<(ostream & os,  Punkt const & p){$/;"	f	class:Punkt	access:friend	signature:(ostream & os, Punkt const & p)
+Punkt::operator <<	Gamling.cpp	/^	friend ostream& operator<<(ostream & os,  Punkt const & p){$/;"	f	class:Punkt	access:friend	signature:(ostream & os, Punkt const & p)
+Punkt::operator =	Galadriel.cpp	/^	Punkt& operator=(const Punkt& p){$/;"	f	class:Punkt	access:public	signature:(const Punkt& p)
+Punkt::operator =	Gamling.cpp	/^	Punkt& operator=(const Punkt& p){$/;"	f	class:Punkt	access:public	signature:(const Punkt& p)
+Punkt::out	Galadriel.cpp	/^		Punkt out(p1);$/;"	p	file:	signature:(p1)
+Punkt::setX	Galadriel.cpp	/^	void setX(int x1){$/;"	f	class:Punkt	access:public	signature:(int x1)
+Punkt::setX	Gamling.cpp	/^	void setX(int x1){$/;"	f	class:Punkt	access:public	signature:(int x1)
+Punkt::setY	Galadriel.cpp	/^	void setY(int x2){$/;"	f	class:Punkt	access:public	signature:(int x2)
+Punkt::setY	Gamling.cpp	/^	int setY(int x2){$/;"	f	class:Punkt	access:public	signature:(int x2)
+Punkt::x	Galadriel.cpp	/^	int x;$/;"	m	class:Punkt	file:	access:private
+Punkt::x	Gamling.cpp	/^	int x;$/;"	m	class:Punkt	file:	access:private
+Punkt::y	Galadriel.cpp	/^	int y;$/;"	m	class:Punkt	file:	access:private
+Punkt::y	Gamling.cpp	/^	int y;$/;"	m	class:Punkt	file:	access:private
+Punkt::~Punkt	Galadriel.cpp	/^	~Punkt(){$/;"	f	class:Punkt	access:public	signature:()
+Punkt::~Punkt	Gamling.cpp	/^	~Punkt(){$/;"	f	class:Punkt	access:public	signature:()
+Punkte	Galadriel.cpp	/^struct Punkte{$/;"	s	file:
+Punkte	Gamling.cpp	/^struct Punkte{$/;"	s	file:
+Punkte::x	Galadriel.cpp	/^	int x;$/;"	m	struct:Punkte	file:	access:public
+Punkte::x	Gamling.cpp	/^	int x;$/;"	m	struct:Punkte	file:	access:public
+Punkte::y	Galadriel.cpp	/^	int y;$/;"	m	struct:Punkte	file:	access:public
+Punkte::y	Gamling.cpp	/^	int y;$/;"	m	struct:Punkte	file:	access:public
+a	Grima.cpp	/^	Kunde* a = new Kunde("Peter", 35, 0);$/;"	l
+a	Guthlaf.cpp	/^	Kunde* a = new Kunde("Peter", 35, 0);$/;"	l
+alter	Golasgil.cpp	/^		float alter;$/;"	m	class:Kontakt	file:	access:private
+alter	Grima.cpp	/^		int alter;$/;"	m	class:Kontakt	file:	access:private
+alter	Guthlaf.cpp	/^		int alter;$/;"	m	class:Kontakt	file:	access:private
+amphibie1	Gilraen.cpp	/^	Amphibie amphibie1;$/;"	l
+amphibie2	Gilraen.cpp	/^	Amphibie amphibie2;$/;"	l
+anzahlRaeder	Gilraen.cpp	/^		int anzahlRaeder = 4;$/;"	m	class:Auto	file:	access:public
+anzahlSchiffsschrauben	Gilraen.cpp	/^		int anzahlSchiffsschrauben = 1;$/;"	m	class:Boot	file:	access:public
+anzahlSitzplaetze	Gilraen.cpp	/^		int anzahlSitzplaetze = 0;$/;"	m	class:BefoerderungsMittel	file:	access:public
+b	Galador.cpp	/^	Bruch b;$/;"	l
+b	Grima.cpp	/^	Kunde* b = new Kunde("Dieter", 40, 40);$/;"	l
+b	Guthlaf.cpp	/^	Kunde* b = new Kunde("Dieter", 40, 40);$/;"	l
+bankverbindung	Grima.cpp	/^		string bankverbindung;$/;"	m	class:Lieferant	file:	access:private
+bankverbindung	Guthlaf.cpp	/^		string bankverbindung;$/;"	m	class:Lieferant	file:	access:private
+c	Galador.cpp	/^	Bruch c(a);$/;"	p	file:	signature:(a)
+c	Galathil.cpp	/^	Bruch c;$/;"	l
+c	Galdor.cpp	/^	Complex c;$/;"	l
+c	Grima.cpp	/^	Lieferant* c = new Lieferant("Aldi", 7, "asdf");$/;"	l
+c	Guthlaf.cpp	/^	Lieferant* c = new Lieferant("Aldi", 7, "asdf");$/;"	l
+d	Grima.cpp	/^	Lieferant* d = new Lieferant("Lidl", 4, "hjkl");$/;"	l
+d	Guthlaf.cpp	/^	Lieferant* d = new Lieferant("Lidl", 4, "hjkl");$/;"	l
+e	Gamling.cpp	/^	Punkte e;$/;"	l
+endl	Galador.cpp	/^	cout << a << endl;$/;"	l
+endl	Galador.cpp	/^	cout << b << endl;$/;"	l
+endl	Galador.cpp	/^	cout << c << endl;$/;"	l
+endl	Galadriel.cpp	/^		cout << "deine Klasse wird eliminiert " << endl;$/;"	l
+endl	Galadriel.cpp	/^	cout << "z: "<<z<<" y: " << y << endl;$/;"	l
+endl	Galadriel.cpp	/^	cout << p << endl;$/;"	l
+endl	Galadriel.cpp	/^	cout << p1 << endl;$/;"	l
+endl	Galadriel.cpp	/^	cout << x << endl;$/;"	l
+endl	Galathil.cpp	/^	cout << "a = " << a << endl;$/;"	l
+endl	Galathil.cpp	/^	cout << "a*b = " << c << endl;$/;"	l
+endl	Galathil.cpp	/^	cout << "a+b = " << c << endl;$/;"	l
+endl	Galathil.cpp	/^	cout << "a-b = " << c << endl;$/;"	l
+endl	Galathil.cpp	/^	cout << "a\/b = " << c << endl;$/;"	l
+endl	Galathil.cpp	/^	cout << "b = " << b << endl;$/;"	l
+endl	Galdor.cpp	/^	cout << "a = " << a << endl;$/;"	l
+endl	Galdor.cpp	/^	cout << "a*b = " << c << endl;$/;"	l
+endl	Galdor.cpp	/^	cout << "a+b = " << c << endl;$/;"	l
+endl	Galdor.cpp	/^	cout << "a-b = " << c << endl;$/;"	l
+endl	Galdor.cpp	/^	cout << "b = " << b << endl;$/;"	l
+endl	Gamling.cpp	/^		cout << "deine Klasse wird eliminiert " << endl;$/;"	l
+endl	Gamling.cpp	/^	cout << p << endl;$/;"	l
+endl	Gilraen.cpp	/^			cout << "new Amphibie" << endl;$/;"	l
+endl	Gilraen.cpp	/^			cout << "new Auto" << endl;$/;"	l
+endl	Gilraen.cpp	/^			cout << "new BefoerderungsMittel" << endl;$/;"	l
+endl	Gilraen.cpp	/^			cout << "new Boot" << endl;$/;"	l
+endl	Gilraen.cpp	/^			cout << "new Fahrzeug" << endl;$/;"	l
+endl	Golasgil.cpp	/^	cout << b << endl;$/;"	l
+endl	Golasgil.cpp	/^	cout << d << endl;$/;"	l
+endl	Grima.cpp	/^	cout << "start" << endl;$/;"	l
+endl	Guthlaf.cpp	/^	cout << "start" << endl;$/;"	l
+getAlter	Golasgil.cpp	/^		float getAlter(){$/;"	f	class:Kontakt	access:public	signature:()
+getAlter	Grima.cpp	/^		int getAlter(){$/;"	f	class:Kontakt	access:public	signature:()
+getAlter	Guthlaf.cpp	/^		int getAlter(){$/;"	f	class:Kontakt	access:public	signature:()
+getAnzahlSitzplaetze	Gilraen.cpp	/^		int getAnzahlSitzplaetze(){$/;"	f	class:Amphibie	access:public	signature:()
+getBankverbindung	Grima.cpp	/^		string getBankverbindung(){$/;"	f	class:Lieferant	access:public	signature:()
+getBankverbindung	Guthlaf.cpp	/^		string getBankverbindung(){$/;"	f	class:Lieferant	access:public	signature:()
+getGGT	Galathil.cpp	/^		int getGGT(){$/;"	f	class:Bruch	access:public	signature:()
+getKontostand	Grima.cpp	/^		int getKontostand(){$/;"	f	class:Kunde	access:public	signature:()
+getKontostand	Guthlaf.cpp	/^		int getKontostand(){$/;"	f	class:Kunde	access:public	signature:()
+getMaxNorm	Galadriel.cpp	/^	int getMaxNorm(){$/;"	f	class:Punkt	access:public	signature:()
+getMaxNorm	Gamling.cpp	/^	int getMaxNorm(){$/;"	f	class:Punkt	access:public	signature:()
+getName	Golasgil.cpp	/^		string getName(){$/;"	f	class:Kontakt	access:public	signature:()
+getName	Grima.cpp	/^		string getName(){$/;"	f	class:Kontakt	access:public	signature:()
+getName	Guthlaf.cpp	/^		string getName(){$/;"	f	class:Kontakt	access:public	signature:()
+getNenner	Galador.cpp	/^		int getNenner(){$/;"	f	class:Bruch	access:public	signature:()
+getNenner	Galathil.cpp	/^		int getNenner(){$/;"	f	class:Bruch	access:public	signature:()
+getTopSpeedAuto	Gilraen.cpp	/^		float getTopSpeedAuto(){$/;"	f	class:Amphibie	access:public	signature:()
+getTopSpeedBoot	Gilraen.cpp	/^		float getTopSpeedBoot(){$/;"	f	class:Amphibie	access:public	signature:()
+getX	Galadriel.cpp	/^	int getX()const{$/;"	f	class:Punkt	access:public	signature:() const
+getX	Gamling.cpp	/^	int getX()const{$/;"	f	class:Punkt	access:public	signature:() const
+getY	Galadriel.cpp	/^	int getY() const {$/;"	f	class:Punkt	access:public	signature:() const
+getY	Gamling.cpp	/^	int getY() const {$/;"	f	class:Punkt	access:public	signature:() const
+getZaehler	Galador.cpp	/^		int getZaehler(){$/;"	f	class:Bruch	access:public	signature:()
+getZaehler	Galathil.cpp	/^		int getZaehler(){$/;"	f	class:Bruch	access:public	signature:()
+ggt	Galathil.cpp	/^			int ggt = this->getGGT();$/;"	l
+ggt	Galathil.cpp	/^			int ggt=1;$/;"	l
+konjugiere	Galdor.cpp	/^		void konjugiere(){$/;"	f	class:Complex	access:public	signature:()
+kontakte	Grima.cpp	/^	vector<Kontakt*> kontakte;$/;"	l
+kontakte	Guthlaf.cpp	/^	vector<Kontakt*> kontakte;$/;"	l
+kontostand	Grima.cpp	/^		int kontostand;$/;"	m	class:Kunde	file:	access:private
+kontostand	Guthlaf.cpp	/^		int kontostand;$/;"	m	class:Kunde	file:	access:private
+main	Galador.cpp	/^int main(){$/;"	f	signature:()
+main	Galadriel.cpp	/^int main(){$/;"	f	signature:()
+main	Galathil.cpp	/^int main(){$/;"	f	signature:()
+main	Galdor.cpp	/^int main(){$/;"	f	signature:()
+main	Gamling.cpp	/^int main(){$/;"	f	signature:()
+main	Gilraen.cpp	/^int main(){$/;"	f	signature:()
+main	Golasgil.cpp	/^int main(){$/;"	f	signature:()
+main	Grima.cpp	/^int main(){$/;"	f	signature:()
+main	Guthlaf.cpp	/^int main(){$/;"	f	signature:()
+max	Galathil.cpp	/^			int max;$/;"	l
+name	Golasgil.cpp	/^		string name;$/;"	m	class:Kontakt	file:	access:private
+name	Grima.cpp	/^		string name;$/;"	m	class:Kontakt	file:	access:private
+name	Guthlaf.cpp	/^		string name;$/;"	m	class:Kontakt	file:	access:private
+nenner	Galador.cpp	/^		int nenner;$/;"	m	class:Bruch	file:	access:private
+nenner	Galathil.cpp	/^			int nenner = this->nenner;$/;"	l
+nenner	Galathil.cpp	/^		int nenner;$/;"	m	class:Bruch	file:	access:private
+normalisiere	Galathil.cpp	/^			out.normalisiere();$/;"	p	file:	signature:()
+normalisiere	Galathil.cpp	/^		void normalisiere(){$/;"	f	class:Bruch	file:	access:private	signature:()
+operator *	Galadriel.cpp	/^	friend int operator*(const Punkt& p1, const Punkt& p2){$/;"	f	class:Punkt	access:friend	signature:(const Punkt& p1, const Punkt& p2)
+operator *	Galathil.cpp	/^		friend Bruch operator*(Bruch& b1, Bruch& b2){$/;"	f	class:Bruch	access:friend	signature:(Bruch& b1, Bruch& b2)
+operator *	Galdor.cpp	/^		friend Complex operator*(const Complex& a, const Complex& b){$/;"	f	class:Complex	access:friend	signature:(const Complex& a, const Complex& b)
+operator *=	Galdor.cpp	/^		Complex& operator*=(const Complex& c){$/;"	f	class:Complex	access:public	signature:(const Complex& c)
+operator +	Galadriel.cpp	/^	friend Punkt operator+(const Punkt& p1, const Punkt& p2){$/;"	f	class:Punkt	access:friend	signature:(const Punkt& p1, const Punkt& p2)
+operator +	Galathil.cpp	/^		friend Bruch operator+(Bruch& b1, Bruch& b2){$/;"	f	class:Bruch	access:friend	signature:(Bruch& b1, Bruch& b2)
+operator +	Galdor.cpp	/^		friend Complex operator+(const Complex& a, const Complex& b){$/;"	f	class:Complex	access:friend	signature:(const Complex& a, const Complex& b)
+operator +=	Galadriel.cpp	/^	Punkt& operator+=(const Punkt& p){$/;"	f	class:Punkt	access:public	signature:(const Punkt& p)
+operator +=	Galdor.cpp	/^		Complex& operator+=(const Complex& c){$/;"	f	class:Complex	access:public	signature:(const Complex& c)
+operator -	Galadriel.cpp	/^	friend Punkt operator-(const Punkt& p1, const Punkt& p2){$/;"	f	class:Punkt	access:friend	signature:(const Punkt& p1, const Punkt& p2)
+operator -	Galathil.cpp	/^		friend Bruch operator-(Bruch& b1, Bruch& b2){$/;"	f	class:Bruch	access:friend	signature:(Bruch& b1, Bruch& b2)
+operator -	Galdor.cpp	/^		friend Complex operator-(const Complex& a, const Complex& b){$/;"	f	class:Complex	access:friend	signature:(const Complex& a, const Complex& b)
+operator -=	Galadriel.cpp	/^	Punkt& operator-=(const Punkt& p){$/;"	f	class:Punkt	access:public	signature:(const Punkt& p)
+operator -=	Galdor.cpp	/^		Complex& operator-=(const Complex& c){$/;"	f	class:Complex	access:public	signature:(const Complex& c)
+operator /	Galathil.cpp	/^		friend Bruch operator\/(Bruch& b1, Bruch& b2){$/;"	f	class:Bruch	access:friend	signature:(Bruch& b1, Bruch& b2)
+operator <<	Galador.cpp	/^		friend ostream& operator<<(ostream& os, const Bruch& b){$/;"	f	class:Bruch	access:friend	signature:(ostream& os, const Bruch& b)
+operator <<	Galadriel.cpp	/^	friend ostream& operator<<(ostream & os,  Punkt const & p){$/;"	f	class:Punkt	access:friend	signature:(ostream & os, Punkt const & p)
+operator <<	Galathil.cpp	/^		friend ostream& operator<<(ostream& os, const Bruch& b){$/;"	f	class:Bruch	access:friend	signature:(ostream& os, const Bruch& b)
+operator <<	Galdor.cpp	/^		friend ostream& operator<<(ostream& os, const Complex& c){$/;"	f	class:Complex	access:friend	signature:(ostream& os, const Complex& c)
+operator <<	Gamling.cpp	/^	friend ostream& operator<<(ostream & os,  Punkt const & p){$/;"	f	class:Punkt	access:friend	signature:(ostream & os, Punkt const & p)
+operator <<	Golasgil.cpp	/^		friend ostream& operator<<(ostream& os, Kontakt& kontakt){$/;"	f	class:Kontakt	access:friend	signature:(ostream& os, Kontakt& kontakt)
+operator =	Galadriel.cpp	/^	Punkt& operator=(const Punkt& p){$/;"	f	class:Punkt	access:public	signature:(const Punkt& p)
+operator =	Gamling.cpp	/^	Punkt& operator=(const Punkt& p){$/;"	f	class:Punkt	access:public	signature:(const Punkt& p)
+out	Galadriel.cpp	/^		Punkt out(p1);$/;"	p	file:	signature:(p1)
+out	Galathil.cpp	/^			Bruch out(b1);$/;"	p	file:	signature:(b1)
+out	Galathil.cpp	/^			Bruch out(b2);$/;"	p	file:	signature:(b2)
+out	Galdor.cpp	/^			Complex out(a);$/;"	p	file:	signature:(a)
+p	Gamling.cpp	/^	Punkt p;$/;"	l
+p1	Galadriel.cpp	/^	Punkt p1(p);$/;"	p	file:	signature:(p)
+p1	Gamling.cpp	/^	Punkt p1(p);$/;"	p	file:	signature:(p)
+push_back	Grima.cpp	/^	kontakte.push_back(a);$/;"	p	file:	signature:(a)
+push_back	Grima.cpp	/^	kontakte.push_back(b);$/;"	p	file:	signature:(b)
+push_back	Grima.cpp	/^	kontakte.push_back(c);$/;"	p	file:	signature:(c)
+push_back	Grima.cpp	/^	kontakte.push_back(d);$/;"	p	file:	signature:(d)
+push_back	Guthlaf.cpp	/^	kontakte.push_back(a);$/;"	p	file:	signature:(a)
+push_back	Guthlaf.cpp	/^	kontakte.push_back(b);$/;"	p	file:	signature:(b)
+push_back	Guthlaf.cpp	/^	kontakte.push_back(c);$/;"	p	file:	signature:(c)
+push_back	Guthlaf.cpp	/^	kontakte.push_back(d);$/;"	p	file:	signature:(d)
+setAlter	Golasgil.cpp	/^		void setAlter(float alter){$/;"	f	class:Kontakt	access:public	signature:(float alter)
+setAnzahlSitzplaetze	Gilraen.cpp	/^		void setAnzahlSitzplaetze(int anzahlSitzplaetze){$/;"	f	class:Amphibie	access:public	signature:(int anzahlSitzplaetze)
+setKontostand	Grima.cpp	/^		void setKontostand(int kontostand){$/;"	f	class:Kunde	access:public	signature:(int kontostand)
+setKontostand	Guthlaf.cpp	/^		void setKontostand(int kontostand){$/;"	f	class:Kunde	access:public	signature:(int kontostand)
+setName	Golasgil.cpp	/^		void setName(string name){$/;"	f	class:Kontakt	access:public	signature:(string name)
+setNenner	Galador.cpp	/^		void setNenner(int nenner){$/;"	f	class:Bruch	access:public	signature:(int nenner)
+setNenner	Galathil.cpp	/^		void setNenner(int nenner){$/;"	f	class:Bruch	access:public	signature:(int nenner)
+setTopSpeedAuto	Gilraen.cpp	/^		void setTopSpeedAuto(float topSpeed){$/;"	f	class:Amphibie	access:public	signature:(float topSpeed)
+setTopSpeedBoot	Gilraen.cpp	/^		void setTopSpeedBoot(float topSpeed){$/;"	f	class:Amphibie	access:public	signature:(float topSpeed)
+setX	Galadriel.cpp	/^	void setX(int x1){$/;"	f	class:Punkt	access:public	signature:(int x1)
+setX	Gamling.cpp	/^	void setX(int x1){$/;"	f	class:Punkt	access:public	signature:(int x1)
+setY	Galadriel.cpp	/^	void setY(int x2){$/;"	f	class:Punkt	access:public	signature:(int x2)
+setY	Gamling.cpp	/^	int setY(int x2){$/;"	f	class:Punkt	access:public	signature:(int x2)
+setZaehler	Galador.cpp	/^		void setZaehler(int zaehler){$/;"	f	class:Bruch	access:public	signature:(int zaehler)
+setZaehler	Galathil.cpp	/^		void setZaehler(int zaehler){$/;"	f	class:Bruch	access:public	signature:(int zaehler)
+topSpeed	Gilraen.cpp	/^			Auto::topSpeed = topSpeed;$/;"	m	class:Amphibie::Auto	file:
+topSpeed	Gilraen.cpp	/^			Boot::topSpeed = topSpeed;$/;"	m	class:Amphibie::Boot	file:
+topSpeed	Gilraen.cpp	/^		float topSpeed = 0;$/;"	m	class:Fahrzeug	file:	access:public
+x	Galadriel.cpp	/^	int x = p*p1;$/;"	l
+x	Galadriel.cpp	/^	int x;$/;"	m	class:Punkt	file:	access:private
+x	Galadriel.cpp	/^	int x;$/;"	m	struct:Punkte	file:	access:public
+x	Galdor.cpp	/^		double x;$/;"	m	class:Complex	file:	access:private
+x	Gamling.cpp	/^	int x;$/;"	m	class:Punkt	file:	access:private
+x	Gamling.cpp	/^	int x;$/;"	m	struct:Punkte	file:	access:public
+y	Galadriel.cpp	/^	cin >> y;$/;"	l
+y	Galadriel.cpp	/^	int y;$/;"	m	class:Punkt	file:	access:private
+y	Galadriel.cpp	/^	int y;$/;"	m	struct:Punkte	file:	access:public
+y	Galadriel.cpp	/^	string y;$/;"	l
+y	Galdor.cpp	/^		double y;$/;"	m	class:Complex	file:	access:private
+y	Gamling.cpp	/^	int y;$/;"	m	class:Punkt	file:	access:private
+y	Gamling.cpp	/^	int y;$/;"	m	struct:Punkte	file:	access:public
+z	Galadriel.cpp	/^	cin >> z;$/;"	l
+z	Galadriel.cpp	/^	string z;$/;"	l
+zaehler	Galador.cpp	/^		int zaehler;$/;"	m	class:Bruch	file:	access:private
+zaehler	Galathil.cpp	/^			int zaehler = this->zaehler;$/;"	l
+zaehler	Galathil.cpp	/^		int zaehler;$/;"	m	class:Bruch	file:	access:private
+~Auto	Gilraen.cpp	/^		~Auto(){$/;"	f	class:Auto	access:public	signature:()
+~BefoerderungsMittel	Gilraen.cpp	/^		~BefoerderungsMittel(){$/;"	f	class:BefoerderungsMittel	access:public	signature:()
+~Boot	Gilraen.cpp	/^		~Boot(){$/;"	f	class:Boot	access:public	signature:()
+~Bruch	Galador.cpp	/^		~Bruch(){$/;"	f	class:Bruch	access:public	signature:()
+~Bruch	Galathil.cpp	/^		~Bruch(){$/;"	f	class:Bruch	access:public	signature:()
+~Fahrzeug	Gilraen.cpp	/^		~Fahrzeug(){$/;"	f	class:Fahrzeug	access:public	signature:()
+~IReport	Guthlaf.cpp	/^		~IReport(){}$/;"	f	class:IReport	access:public	signature:()
+~Kontakt	Golasgil.cpp	/^		~Kontakt(){}$/;"	f	class:Kontakt	access:public	signature:()
+~Kontakt	Grima.cpp	/^		~Kontakt(){$/;"	f	class:Kontakt	access:public	signature:()
+~Kontakt	Guthlaf.cpp	/^		~Kontakt(){$/;"	f	class:Kontakt	access:public	signature:()
+~Punkt	Galadriel.cpp	/^	~Punkt(){$/;"	f	class:Punkt	access:public	signature:()
+~Punkt	Gamling.cpp	/^	~Punkt(){$/;"	f	class:Punkt	access:public	signature:()

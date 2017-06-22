@@ -1,0 +1,6 @@
+syn keyword CTagsLocalVariable a c p endl nenner b amphibie1 e ggt amphibie2 kontakte y max zaehler z x d
+syn keyword CTagsStructure Punkte
+syn keyword CTagsMember bankverbindung anzahlSitzplaetze nenner anzahlSchiffsschrauben anzahlRaeder y alter zaehler topSpeed name x kontostand
+syn keyword CTagsFunction p1 setKontostand BefoerderungsMittel push_back setNenner konjugiere MonatsReport Fahrzeug Bruch getTopSpeedBoot Punkt IReport getGGT Kunde getTopSpeedAuto setX Amphibie setY Complex getKontostand getMaxNorm out getName getX getNenner c getBankverbindung setTopSpeedBoot setZaehler setAlter normalisiere getZaehler Lieferant getAnzahlSitzplaetze Auto Kontakt setTopSpeedAuto setAnzahlSitzplaetze main getY Boot setName getAlter
+syn keyword CTagsClass KontaktVerwaltung Kontakt Kunde Boot BefoerderungsMittel Fahrzeug Punkt FahrzeugVerwaltung Lieferant Amphibie IReport Bruch Complex Auto
+
