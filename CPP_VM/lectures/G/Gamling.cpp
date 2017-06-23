@@ -28,7 +28,7 @@ class Punkt{
 		return *this;
 	}
 
-	friend ostream& operator<<(ostream & os,  Punkt const & p){
+	friend ostream& operator<<(ostream & os, const Punkt& p){
 		os << "(" << p.x << "/" << p.y << ")" ;
 		return os;
 	}

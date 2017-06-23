@@ -21,10 +21,17 @@
 - funktionen
 - klassen
 - structs
+- enums
+	- liste mit constanten
+- typedef in templates
+	- typedef T value_type
+	- value_type ist ein alias zum type T
+	- weil außerhalb der klasse würde klasse::T nicht gehen
 
 - notizen
 - funktionspointer
-typedef double (*func_t)(double);
+	- typedef double (*func_t)(double);
+	- vector<func_t>
 
 double quad(doubble x){
 	return x*x;
@@ -44,3 +51,4 @@ int abc(){
 int main(){
 	abc();
 }
+

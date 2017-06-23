@@ -1,0 +1,7 @@
+syn keyword CTagsLocalVariable endl
+syn keyword CTagsStructure Punkte
+syn keyword CTagsMember y x
+syn keyword CTagsFunction setY Punkt getY main getX setX
+syn keyword CTagsType value_type
+syn keyword CTagsClass Punkt
+

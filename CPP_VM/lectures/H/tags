@@ -1,0 +1,47 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	makefile	/^CC = gcc$/;"	m
+CEXAMPLES	makefile	/^CEXAMPLES = $(shell find . -name '*.c' -print -type f)$/;"	m
+CFLAGS	makefile	/^CFLAGS = -ansi -pedantic -Wall -Wextra -Wconversion -O3$/;"	m
+CTARGETS	makefile	/^CTARGETS = $(CEXAMPLES:.c=.out)$/;"	m
+CXX	makefile	/^CXX = g++$/;"	m
+CXXEXAMPLES	makefile	/^CXXEXAMPLES = $(shell find . -name '*.cpp' -print -type f)$/;"	m
+CXXFLAGS	makefile	/^CXXFLAGS = -ansi -pedantic -Wall -Wextra -Wconversion$/;"	m
+CXXTARGETS	makefile	/^CXXTARGETS = $(CXXEXAMPLES:.cpp=.out) $/;"	m
+LDFLAGS	makefile	/^LDFLAGS = -lm$/;"	m
+Punkt	Hador.cpp	/^		Punkt(T n, T z): x(x), y(y){}$/;"	f	class:Punkt	access:public	signature:(T n, T z)
+Punkt	Hador.cpp	/^		Punkt(const Punkt<T>& p): x(p.x), y(p.y){}$/;"	f	class:Punkt	access:public	signature:(const Punkt<T>& p)
+Punkt	Hador.cpp	/^		Punkt(struct Punkte<T>& p): x(p.x), y(p.y){}$/;"	f	class:Punkt	access:public	signature:(struct Punkte<T>& p)
+Punkt	Hador.cpp	/^class Punkt {$/;"	c	file:
+Punkt::Punkt	Hador.cpp	/^		Punkt(T n, T z): x(x), y(y){}$/;"	f	class:Punkt	access:public	signature:(T n, T z)
+Punkt::Punkt	Hador.cpp	/^		Punkt(const Punkt<T>& p): x(p.x), y(p.y){}$/;"	f	class:Punkt	access:public	signature:(const Punkt<T>& p)
+Punkt::Punkt	Hador.cpp	/^		Punkt(struct Punkte<T>& p): x(p.x), y(p.y){}$/;"	f	class:Punkt	access:public	signature:(struct Punkte<T>& p)
+Punkt::getX	Hador.cpp	/^		int getX() const {$/;"	f	class:Punkt	access:public	signature:() const
+Punkt::getY	Hador.cpp	/^		int getY() const {$/;"	f	class:Punkt	access:public	signature:() const
+Punkt::operator <<	Hador.cpp	/^		friend ostream& operator<<(ostream & os, const Punkt<T>& p){$/;"	f	class:Punkt	access:friend	signature:(ostream & os, const Punkt<T>& p)
+Punkt::setX	Hador.cpp	/^		void setX(const T& x){$/;"	f	class:Punkt	access:public	signature:(const T& x)
+Punkt::setY	Hador.cpp	/^		void setY(const T& y){$/;"	f	class:Punkt	access:public	signature:(const T& y)
+Punkt::value_type	Hador.cpp	/^		typedef T value_type;$/;"	t	class:Punkt	file:	access:private
+Punkt::x	Hador.cpp	/^		T x;$/;"	m	class:Punkt	file:	access:private
+Punkt::y	Hador.cpp	/^		T y;$/;"	m	class:Punkt	file:	access:private
+Punkt::~Punkt	Hador.cpp	/^		~Punkt(){}$/;"	f	class:Punkt	access:public	signature:()
+Punkte	Hador.cpp	/^struct Punkte{$/;"	s	file:
+Punkte::x	Hador.cpp	/^	T x;$/;"	m	struct:Punkte	file:	access:public
+Punkte::y	Hador.cpp	/^	T y;$/;"	m	struct:Punkte	file:	access:public
+endl	Hador.cpp	/^	cout <<p <<endl;$/;"	l
+getX	Hador.cpp	/^		int getX() const {$/;"	f	class:Punkt	access:public	signature:() const
+getY	Hador.cpp	/^		int getY() const {$/;"	f	class:Punkt	access:public	signature:() const
+main	Hador.cpp	/^int main(){$/;"	f	signature:()
+operator <<	Hador.cpp	/^		friend ostream& operator<<(ostream & os, const Punkt<T>& p){$/;"	f	class:Punkt	access:friend	signature:(ostream & os, const Punkt<T>& p)
+setX	Hador.cpp	/^		void setX(const T& x){$/;"	f	class:Punkt	access:public	signature:(const T& x)
+setY	Hador.cpp	/^		void setY(const T& y){$/;"	f	class:Punkt	access:public	signature:(const T& y)
+value_type	Hador.cpp	/^		typedef T value_type;$/;"	t	class:Punkt	file:	access:private
+x	Hador.cpp	/^		T x;$/;"	m	class:Punkt	file:	access:private
+x	Hador.cpp	/^	T x;$/;"	m	struct:Punkte	file:	access:public
+y	Hador.cpp	/^		T y;$/;"	m	class:Punkt	file:	access:private
+y	Hador.cpp	/^	T y;$/;"	m	struct:Punkte	file:	access:public
+~Punkt	Hador.cpp	/^		~Punkt(){}$/;"	f	class:Punkt	access:public	signature:()
