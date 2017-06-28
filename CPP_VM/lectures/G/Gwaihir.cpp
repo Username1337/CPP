@@ -23,11 +23,15 @@ class Queue {
 			}
 		}
 
-		void add(int x){
-			this->elemente.push_back(x);
+		bool operator==(const Queue& rechts){
+			return this->elemente == rechts.elemente;
 		}
 
-		const Queue& operator+=(const Queue& q){
+		bool operator!=(const Queue& rechts){
+			return !(*this==rechts);
+		}
+
+		Queue& operator+=(const Queue& q){
 			for(int i: q.elemente){
 				this->elemente.push_back(i);
 			}
@@ -40,7 +44,7 @@ class Queue {
 			return *neu;
 		}
 
-		const Queue& operator+=(const int x){
+		Queue& operator+=(const int x){
 			this->elemente.push_back(x);
 			return *this;
 		}
@@ -51,7 +55,11 @@ class Queue {
 			return *neu;
 		}
 
-		const int operator[](size_t idx){ 
+		void add(int x){
+			this->elemente.push_back(x);
+		}
+
+		int operator[](size_t idx){ 
 			return this->elemente[idx];
 		}
 
@@ -71,10 +79,6 @@ class Queue {
 
 int main(){
 	cout << "Hallo" << endl;
-	vector<int> v();
-	vector<int> v2{1,23};
-	vector<int>* v3 = new vector<int>();
-	vector<int>* v4 = new vector<int>{3,4,5};
 	Queue* d = new Queue();
 	*d+=22;
 	*d+=23;
