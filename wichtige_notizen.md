@@ -113,6 +113,51 @@
 	}
 	```
 
+## Iterator
+- man kann mit `for(auto a: A)` über die Elemente iterieren
+- Beispiel in lectures/Grinnah.cpp
+- G23\_ranged\_base\_for.cpp:
+	```cpp
+	class D {
+
+		// nested class definition inside
+		class myiterator
+		{
+			private:
+				const D & d;    // we need to know which iterator we traverse
+				size_t index;      // and the position
+
+			public:
+				myiterator(const D & _d, size_t _index) : d(_d), index(_index) { }
+
+				// for simplicity, compare identity and indices only
+				bool operator!=(const myiterator& rhs) const{
+					//die beiden listen müssen gleich sein, aber die position anders
+					return (&d==&rhs.d) && (index!=rhs.index);
+				}
+
+				double operator*() const {
+					return d.v[index];
+				}
+
+				const myiterator& operator++(){
+					++index;
+					return *this;   // standard return value
+				}
+		};
+
+		private:    
+		vector<double> v;
+
+		public:
+		// use initializer_list from vector
+		D(const initializer_list<double>& l) : v(l) { }
+
+		myiterator begin () const { return myiterator(*this, 0); }
+		myiterator end () const   { return myiterator(*this, v.size()); }
+	};
+	```
+
 ## Wichtige Elemente
 
 - Hello World
@@ -180,6 +225,7 @@ cout << i;
 		v[3];
 		//iterate
 		for(auto x: v){...}
+		v.size();
 		```
 
 ## Datenstrukturen
@@ -216,3 +262,4 @@ cout << i;
 	```
 
 ## Templates
+

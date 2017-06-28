@@ -4,6 +4,31 @@
 using namespace std;
 
 class Queue {
+
+	class myiterator{
+		private:
+			const Queue& queue;
+			size_t index;
+
+		public:
+			myiterator(const Queue& _d, size_t _index): queue(_d), index(_index) {}
+
+			bool operator!=(const myiterator& rechts) const{
+				bool gleiche_element_liste = ( &(this->queue.elemente) == &(rechts.queue.elemente) );
+				bool nicht_gleiche_indizes = (this->index != rechts.index);
+				return gleiche_element_liste && nicht_gleiche_indizes;
+			}
+
+			double operator*() const{
+				return queue.elemente[index];
+			}
+
+			const myiterator& operator++(){
+				this->index++;
+				return *this;
+			}
+	};
+
 	private:
 		vector<int> elemente;
 
@@ -81,6 +106,14 @@ class Queue {
 			os << "]";
 			return os;
 		}
+
+		myiterator begin() const {
+			return myiterator(*this, 0);
+		}
+
+		myiterator end(){
+			return myiterator(*this, this->elemente.size());
+		}
 };
 
 int main(){
@@ -94,7 +127,11 @@ int main(){
 	(*q)[1] = 3;
 	cout << "q[1]: " << (*q)[1] << endl;
 
-	cout << *q;
+	for(auto x: (*q)){
+		cout << x << endl;
+	}
+
+	/* cout << *q; */
 
 	return 127;
 }
