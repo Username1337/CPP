@@ -17,7 +17,7 @@ class Queue {
 			}
 		}
 
-		Queue(initializer_list<int> liste){
+		Queue(const initializer_list<int>& liste){
 			for(int x: liste){
 				this->elemente.push_back(x);
 			}
@@ -34,7 +34,7 @@ class Queue {
 			return *this;
 		}
 
-		friend Queue& operator+(const Queue& links, const Queue& rechts){
+		friend const Queue& operator+(const Queue& links, const Queue& rechts){
 			Queue* neu = new Queue(links);
 			*neu+=rechts;
 			return *neu;
@@ -45,10 +45,14 @@ class Queue {
 			return *this;
 		}
 
-		friend Queue& operator+(const Queue& links, const int x){
+		friend const Queue& operator+(const Queue& links, const int x){
 			Queue* neu = new Queue(links);
 			*neu+=x;
 			return *neu;
+		}
+
+		const int operator[](size_t idx){ 
+			return this->elemente[idx];
 		}
 
 		void print(){
@@ -67,6 +71,10 @@ class Queue {
 
 int main(){
 	cout << "Hallo" << endl;
+	vector<int> v();
+	vector<int> v2{1,23};
+	vector<int>* v3 = new vector<int>();
+	vector<int>* v4 = new vector<int>{3,4,5};
 	Queue* d = new Queue();
 	*d+=22;
 	*d+=23;
