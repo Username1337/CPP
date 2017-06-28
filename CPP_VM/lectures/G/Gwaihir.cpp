@@ -64,8 +64,9 @@ class Queue {
 		}
 
 		void print(){
+			string out = "";
 			for(int x: this->elemente){
-				cout << x << endl;
+				out+=x+", ";
 			}
 			//Alternativen
 			/* for(auto x = this->elemente.begin(); x!=this->elemente.end(); x++){ */
@@ -80,15 +81,12 @@ class Queue {
 int main(){
 	cout << "Hallo" << endl;
 	Queue* d = new Queue();
-	*d+=22;
-	*d+=23;
-	*d+=24;
-	*d+=25;
-	*d+=26;
-	/* d->print(); */
-	Queue* q = new Queue{12,13,14,15,16};
-	//TODO how to make a new object with {...} on the heap
+	*d+=20;
+	*d+=21;
+	Queue* q = new Queue{10,11};
 	*q+=*d;
-	q->print();
+	/* q->print(); */
+	cout << q;
+	q->add(4);
 	return 0;
 }
