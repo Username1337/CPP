@@ -10,17 +10,13 @@ class Bruch {
 		int nenner;
 
 	public:
-		Bruch(): zaehler(1), nenner(1){
-		}
+		Bruch(): zaehler(1), nenner(1){}
 
-		Bruch(int zaehler, int nenner): zaehler(zaehler), nenner(nenner){
-		}
+		Bruch(int zaehler, int nenner): zaehler(zaehler), nenner(nenner){}
 
-		Bruch(Bruch& bruch): zaehler(bruch.zaehler), nenner(bruch.nenner){
-		}
+		Bruch(Bruch& bruch): zaehler(bruch.zaehler), nenner(bruch.nenner){}
 
-		~Bruch(){
-		}
+		~Bruch(){}
 
 		friend ostream& operator<<(ostream& os, const Bruch& b){
 			os << b.zaehler << "/" << b.nenner;
@@ -31,7 +27,7 @@ class Bruch {
 			return this->zaehler;
 		}
 
-		void setZaehler(int zaehler){
+		void setZaehler(const int zaehler){
 			this->zaehler = zaehler;
 		}
 
@@ -39,7 +35,7 @@ class Bruch {
 			return this->nenner;
 		}
 
-		void setNenner(int nenner){
+		void setNenner(const int nenner){
 			this->nenner = nenner;
 		}
 };
@@ -48,6 +44,7 @@ int main(){
 	Bruch a(2,3);
 	Bruch b;
 	Bruch c(a);
+	Bruch d;
 	cout << a << endl;
 	cout << b << endl;
 	cout << c << endl;

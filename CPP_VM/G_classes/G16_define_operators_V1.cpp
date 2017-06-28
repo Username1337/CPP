@@ -52,7 +52,7 @@ int main()
 	tools_log(); cout << "play with operators ..." << endl;
 
 	Bruch b1(2,3),b2(3,1),b3(3,2);
-	b1.getBla();
+	/* b1.getBla(); */
 
 	tools_log(); cout << "b1:" << b1 << ",b2:" << b2 << ",b3:" << b3 << endl;
 
