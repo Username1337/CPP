@@ -52,6 +52,7 @@ thread t1(Work, ref(4));
 ```
 
 - kritische regionen
+- `#include <condition_variable>`
 ```
 mutex_sum->lock();
 (*sum) += inc;
