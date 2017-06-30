@@ -48,7 +48,9 @@ class Punkt {
 };
 
 int main(){
-	Punkt<int> p(2,3);
-	cout <<p <<endl;
+	Punkt<int> i(2,3);
+	Punkt<double> d(2.4,3.8);
+	cout <<i <<endl;
+	cout <<d <<endl;
 	return 0;
 }
