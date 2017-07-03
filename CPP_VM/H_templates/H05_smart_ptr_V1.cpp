@@ -78,7 +78,6 @@ int main()
 		//C* pp = createC(4);
 		//unique_ptr<C> p3(pp);
 		//unique_ptr<C> p4(pp);
-
 	}
 
 	return EXIT_SUCCESS;

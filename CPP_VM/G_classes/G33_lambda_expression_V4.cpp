@@ -9,7 +9,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <vector>
-#include <algorithm>
+#include <algorithms>
 using namespace std;
 
 #include "../tools/tools.h"
