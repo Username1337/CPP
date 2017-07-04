@@ -429,6 +429,7 @@
 - mutex / kritische regionen
 	- `#include <condition_variable>`
 	- sperrt threads vor dem zugriff auf variablen, oder ganze bereiche eines codes
+	- [CPP References](file:///home/bergiu/Downloads/reference/en/cpp/thread/mutex.html)
 
 	- unsichere methode
 		```cpp
