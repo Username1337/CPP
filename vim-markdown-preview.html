@@ -1,0 +1,452 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+</head>
+<body>
+<h1 id="wichtige-notizen">Wichtige Notizen</h1>
+<h2 id="wichtige-elemente">Wichtige Elemente</h2>
+<ul>
+<li><p>Hello World</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span>
+<span class="pp">#include </span><span class="im">&lt;string&gt;</span>
+
+<span class="kw">using</span> <span class="kw">namespace</span> std;
+
+<span class="dt">int</span> main(){
+    cout &lt;&lt; <span class="st">&quot;Hello World&quot;</span> &lt;&lt; endl;
+    <span class="cf">return</span> <span class="dv">0</span>;
+}</code></pre></div></li>
+<li><p>Ein/Ausgabe</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> i;
+cin &gt;&gt; i;
+cout &lt;&lt; i;</code></pre></div></li>
+</ul>
+<h2 id="datentypen">Datentypen</h2>
+<ul>
+<li>Primitive Datentypen
+<ul>
+<li><code>size_t</code>
+<ul>
+<li>positiver int</li>
+</ul></li>
+</ul></li>
+<li>Arrays
+<ul>
+<li>beim übergeben an Funktionen die Länge mit geben!</li>
+<li><p>wichtige befehle</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">size_t</span> length = <span class="dv">3</span>;              <span class="co">//size</span>
+<span class="dt">int</span> arr[length];                <span class="co">//stack</span>
+<span class="dt">int</span>* arr = <span class="kw">new</span> <span class="dt">int</span>[length];     <span class="co">//heap</span>
+<span class="co">//sonstiges</span>
+cout &lt;&lt; arr[<span class="dv">2</span>];                 <span class="co">//get</span>
+arr[<span class="dv">2</span>] = <span class="dv">5</span>;                     <span class="co">//set</span>
+<span class="co">//</span><span class="al">TODO</span><span class="co"> geht nicht</span>
+arr[<span class="dv">2</span>] = <span class="kw">nullptr</span>;               <span class="co">//remove</span>
+<span class="co">//iterate</span>
+<span class="cf">for</span>(<span class="dt">int</span> x: arr){ ... }
+<span class="cf">for</span>(<span class="dt">size_t</span> i=<span class="dv">0</span>; i&lt;<span class="kw">sizeof</span>(arr)/<span class="kw">sizeof</span>(<span class="dt">int</span>); ++i){ ... }</code></pre></div></li>
+</ul></li>
+<li>CPP Arrays
+<ul>
+<li><a href="file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/container/array.html">CPP References</a></li>
+</ul></li>
+<li>Vector
+<ul>
+<li><code>#include &lt;vector&gt;</code></li>
+<li>Arraylist</li>
+<li><p>how to use</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">vector&lt;<span class="dt">int</span>&gt; v();            <span class="co">//stack</span>
+vector&lt;<span class="dt">int</span>&gt; v{<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>};       <span class="co">//stack</span>
+vector&lt;<span class="dt">int</span>&gt;* v = <span class="kw">new</span> vector&lt;<span class="dt">int</span>&gt;();         <span class="co">//heap</span>
+vector&lt;<span class="dt">int</span>&gt;* v = <span class="kw">new</span> vector&lt;<span class="dt">int</span>&gt;{<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>};    <span class="co">//heap</span>
+<span class="co">//sonstiges</span>
+v.push_back(<span class="dv">3</span>);             <span class="co">//append</span>
+v[<span class="dv">3</span>];                       <span class="co">//get</span>
+v[<span class="dv">3</span>] = <span class="dv">2</span>;                   <span class="co">//set</span>
+<span class="co">//</span><span class="al">TODO</span><span class="co"> remove</span>
+v.size();                   <span class="co">//size</span>
+<span class="co">//iterate</span>
+<span class="cf">for</span>(<span class="kw">auto</span> x: v){...}
+<span class="co">//count vector elements if lambda expression returns true</span>
+<span class="dt">int</span> cnt1 = count_if (v.begin(), v.end(), [](<span class="dt">int</span> k){ <span class="cf">return</span> (<span class="dv">0</span>==k%<span class="dv">2</span>);});</code></pre></div></li>
+<li><p><a href="file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/container/vector.html">CPP References</a></p></li>
+</ul></li>
+<li>Set
+<ul>
+<li><code>#include &lt;set&gt;</code></li>
+<li>Menge
+<ul>
+<li>es gibt keine doppelten Elemente</li>
+</ul></li>
+<li><p>How to use:</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">set&lt;<span class="dt">int</span>&gt; s = {<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>};
+s.insert(<span class="dv">3</span>);
+s.size();</code></pre></div></li>
+<li><p><a href="file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/container/set.html">CPP References</a></p></li>
+</ul></li>
+<li>Unordered Map
+<ul>
+<li><code>#include &lt;unordered_map&gt;</code></li>
+<li>AssoziativesArray/HashMap</li>
+<li><p>How to use</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">unordered_map&lt;<span class="dt">long</span>,<span class="dt">long</span>&gt; map;</code></pre></div></li>
+<li><p><a href="file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/container/unordered_map.html">CPP References</a></p></li>
+</ul></li>
+<li>Chrono
+<ul>
+<li><code>#include &lt;chrono&gt;</code></li>
+<li>Für die Zeitmessung</li>
+<li><code>G_classes/G26_timing.cpp</code></li>
+<li><p>how to use</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> f(){
+this_thread::sleep_for(chrono::milliseconds(<span class="dv">2134</span>));     <span class="co">//sleep 2134 ms</span>
+this_thread::sleep_for(chrono::seconds(<span class="dv">2</span>));             <span class="co">//sleep    2 s</span>
+}
+<span class="kw">auto</span> t1 = chrono::high_resolution_clock::now();
+f();
+<span class="kw">auto</span> t2 = chrono::high_resolution_clock::now();
+cout &lt;&lt; chrono::duration_cast&lt;chrono::milliseconds&gt;(t2-t1).count() &lt;&lt; <span class="st">&quot;ms&quot;</span>;</code></pre></div></li>
+<li><p><a href="file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/chrono.html">CPP References</a></p></li>
+</ul></li>
+<li>Math
+<ul>
+<li><code>#include &lt;cmath&gt;</code></li>
+</ul></li>
+</ul>
+<h2 id="datenstrukturen">Datenstrukturen</h2>
+<ul>
+<li>Structs
+<ul>
+<li><p>Klassen ohne Funktionen mit nur public members</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//</span><span class="al">TODO</span></code></pre></div></li>
+</ul></li>
+<li>Enums
+<ul>
+<li>Liste mit Konstanten</li>
+<li>wird zur Compilezeit festgelegt</li>
+<li><p>How to use</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">enum</span> { dim = <span class="dv">4</span> };</code></pre></div></li>
+</ul></li>
+</ul>
+<h2 id="funktions-pointer">Funktions Pointer</h2>
+<ul>
+<li><p>Type Definition</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">double</span>(*<span class="dt">func_t</span>)(<span class="dt">double</span>);
+<span class="co">//func_t ist jetzt der Name für Funktionen dieses Aufbaus</span></code></pre></div></li>
+<li><p>wichtige Befehle</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">vector&lt;<span class="dt">func_t</span>&gt; v;                       <span class="co">//vector der diese Funktionen enthält</span>
+<span class="dt">double</span> quad(<span class="dt">double</span> x){ <span class="cf">return</span> x*x }     <span class="co">//neue func_t Funktion</span>
+v.push_back(quad);                      <span class="co">//Funktion zu vector hinzufügen</span>
+v.push_back(&amp;quad);                     <span class="co">//das selbe</span>
+v[<span class="dv">0</span>](<span class="dv">4</span>);                                <span class="co">//ausführen, liefert 16</span></code></pre></div></li>
+</ul>
+<h2 id="operatoren-konstruktoren">Operatoren / Konstruktoren</h2>
+<ul>
+<li><p><code>Constructor mit: a(a)</code></p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Bruch(<span class="dt">int</span> zaehler, <span class="dt">int</span> nenner): zaehler(zaehler), nenner(nenner){}</code></pre></div></li>
+<li><p><code>Copy Constructor</code></p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Bruch(<span class="at">const</span> Bruch&amp; alt): zaehler(alt.zaehler), nenner(alt.nenner){}</code></pre></div></li>
+<li><p><code>Destructor</code></p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">~Bruch(){}</code></pre></div></li>
+<li><code>{} Constructor</code>
+<ul>
+<li><p>Stack</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Queue q = {<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>}</code></pre></div></li>
+<li><p>Heap</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Queue* q = <span class="kw">new</span> Queue{<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>}</code></pre></div></li>
+<li><p>Constructor:</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Queue(<span class="at">const</span> initializer_list&lt;<span class="dt">int</span>&gt;&amp; liste){
+    <span class="cf">for</span>(<span class="dt">int</span> x: liste){
+        <span class="kw">this</span>-&gt;elemente.push_back(x);
+    }
+}</code></pre></div></li>
+</ul></li>
+<li><p><code>Operatoren: == !=</code></p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">bool</span> <span class="kw">operator</span>==(<span class="at">const</span> Queue&amp; rechts){
+    <span class="cf">return</span> <span class="kw">this</span>-&gt;elemente == rechts.elemente;
+}
+<span class="dt">bool</span> <span class="kw">operator</span>!=(<span class="at">const</span> Queue&amp; rechts){
+    <span class="cf">return</span> !(*<span class="kw">this</span>==rechts);
+}</code></pre></div></li>
+<li><p><code>Operatoren: *= += /= -=</code></p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Queue&amp; opertator+=(<span class="at">const</span> Queue&amp; rechts){
+    <span class="cf">for</span>(<span class="dt">int</span> i: rechts.elemente){
+        <span class="kw">this</span>-&gt;elemente.push_back(i);
+    }
+    <span class="cf">return</span> *<span class="kw">this</span>;
+}</code></pre></div></li>
+<li><p><code>Operatoren: * + / -</code></p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">friend</span> <span class="at">const</span> Queue&amp; <span class="kw">operator</span>+(<span class="at">const</span> Queue&amp; links, <span class="at">const</span> Queue&amp; rechts){
+    Queue* neu = <span class="kw">new</span> Queue(links);
+    neu+=rechts;
+    <span class="cf">return</span> *neu;
+}</code></pre></div></li>
+<li><p><code>Operator: &lt;&lt;</code></p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">friend</span> ostream&amp; <span class="kw">operator</span>&lt;&lt;(ostream&amp; os, <span class="at">const</span> Bruch&amp; b){
+    os &lt;&lt; b.zaehler &lt;&lt; <span class="st">&quot;/&quot;</span> &lt;&lt; b.nenner;
+}</code></pre></div></li>
+<li><p><code>Operator: &gt;&gt;</code></p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">friend</span> istream&amp; <span class="kw">operator</span>&gt;&gt; (istream&amp; istr, complex&amp; a){}</code></pre></div></li>
+<li><p><code>Operator: []</code></p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span>&amp; <span class="kw">operator</span>[](<span class="dt">size_t</span> idx){ 
+    <span class="cf">return</span> <span class="kw">this</span>-&gt;elemente[idx];
+}</code></pre></div></li>
+<li><code>Operator: ++a</code>
+<ul>
+<li>zuerst den Wert erhöhen, dann returnen</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Bruch&amp; <span class="kw">operator</span>++(){
+    ++zaehler; ++nenner;
+    <span class="cf">return</span> *<span class="kw">this</span>;
+}</code></pre></div></li>
+<li><code>Operator: a++</code>
+<ul>
+<li>zuerst returnen, dann den Wert erhöhen</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Bruch <span class="kw">operator</span>++(<span class="dt">int</span>){
+    Bruch tmp(*<span class="kw">this</span>);
+    ++zaehler; ++nenner;
+    <span class="cf">return</span> tmp;
+}</code></pre></div></li>
+<li><p><code>Operatoren später überladen</code></p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> Bruch {
+    <span class="kw">public</span>:
+        <span class="kw">friend</span> <span class="at">const</span> Bruch&amp; <span class="kw">operator</span>+(<span class="at">const</span> Bruch&amp; links, <span class="at">const</span> Bruch&amp; rechts);
+};
+
+<span class="at">const</span> Bruch&amp; Bruch::<span class="kw">operator</span>+(<span class="at">const</span> Bruch&amp; links, <span class="at">const</span> Bruch&amp; rechts){
+    ...
+}</code></pre></div></li>
+</ul>
+<h2 id="iterator">Iterator</h2>
+<ul>
+<li>man kann mit <code>for(auto a: A)</code> über die Elemente iterieren</li>
+<li>Beispiel in lectures/Grinnah.cpp</li>
+<li><p>G23_ranged_base_for.cpp:</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> D {
+    <span class="co">// nested class definition inside</span>
+    <span class="kw">class</span> myiterator
+    {
+        <span class="kw">private</span>:
+            <span class="at">const</span> D &amp; d;            <span class="co">// we need to know which iterator we traverse</span>
+            <span class="dt">size_t</span> index;           <span class="co">// and the position</span>
+        <span class="kw">public</span>:
+            myiterator(<span class="at">const</span> D &amp; _d, <span class="dt">size_t</span> _index) : d(_d), index(_index) { }
+            <span class="co">// for simplicity, compare identity and indices only</span>
+            <span class="dt">bool</span> <span class="kw">operator</span>!=(<span class="at">const</span> myiterator&amp; rhs) <span class="at">const</span>{
+                <span class="co">//die beiden listen müssen gleich sein, aber die position anders</span>
+                <span class="cf">return</span> (&amp;d==&amp;rhs.d) &amp;&amp; (index!=rhs.index);
+            }
+            <span class="dt">double</span> <span class="kw">operator</span>*() <span class="at">const</span> {
+                <span class="cf">return</span> d.v[index];
+            }
+            <span class="at">const</span> myiterator&amp; <span class="kw">operator</span>++(){
+                ++index;
+                <span class="cf">return</span> *<span class="kw">this</span>;       <span class="co">// standard return value</span>
+            }
+    };
+    <span class="kw">private</span>:
+        vector&lt;<span class="dt">double</span>&gt; v;
+    <span class="kw">public</span>:
+        <span class="co">// use initializer_list from vector</span>
+        D(<span class="at">const</span> initializer_list&lt;<span class="dt">double</span>&gt;&amp; l) : v(l) { }
+        myiterator begin () <span class="at">const</span> { <span class="cf">return</span> myiterator(*<span class="kw">this</span>, <span class="dv">0</span>); }
+        myiterator end () <span class="at">const</span>   { <span class="cf">return</span> myiterator(*<span class="kw">this</span>, v.size()); }
+};</code></pre></div></li>
+</ul>
+<h2 id="templates">Templates</h2>
+<ul>
+<li><p>Template Klassen</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Point {
+    <span class="kw">public</span>:
+        <span class="kw">typedef</span> T <span class="dt">value_type</span>;           <span class="co">//type of the value</span>
+        <span class="kw">typedef</span> T <span class="dt">key_type</span>;             <span class="co">//type of the key</span>
+        <span class="kw">typedef</span> T <span class="dt">size_type</span>;            <span class="co">//type of the size</span>
+        <span class="co">//setzt value_type auf T, damit man von außerhalb den Type erfahren kann</span>
+        T x;
+        T y;
+};</code></pre></div></li>
+<li><p>Spezialisierung</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T <span class="dt">int</span> N&gt;
+<span class="kw">class</span> Point { ... };
+<span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> Point&lt;T, <span class="dv">3</span>&gt; { ... };
+<span class="kw">template</span> &lt;<span class="dt">int</span> N&gt;
+<span class="kw">class</span> Point&lt;<span class="dt">double</span>, N&gt; { ... };</code></pre></div></li>
+<li><p>Template Funktionen</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T1, <span class="kw">typename</span> T2&gt;
+<span class="dt">void</span> Rotate(T1&amp; t1, T2&amp; t2){
+    T1 tmp = t1;
+    t1 = t2;
+    t2 = tmp;
+}</code></pre></div></li>
+<li><p>Template mit Werten, anstelle von Typen</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T, <span class="dt">int</span> N&gt;
+<span class="kw">class</span> MyVector {
+    <span class="kw">enum</span> { dim = N };
+    T data[dim];
+    <span class="co">//einen vorgegebenen type nutzen und einen anderen</span>
+    <span class="kw">template</span> &lt;<span class="kw">typename</span> S&gt;
+    MyVector&amp; <span class="kw">operator</span>=(<span class="at">const</span> MyVector&lt;S,N&gt;&amp; v){ ... }
+};
+<span class="co">//Vector der Dimension 3</span>
+MyVector&lt;<span class="dt">int</span>, <span class="dv">3</span>&gt; mv;</code></pre></div></li>
+</ul>
+<h2 id="lambdas">Lambdas</h2>
+<ul>
+<li><p>normal</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">auto</span> add = [](<span class="dt">int</span> n) { <span class="cf">return</span> n<span class="dv">+4</span>; };
+<span class="kw">auto</span> inc = [](<span class="dt">int</span>&amp; n) { <span class="cf">return</span> ++n; };
+add(<span class="dv">4</span>);     <span class="co">//returns 8</span>
+<span class="dt">int</span> x=<span class="dv">7</span>;
+inc(x);     <span class="co">//increases x</span></code></pre></div></li>
+<li><p>copy outer vars</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> m = <span class="dv">12</span>;
+<span class="kw">auto</span> addToM = [=](<span class="dt">int</span> n) { <span class="cf">return</span> m+n; };
+addToM(<span class="dv">4</span>);  <span class="co">//returnt die summe aus m und 4</span></code></pre></div></li>
+<li>reference outer vars
+<ul>
+<li>vars können geändert werden</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">auto</span> setM = [&amp;](<span class="dt">int</span> n) { m=n };
+setM(<span class="dv">5</span>);    <span class="co">//setzt m auf 5</span></code></pre></div></li>
+<li><p>andere syntaxe</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">auto</span> pi = []() -&gt; <span class="dt">double</span> { <span class="cf">return</span> <span class="fl">3.1415926</span>; };
+<span class="kw">typedef</span> <span class="dt">double</span> (*<span class="dt">polynome_t</span>)(<span class="dt">double</span> x);
+<span class="dt">polynome_t</span> quad = [](<span class="dt">double</span> x) { <span class="cf">return</span> x*x; };</code></pre></div></li>
+</ul>
+<h2 id="smart-pointer">Smart Pointer</h2>
+<ul>
+<li>Unique Pointer
+<ul>
+<li><code>#include &lt;memory&gt;</code></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">C* c = <span class="kw">new</span> C(<span class="dv">4</span>)
+unique_ptr&lt;C&gt; p1(c);
+unique_ptr&lt;C&gt; p2;
+p2 = move(p1)               <span class="co">//verschiebt das objekt von p1 nach p2</span>
+p1.get()                    <span class="co">//gibt den zeiger zu dem objekt zurück</span>
+*p1                         <span class="co">//gibt das objekt selber zurück</span></code></pre></div></li>
+<li>Shared Pointer
+<ul>
+<li><code>#include &lt;memory&gt;</code></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">C* c = <span class="kw">new</span> C(<span class="dv">4</span>)
+shared_ptr&lt;C&gt; s1(c);
+shared_ptr&lt;C&gt; s2(c);
+s.reset()                   <span class="co">//löscht s</span>
+p1.get()                    <span class="co">//gibt den zeiger zu dem objekt zurück</span>
+*p1                         <span class="co">//gibt das objekt selber zurück</span></code></pre></div></li>
+</ul>
+<h2 id="threads">Threads</h2>
+<ul>
+<li>wenn man ein programm startet, wird der main thread gestartet</li>
+<li>bei mehreren kernen laufen die threads parallel ab</li>
+<li>beim kompilieren <code>-pthread</code> anhängen</li>
+<li>thread führt funktion aus</li>
+<li><p>how to</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> Work(<span class="dt">int</span> sec){
+    this_thread::sleep_for(chrono::seconds(sec));
+}
+thread t1(Work, <span class="dv">1</span>);
+thread t2(Work, <span class="dv">2</span>);
+thread t3([](){ this_thread::sleep_for(chrono::seconds(<span class="dv">2</span>)); }); <span class="co">//mit lambda</span>
+t2.join();              <span class="co">//wait for t2</span>
+t1.join();              <span class="co">//wait for t1</span></code></pre></div></li>
+<li><p>threads mit referenzen aufrufen</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> Work(<span class="dt">int</span>&amp; sec){
+    this_thread::sleep_for(chrono::seconds(sec));
+}
+thread t1(Work, ref(<span class="dv">4</span>));</code></pre></div></li>
+<li>mutex / kritische regionen
+<ul>
+<li><code>#include &lt;condition_variable&gt;</code></li>
+<li>sperrt threads vor dem zugriff auf variablen, oder ganze bereiche eines codes</li>
+<li><p><a href="file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/thread/mutex.html">CPP References</a></p></li>
+<li><p>unsichere methode</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> Work(<span class="dt">int</span>* sum, mutex* mutex_sum){
+    <span class="cf">for</span> (<span class="dt">int</span> i=<span class="dv">0</span>; i&lt;n; ++i){
+        mutex_sum-&gt;lock();
+        (*sum) += <span class="dv">1</span>;
+        mutex_sum-&gt;unlock();
+    }
+}
+mutex mutex_sum;                <span class="co">//erstelle einen mutex</span>
+<span class="dt">int</span> x = <span class="dv">0</span>;
+thread t1(Work, &amp;x, &amp;mutex_sum)</code></pre></div></li>
+<li><p>sichere methode</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> Work(<span class="dt">int</span>* sum, mutex* mutex_sum){
+    <span class="cf">for</span> (<span class="dt">int</span> i=<span class="dv">0</span>; i&lt;n; ++i){
+        loack_guard&lt;mutex&gt; lk(*mutex_sum);
+        (*sum) += <span class="dv">1</span>;
+    }
+}
+mutex mutex_sum;                <span class="co">//erstelle einen mutex</span>
+<span class="dt">int</span> x = <span class="dv">0</span>;
+thread t1(Work, &amp;x, &amp;mutex_sum)</code></pre></div></li>
+<li>wait until unlock
+<ul>
+<li><code>mutex.try_lock()</code>
+<ul>
+<li>returnt false, wenn es gelocked ist</li>
+<li>wenn es nicht gelocked ist, wird es gelocked und true returnt</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//zählt solange hoch, bis signal geunlocked wird</span>
+<span class="co">//und lockt es direkt wieder, geht aber aus der schleife raus</span>
+<span class="cf">while</span> (!signal.try_lock()){
+    ++cnt;
+}
+<span class="co">//jetzt wieder unlocken</span>
+signal.unlock();</code></pre></div></li>
+</ul></li>
+<li>condition variablen
+<ul>
+<li>wartet auf ein ereignis</li>
+</ul></li>
+</ul>
+</body>
+</html>

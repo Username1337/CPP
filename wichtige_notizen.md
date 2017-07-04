@@ -46,7 +46,7 @@
 		```
 
 - CPP Arrays
-	- [CPP References](file:///home/bergiu/Downloads/reference/en/cpp/container/array.html)
+	- [CPP References](file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/container/array.html)
 
 - Vector
 	- `#include <vector>`
@@ -68,7 +68,7 @@
 		//count vector elements if lambda expression returns true
 		int cnt1 = count_if (v.begin(), v.end(), [](int k){ return (0==k%2);});
 		```
-	- [CPP References](file:///home/bergiu/Downloads/reference/en/cpp/container/vector.html)
+	- [CPP References](file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/container/vector.html)
 
 - Set
 	- `#include <set>`
@@ -80,7 +80,7 @@
 		s.insert(3);
 		s.size();
 		```
-	- [CPP References](file:///home/bergiu/Downloads/reference/en/cpp/container/set.html)
+	- [CPP References](file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/container/set.html)
 
 - Unordered Map
 	- `#include <unordered_map>`
@@ -89,7 +89,7 @@
 		```cpp
 		unordered_map<long,long> map;
 		```
-	- [CPP References](file:///home/bergiu/Downloads/reference/en/cpp/container/unordered_map.html)
+	- [CPP References](file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/container/unordered_map.html)
 
 - Chrono
 	- `#include <chrono>`
@@ -106,7 +106,7 @@
 	auto t2 = chrono::high_resolution_clock::now();
 	cout << chrono::duration_cast<chrono::milliseconds>(t2-t1).count() << "ms";
 	```
-	- [CPP References](file:///home/bergiu/Downloads/reference/en/cpp/chrono.html)
+	- [CPP References](file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/chrono.html)
 
 - Math
 	- `#include <cmath>`
@@ -429,7 +429,7 @@
 - mutex / kritische regionen
 	- `#include <condition_variable>`
 	- sperrt threads vor dem zugriff auf variablen, oder ganze bereiche eines codes
-	- [CPP References](file:///home/bergiu/Downloads/reference/en/cpp/thread/mutex.html)
+	- [CPP References](file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/thread/mutex.html)
 
 	- unsichere methode
 		```cpp
