@@ -15,53 +15,53 @@ using namespace std;
 // Auf ein Signal warten
 void Work(condition_variable & cv, mutex & m) 
 {
-    tools_log(); cout << "thread started" << endl;
+	tools_log(); cout << "thread started" << endl;
 
-    std::unique_lock<std::mutex> lk(m);
-    tools_log(); cout << "got mutex, now wait for signal" << endl;
+	std::unique_lock<std::mutex> lk(m);
+	tools_log(); cout << "got mutex, now wait for signal" << endl;
 
 	cv.wait(lk);						/* Was ist mit dem Mutex?
- * 
- * 	Das Mutex muss hier natuerlich freigegeben werden, damit an
- * 	anderer Stelle auch die condition variable signalisiert werden kann.
- * 	wait gibt es intern frei.
- */
-    tools_log(); cout << "got signal, do work for 2 sec" << endl;
-    
-    // Arbeit erledigen
-    this_thread::sleep_for(std::chrono::seconds(2));
-    
-    tools_log(); cout << "work and thread done" << endl;     
+										 * 
+										 * 	Das Mutex muss hier natuerlich freigegeben werden, damit an
+										 * 	anderer Stelle auch die condition variable signalisiert werden kann.
+										 * 	wait gibt es intern frei.
+										 */
+	tools_log(); cout << "got signal, do work for 2 sec" << endl;
+
+	// Arbeit erledigen
+	this_thread::sleep_for(std::chrono::seconds(2));
+
+	tools_log(); cout << "work and thread done" << endl;     
 }
 
 int main()
 {
-    tools_log(); cout << "start thread t" << endl;
+	tools_log(); cout << "start thread t" << endl;
 
-    condition_variable cv;
-    mutex m;
-    
-    thread t(Work,ref(cv),ref(m));tools_registerthreadname(t);
+	condition_variable cv;
+	mutex m;
 
-/*	Race condition?
- * 	
- * 	Die folgende Zeile auskommentieren und das Programm haengt.
- */
-    //this_thread::sleep_for(std::chrono::milliseconds(10));
-        
-    {
-    std::unique_lock<std::mutex> lk(m);
-    tools_log(); cout << "do main work" << endl;
-    this_thread::sleep_for(std::chrono::seconds(1));
+	thread t(Work,ref(cv),ref(m));tools_registerthreadname(t);
 
-    tools_log(); cout << "done, signal thread" << endl;
-    cv.notify_one();
-    }
+	/*	Race condition?
+	 * 	
+	 * 	Die folgende Zeile auskommentieren und das Programm haengt.
+	 */
+	//this_thread::sleep_for(std::chrono::milliseconds(10));
 
-    tools_log(); cout << "and wait for join" << endl;
-    t.join();
+	{
+		std::unique_lock<std::mutex> lk(m);
+		tools_log(); cout << "do main work" << endl;
+		this_thread::sleep_for(std::chrono::seconds(1));
 
-    tools_log(); cout << "joined, done" << endl;
-    
-    return EXIT_SUCCESS;
+		tools_log(); cout << "done, signal thread" << endl;
+		cv.notify_one();
+	}
+
+	tools_log(); cout << "and wait for join" << endl;
+	t.join();
+
+	tools_log(); cout << "joined, done" << endl;
+
+	return EXIT_SUCCESS;
 }

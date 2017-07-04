@@ -45,6 +45,9 @@
 		for(size_t i=0; i<sizeof(arr)/sizeof(int); ++i){ ... }
 		```
 
+- CPP Arrays
+	- [CPP References](file:///home/bergiu/Downloads/reference/en/cpp/container/array.html)
+
 - Vector
 	- `#include <vector>`
 	- Arraylist
@@ -62,7 +65,10 @@
 		v.size();					//size
 		//iterate
 		for(auto x: v){...}
+		//count vector elements if lambda expression returns true
+		int cnt1 = count_if (v.begin(), v.end(), [](int k){ return (0==k%2);});
 		```
+	- [CPP References](file:///home/bergiu/Downloads/reference/en/cpp/container/vector.html)
 
 - Set
 	- `#include <set>`
@@ -74,6 +80,7 @@
 		s.insert(3);
 		s.size();
 		```
+	- [CPP References](file:///home/bergiu/Downloads/reference/en/cpp/container/set.html)
 
 - Unordered Map
 	- `#include <unordered_map>`
@@ -82,23 +89,27 @@
 		```cpp
 		unordered_map<long,long> map;
 		```
+	- [CPP References](file:///home/bergiu/Downloads/reference/en/cpp/container/unordered_map.html)
 
 - Chrono
 	- `#include <chrono>`
 	- Für die Zeitmessung
-	this_thread::sleep_for(chrono::seconds(2));
-
-- Limits
-	- `#include <limits>`
-	- How to use
-		```cpp
-		```
+	- `G_classes/G26_timing.cpp`
+	- how to use
+	```cpp
+	void f(){
+		this_thread::sleep_for(chrono::milliseconds(2134));		//sleep 2134 ms
+		this_thread::sleep_for(chrono::seconds(2));				//sleep    2 s
+	}
+	auto t1 = chrono::high_resolution_clock::now();
+	f();
+	auto t2 = chrono::high_resolution_clock::now();
+	cout << chrono::duration_cast<chrono::milliseconds>(t2-t1).count() << "ms";
+	```
+	- [CPP References](file:///home/bergiu/Downloads/reference/en/cpp/chrono.html)
 
 - Math
 	- `#include <cmath>`
-	- How to use
-		```cpp
-		```
 
 ## Datenstrukturen
 
@@ -218,6 +229,7 @@
 
 - `Operator: ++a`
 	- zuerst den Wert erhöhen, dann returnen
+
 	```cpp
 	Bruch& operator++(){
 		++zaehler; ++nenner;
@@ -227,6 +239,7 @@
 
 - `Operator: a++`
 	- zuerst returnen, dann den Wert erhöhen
+
 	```cpp
 	Bruch operator++(int){
 		Bruch tmp(*this);
@@ -257,8 +270,8 @@
 		class myiterator
 		{
 			private:
-				const D & d;    // we need to know which iterator we traverse
-				size_t index;      // and the position
+				const D & d;			// we need to know which iterator we traverse
+				size_t index;			// and the position
 			public:
 				myiterator(const D & _d, size_t _index) : d(_d), index(_index) { }
 				// for simplicity, compare identity and indices only
@@ -271,7 +284,7 @@
 				}
 				const myiterator& operator++(){
 					++index;
-					return *this;   // standard return value
+					return *this;		// standard return value
 				}
 		};
 		private:
@@ -291,7 +304,9 @@
 	template <typename T>
 	class Point {
 		public:
-			typedef T value_type;
+			typedef T value_type;			//type of the value
+			typedef T key_type;				//type of the key
+			typedef T size_type;			//type of the size
 			//setzt value_type auf T, damit man von außerhalb den Type erfahren kann
 			T x;
 			T y;
@@ -349,6 +364,7 @@
 	```
 - reference outer vars
 	- vars können geändert werden
+
 	```cpp
 	auto setM = [&](int n) { m=n };
 	setM(5);	//setzt m auf 5
@@ -363,6 +379,7 @@
 ## Smart Pointer
 - Unique Pointer
 	- `#include <memory>`
+
 	```cpp
 	C* c = new C(4)
 	unique_ptr<C> p1(c);
@@ -374,6 +391,7 @@
 
 - Shared Pointer
 	- `#include <memory>`
+
 	```cpp
 	C* c = new C(4)
 	shared_ptr<C> s1(c);
@@ -386,7 +404,7 @@
 ## Threads
 - wenn man ein programm startet, wird der main thread gestartet
 - bei mehreren kernen laufen die threads parallel ab
-- beim kompilieren -pthread anhängen
+- beim kompilieren `-pthread` anhängen
 - thread führt funktion aus
 - how to
 	```cpp
@@ -408,15 +426,51 @@
 	thread t1(Work, ref(4));
 	```
 
-- kritische regionen
+- mutex / kritische regionen
 	- `#include <condition_variable>`
-	```cpp
-	mutex_sum->lock();
-	(*sum) += inc;
-	mutex_sum->unlock();
-	```
-	- wenn dazwischen ein error geworfen wird, dann wird es nicht geunlocked (exception safe)
+	- sperrt threads vor dem zugriff auf variablen, oder ganze bereiche eines codes
+
+	- unsichere methode
 		```cpp
-		lock_guard<mutex> lk(*mutex_sum);
-		(*sum) += inc;
+		void Work(int* sum, mutex* mutex_sum){
+			for (int i=0; i<n; ++i){
+				mutex_sum->lock();
+				(*sum) += 1;
+				mutex_sum->unlock();
+			}
+		}
+		mutex mutex_sum;				//erstelle einen mutex
+		int x = 0;
+		thread t1(Work, &x, &mutex_sum)
 		```
+
+	- sichere methode
+		```cpp
+		void Work(int* sum, mutex* mutex_sum){
+			for (int i=0; i<n; ++i){
+				loack_guard<mutex> lk(*mutex_sum);
+				(*sum) += 1;
+			}
+		}
+		mutex mutex_sum;				//erstelle einen mutex
+		int x = 0;
+		thread t1(Work, &x, &mutex_sum)
+		```
+
+	- wait until unlock
+		- `mutex.try_lock()`
+			- returnt false, wenn es gelocked ist
+			- wenn es nicht gelocked ist, wird es gelocked und true returnt
+
+		```cpp
+		//zählt solange hoch, bis signal geunlocked wird
+		//und lockt es direkt wieder, geht aber aus der schleife raus
+		while (!signal.try_lock()){
+			++cnt;
+		}
+		//jetzt wieder unlocken
+		signal.unlock();
+		```
+
+- condition variablen
+	- wartet auf ein ereignis
