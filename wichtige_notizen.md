@@ -102,11 +102,6 @@
 
 ## Datenstrukturen
 
-- Klassen
-	```cpp
-	//TODO
-	```
-
 - Structs
 	- Klassen ohne Funktionen mit nur public members
 	```cpp
