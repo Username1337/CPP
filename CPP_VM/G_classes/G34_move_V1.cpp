@@ -30,72 +30,72 @@ using namespace std;
 #pragma GCC optimize "-fno-elide-constructors"
 
 class C {
-public:    
-    C() { 
-		tools_log(); cout << "ctor C()" << endl; 
-	}
-    
-    C(const C &) { 
-        tools_log(); cout << "ctor C(&)" << endl; 
-    }
-    
-    C & operator=(const C &) {
-        tools_log(); cout << "op=(&)" << endl; return *this; 
-    }
-        
-    /*	Worin unterscheiden sich + und *?
-     * 
-     * 	Op+ wird ueber zwei Referenzen aufgerufen, wogegen Op* die
-     * 	Kopie fuer den Rueckgabewert direkt beim Aufruf erzeugt.
-     */
-     
-    C & operator+=(const C &) { 
-        return *this; 
-    }
+	public:    
+		C() { 
+			tools_log(); cout << "ctor C()" << endl; 
+		}
 
-    friend C operator+(const C & lhs, const C & rhs) {  
-        tools_log(); cout << "op+" << endl; 
-        C result(lhs);
-        result += rhs;
-        return result; 
-    }
+		C(const C &) { 
+			tools_log(); cout << "ctor C(&)" << endl; 
+		}
 
-    C & operator*=(const C &) { 
-        return *this; 
-    }
-    
-    friend C operator*(C lhs, const C & rhs) { 
-        tools_log(); cout << "op*" << endl; 
-        lhs*=rhs; 
-        return lhs; 
-    }
+		C & operator=(const C &) {
+			tools_log(); cout << "op=(&)" << endl; return *this; 
+		}
+
+		/*	Worin unterscheiden sich + und *?
+		 * 
+		 * 	Op+ wird ueber zwei Referenzen aufgerufen, wogegen Op* die
+		 * 	Kopie fuer den Rueckgabewert direkt beim Aufruf erzeugt.
+		 */
+
+		C & operator+=(const C &) { 
+			return *this; 
+		}
+
+		friend C operator+(const C & lhs, const C & rhs) {  
+			tools_log(); cout << "op+" << endl; 
+			C result(lhs);
+			result += rhs;
+			return result; 
+		}
+
+		C & operator*=(const C &) { 
+			return *this; 
+		}
+
+		friend C operator*(C lhs, const C & rhs) { 
+			tools_log(); cout << "op*" << endl; 
+			lhs*=rhs; 
+			return lhs; 
+		}
 
 };
 
 int main()
 {
-    tools_log(); cout << "start" << endl;
+	tools_log(); cout << "start" << endl;
 
 	// Wie viele Objekte werden erzeugt?
-	
-    C c1,c2,c3;
 
-    cout << endl;
+	C c1,c2,c3;
 
-    tools_log(); cout << "c3=c1+c2" << endl;
-    c3 = c1+c2;
-    //c3.operator=(operator+(c1,c2)); // long version c3=c1+c2
-    
-    cout << endl;
-    
-    tools_log(); cout << "c3=c1*c2" << endl;
-    c3 = c1*c2;
+	cout << endl;
 
-    cout << endl;
+	tools_log(); cout << "c3=c1+c2" << endl;
+	c3 = c1+c2;
+	//c3.operator=(operator+(c1,c2)); // long version c3=c1+c2
 
-    //tools_log(); cout << "c3=c1+c2+c3" << endl;
-    c3 = c1+c2+c3;
+	cout << endl;
 
-    return EXIT_SUCCESS;
+	tools_log(); cout << "c3=c1*c2" << endl;
+	c3 = c1*c2;
+
+	cout << endl;
+
+	//tools_log(); cout << "c3=c1+c2+c3" << endl;
+	c3 = c1+c2+c3;
+
+	return EXIT_SUCCESS;
 }
 

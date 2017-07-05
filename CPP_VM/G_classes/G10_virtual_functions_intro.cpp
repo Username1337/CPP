@@ -18,37 +18,37 @@ using namespace std;
 
 class Object
 {
-public:
-int n;
-    virtual string toString() const { return "Object::toString"; }
+	public:
+		int n;
+		virtual string toString() const { return "Object::toString"; }
 };
 
 class C : public Object
 {
-public:
-    string toString() const { return "C::toString"; }
+	public:
+		string toString() const { return "C::toString"; }
 };
 
 void Out(const Object& o) { 
-    tools_log(); cout << o.toString() << endl; 
+	tools_log(); cout << o.toString() << endl; 
 }
 
 int main()
 {
-    C c;
-    
-    tools_log(); cout << "size C " << sizeof(C) << endl;
-//    cout << "adr " << (void*)(&c) << endl;
-//    cout << "adr " << (void*)(&(c.n)) << endl;
+	C c;
 
-    
-    // was geht schief bzw. was ist beabsichtigt?
-    tools_log(); cout << c.toString() << endl;
-    Out(c);
-    
-    //Object& ro = c;
-    //tools_log(); cout << ro.toString() << endl;
+	tools_log(); cout << "size C " << sizeof(C) << endl;
+	//    cout << "adr " << (void*)(&c) << endl;
+	//    cout << "adr " << (void*)(&(c.n)) << endl;
 
-    return EXIT_SUCCESS;
+
+	// was geht schief bzw. was ist beabsichtigt?
+	tools_log(); cout << c.toString() << endl;
+	Out(c);
+
+	//Object& ro = c;
+	//tools_log(); cout << ro.toString() << endl;
+
+	return EXIT_SUCCESS;
 }
 

@@ -13,17 +13,17 @@ using namespace std;
 #include "../tools/tools.h"
 
 class C {
-    int n = 23;
-    static int cnt; 	//  = 0; direkte Initialisierung nicht erlaubt
+	int n = 23;
+	static int cnt; 	//  = 0; direkte Initialisierung nicht erlaubt
 
-public:
-    C()  { ++cnt; }		// cnt enthaelt die aktuelle Anzahl von C-Objekten
-    ~C() { --cnt; }
-        
-    void set_n(int N);	// hier nur Deklarationen; Definitionen ausserhalb
-    int get_n() const;
-    
-    static int get_cnt() { return cnt; }
+	public:
+	C()  { ++cnt; }		// cnt enthaelt die aktuelle Anzahl von C-Objekten
+	~C() { --cnt; }
+
+	void set_n(int N);	// hier nur Deklarationen; Definitionen ausserhalb
+	int get_n() const;
+
+	static int get_cnt() { return cnt; }
 };
 
 // Definitionen folgen, jeweils mit vollem Namen ("C::")
@@ -35,7 +35,7 @@ void C::set_n(int N) {
 }
 
 int C::get_n() const { 
-    return n; 
+	return n; 
 }
 
 /*	statische Elemente
@@ -53,22 +53,22 @@ int main()
 {    
 	tools_log(); cout << "#C-Obj: " << C::get_cnt() << endl;
 
-    C c1,c2; 
-    c2.set_n(42); 
-    tools_log(); cout << "c1.n=" << c1.get_n() << ", c2.n=" << c2.get_n() 
-                      << ", #C-Obj: " << C::get_cnt() << endl;
-    
-    if (true) {
-        C c3;
-        tools_log(); cout << "#C-Obj: " << C::get_cnt() << endl;
-    }
-    
-    tools_log(); cout << "#C-Obj: " << C::get_cnt() << endl;
-    
-//    f();
-//    f();
-//    f();
-    
-    return EXIT_SUCCESS;
+	C c1,c2; 
+	c2.set_n(42); 
+	tools_log(); cout << "c1.n=" << c1.get_n() << ", c2.n=" << c2.get_n() 
+		<< ", #C-Obj: " << C::get_cnt() << endl;
+
+	if (true) {
+		C c3;
+		tools_log(); cout << "#C-Obj: " << C::get_cnt() << endl;
+	}
+
+	tools_log(); cout << "#C-Obj: " << C::get_cnt() << endl;
+
+	//    f();
+	//    f();
+	//    f();
+
+	return EXIT_SUCCESS;
 }
 

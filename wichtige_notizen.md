@@ -23,11 +23,19 @@
 	cout << i;
 	```
 
+- andere coole sachen
+	```cpp
+	int x{}, y{};			//initialisiert x und y mit 0
+	```
+
 ## Datentypen
 
 - Primitive Datentypen
 	- `size_t`
 		- positiver int
+
+- Casts
+	- TODO
 
 - Arrays
 	- beim übergeben an Funktionen die Länge mit geben!
@@ -63,11 +71,13 @@
 		v[3];						//get
 		v[3] = 2;					//set
 		//TODO remove
+		v.erase(remove(...)) ??? (G29)
 		v.size();					//size
 		//iterate
 		for(auto x: v){...}
 		//count vector elements if lambda expression returns true
 		int cnt1 = count_if (v.begin(), v.end(), [](int k){ return (0==k%2);});
+		auto result1 = find_if(v.begin(), v.end(), [](int k){ return (0==k%2);});
 		```
 	- [CPP References](reference/en/cpp/container/vector.html)
 
@@ -121,12 +131,16 @@
 	```
 
 - Enums
+	//TODO
 	- Liste mit Konstanten
 	- wird zur Compilezeit festgelegt
 	- How to use
 	```cpp
 	enum { dim = 4 };
 	```
+
+- Unions
+	//TODO
 
 ## Funktions Pointer
 
@@ -298,6 +312,160 @@
 	};
 	```
 
+## Statics
+```cpp
+class C {
+	private:
+		static int cnt;			//direkte initialisierung mit "=0" ist nicht erlaubt
+	public:
+		C() { ++cnt; }
+		static int get_cnt(){ return cnt; }
+};
+int C::cnt = 0;					//es muss außerhalb initialisiert werden
+```
+
+## Vererbung
+- Einfache Vererbung
+	- beim erstellen
+		1. Zuerst wird die Basis-Klasse erstellt
+		2. Dann die Kind-Klasse
+	- beim löschen
+		1. Zuerst wird die Kind-Klasse zerstört
+		2. Dann die Basis-Klasse
+	- `A* l = new B(4);`
+		- A ist der dynamische Type, da er sich ändern kann
+		- B ist der statische Type, da er sich nicht ändern kann
+	- `virtual` muss in Basis-Klasse stehen
+
+	```cpp
+	class A {
+		protected:
+			int n;
+		public:
+			A(int N) : n(N) {}
+			void f(){}						//nimm immer die methode des dynamischen Types
+			virtual void g(){}				//nimm immer die methode des statischen Types
+			virtual void h(){}				//nimm immer die methode des statischen Types
+			virtual void i() final {}		//final methode kann nicht überschieben werden
+	};
+	class B: public A {						//B erbt von A
+		public:
+			B(int N): A(N) {}
+			void f(){}						//verdeckt die methode
+			//virtual void f(){}			//für alle kinder ist es virtual, aber nicht wenn man als dynamischen Type A hat
+			virtual void g(){}				//überschreibt die methode
+			void h(){}						//überschreibt die methode und ist immernoch virtual
+			//virtual void i() final {}		//geht nicht, da es final ist
+	};
+	class C final: public A { ... };		//man kann nicht mehr von C Erben
+	A a;
+	B b;
+	//normal
+	a.f();				//gibt A::f() aus
+	a.g();				//gibt A::g() aus
+	b.f();				//gibt B::f() aus
+	b.g();				//gibt B::g() aus
+	//Dynamischer Type ist A
+	A* ap = new A();
+	A* bp = new B();
+	ap->f();			//gibt A::f() aus
+	ap->g();			//gibt A::g() aus
+	bp->f();			//gibt A::f() aus, weil es in A nicht virtual ist
+	bp->g();			//gibt B::g() aus
+	//Als Referenz verhält es sich genauso wie als pointer
+	A& ar = a;
+	A& br = b;
+	ar.f();				//gibt A::f() aus
+	ar.g();				//gibt A::g() aus
+	br.f();				//gibt A::f() aus, weil es in A nicht virtual ist
+	br.g();				//gibt B::g() aus
+	//ohne void in der vererbten
+	ap->h();			//gibt A::h() aus
+	bp->h();			//gibt B::h() aus, obwohl in B nicht virtual steht
+	```
+
+- Abstrakte Klassen (abstract class) / Interfaces
+	- eine Klasse, von der man keine Objekte erstellen kann
+	- Interfaces gibt es nicht
+
+	```cpp
+	class IReport {
+		virtual void CreateReport() = 0;		//"=0" means pure virtual
+	};
+	class Report: IReport {
+		//muss die pure virtual methods erstellen, sonst ist es auch eine abstracte klasse
+		virtual void CreateReport(){ ... }
+	};
+	```
+
+- Mehrfach Vererbung
+	- Ausgefranzt
+		- Es gibt 2 mal A
+
+		```cpp
+		class A {
+			protected:
+				int n;
+			public:
+				A(int N): n(N) {}
+		};
+		class B1: public A {
+			public:
+				B1(int N): A(N) {}
+		};
+		class B2: public A {
+			public:
+				B2(int N): A(N) {}
+		};
+		class C: public B1, public B2 {
+			public:
+				C(int N): B1(N+1), B2(N+2) {}
+				int getB1N(){
+					return B1::n;
+				}
+				int getB2N(){
+					return B2::n;
+				}
+		};
+		B1 b1;		//zuerst wird A erstellt, dann B1
+		B2 b2;		//zuerst wird A erstellt, dann B2
+		C c;		//zuerst A, B1, dann A, B2, dann C
+		//beim Löschen:
+		//C: zuerst C, dann B2, A, dann B1, A
+		```
+
+	- Geschlossen
+		- Es gibt 1 mal A
+
+		```cpp
+		class A {
+			protected:
+				int n;
+			public:
+				A(int N): n(N) {}
+		};
+		class B1: public A {
+			public:
+				B1(int N): A(N) {}
+		};
+		class B2: public A {
+			public:
+				B2(int N): A(N) {}
+		};
+		class C: public B1, public B2 {
+			public:
+				C(int N): A(N), B1(N+1), B2(N+2) {}			//A muss vor den anderen erstellt werden
+				int getN(){
+					return n;
+				}
+		};
+		B1 b1(1);		//zuerst wird A erstellt, dann B1 (n ist 1)
+		B2 b2(1);		//zuerst wird A erstellt, dann B2 (n ist 1)
+		C c(1);			//zuerst A, B1, B2, dann C (n ist 3)
+		//beim Löschen:
+		//C: zuerst C, dann B2, B1, A
+		```
+
 ## Templates
 
 - Template Klassen
@@ -316,12 +484,22 @@
 
 - Spezialisierung
 	```cpp
-	template <typename T int N>
+	template <typename T, int N>
 	class Point { ... };
 	template <typename T>
 	class Point<T, 3> { ... };
 	template <int N>
 	class Point<double, N> { ... };
+	```
+
+- Einzelne Funktionen Spezialisieren
+	```cpp
+	template<typename T>
+	class Bruch {
+		T getGGT(){ ... }
+	}
+	template<>
+	int Bruch<int>::getGGT(){ ... }
 	```
 
 - Template Funktionen
@@ -375,6 +553,9 @@
 	auto pi = []() -> double { return 3.1415926; };
 	typedef double (*polynome_t)(double x);
 	polynome_t quad = [](double x) { return x*x; };
+	//count vector elements if lambda expression returns true
+	int cnt1 = count_if (v.begin(), v.end(), [](int k){ return (0==k%2);});
+	auto result1 = find_if(v.begin(), v.end(), [](int k){ return (0==k%2);});
 	```
 
 ## Smart Pointer
@@ -476,3 +657,4 @@
 
 - condition variablen
 	- wartet auf ein ereignis
+	- TODO

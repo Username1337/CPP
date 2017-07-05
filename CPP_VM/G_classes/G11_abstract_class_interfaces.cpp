@@ -20,7 +20,7 @@ using namespace std;
 // this is an abstract class with one pure virtual function
 class IReport 
 {
-    virtual void CreateReport() = 0;    // "=0" means pure virtual
+	virtual void CreateReport() = 0;    // "=0" means pure virtual
 };
 
 // inheriting from an abstract class; it is not necessary to implement
@@ -28,17 +28,17 @@ class IReport
 // abstract class
 class Customer : public IReport
 {
-public:
-    void CreateReport() { tools_log(); cout << "report created." << endl; }     // implementation
+	public:
+		void CreateReport() { tools_log(); cout << "report created." << endl; }     // implementation
 };
 
 int main()
 {
-    // an abstract class cannot be instantiated
-    //IReport r;
-    Customer c;
-    c.CreateReport();
+	// an abstract class cannot be instantiated
+	//IReport r;
+	Customer c;
+	c.CreateReport();
 
-    return EXIT_SUCCESS;
+	return EXIT_SUCCESS;
 }
 

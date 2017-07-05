@@ -1,0 +1,10 @@
+syn keyword CTagsLocalVariable b r1 x1 cr t1 D add4 it setm endl ccr pf pi q n A c4 func_x3 p r2 c2r c2 map result2 c1 t2 pn L two c m ppp lambda_x3 s pa vtable x a result1 myTable addtom lambda_x2 f result x2 d first fn v c3 inc pc s3 b2 trapezrule pb
+syn keyword CTagsMember data x1 y amount unit _x1 n p ptr y1 y2 max_elements z c _x2 a cnt x2 d v index t
+syn keyword CTagsGlobalVariable m table endl
+syn keyword CTagsConstant name matrnr
+syn keyword CTagsEnumerationValue dim
+syn keyword CTagsFunction B2 Draw getn A get_cnt Bruch h fib_static_alex CStringIII output push_back strcpy Line myiterator Out swap B1 f3 remove_value B end C f2 CreateReport set_value g Unit eval get_n set_n p3 main reserve fib_seriell_alex D set_P2 Memory toString Point get_name result k CStringI clear set_P1 c3 f1 s3 set_m remove x3 set clone CStringII Swap read_n test_expression rc begin f X weight3 setn
+syn keyword CTagsType fib_ptr sim_func polynom_t c2_member_func
+syn keyword CTagsClass ICloneable B1 Object set B2 D C1 B A C Bruch C2 CStringII F E1 IReport E2 final CStringIII Memory Customer Point Unit Line myiterator IDrawable CStringI X
+
+syn match CTagsFunction /contains/

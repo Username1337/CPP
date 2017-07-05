@@ -1,0 +1,1061 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A	G09_simple_inheritance.cpp	/^    A(int N) : n(N) { tools_log(); cout << "ctor A(" << n << ")" << endl; }$/;"	f	class:A	access:public	signature:(int N)
+A	G09_simple_inheritance.cpp	/^class A $/;"	c	file:
+A	G10_virtual_functions.cpp	/^class A$/;"	c	file:
+A	G12_virtual_functions_example.cpp	/^class A : public Object, public ICloneable$/;"	c	file:	inherits:Object,ICloneable
+A	G13_multiple_inheritance_V1.cpp	/^    A(int N) : n(N) { tools_log(); cout << "ctor A(" << n << ")" << endl; }$/;"	f	class:A	access:public	signature:(int N)
+A	G13_multiple_inheritance_V1.cpp	/^class A $/;"	c	file:
+A	G14_multiple_inheritance_V2.cpp	/^    A(int N) : n(N) { tools_log(); cout << "ctor A(" << n << ")" << endl; }$/;"	f	class:A	access:public	signature:(int N)
+A	G14_multiple_inheritance_V2.cpp	/^class A $/;"	c	file:
+A	G25_deleted_default_explicit.cpp	/^    A() = default;$/;"	p	class:A	file:	access:public	signature:()
+A	G25_deleted_default_explicit.cpp	/^    A(const A&) = delete; \/\/ Kein copy ctor$/;"	p	class:A	file:	access:public	signature:(const A&)
+A	G25_deleted_default_explicit.cpp	/^    A(double) { }         \/\/ Wenn dieser ctor exist., dann gibt es keinen Default$/;"	f	class:A	access:public	signature:(double)
+A	G25_deleted_default_explicit.cpp	/^class A { $/;"	c	file:
+A	G32_lambda_expression_V3.cpp	/^    double A;$/;"	l
+A	G33_lambda_expression_V4.cpp	/^    auto A = trapezrule([](double x)->double{return x*x;});$/;"	l
+A::A	G09_simple_inheritance.cpp	/^    A(int N) : n(N) { tools_log(); cout << "ctor A(" << n << ")" << endl; }$/;"	f	class:A	access:public	signature:(int N)
+A::A	G13_multiple_inheritance_V1.cpp	/^    A(int N) : n(N) { tools_log(); cout << "ctor A(" << n << ")" << endl; }$/;"	f	class:A	access:public	signature:(int N)
+A::A	G14_multiple_inheritance_V2.cpp	/^    A(int N) : n(N) { tools_log(); cout << "ctor A(" << n << ")" << endl; }$/;"	f	class:A	access:public	signature:(int N)
+A::A	G25_deleted_default_explicit.cpp	/^    A() = default;$/;"	p	class:A	file:	access:public	signature:()
+A::A	G25_deleted_default_explicit.cpp	/^    A(const A&) = delete; \/\/ Kein copy ctor$/;"	p	class:A	file:	access:public	signature:(const A&)
+A::A	G25_deleted_default_explicit.cpp	/^    A(double) { }         \/\/ Wenn dieser ctor exist., dann gibt es keinen Default$/;"	f	class:A	access:public	signature:(double)
+A::clone	G12_virtual_functions_example.cpp	/^    Object* clone() { return new A(); }$/;"	f	class:A	access:public	signature:()
+A::endl	G09_simple_inheritance.cpp	/^    A(int N) : n(N) { tools_log(); cout << "ctor A(" << n << ")" << endl; }$/;"	l
+A::endl	G09_simple_inheritance.cpp	/^    ~A()            { tools_log(); cout << "dtor A(" << n << ")" << endl; }$/;"	l
+A::endl	G10_virtual_functions.cpp	/^    virtual void g()       { tools_log(); cout << "A::g" << endl; }$/;"	l
+A::endl	G10_virtual_functions.cpp	/^    void f()               { tools_log(); cout << "A::f" << endl; }$/;"	l
+A::endl	G13_multiple_inheritance_V1.cpp	/^    A(int N) : n(N) { tools_log(); cout << "ctor A(" << n << ")" << endl; }$/;"	l
+A::endl	G13_multiple_inheritance_V1.cpp	/^    ~A()            { tools_log(); cout << "dtor A(" << n << ")" << endl; }$/;"	l
+A::endl	G14_multiple_inheritance_V2.cpp	/^    A(int N) : n(N) { tools_log(); cout << "ctor A(" << n << ")" << endl; }$/;"	l
+A::endl	G14_multiple_inheritance_V2.cpp	/^    ~A()            { tools_log(); cout << "dtor A(" << n << ")" << endl; }$/;"	l
+A::f	G10_virtual_functions.cpp	/^    void f()               { tools_log(); cout << "A::f" << endl; }$/;"	f	class:A	access:public	signature:()
+A::g	G10_virtual_functions.cpp	/^    virtual void g()       { tools_log(); cout << "A::g" << endl; }$/;"	f	class:A	access:public	signature:()
+A::getn	G09_simple_inheritance.cpp	/^    int getn() const { return n; }$/;"	f	class:A	access:public	signature:() const
+A::getn	G13_multiple_inheritance_V1.cpp	/^    int getn() const { return n; }$/;"	f	class:A	access:public	signature:() const
+A::getn	G14_multiple_inheritance_V2.cpp	/^    int getn() const { return n; }$/;"	f	class:A	access:public	signature:() const
+A::n	G09_simple_inheritance.cpp	/^    int n;$/;"	m	class:A	file:	access:protected
+A::n	G13_multiple_inheritance_V1.cpp	/^    int n;$/;"	m	class:A	file:	access:public
+A::n	G14_multiple_inheritance_V2.cpp	/^    int n;$/;"	m	class:A	file:	access:public
+A::operator =	G25_deleted_default_explicit.cpp	/^    A& operator=(const A&) = default;    \/\/ und default assignment$/;"	p	class:A	file:	access:public	signature:(const A&)
+A::toString	G12_virtual_functions_example.cpp	/^    string toString() { return "(I am A)"; }$/;"	f	class:A	access:public	signature:()
+A::~A	G09_simple_inheritance.cpp	/^    ~A()            { tools_log(); cout << "dtor A(" << n << ")" << endl; }$/;"	f	class:A	access:public	signature:()
+A::~A	G13_multiple_inheritance_V1.cpp	/^    ~A()            { tools_log(); cout << "dtor A(" << n << ")" << endl; }$/;"	f	class:A	access:public	signature:()
+A::~A	G14_multiple_inheritance_V2.cpp	/^    ~A()            { tools_log(); cout << "dtor A(" << n << ")" << endl; }$/;"	f	class:A	access:public	signature:()
+B	G09_simple_inheritance.cpp	/^    B(int N) : A(N), c('A') { 			\/*	A(N) ?$/;"	f	class:B	access:public	signature:(int N)
+B	G09_simple_inheritance.cpp	/^class B : public A  					\/*	public A ?$/;"	c	file:	inherits:A
+B	G10_virtual_functions.cpp	/^class B : public A$/;"	c	file:	inherits:A
+B	G12_virtual_functions_example.cpp	/^class B : public Object, public ICloneable$/;"	c	file:	inherits:Object,ICloneable
+B	G25_deleted_default_explicit.cpp	/^    B() = delete;$/;"	p	class:B	file:	access:public	signature:()
+B	G25_deleted_default_explicit.cpp	/^    B(const B& br) { n=br.n; cout << "B::B(B&) n=" << n << endl; }$/;"	f	class:B	access:public	signature:(const B& br)
+B	G25_deleted_default_explicit.cpp	/^    B(int n) : n(n) { cout << "B::B(int n) n=" << n << endl; }$/;"	f	class:B	access:public	signature:(int n)
+B	G25_deleted_default_explicit.cpp	/^class B {$/;"	c	file:
+B1	G13_multiple_inheritance_V1.cpp	/^    B1(int N) : A(N) { tools_log(); cout << "ctor B1(" << n << ")" << endl; }$/;"	f	class:B1	access:public	signature:(int N)
+B1	G13_multiple_inheritance_V1.cpp	/^class B1 : public A$/;"	c	file:	inherits:A
+B1	G14_multiple_inheritance_V2.cpp	/^    B1(int N) : A(N) { tools_log(); cout << "ctor B1(" << n << ")" << N << endl; }$/;"	f	class:B1	access:public	signature:(int N)
+B1	G14_multiple_inheritance_V2.cpp	/^class B1 : virtual public A$/;"	c	file:	inherits:A
+B1::B1	G13_multiple_inheritance_V1.cpp	/^    B1(int N) : A(N) { tools_log(); cout << "ctor B1(" << n << ")" << endl; }$/;"	f	class:B1	access:public	signature:(int N)
+B1::B1	G14_multiple_inheritance_V2.cpp	/^    B1(int N) : A(N) { tools_log(); cout << "ctor B1(" << n << ")" << N << endl; }$/;"	f	class:B1	access:public	signature:(int N)
+B1::endl	G13_multiple_inheritance_V1.cpp	/^    B1(int N) : A(N) { tools_log(); cout << "ctor B1(" << n << ")" << endl; }$/;"	l
+B1::endl	G13_multiple_inheritance_V1.cpp	/^    ~B1()            { tools_log(); cout << "dtor B1(" << n << ")" << endl; }$/;"	l
+B1::endl	G14_multiple_inheritance_V2.cpp	/^    B1(int N) : A(N) { tools_log(); cout << "ctor B1(" << n << ")" << N << endl; }$/;"	l
+B1::endl	G14_multiple_inheritance_V2.cpp	/^    ~B1()            { tools_log(); cout << "dtor B1(" << n << ")" << endl; }$/;"	l
+B1::~B1	G13_multiple_inheritance_V1.cpp	/^    ~B1()            { tools_log(); cout << "dtor B1(" << n << ")" << endl; }$/;"	f	class:B1	access:public	signature:()
+B1::~B1	G14_multiple_inheritance_V2.cpp	/^    ~B1()            { tools_log(); cout << "dtor B1(" << n << ")" << endl; }$/;"	f	class:B1	access:public	signature:()
+B2	G13_multiple_inheritance_V1.cpp	/^    B2(int N) : A(N) { tools_log(); cout << "ctor B2(" << n << ")" << endl; }$/;"	f	class:B2	access:public	signature:(int N)
+B2	G13_multiple_inheritance_V1.cpp	/^class B2 : public A$/;"	c	file:	inherits:A
+B2	G14_multiple_inheritance_V2.cpp	/^    B2(int N) : A(N) { tools_log(); cout << "ctor B2(" << n << ")" << endl; }$/;"	f	class:B2	access:public	signature:(int N)
+B2	G14_multiple_inheritance_V2.cpp	/^class B2 : virtual public A$/;"	c	file:	inherits:A
+B2::B2	G13_multiple_inheritance_V1.cpp	/^    B2(int N) : A(N) { tools_log(); cout << "ctor B2(" << n << ")" << endl; }$/;"	f	class:B2	access:public	signature:(int N)
+B2::B2	G14_multiple_inheritance_V2.cpp	/^    B2(int N) : A(N) { tools_log(); cout << "ctor B2(" << n << ")" << endl; }$/;"	f	class:B2	access:public	signature:(int N)
+B2::endl	G13_multiple_inheritance_V1.cpp	/^    B2(int N) : A(N) { tools_log(); cout << "ctor B2(" << n << ")" << endl; }$/;"	l
+B2::endl	G13_multiple_inheritance_V1.cpp	/^    ~B2()            { tools_log(); cout << "dtor B2(" << n << ")" << endl; }$/;"	l
+B2::endl	G14_multiple_inheritance_V2.cpp	/^    B2(int N) : A(N) { tools_log(); cout << "ctor B2(" << n << ")" << endl; }$/;"	l
+B2::endl	G14_multiple_inheritance_V2.cpp	/^    ~B2()            { tools_log(); cout << "dtor B2(" << n << ")" << endl; }$/;"	l
+B2::~B2	G13_multiple_inheritance_V1.cpp	/^    ~B2()            { tools_log(); cout << "dtor B2(" << n << ")" << endl; }$/;"	f	class:B2	access:public	signature:()
+B2::~B2	G14_multiple_inheritance_V2.cpp	/^    ~B2()            { tools_log(); cout << "dtor B2(" << n << ")" << endl; }$/;"	f	class:B2	access:public	signature:()
+B::B	G09_simple_inheritance.cpp	/^    B(int N) : A(N), c('A') { 			\/*	A(N) ?$/;"	f	class:B	access:public	signature:(int N)
+B::B	G25_deleted_default_explicit.cpp	/^    B() = delete;$/;"	p	class:B	file:	access:public	signature:()
+B::B	G25_deleted_default_explicit.cpp	/^    B(const B& br) { n=br.n; cout << "B::B(B&) n=" << n << endl; }$/;"	f	class:B	access:public	signature:(const B& br)
+B::B	G25_deleted_default_explicit.cpp	/^    B(int n) : n(n) { cout << "B::B(int n) n=" << n << endl; }$/;"	f	class:B	access:public	signature:(int n)
+B::c	G09_simple_inheritance.cpp	/^    char c;$/;"	m	class:B	file:	access:protected
+B::clone	G12_virtual_functions_example.cpp	/^    Object* clone() { return new B(); }$/;"	f	class:B	access:public	signature:()
+B::endl	G09_simple_inheritance.cpp	/^		tools_log(); cout << "ctor B(" << n << ")" << endl; $/;"	l
+B::endl	G09_simple_inheritance.cpp	/^		tools_log(); cout << "dtor B(" << n << ")" << endl; $/;"	l
+B::endl	G10_virtual_functions.cpp	/^    void f()               { tools_log(); cout << "B::f" << endl; }$/;"	l
+B::endl	G10_virtual_functions.cpp	/^    void g()               { tools_log(); cout << "B::g" << endl; }$/;"	l
+B::endl	G25_deleted_default_explicit.cpp	/^    B(const B& br) { n=br.n; cout << "B::B(B&) n=" << n << endl; }$/;"	l
+B::endl	G25_deleted_default_explicit.cpp	/^    B(int n) : n(n) { cout << "B::B(int n) n=" << n << endl; }$/;"	l
+B::f	G10_virtual_functions.cpp	/^    void f()               { tools_log(); cout << "B::f" << endl; }$/;"	f	class:B	access:public	signature:()
+B::g	G10_virtual_functions.cpp	/^    void g()               { tools_log(); cout << "B::g" << endl; }$/;"	f	class:B	access:public	signature:()
+B::n	G25_deleted_default_explicit.cpp	/^    int n;$/;"	m	class:B	file:	access:private
+B::toString	G12_virtual_functions_example.cpp	/^    string toString() { return "(I am B)"; }$/;"	f	class:B	access:public	signature:()
+B::~B	G09_simple_inheritance.cpp	/^    ~B()                    { $/;"	f	class:B	access:public	signature:()
+Bruch	G16_define_operators_V1.cpp	/^	Bruch(int Z, int N) : z(Z), n(N) { }$/;"	f	class:Bruch	access:public	signature:(int Z, int N)
+Bruch	G16_define_operators_V1.cpp	/^class Bruch {$/;"	c	file:
+Bruch::Bruch	G16_define_operators_V1.cpp	/^	Bruch(int Z, int N) : z(Z), n(N) { }$/;"	f	class:Bruch	access:public	signature:(int Z, int N)
+Bruch::n	G16_define_operators_V1.cpp	/^	int z,n;	\/\/ z\/n$/;"	m	class:Bruch	file:	access:private
+Bruch::operator *	G16_define_operators_V1.cpp	/^	friend const Bruch operator*(Bruch lhs, const Bruch & rhs) {	$/;"	f	class:Bruch	access:friend	signature:(Bruch lhs, const Bruch & rhs)
+Bruch::operator *=	G16_define_operators_V1.cpp	/^	Bruch & operator*=(const Bruch & b) {$/;"	f	class:Bruch	access:public	signature:(const Bruch & b)
+Bruch::operator <<	G16_define_operators_V1.cpp	/^	friend ostream & operator<<(ostream & os, const Bruch & b ) {$/;"	f	class:Bruch	access:friend	signature:(ostream & os, const Bruch & b )
+Bruch::z	G16_define_operators_V1.cpp	/^	int z,n;	\/\/ z\/n$/;"	m	class:Bruch	file:	access:private
+C	G01_sneak_preview.cpp	/^		C() : n(-1) {$/;"	f	class:C	access:public	signature:()
+C	G01_sneak_preview.cpp	/^		C(const C& c) : n(c.n) {$/;"	f	class:C	access:public	signature:(const C& c)
+C	G01_sneak_preview.cpp	/^		C(int _n) : n(_n) {$/;"	f	class:C	access:public	signature:(int _n)
+C	G01_sneak_preview.cpp	/^class C {$/;"	c	file:
+C	G02_simple_classes.cpp	/^    C() : n(0)      { tools_log(); cout << "ctor C() n=" << n << endl; }$/;"	f	class:C	access:public	signature:()
+C	G02_simple_classes.cpp	/^    C(const C & c) : n(c.n) { tools_log(); cout << "ctor copy C(int) n=" << n << endl; }$/;"	f	class:C	access:public	signature:(const C & c)
+C	G02_simple_classes.cpp	/^    C(int N) : n(N) { tools_log(); cout << "ctor C(int) n=" << n << endl; }$/;"	f	class:C	access:public	signature:(int N)
+C	G02_simple_classes.cpp	/^class C {           \/\/ from here all private$/;"	c	file:
+C	G02a_simple_class.cpp	/^    C() : n(12)  { tools_log(); cout << "ctor C() n=" << n << endl; }$/;"	f	class:C	access:public	signature:()
+C	G02a_simple_class.cpp	/^    C(const C & c) : n(c.n) { tools_log(); cout << "ctor copy C(int) n=" << n << endl; }$/;"	f	class:C	access:public	signature:(const C & c)
+C	G02a_simple_class.cpp	/^    C(int N) : n(N) { tools_log(); cout << "ctor C(int) n=" << n << endl; }$/;"	f	class:C	access:public	signature:(int N)
+C	G02a_simple_class.cpp	/^class C {           \/\/ from here all private$/;"	c	file:
+C	G03_const_and_ref.cpp	/^    C(const C& c) : n(c.n) { }$/;"	f	class:C	access:public	signature:(const C& c)
+C	G03_const_and_ref.cpp	/^    C(int n=0) : n(n) { }$/;"	f	class:C	access:public	signature:(int n=0)
+C	G03_const_and_ref.cpp	/^class C {$/;"	c	file:
+C	G04_rule_of_three_V1.cpp	/^    C()    { tools_log(); cout << "ctor C()" << endl; }$/;"	f	class:C	access:public	signature:()
+C	G04_rule_of_three_V1.cpp	/^    C(const C & \/*c*\/)  { $/;"	f	class:C	access:public	signature:(const C & )
+C	G04_rule_of_three_V1.cpp	/^class C {$/;"	c	file:
+C	G05_rule_of_three_V2.cpp	/^    C(const C & c)  { $/;"	f	class:C	access:public	signature:(const C & c)
+C	G05_rule_of_three_V2.cpp	/^    C(int _n=0) : n(_n)    { tools_log(); cout << "ctor C() n=" << n << endl; }$/;"	f	class:C	access:public	signature:(int _n=0)
+C	G05_rule_of_three_V2.cpp	/^class C {$/;"	c	file:
+C	G06_new_and_delete.cpp	/^    C(int N=123) : n(N) { }     \/\/ default par.$/;"	f	class:C	access:public	signature:(int N=123)
+C	G06_new_and_delete.cpp	/^class C {$/;"	c	file:
+C	G10_virtual_functions_intro.cpp	/^class C : public Object$/;"	c	file:	inherits:Object
+C	G13_multiple_inheritance_V1.cpp	/^    C(int N) : B1(N+1),B2(N+2) { tools_log(); cout << "ctor C(" << B1::n << "," << B2::n << ")" << endl; }$/;"	f	class:C	access:public	signature:(int N)
+C	G13_multiple_inheritance_V1.cpp	/^class C : public B1, public B2$/;"	c	file:	inherits:B1,B2
+C	G14_multiple_inheritance_V2.cpp	/^    C(int N) : A(N), B1(N+1),B2(N+2) { tools_log(); cout << "ctor C(" << B1::n << "," << B2::n << ")" << endl; }$/;"	f	class:C	access:public	signature:(int N)
+C	G14_multiple_inheritance_V2.cpp	/^class C : public B1, public B2$/;"	c	file:	inherits:B1,B2
+C	G22_initializers.cpp	/^    C() : b{3,4} { }$/;"	f	class:C	access:public	signature:()
+C	G22_initializers.cpp	/^class C {$/;"	c	file:
+C	G24_statics.cpp	/^    C()  { ++cnt; }		\/\/ cnt enthaelt die aktuelle Anzahl von C-Objekten$/;"	f	class:C	access:public	signature:()
+C	G24_statics.cpp	/^class C {$/;"	c	file:
+C	G25_deleted_default_explicit.cpp	/^    C() = default;		\/\/ std ctor$/;"	p	class:C	file:	access:public	signature:()
+C	G25_deleted_default_explicit.cpp	/^    C(const C &) = default; $/;"	p	class:C	file:	access:public	signature:(const C &)
+C	G25_deleted_default_explicit.cpp	/^    C(const char * pc) : C(string(pc))  { tools_log(); cout << "   C(pc) '" << pc << "'" << endl; }$/;"	f	class:C	access:public	signature:(const char * pc)
+C	G25_deleted_default_explicit.cpp	/^    C(const string & s)                 { tools_log(); cout << "   C(s)  '" << s << "'" << endl; }$/;"	f	class:C	access:public	signature:(const string & s)
+C	G25_deleted_default_explicit.cpp	/^    explicit C(int n)                   { tools_log(); cout << "   C(n)  '" << n << "'" << endl; }$/;"	f	class:C	access:public	signature:(int n)
+C	G25_deleted_default_explicit.cpp	/^class C {$/;"	c	file:
+C	G34_move_V1.cpp	/^    C() { $/;"	f	class:C	access:public	signature:()
+C	G34_move_V1.cpp	/^    C(const C &) { $/;"	f	class:C	access:public	signature:(const C &)
+C	G34_move_V1.cpp	/^class C {$/;"	c	file:
+C	G35_move_V2.cpp	/^    C() { $/;"	f	class:C	access:public	signature:()
+C	G35_move_V2.cpp	/^    C(const C &&) { $/;"	f	class:C	access:public	signature:(const C &&)
+C	G35_move_V2.cpp	/^    C(const C &) { $/;"	f	class:C	access:public	signature:(const C &)
+C	G35_move_V2.cpp	/^class C {$/;"	c	file:
+C1	G21_vtbl_fun.cpp	/^class C1 { $/;"	c	file:
+C1::n	G21_vtbl_fun.cpp	/^    long n = 1; $/;"	m	class:C1	file:	access:public
+C2	G21_vtbl_fun.cpp	/^class C2 { $/;"	c	file:
+C2::endl	G21_vtbl_fun.cpp	/^        << hex << this << dec << endl; $/;"	l
+C2::f	G21_vtbl_fun.cpp	/^    virtual void f(int m) { $/;"	f	class:C2	access:public	signature:(int m)
+C2::n	G21_vtbl_fun.cpp	/^    long n = 2; $/;"	m	class:C2	file:	access:public
+C::C	G01_sneak_preview.cpp	/^		C() : n(-1) {$/;"	f	class:C	access:public	signature:()
+C::C	G01_sneak_preview.cpp	/^		C(const C& c) : n(c.n) {$/;"	f	class:C	access:public	signature:(const C& c)
+C::C	G01_sneak_preview.cpp	/^		C(int _n) : n(_n) {$/;"	f	class:C	access:public	signature:(int _n)
+C::C	G02_simple_classes.cpp	/^    C() : n(0)      { tools_log(); cout << "ctor C() n=" << n << endl; }$/;"	f	class:C	access:public	signature:()
+C::C	G02_simple_classes.cpp	/^    C(const C & c) : n(c.n) { tools_log(); cout << "ctor copy C(int) n=" << n << endl; }$/;"	f	class:C	access:public	signature:(const C & c)
+C::C	G02_simple_classes.cpp	/^    C(int N) : n(N) { tools_log(); cout << "ctor C(int) n=" << n << endl; }$/;"	f	class:C	access:public	signature:(int N)
+C::C	G02a_simple_class.cpp	/^    C() : n(12)  { tools_log(); cout << "ctor C() n=" << n << endl; }$/;"	f	class:C	access:public	signature:()
+C::C	G02a_simple_class.cpp	/^    C(const C & c) : n(c.n) { tools_log(); cout << "ctor copy C(int) n=" << n << endl; }$/;"	f	class:C	access:public	signature:(const C & c)
+C::C	G02a_simple_class.cpp	/^    C(int N) : n(N) { tools_log(); cout << "ctor C(int) n=" << n << endl; }$/;"	f	class:C	access:public	signature:(int N)
+C::C	G03_const_and_ref.cpp	/^    C(const C& c) : n(c.n) { }$/;"	f	class:C	access:public	signature:(const C& c)
+C::C	G03_const_and_ref.cpp	/^    C(int n=0) : n(n) { }$/;"	f	class:C	access:public	signature:(int n=0)
+C::C	G04_rule_of_three_V1.cpp	/^    C()    { tools_log(); cout << "ctor C()" << endl; }$/;"	f	class:C	access:public	signature:()
+C::C	G04_rule_of_three_V1.cpp	/^    C(const C & \/*c*\/)  { $/;"	f	class:C	access:public	signature:(const C & )
+C::C	G05_rule_of_three_V2.cpp	/^    C(const C & c)  { $/;"	f	class:C	access:public	signature:(const C & c)
+C::C	G05_rule_of_three_V2.cpp	/^    C(int _n=0) : n(_n)    { tools_log(); cout << "ctor C() n=" << n << endl; }$/;"	f	class:C	access:public	signature:(int _n=0)
+C::C	G06_new_and_delete.cpp	/^    C(int N=123) : n(N) { }     \/\/ default par.$/;"	f	class:C	access:public	signature:(int N=123)
+C::C	G13_multiple_inheritance_V1.cpp	/^    C(int N) : B1(N+1),B2(N+2) { tools_log(); cout << "ctor C(" << B1::n << "," << B2::n << ")" << endl; }$/;"	f	class:C	access:public	signature:(int N)
+C::C	G14_multiple_inheritance_V2.cpp	/^    C(int N) : A(N), B1(N+1),B2(N+2) { tools_log(); cout << "ctor C(" << B1::n << "," << B2::n << ")" << endl; }$/;"	f	class:C	access:public	signature:(int N)
+C::C	G22_initializers.cpp	/^    C() : b{3,4} { }$/;"	f	class:C	access:public	signature:()
+C::C	G24_statics.cpp	/^    C()  { ++cnt; }		\/\/ cnt enthaelt die aktuelle Anzahl von C-Objekten$/;"	f	class:C	access:public	signature:()
+C::C	G25_deleted_default_explicit.cpp	/^    C() = default;		\/\/ std ctor$/;"	p	class:C	file:	access:public	signature:()
+C::C	G25_deleted_default_explicit.cpp	/^    C(const C &) = default; $/;"	p	class:C	file:	access:public	signature:(const C &)
+C::C	G25_deleted_default_explicit.cpp	/^    C(const char * pc) : C(string(pc))  { tools_log(); cout << "   C(pc) '" << pc << "'" << endl; }$/;"	f	class:C	access:public	signature:(const char * pc)
+C::C	G25_deleted_default_explicit.cpp	/^    C(const string & s)                 { tools_log(); cout << "   C(s)  '" << s << "'" << endl; }$/;"	f	class:C	access:public	signature:(const string & s)
+C::C	G25_deleted_default_explicit.cpp	/^    explicit C(int n)                   { tools_log(); cout << "   C(n)  '" << n << "'" << endl; }$/;"	f	class:C	access:public	signature:(int n)
+C::C	G34_move_V1.cpp	/^    C() { $/;"	f	class:C	access:public	signature:()
+C::C	G34_move_V1.cpp	/^    C(const C &) { $/;"	f	class:C	access:public	signature:(const C &)
+C::C	G35_move_V2.cpp	/^    C() { $/;"	f	class:C	access:public	signature:()
+C::C	G35_move_V2.cpp	/^    C(const C &&) { $/;"	f	class:C	access:public	signature:(const C &&)
+C::C	G35_move_V2.cpp	/^    C(const C &) { $/;"	f	class:C	access:public	signature:(const C &)
+C::a	G22_initializers.cpp	/^    int a[3] = { 1,2,3 };   \/\/ statt C() : a{1,2,3}$/;"	m	class:C	file:	access:public
+C::cnt	G24_statics.cpp	/^    static int cnt; 	\/\/  = 0; direkte Initialisierung nicht erlaubt$/;"	m	class:C	file:	access:private
+C::cnt	G24_statics.cpp	/^int C::cnt = 0;$/;"	m	class:C	file:
+C::endl	G01_sneak_preview.cpp	/^			tools_log(); cout << "cstr C() n=" << n << endl;$/;"	l
+C::endl	G01_sneak_preview.cpp	/^			tools_log(); cout << "cstr C(c) n=" << n << endl;$/;"	l
+C::endl	G01_sneak_preview.cpp	/^			tools_log(); cout << "cstr C(n) n=" << n << endl;$/;"	l
+C::endl	G01_sneak_preview.cpp	/^			tools_log(); cout << "dstr ~C() n=" << n << endl;$/;"	l
+C::endl	G02_simple_classes.cpp	/^    C() : n(0)      { tools_log(); cout << "ctor C() n=" << n << endl; }$/;"	l
+C::endl	G02_simple_classes.cpp	/^    C(const C & c) : n(c.n) { tools_log(); cout << "ctor copy C(int) n=" << n << endl; }$/;"	l
+C::endl	G02_simple_classes.cpp	/^    C(int N) : n(N) { tools_log(); cout << "ctor C(int) n=" << n << endl; }$/;"	l
+C::endl	G02_simple_classes.cpp	/^    ~C()            { tools_log(); cout << "dtor ~C() n=" << n << endl; }$/;"	l
+C::endl	G02a_simple_class.cpp	/^    C() : n(12)  { tools_log(); cout << "ctor C() n=" << n << endl; }$/;"	l
+C::endl	G02a_simple_class.cpp	/^    C(const C & c) : n(c.n) { tools_log(); cout << "ctor copy C(int) n=" << n << endl; }$/;"	l
+C::endl	G02a_simple_class.cpp	/^    C(int N) : n(N) { tools_log(); cout << "ctor C(int) n=" << n << endl; }$/;"	l
+C::endl	G02a_simple_class.cpp	/^    ~C()            { tools_log(); cout << "dtor ~C() n=" << n << endl; }$/;"	l
+C::endl	G04_rule_of_three_V1.cpp	/^        tools_log(); cout << "ctor C(C)" << endl; \/* copy from c *\/ $/;"	l
+C::endl	G04_rule_of_three_V1.cpp	/^        tools_log(); cout << "op=(C)" << endl; \/* copy from c *\/ $/;"	l
+C::endl	G04_rule_of_three_V1.cpp	/^    C()    { tools_log(); cout << "ctor C()" << endl; }$/;"	l
+C::endl	G04_rule_of_three_V1.cpp	/^    ~C()   { tools_log(); cout << "dtor ~C()" << endl; }$/;"	l
+C::endl	G05_rule_of_three_V2.cpp	/^        tools_log(); cout << "ctor C(C) n=" << n << endl; \/* copy from c *\/ $/;"	l
+C::endl	G05_rule_of_three_V2.cpp	/^    C(int _n=0) : n(_n)    { tools_log(); cout << "ctor C() n=" << n << endl; }$/;"	l
+C::endl	G05_rule_of_three_V2.cpp	/^    ~C()   { tools_log(); cout << "dtor ~C() n=" << n << endl; }$/;"	l
+C::endl	G13_multiple_inheritance_V1.cpp	/^    C(int N) : B1(N+1),B2(N+2) { tools_log(); cout << "ctor C(" << B1::n << "," << B2::n << ")" << endl; }$/;"	l
+C::endl	G13_multiple_inheritance_V1.cpp	/^    ~C()                       { tools_log(); cout << "dtor C(" << B1::n << "," << B2::n << ")" << endl; }$/;"	l
+C::endl	G14_multiple_inheritance_V2.cpp	/^    C(int N) : A(N), B1(N+1),B2(N+2) { tools_log(); cout << "ctor C(" << B1::n << "," << B2::n << ")" << endl; }$/;"	l
+C::endl	G14_multiple_inheritance_V2.cpp	/^    ~C()                       { tools_log(); cout << "dtor C(" << B1::n << "," << B2::n << ")" << endl; }$/;"	l
+C::endl	G25_deleted_default_explicit.cpp	/^    C(const char * pc) : C(string(pc))  { tools_log(); cout << "   C(pc) '" << pc << "'" << endl; }$/;"	l
+C::endl	G25_deleted_default_explicit.cpp	/^    C(const string & s)                 { tools_log(); cout << "   C(s)  '" << s << "'" << endl; }$/;"	l
+C::endl	G25_deleted_default_explicit.cpp	/^    explicit C(int n)                   { tools_log(); cout << "   C(n)  '" << n << "'" << endl; }$/;"	l
+C::endl	G34_move_V1.cpp	/^		tools_log(); cout << "ctor C()" << endl; $/;"	l
+C::endl	G34_move_V1.cpp	/^        tools_log(); cout << "ctor C(&)" << endl; $/;"	l
+C::endl	G34_move_V1.cpp	/^        tools_log(); cout << "op*" << endl; $/;"	l
+C::endl	G34_move_V1.cpp	/^        tools_log(); cout << "op+" << endl; $/;"	l
+C::endl	G34_move_V1.cpp	/^        tools_log(); cout << "op=(&)" << endl; return *this; $/;"	l
+C::endl	G35_move_V2.cpp	/^		tools_log(); cout << "ctor C()" << endl; $/;"	l
+C::endl	G35_move_V2.cpp	/^        tools_log(); cout << "ctor C(&&)" << endl; $/;"	l
+C::endl	G35_move_V2.cpp	/^        tools_log(); cout << "ctor C(&)" << endl; $/;"	l
+C::endl	G35_move_V2.cpp	/^        tools_log(); cout << "op*" << endl; $/;"	l
+C::endl	G35_move_V2.cpp	/^        tools_log(); cout << "op+" << endl; $/;"	l
+C::endl	G35_move_V2.cpp	/^        tools_log(); cout << "op=(&&)" << endl; $/;"	l
+C::endl	G35_move_V2.cpp	/^        tools_log(); cout << "op=(&)" << endl; return *this; $/;"	l
+C::get_cnt	G24_statics.cpp	/^    static int get_cnt() { return cnt; }$/;"	f	class:C	access:public	signature:()
+C::get_n	G24_statics.cpp	/^    int get_n() const;$/;"	p	class:C	file:	access:public	signature:() const
+C::get_n	G24_statics.cpp	/^int C::get_n() const { $/;"	f	class:C	signature:() const
+C::getn	G02_simple_classes.cpp	/^    int getn() { return n; }        $/;"	f	class:C	access:public	signature:()
+C::getn	G03_const_and_ref.cpp	/^    friend ostream& operator<<(ostream& os, const C& c) { os << c.getn(); return os; }$/;"	p	file:	signature:()
+C::getn	G03_const_and_ref.cpp	/^    int getn() const { return n; }$/;"	f	class:C	access:public	signature:() const
+C::n	G01_sneak_preview.cpp	/^		int n;$/;"	m	class:C	file:	access:public
+C::n	G02_simple_classes.cpp	/^    int n;$/;"	m	class:C	file:	access:private
+C::n	G02a_simple_class.cpp	/^    int n;$/;"	m	class:C	file:	access:private
+C::n	G03_const_and_ref.cpp	/^    int n;$/;"	m	class:C	file:	access:private
+C::n	G05_rule_of_three_V2.cpp	/^	int n;$/;"	m	class:C	file:	access:public
+C::n	G06_new_and_delete.cpp	/^    int n;$/;"	m	class:C	file:	access:public
+C::n	G22_initializers.cpp	/^    int n = 23;             \/\/ default value $/;"	m	class:C	file:	access:public
+C::n	G24_statics.cpp	/^    int n = 23;$/;"	m	class:C	file:	access:private
+C::operator *	G34_move_V1.cpp	/^    friend C operator*(C lhs, const C & rhs) { $/;"	f	class:C	access:friend	signature:(C lhs, const C & rhs)
+C::operator *	G35_move_V2.cpp	/^    friend C operator*(C lhs, const C & rhs) { $/;"	f	class:C	access:friend	signature:(C lhs, const C & rhs)
+C::operator *=	G34_move_V1.cpp	/^    C & operator*=(const C &) { $/;"	f	class:C	access:public	signature:(const C &)
+C::operator *=	G35_move_V2.cpp	/^    C & operator*=(const C &) { $/;"	f	class:C	access:public	signature:(const C &)
+C::operator +	G01_sneak_preview.cpp	/^		friend C operator+(const C& c1, const C& c2) {$/;"	f	class:C	access:friend	signature:(const C& c1, const C& c2)
+C::operator +	G34_move_V1.cpp	/^    friend C operator+(const C & lhs, const C & rhs) {  $/;"	f	class:C	access:friend	signature:(const C & lhs, const C & rhs)
+C::operator +	G35_move_V2.cpp	/^    friend C operator+(const C & lhs, const C & rhs) {  $/;"	f	class:C	access:friend	signature:(const C & lhs, const C & rhs)
+C::operator +=	G34_move_V1.cpp	/^    C & operator+=(const C &) { $/;"	f	class:C	access:public	signature:(const C &)
+C::operator +=	G35_move_V2.cpp	/^    C & operator+=(const C &) { $/;"	f	class:C	access:public	signature:(const C &)
+C::operator <<	G01_sneak_preview.cpp	/^		friend ostream& operator<<(ostream& os, const C& c){$/;"	f	class:C	access:friend	signature:(ostream& os, const C& c)
+C::operator <<	G02_simple_classes.cpp	/^    friend std::ostream & operator<<(std::ostream & os, const C  & c ) {$/;"	f	class:C	access:friend	signature:(std::ostream & os, const C & c )
+C::operator <<	G03_const_and_ref.cpp	/^    friend ostream& operator<<(ostream& os, const C& c) { os << c.getn(); return os; }$/;"	f	class:C	access:friend	signature:(ostream& os, const C& c)
+C::operator <<	G14_multiple_inheritance_V2.cpp	/^    friend ostream& operator<<(ostream& os, const C& c) {$/;"	f	class:C	access:friend	signature:(ostream& os, const C& c)
+C::operator =	G02a_simple_class.cpp	/^    C& operator=(const C & c) { tools_log(); n=c.n; $/;"	f	class:C	access:public	signature:(const C & c)
+C::operator =	G03_const_and_ref.cpp	/^    C& operator=(const C& c) {  n = c.getn(); return *this; }$/;"	f	class:C	access:public	signature:(const C& c)
+C::operator =	G04_rule_of_three_V1.cpp	/^    C & operator=(const C & \/*c*\/)  { $/;"	f	class:C	access:public	signature:(const C & )
+C::operator =	G05_rule_of_three_V2.cpp	/^    C & operator=(const C & c)  { $/;"	f	class:C	access:public	signature:(const C & c)
+C::operator =	G25_deleted_default_explicit.cpp	/^    C& operator=(const C&) = delete;$/;"	p	class:C	file:	access:public	signature:(const C&)
+C::operator =	G34_move_V1.cpp	/^    C & operator=(const C &) {$/;"	f	class:C	access:public	signature:(const C &)
+C::operator =	G35_move_V2.cpp	/^    C & operator=(const C &&) {$/;"	f	class:C	access:public	signature:(const C &&)
+C::operator =	G35_move_V2.cpp	/^    C & operator=(const C &) {$/;"	f	class:C	access:public	signature:(const C &)
+C::p	G22_initializers.cpp	/^    int *p = new int[2] { -2,-3 };  \/\/ auch fuer dynamische arrays$/;"	m	class:C	file:	access:public
+C::result	G34_move_V1.cpp	/^        C result(lhs);$/;"	p	file:	signature:(lhs)
+C::result	G35_move_V2.cpp	/^        C result(lhs);$/;"	p	file:	signature:(lhs)
+C::set_n	G24_statics.cpp	/^    void set_n(int N);	\/\/ hier nur Deklarationen; Definitionen ausserhalb$/;"	p	class:C	file:	access:public	signature:(int N)
+C::set_n	G24_statics.cpp	/^void C::set_n(int N) { $/;"	f	class:C	signature:(int N)
+C::setn	G03_const_and_ref.cpp	/^    void setn(int n) { this->n = n; } \/\/ (*this).n = n $/;"	f	class:C	access:public	signature:(int n)
+C::toString	G10_virtual_functions_intro.cpp	/^    string toString() const { return "C::toString"; }$/;"	f	class:C	access:public	signature:() const
+C::y	G22_initializers.cpp	/^    int y,z{};              \/\/ y nicht initialisiert, z ist Null (0) $/;"	m	class:C	file:	access:public
+C::~C	G01_sneak_preview.cpp	/^		~C() {$/;"	f	class:C	access:public	signature:()
+C::~C	G02_simple_classes.cpp	/^    ~C()            { tools_log(); cout << "dtor ~C() n=" << n << endl; }$/;"	f	class:C	access:public	signature:()
+C::~C	G02a_simple_class.cpp	/^    ~C()            { tools_log(); cout << "dtor ~C() n=" << n << endl; }$/;"	f	class:C	access:public	signature:()
+C::~C	G04_rule_of_three_V1.cpp	/^    ~C()   { tools_log(); cout << "dtor ~C()" << endl; }$/;"	f	class:C	access:public	signature:()
+C::~C	G05_rule_of_three_V2.cpp	/^    ~C()   { tools_log(); cout << "dtor ~C() n=" << n << endl; }$/;"	f	class:C	access:public	signature:()
+C::~C	G13_multiple_inheritance_V1.cpp	/^    ~C()                       { tools_log(); cout << "dtor C(" << B1::n << "," << B2::n << ")" << endl; }$/;"	f	class:C	access:public	signature:()
+C::~C	G14_multiple_inheritance_V2.cpp	/^    ~C()                       { tools_log(); cout << "dtor C(" << B1::n << "," << B2::n << ")" << endl; }$/;"	f	class:C	access:public	signature:()
+C::~C	G22_initializers.cpp	/^    ~C() { delete [] p; }$/;"	f	class:C	access:public	signature:()
+C::~C	G24_statics.cpp	/^    ~C() { --cnt; }$/;"	f	class:C	access:public	signature:()
+CC	makefile	/^CC = gcc$/;"	m
+CEXAMPLES	makefile	/^CEXAMPLES = $(shell find . -name '*.c' -print -type f)$/;"	m
+CFLAGS	makefile	/^CFLAGS = -ansi -pedantic -Wall -Wextra -Wconversion -O3$/;"	m
+CStringI	G07_string_example.cpp	/^    CStringI(const CStringI & s) : p(new char [std::strlen(s.p)+1]) { \/\/ better approach?$/;"	f	class:CStringI	access:public	signature:(const CStringI & s)
+CStringI	G07_string_example.cpp	/^    CStringI(const char * Src) : p(new char [std::strlen(Src)+1]) {     $/;"	f	class:CStringI	access:public	signature:(const char * Src)
+CStringI	G07_string_example.cpp	/^class CStringI$/;"	c	file:
+CStringI::CStringI	G07_string_example.cpp	/^    CStringI(const CStringI & s) : p(new char [std::strlen(s.p)+1]) { \/\/ better approach?$/;"	f	class:CStringI	access:public	signature:(const CStringI & s)
+CStringI::CStringI	G07_string_example.cpp	/^    CStringI(const char * Src) : p(new char [std::strlen(Src)+1]) {     $/;"	f	class:CStringI	access:public	signature:(const char * Src)
+CStringI::operator <<	G07_string_example.cpp	/^    friend std::ostream & operator<<(std::ostream & os, CStringI const & s ) {$/;"	f	class:CStringI	access:friend	signature:(std::ostream & os, CStringI const & s )
+CStringI::operator =	G07_string_example.cpp	/^    CStringI & operator=(const CStringI & s) {$/;"	f	class:CStringI	access:public	signature:(const CStringI & s)
+CStringI::p	G07_string_example.cpp	/^    char * p;$/;"	m	class:CStringI	file:	access:public
+CStringI::std::strcpy	G07_string_example.cpp	/^            std::strcpy(p,s.p); $/;"	p	class:CStringI::std	file:	signature:(p,s.p)
+CStringI::std::strcpy	G07_string_example.cpp	/^        std::strcpy(p,Src); $/;"	p	class:CStringI::std	file:	signature:(p,Src)
+CStringI::std::strcpy	G07_string_example.cpp	/^        std::strcpy(p,s.p); $/;"	p	class:CStringI::std	file:	signature:(p,s.p)
+CStringI::~CStringI	G07_string_example.cpp	/^    ~CStringI() { delete [] p; }$/;"	f	class:CStringI	access:public	signature:()
+CStringII	G07_string_example.cpp	/^    CStringII(const CStringII & s) : CStringII(s.p) { } \/\/ use ctor above - c++11$/;"	f	class:CStringII	access:public	signature:(const CStringII & s)
+CStringII	G07_string_example.cpp	/^    CStringII(const char * Src) : p(new char [std::strlen(Src)+1]) { $/;"	f	class:CStringII	access:public	signature:(const char * Src)
+CStringII	G07_string_example.cpp	/^class CStringII$/;"	c	file:
+CStringII::CStringII	G07_string_example.cpp	/^    CStringII(const CStringII & s) : CStringII(s.p) { } \/\/ use ctor above - c++11$/;"	f	class:CStringII	access:public	signature:(const CStringII & s)
+CStringII::CStringII	G07_string_example.cpp	/^    CStringII(const char * Src) : p(new char [std::strlen(Src)+1]) { $/;"	f	class:CStringII	access:public	signature:(const char * Src)
+CStringII::Swap	G07_string_example.cpp	/^    friend void Swap(CStringII & s1, CStringII & s2) {$/;"	f	class:CStringII	access:friend	signature:(CStringII & s1, CStringII & s2)
+CStringII::operator <<	G07_string_example.cpp	/^    friend std::ostream & operator<<(std::ostream & os, CStringII const & s ) {$/;"	f	class:CStringII	access:friend	signature:(std::ostream & os, CStringII const & s )
+CStringII::operator =	G07_string_example.cpp	/^    CStringII & operator=(CStringII s) {    \/\/ note the copy!$/;"	f	class:CStringII	access:public	signature:(CStringII s)
+CStringII::p	G07_string_example.cpp	/^    char * p;$/;"	m	class:CStringII	file:	access:public
+CStringII::std::strcpy	G07_string_example.cpp	/^        std::strcpy(p,Src); $/;"	p	class:CStringII::std	file:	signature:(p,Src)
+CStringII::std::swap	G07_string_example.cpp	/^        std::swap(s1.p,s2.p);$/;"	p	class:CStringII::std	file:	signature:(s1.p,s2.p)
+CStringII::~CStringII	G07_string_example.cpp	/^    ~CStringII() { delete [] p; }$/;"	f	class:CStringII	access:public	signature:()
+CStringIII	G19_define_operators_V4.cpp	/^    CStringIII(const CStringIII & s) : CStringIII(s.p) { }		\/* : CStringIII(...) *\/$/;"	f	class:CStringIII	access:public	signature:(const CStringIII & s)
+CStringIII	G19_define_operators_V4.cpp	/^    CStringIII(const char * Src) : p(new char [strlen(Src)+1]) { strcpy(p,Src); }$/;"	f	class:CStringIII	access:public	signature:(const char * Src)
+CStringIII	G19_define_operators_V4.cpp	/^    CStringIII(const string & s) : CStringIII(s.c_str()) { }	\/* : CStringIII(...) ?$/;"	f	class:CStringIII	access:public	signature:(const string & s)
+CStringIII	G19_define_operators_V4.cpp	/^class CStringIII$/;"	c	file:
+CStringIII::CStringIII	G19_define_operators_V4.cpp	/^    CStringIII(const CStringIII & s) : CStringIII(s.p) { }		\/* : CStringIII(...) *\/$/;"	f	class:CStringIII	access:public	signature:(const CStringIII & s)
+CStringIII::CStringIII	G19_define_operators_V4.cpp	/^    CStringIII(const char * Src) : p(new char [strlen(Src)+1]) { strcpy(p,Src); }$/;"	f	class:CStringIII	access:public	signature:(const char * Src)
+CStringIII::CStringIII	G19_define_operators_V4.cpp	/^    CStringIII(const string & s) : CStringIII(s.c_str()) { }	\/* : CStringIII(...) ?$/;"	f	class:CStringIII	access:public	signature:(const string & s)
+CStringIII::operator +	G19_define_operators_V4.cpp	/^	friend const CStringIII operator+(CStringIII lhs, const CStringIII & rhs) {	$/;"	f	class:CStringIII	access:friend	signature:(CStringIII lhs, const CStringIII & rhs)
+CStringIII::operator +=	G19_define_operators_V4.cpp	/^    CStringIII & operator+=(const CStringIII & rhs) {$/;"	f	class:CStringIII	access:public	signature:(const CStringIII & rhs)
+CStringIII::operator <<	G19_define_operators_V4.cpp	/^    friend ostream & operator<<(ostream & os, const CStringIII & s ) {$/;"	f	class:CStringIII	access:friend	signature:(ostream & os, const CStringIII & s )
+CStringIII::operator =	G19_define_operators_V4.cpp	/^    CStringIII & operator=(CStringIII s) {  \/\/ note the copy!$/;"	f	class:CStringIII	access:public	signature:(CStringIII s)
+CStringIII::p	G19_define_operators_V4.cpp	/^    char * p;$/;"	m	class:CStringIII	file:	access:public
+CStringIII::q	G19_define_operators_V4.cpp	/^		char * q = new char [strlen(p)+strlen(rhs.p)+1];$/;"	l
+CStringIII::strcpy	G19_define_operators_V4.cpp	/^		strcat(strcpy(q,p),rhs.p);$/;"	p	file:	signature:(q,p)
+CStringIII::~CStringIII	G19_define_operators_V4.cpp	/^    ~CStringIII() { delete [] p; }$/;"	f	class:CStringIII	access:public	signature:()
+CTARGETS	makefile	/^CTARGETS = $(CEXAMPLES:.c=.out)$/;"	m
+CXX	makefile	/^CXX = g++$/;"	m
+CXXEXAMPLES	makefile	/^CXXEXAMPLES = $(shell find . -name '*.cpp' -print -type f)$/;"	m
+CXXFLAGS	makefile	/^CXXFLAGS = -ansi -pedantic -Wall -Wextra -Wconversion$/;"	m
+CXXTARGETS	makefile	/^CXXTARGETS = $(CXXEXAMPLES:.cpp=.out) $/;"	m
+CreateReport	G11_abstract_class_interfaces.cpp	/^    c.CreateReport();$/;"	p	file:	signature:()
+CreateReport	G11_abstract_class_interfaces.cpp	/^    virtual void CreateReport() = 0;    \/\/ "=0" means pure virtual$/;"	p	class:IReport	file:	access:private	signature:()
+CreateReport	G11_abstract_class_interfaces.cpp	/^    void CreateReport() { tools_log(); cout << "report created." << endl; }     \/\/ implementation$/;"	f	class:Customer	access:public	signature:()
+Customer	G11_abstract_class_interfaces.cpp	/^class Customer : public IReport$/;"	c	file:	inherits:IReport
+Customer::CreateReport	G11_abstract_class_interfaces.cpp	/^    void CreateReport() { tools_log(); cout << "report created." << endl; }     \/\/ implementation$/;"	f	class:Customer	access:public	signature:()
+Customer::endl	G11_abstract_class_interfaces.cpp	/^    void CreateReport() { tools_log(); cout << "report created." << endl; }     \/\/ implementation$/;"	l
+D	G01_sneak_preview.cpp	/^class D { int n; };$/;"	c	file:
+D	G10_virtual_functions.cpp	/^class D$/;"	c	file:
+D	G15_line_example_sol.cpp	/^    IDrawable& D = L;$/;"	l
+D	G22_initializers.cpp	/^    D(const initializer_list<double>& l) \/\/ * Alternative ?$/;"	f	class:D	access:public	signature:(const initializer_list<double>& l)
+D	G22_initializers.cpp	/^class D {$/;"	c	file:
+D	G23_ranged_base_for.cpp	/^	D(const initializer_list<double>& l) : v(l) { }$/;"	f	class:D	access:public	signature:(const initializer_list<double>& l)
+D	G23_ranged_base_for.cpp	/^class D {$/;"	c	file:
+D::D	G22_initializers.cpp	/^    D(const initializer_list<double>& l) \/\/ * Alternative ?$/;"	f	class:D	access:public	signature:(const initializer_list<double>& l)
+D::D	G23_ranged_base_for.cpp	/^	D(const initializer_list<double>& l) : v(l) { }$/;"	f	class:D	access:public	signature:(const initializer_list<double>& l)
+D::begin	G23_ranged_base_for.cpp	/^	myiterator begin () const { return myiterator(*this, 0); }$/;"	f	class:D	access:public	signature:() const
+D::end	G23_ranged_base_for.cpp	/^	myiterator end () const   { return myiterator(*this, v.size()); }$/;"	f	class:D	access:public	signature:() const
+D::endl	G10_virtual_functions.cpp	/^    virtual void f2()       { tools_log(); cout << "D::f2" << endl; }$/;"	l
+D::endl	G10_virtual_functions.cpp	/^    virtual void f3(int n)  { tools_log(); cout << "D::f3 n=" << n << endl; }$/;"	l
+D::endl	G10_virtual_functions.cpp	/^    virtual void f4() final { tools_log(); cout << "D::f4" << endl; }$/;"	v
+D::endl	G10_virtual_functions.cpp	/^    void f1()               { tools_log(); cout << "D::f1" << endl; }$/;"	l
+D::f1	G10_virtual_functions.cpp	/^    void f1()               { tools_log(); cout << "D::f1" << endl; }$/;"	f	class:D	access:public	signature:()
+D::f2	G10_virtual_functions.cpp	/^    virtual void f2()       { tools_log(); cout << "D::f2" << endl; }$/;"	f	class:D	access:public	signature:()
+D::f3	G10_virtual_functions.cpp	/^    virtual void f3(int n)  { tools_log(); cout << "D::f3 n=" << n << endl; }$/;"	f	class:D	access:public	signature:(int n)
+D::myiterator	G23_ranged_base_for.cpp	/^	class myiterator$/;"	c	class:D	file:	access:private
+D::myiterator::d	G23_ranged_base_for.cpp	/^			const D & d;    \/\/ we need to know which iterator we traverse$/;"	m	class:D::myiterator	file:	access:private
+D::myiterator::index	G23_ranged_base_for.cpp	/^			size_t index;      \/\/ and the position$/;"	m	class:D::myiterator	file:	access:private
+D::myiterator::myiterator	G23_ranged_base_for.cpp	/^			myiterator(const D & _d, size_t _index) : d(_d), index(_index) { }$/;"	f	class:D::myiterator	access:public	signature:(const D & _d, size_t _index)
+D::myiterator::operator !=	G23_ranged_base_for.cpp	/^			bool operator!=(const myiterator& rhs) const$/;"	f	class:D::myiterator	access:public	signature:(const myiterator& rhs) const
+D::myiterator::operator *	G23_ranged_base_for.cpp	/^			double operator*() const { return d.v[index]; }$/;"	f	class:D::myiterator	access:public	signature:() const
+D::myiterator::operator ++	G23_ranged_base_for.cpp	/^			const myiterator& operator++()$/;"	f	class:D::myiterator	access:public	signature:()
+D::n	G01_sneak_preview.cpp	/^class D { int n; };$/;"	m	class:D	file:	access:private
+D::push_back	G22_initializers.cpp	/^            v.push_back(x);$/;"	p	file:	signature:(x)
+D::v	G22_initializers.cpp	/^    vector<double> v;$/;"	m	class:D	file:	access:public
+D::v	G23_ranged_base_for.cpp	/^	vector<double> v;$/;"	m	class:D	file:	access:private
+Draw	G15_line_example.cpp	/^    void Draw() { \/* cout << *this << endl; *\/ }    \/\/ (3)$/;"	f	class:Line	access:public	signature:()
+Draw	G15_line_example_sol.cpp	/^    D.Draw();$/;"	p	file:	signature:()
+Draw	G15_line_example_sol.cpp	/^    virtual void Draw() = 0;$/;"	p	class:IDrawable	file:	access:public	signature:()
+Draw	G15_line_example_sol.cpp	/^    void Draw() { cout << *this << endl;}$/;"	f	class:Line	access:public	signature:()
+E1	G01_sneak_preview.cpp	/^class E1 : D { };$/;"	c	file:	inherits:D
+E2	G01_sneak_preview.cpp	/^class E2 : D { };$/;"	c	file:	inherits:D
+F	G01_sneak_preview.cpp	/^class F : public E1, public E2 { };$/;"	c	file:	inherits:E1,E2
+ICloneable	G12_virtual_functions_example.cpp	/^class ICloneable {$/;"	c	file:
+ICloneable::clone	G12_virtual_functions_example.cpp	/^    virtual Object* clone() = 0;$/;"	p	class:ICloneable	file:	access:public	signature:()
+IDrawable	G15_line_example_sol.cpp	/^class IDrawable {$/;"	c	file:
+IDrawable::Draw	G15_line_example_sol.cpp	/^    virtual void Draw() = 0;$/;"	p	class:IDrawable	file:	access:public	signature:()
+IReport	G11_abstract_class_interfaces.cpp	/^class IReport $/;"	c	file:
+IReport::CreateReport	G11_abstract_class_interfaces.cpp	/^    virtual void CreateReport() = 0;    \/\/ "=0" means pure virtual$/;"	p	class:IReport	file:	access:private	signature:()
+L	G15_line_example.cpp	/^    Line L;$/;"	l
+L	G15_line_example_sol.cpp	/^    Line L;$/;"	l
+LDFLAGS	makefile	/^LDFLAGS = -lm$/;"	m
+Line	G15_line_example.cpp	/^    Line() {}$/;"	f	class:Line	access:public	signature:()
+Line	G15_line_example.cpp	/^class Line  \/* (1) *\/ { $/;"	c	file:
+Line	G15_line_example_sol.cpp	/^    Line() {}$/;"	f	class:Line	access:public	signature:()
+Line	G15_line_example_sol.cpp	/^class Line : public IDrawable { $/;"	c	file:	inherits:IDrawable
+Line::Draw	G15_line_example.cpp	/^    void Draw() { \/* cout << *this << endl; *\/ }    \/\/ (3)$/;"	f	class:Line	access:public	signature:()
+Line::Draw	G15_line_example_sol.cpp	/^    void Draw() { cout << *this << endl;}$/;"	f	class:Line	access:public	signature:()
+Line::Line	G15_line_example.cpp	/^    Line() {}$/;"	f	class:Line	access:public	signature:()
+Line::Line	G15_line_example_sol.cpp	/^    Line() {}$/;"	f	class:Line	access:public	signature:()
+Line::endl	G15_line_example_sol.cpp	/^    void Draw() { cout << *this << endl;}$/;"	l
+Line::operator <<	G15_line_example_sol.cpp	/^    friend std::ostream & operator<<(std::ostream & os, const Line& l ) {$/;"	f	class:Line	access:friend	signature:(std::ostream & os, const Line& l )
+Line::set_P1	G15_line_example_sol.cpp	/^    Line& set_P1(int x1,int y1) { $/;"	f	class:Line	access:public	signature:(int x1,int y1)
+Line::set_P2	G15_line_example_sol.cpp	/^    Line& set_P2(int x2,int y2) { $/;"	f	class:Line	access:public	signature:(int x2,int y2)
+Line::x1	G15_line_example.cpp	/^    int x1,y1,x2,y2;    \/\/ (2)$/;"	m	class:Line	file:	access:private
+Line::x2	G15_line_example.cpp	/^    int x1,y1,x2,y2;    \/\/ (2)$/;"	m	class:Line	file:	access:private
+Line::y1	G15_line_example.cpp	/^    int x1,y1,x2,y2;    \/\/ (2)$/;"	m	class:Line	file:	access:private
+Line::y2	G15_line_example.cpp	/^    int x1,y1,x2,y2;    \/\/ (2)$/;"	m	class:Line	file:	access:private
+Memory	G01_sneak_preview.cpp	/^		Memory(T _t) : t(_t) { }$/;"	f	class:Memory	access:public	signature:(T _t)
+Memory	G01_sneak_preview.cpp	/^class Memory {$/;"	c	file:
+Memory::Memory	G01_sneak_preview.cpp	/^		Memory(T _t) : t(_t) { }$/;"	f	class:Memory	access:public	signature:(T _t)
+Memory::dim	G01_sneak_preview.cpp	/^		enum { dim = D };$/;"	e	enum:Memory::__anon1	file:
+Memory::t	G01_sneak_preview.cpp	/^		T t;$/;"	m	class:Memory	file:	access:public
+Object	G10_virtual_functions_intro.cpp	/^class Object$/;"	c	file:
+Object	G12_virtual_functions_example.cpp	/^class Object {$/;"	c	file:
+Object::n	G10_virtual_functions_intro.cpp	/^int n;$/;"	m	class:Object	file:	access:public
+Object::toString	G10_virtual_functions_intro.cpp	/^    virtual string toString() const { return "Object::toString"; }$/;"	f	class:Object	access:public	signature:() const
+Object::toString	G12_virtual_functions_example.cpp	/^     virtual string toString() { return "(obj)"; }$/;"	f	class:Object	access:public	signature:()
+Out	G10_virtual_functions_intro.cpp	/^void Out(const Object& o) { $/;"	f	signature:(const Object& o)
+Point	G18_define_operators_V3.cpp	/^	Point(const Point & p) : _x1(p._x1), _x2(p._x2)$/;"	f	class:Point	access:public	signature:(const Point & p)
+Point	G18_define_operators_V3.cpp	/^	Point(int x1, int x2) : _x1(x1), _x2(x2)$/;"	f	class:Point	access:public	signature:(int x1, int x2)
+Point	G18_define_operators_V3.cpp	/^class Point$/;"	c	file:
+Point::Point	G18_define_operators_V3.cpp	/^	Point(const Point & p) : _x1(p._x1), _x2(p._x2)$/;"	f	class:Point	access:public	signature:(const Point & p)
+Point::Point	G18_define_operators_V3.cpp	/^	Point(int x1, int x2) : _x1(x1), _x2(x2)$/;"	f	class:Point	access:public	signature:(int x1, int x2)
+Point::_x1	G18_define_operators_V3.cpp	/^	int _x1,_x2;$/;"	m	class:Point	file:	access:private
+Point::_x2	G18_define_operators_V3.cpp	/^	int _x1,_x2;$/;"	m	class:Point	file:	access:private
+Point::endl	G18_define_operators_V3.cpp	/^		tools_log(); cout << "op== " << result << endl;$/;"	l
+Point::operator ++	G18_define_operators_V3.cpp	/^	Point & operator++()    			\/*	op++() ?$/;"	f	class:Point	access:public	signature:()
+Point::operator ++	G18_define_operators_V3.cpp	/^	Point operator++(int)				\/*	op++(int) ?$/;"	f	class:Point	access:public	signature:(int)
+Point::operator <<	G18_define_operators_V3.cpp	/^	friend ostream & operator<<(ostream & os, const Point& p)$/;"	f	class:Point	access:friend	signature:(ostream & os, const Point& p)
+Point::operator ==	G18_define_operators_V3.cpp	/^	bool operator==(const Point & p) const $/;"	f	class:Point	access:public	signature:(const Point & p) const
+Point::operator []	G18_define_operators_V3.cpp	/^	const int & operator[](int n) const	\/*	op[] ?$/;"	f	class:Point	access:public	signature:(int n) const
+Point::operator []	G18_define_operators_V3.cpp	/^	int & operator[](int n)				\/*	op[] ?$/;"	f	class:Point	access:public	signature:(int n)
+Point::result	G18_define_operators_V3.cpp	/^		bool result = (_x1==p._x1) && (_x2==p._x2);$/;"	l
+Swap	G07_string_example.cpp	/^    friend void Swap(CStringII & s1, CStringII & s2) {$/;"	f	class:CStringII	access:friend	signature:(CStringII & s1, CStringII & s2)
+Unit	G17_define_operators_V2.cpp	/^	Unit(const Unit & u) : amount(u.amount), unit(u.unit)$/;"	f	class:Unit	access:public	signature:(const Unit & u)
+Unit	G17_define_operators_V2.cpp	/^	Unit(double a, const string & u) : amount(a), unit(u)$/;"	f	class:Unit	access:public	signature:(double a, const string & u)
+Unit	G17_define_operators_V2.cpp	/^class Unit {$/;"	c	file:
+Unit::Unit	G17_define_operators_V2.cpp	/^	Unit(const Unit & u) : amount(u.amount), unit(u.unit)$/;"	f	class:Unit	access:public	signature:(const Unit & u)
+Unit::Unit	G17_define_operators_V2.cpp	/^	Unit(double a, const string & u) : amount(a), unit(u)$/;"	f	class:Unit	access:public	signature:(double a, const string & u)
+Unit::amount	G17_define_operators_V2.cpp	/^	double amount;$/;"	m	class:Unit	file:	access:private
+Unit::endl	G17_define_operators_V2.cpp	/^		tools_log(); cout << "op+  " << result << endl;$/;"	l
+Unit::endl	G17_define_operators_V2.cpp	/^		tools_log(); cout << "op-  " << result << endl;$/;"	l
+Unit::operator +	G17_define_operators_V2.cpp	/^	Unit operator+(const Unit & u_rhs) $/;"	f	class:Unit	access:public	signature:(const Unit & u_rhs)
+Unit::operator -	G17_define_operators_V2.cpp	/^	friend Unit operator-(const Unit & u_lhs, const Unit & u_rhs) $/;"	f	class:Unit	access:friend	signature:(const Unit & u_lhs, const Unit & u_rhs)
+Unit::operator <<	G17_define_operators_V2.cpp	/^	friend ostream & operator<<(ostream & os, const Unit & u)$/;"	f	class:Unit	access:friend	signature:(ostream & os, const Unit & u)
+Unit::operator =	G17_define_operators_V2.cpp	/^	Unit & operator=(const Unit & u)$/;"	f	class:Unit	access:public	signature:(const Unit & u)
+Unit::result	G17_define_operators_V2.cpp	/^		Unit result(u_lhs);$/;"	p	file:	signature:(u_lhs)
+Unit::unit	G17_define_operators_V2.cpp	/^	string unit;$/;"	m	class:Unit	file:	access:private
+X	G20_define_operators_V5.cpp	/^	X(int n) : n(n) { }$/;"	f	class:X	access:public	signature:(int n)
+X	G20_define_operators_V5.cpp	/^class X {$/;"	c	file:
+X::X	G20_define_operators_V5.cpp	/^	X(int n) : n(n) { }$/;"	f	class:X	access:public	signature:(int n)
+X::n	G20_define_operators_V5.cpp	/^    int n;$/;"	m	class:X	file:	access:private
+X::operator !=	G20_define_operators_V5.cpp	/^    friend bool operator!=(const X& lhs, const X& rhs)$/;"	f	class:X	access:friend	signature:(const X& lhs, const X& rhs)
+X::operator ()	G20_define_operators_V5.cpp	/^    int operator()(int y)$/;"	f	class:X	access:public	signature:(int y)
+X::operator +	G20_define_operators_V5.cpp	/^    friend X operator+(X lhs, const X& rhs)$/;"	f	class:X	access:friend	signature:(X lhs, const X& rhs)
+X::operator ++	G20_define_operators_V5.cpp	/^    X operator++(int)   \/\/ postfix x++ (dummy argument)$/;"	f	class:X	access:public	signature:(int)
+X::operator ++	G20_define_operators_V5.cpp	/^    X& operator++()     \/\/ prefix ++x$/;"	f	class:X	access:public	signature:()
+X::operator +=	G20_define_operators_V5.cpp	/^    X& operator+=(const X& rhs)$/;"	f	class:X	access:public	signature:(const X& rhs)
+X::operator <	G20_define_operators_V5.cpp	/^    friend bool operator<(const X& lhs, const X& rhs)$/;"	f	class:X	access:friend	signature:(const X& lhs, const X& rhs)
+X::operator <<	G20_define_operators_V5.cpp	/^    friend ostream & operator<<(ostream & os, const X & x ) {$/;"	f	class:X	access:friend	signature:(ostream & os, const X & x )
+X::operator <=	G20_define_operators_V5.cpp	/^    friend bool operator<=(const X& lhs, const X& rhs)$/;"	f	class:X	access:friend	signature:(const X& lhs, const X& rhs)
+X::operator =	G20_define_operators_V5.cpp	/^    X& operator=(const X& rhs)$/;"	f	class:X	access:public	signature:(const X& rhs)
+X::operator ==	G20_define_operators_V5.cpp	/^    friend bool operator==(const X& lhs, const X& rhs)$/;"	f	class:X	access:friend	signature:(const X& lhs, const X& rhs)
+X::operator >	G20_define_operators_V5.cpp	/^    friend bool operator>(const X& lhs, const X& rhs)$/;"	f	class:X	access:friend	signature:(const X& lhs, const X& rhs)
+X::operator >=	G20_define_operators_V5.cpp	/^    friend bool operator>=(const X& lhs, const X& rhs)$/;"	f	class:X	access:friend	signature:(const X& lhs, const X& rhs)
+X::operator >>	G20_define_operators_V5.cpp	/^    friend istream& operator>>(istream& is, X& obj)$/;"	f	class:X	access:friend	signature:(istream& is, X& obj)
+__anon2::n	G21_vtbl_fun.cpp	/^    struct { long* ptr=0; long n=3; } c3;$/;"	m	struct:__anon2	file:	access:public
+__anon2::ptr	G21_vtbl_fun.cpp	/^    struct { long* ptr=0; long n=3; } c3;$/;"	m	struct:__anon2	file:	access:public
+_x1	G18_define_operators_V3.cpp	/^	int _x1,_x2;$/;"	m	class:Point	file:	access:private
+_x2	G18_define_operators_V3.cpp	/^	int _x1,_x2;$/;"	m	class:Point	file:	access:private
+a	G10_virtual_functions.cpp	/^    A a;$/;"	l
+a	G12_virtual_functions_example.cpp	/^    A a;$/;"	l
+a	G22_initializers.cpp	/^    int a[3] = { 1,2,3 };   \/\/ statt C() : a{1,2,3}$/;"	m	class:C	file:	access:public
+add4	G30_lambda_expression_V1.cpp	/^	auto add4 = [](int n) { return n+4; };$/;"	l
+addtom	G30_lambda_expression_V1.cpp	/^	auto addtom = [=](int n) { return m+n; };$/;"	l
+amount	G17_define_operators_V2.cpp	/^	double amount;$/;"	m	class:Unit	file:	access:private
+b	G10_virtual_functions.cpp	/^    B b;$/;"	l
+b	G12_virtual_functions_example.cpp	/^    B b;$/;"	l
+b	G18_define_operators_V3.cpp	/^	bool b;$/;"	l
+b2	G25_deleted_default_explicit.cpp	/^    B b2 = 5;   \/\/ how many ctors? note: pragma!$/;"	l
+begin	G23_ranged_base_for.cpp	/^	myiterator begin () const { return myiterator(*this, 0); }$/;"	f	class:D	access:public	signature:() const
+c	G09_simple_inheritance.cpp	/^    char c;$/;"	m	class:B	file:	access:protected
+c	G10_virtual_functions_intro.cpp	/^    C c;$/;"	l
+c	G11_abstract_class_interfaces.cpp	/^    Customer c;$/;"	l
+c	G22_initializers.cpp	/^    C c;$/;"	l
+c1	G02_simple_classes.cpp	/^    C c1;       \/\/ -> init with n=0$/;"	l
+c1	G02a_simple_class.cpp	/^    C c1;     \/\/ -> init with n=0$/;"	l
+c1	G04_rule_of_three_V1.cpp	/^    C c1;$/;"	l
+c1	G21_vtbl_fun.cpp	/^    C1 c1;  \/\/ no virtual function$/;"	l
+c1	G24_statics.cpp	/^    C c1,c2; $/;"	l
+c1	G25_deleted_default_explicit.cpp	/^    C c1;$/;"	l
+c1	G34_move_V1.cpp	/^    C c1,c2,c3;$/;"	l
+c1	G35_move_V2.cpp	/^    C c1,c2,c3;$/;"	l
+c2	G04_rule_of_three_V1.cpp	/^    C c2 = c1;     \/\/ what function is called?$/;"	l
+c2	G05_rule_of_three_V2.cpp	/^    C c2 = c1;     \/\/ what function is called?$/;"	l
+c2	G21_vtbl_fun.cpp	/^    C2 c2;  \/\/ one virtual function$/;"	l
+c2	G24_statics.cpp	/^    C c1,c2; $/;"	l
+c2	G34_move_V1.cpp	/^    C c1,c2,c3;$/;"	l
+c2	G35_move_V2.cpp	/^    C c1,c2,c3;$/;"	l
+c2_member_func	G21_vtbl_fun.cpp	/^    typedef void (C2::*c2_member_func)(int);$/;"	t	file:
+c2r	G21_vtbl_fun.cpp	/^    C2 & c2r = *(C2*)(&c3);     \/\/ reinterpret c3 as C2 object$/;"	l
+c3	G02a_simple_class.cpp	/^    C c3(c2);   \/\/ -> init with c2.n$/;"	p	file:	signature:(c2)
+c3	G04_rule_of_three_V1.cpp	/^    C c3(c1);$/;"	p	file:	signature:(c1)
+c3	G05_rule_of_three_V2.cpp	/^    C c3(c1);$/;"	p	file:	signature:(c1)
+c3	G21_vtbl_fun.cpp	/^    struct { long* ptr=0; long n=3; } c3;$/;"	l
+c3	G24_statics.cpp	/^        C c3;$/;"	l
+c3	G34_move_V1.cpp	/^    C c1,c2,c3;$/;"	l
+c3	G35_move_V2.cpp	/^    C c1,c2,c3;$/;"	l
+c4	G02a_simple_class.cpp	/^    C c4=c3;    \/\/ -> init with c3.n$/;"	l
+c4	G25_deleted_default_explicit.cpp	/^    C c4 = "c4";$/;"	l
+ccr	G03_const_and_ref.cpp	/^    const C & ccr = c1;$/;"	l
+clear	G12_virtual_functions_example.cpp	/^    v.clear();$/;"	p	file:	signature:()
+clear	G27_fib_bench.cpp	/^	if (-1==n) { map.clear(); return 0; }$/;"	p	file:	signature:()
+clone	G12_virtual_functions_example.cpp	/^    Object* clone() { return new A(); }$/;"	f	class:A	access:public	signature:()
+clone	G12_virtual_functions_example.cpp	/^    Object* clone() { return new B(); }$/;"	f	class:B	access:public	signature:()
+clone	G12_virtual_functions_example.cpp	/^    virtual Object* clone() = 0;$/;"	p	class:ICloneable	file:	access:public	signature:()
+cnt	G24_statics.cpp	/^    static int cnt; 	\/\/  = 0; direkte Initialisierung nicht erlaubt$/;"	m	class:C	file:	access:private
+cnt	G24_statics.cpp	/^int C::cnt = 0;$/;"	m	class:C	file:
+contains	G29_test_set_lsg.cpp	/^    bool contains(unsigned int n) $/;"	f	class:set	access:public	signature:(unsigned int n)
+cr	G03_const_and_ref.cpp	/^    C & cr = c1;            \/\/ this is a (non-const-)reference to c1$/;"	l
+d	G22_initializers.cpp	/^    D d = { 1.1, 2.2, 4.4 };        \/\/ in eigener Klasse$/;"	l
+d	G23_ranged_base_for.cpp	/^			const D & d;    \/\/ we need to know which iterator we traverse$/;"	m	class:D::myiterator	file:	access:private
+d	G23_ranged_base_for.cpp	/^	D d = { 5.5,6.6,7.7 };$/;"	l
+data	G29_test_set_lsg.cpp	/^    vector<unsigned int> data;$/;"	m	class:set	file:	access:private
+dim	G01_sneak_preview.cpp	/^		enum { dim = D };$/;"	e	enum:Memory::__anon1	file:
+end	G23_ranged_base_for.cpp	/^	myiterator end () const   { return myiterator(*this, v.size()); }$/;"	f	class:D	access:public	signature:() const
+end	G29_test_set_lsg.cpp	/^        data.erase(remove(data.begin(), data.end(), n), data.end());$/;"	p	file:	signature:()
+endl	G01_sneak_preview.cpp	/^			tools_log(); cout << "cstr C() n=" << n << endl;$/;"	l
+endl	G01_sneak_preview.cpp	/^			tools_log(); cout << "cstr C(c) n=" << n << endl;$/;"	l
+endl	G01_sneak_preview.cpp	/^			tools_log(); cout << "cstr C(n) n=" << n << endl;$/;"	l
+endl	G01_sneak_preview.cpp	/^			tools_log(); cout << "dstr ~C() n=" << n << endl;$/;"	l
+endl	G01_sneak_preview.cpp	/^		<< " [0]=" << v[0] << " [1]=" << v[1] << endl;$/;"	l
+endl	G01_sneak_preview.cpp	/^		tools_log(); cout << "op<< like ToString: " << c << endl;$/;"	l
+endl	G01_sneak_preview.cpp	/^	cout << endl;$/;"	l
+endl	G01_sneak_preview.cpp	/^	tools_log(); cout << "3 Objects allocated" << endl << endl;$/;"	l
+endl	G01_sneak_preview.cpp	/^	tools_log(); cout << "after" << endl << endl;$/;"	l
+endl	G01_sneak_preview.cpp	/^	tools_log(); cout << "before" << endl;$/;"	l
+endl	G01_sneak_preview.cpp	/^	tools_log(); cout << "op+ " << c3 << endl << endl;$/;"	l
+endl	G02_simple_classes.cpp	/^    C() : n(0)      { tools_log(); cout << "ctor C() n=" << n << endl; }$/;"	l
+endl	G02_simple_classes.cpp	/^    C(const C & c) : n(c.n) { tools_log(); cout << "ctor copy C(int) n=" << n << endl; }$/;"	l
+endl	G02_simple_classes.cpp	/^    C(int N) : n(N) { tools_log(); cout << "ctor C(int) n=" << n << endl; }$/;"	l
+endl	G02_simple_classes.cpp	/^    tools_log(); cout << "call output after" << endl << endl;$/;"	l
+endl	G02_simple_classes.cpp	/^    tools_log(); cout << "call output before" << endl;$/;"	l
+endl	G02_simple_classes.cpp	/^    tools_log(); cout << "free all, note dtor output in reverse order" << endl;$/;"	l
+endl	G02_simple_classes.cpp	/^    ~C()            { tools_log(); cout << "dtor ~C() n=" << n << endl; }$/;"	l
+endl	G02_simple_classes.cpp	/^void output(C c) { tools_log(); cout << "c = " << c << endl; }$/;"	l
+endl	G02a_simple_class.cpp	/^    C() : n(12)  { tools_log(); cout << "ctor C() n=" << n << endl; }$/;"	l
+endl	G02a_simple_class.cpp	/^    C(const C & c) : n(c.n) { tools_log(); cout << "ctor copy C(int) n=" << n << endl; }$/;"	l
+endl	G02a_simple_class.cpp	/^    C(int N) : n(N) { tools_log(); cout << "ctor C(int) n=" << n << endl; }$/;"	l
+endl	G02a_simple_class.cpp	/^    tools_log(); cout << "ende" << endl;$/;"	l
+endl	G02a_simple_class.cpp	/^    tools_log(); cout << "start" << endl;$/;"	l
+endl	G02a_simple_class.cpp	/^    ~C()            { tools_log(); cout << "dtor ~C() n=" << n << endl; }$/;"	l
+endl	G03_const_and_ref.cpp	/^    tools_log(); cout << "c1=" << c1 << ", c2=" << c2 << endl;$/;"	l
+endl	G03_const_and_ref.cpp	/^    tools_log(); cout << "cr=" << cr << ", ccr=" << ccr << endl;$/;"	l
+endl	G03_const_and_ref.cpp	/^    tools_log(); cout << "r1=" << r1 << ", r2=" << r2 << endl;$/;"	l
+endl	G04_rule_of_three_V1.cpp	/^        tools_log(); cout << "ctor C(C)" << endl; \/* copy from c *\/ $/;"	l
+endl	G04_rule_of_three_V1.cpp	/^        tools_log(); cout << "op=(C)" << endl; \/* copy from c *\/ $/;"	l
+endl	G04_rule_of_three_V1.cpp	/^    C()    { tools_log(); cout << "ctor C()" << endl; }$/;"	l
+endl	G04_rule_of_three_V1.cpp	/^    tools_log(); cout << "call functions f,g,h" << endl;$/;"	l
+endl	G04_rule_of_three_V1.cpp	/^    tools_log(); cout << "define C objects" << endl;$/;"	l
+endl	G04_rule_of_three_V1.cpp	/^    tools_log(); cout << "done" << endl << endl;$/;"	l
+endl	G04_rule_of_three_V1.cpp	/^    tools_log(); cout << "free all" << endl;$/;"	l
+endl	G04_rule_of_three_V1.cpp	/^    tools_log(); cout << "make some assignements" << endl;$/;"	l
+endl	G04_rule_of_three_V1.cpp	/^    ~C()   { tools_log(); cout << "dtor ~C()" << endl; }$/;"	l
+endl	G04_rule_of_three_V1.cpp	/^C k(C c)      { tools_log(); cout << "in k" << endl; return c; }$/;"	l
+endl	G04_rule_of_three_V1.cpp	/^void f(C)     { tools_log(); cout << "in f" << endl; }$/;"	l
+endl	G04_rule_of_three_V1.cpp	/^void g(C &)   { tools_log(); cout << "in g" << endl; }$/;"	l
+endl	G04_rule_of_three_V1.cpp	/^void h(C *)   { tools_log(); cout << "in h" << endl; }$/;"	l
+endl	G05_rule_of_three_V2.cpp	/^        tools_log(); cout << "ctor C(C) n=" << n << endl; \/* copy from c *\/ $/;"	l
+endl	G05_rule_of_three_V2.cpp	/^    C(int _n=0) : n(_n)    { tools_log(); cout << "ctor C() n=" << n << endl; }$/;"	l
+endl	G05_rule_of_three_V2.cpp	/^    tools_log(); cout << "case 1" << endl;$/;"	l
+endl	G05_rule_of_three_V2.cpp	/^    tools_log(); cout << "case 2" << endl;$/;"	l
+endl	G05_rule_of_three_V2.cpp	/^    tools_log(); cout << "case 3" << endl;$/;"	l
+endl	G05_rule_of_three_V2.cpp	/^    tools_log(); cout << "define C objects" << endl;$/;"	l
+endl	G05_rule_of_three_V2.cpp	/^    tools_log(); cout << "done" << endl << endl;$/;"	l
+endl	G05_rule_of_three_V2.cpp	/^    tools_log(); cout << "free all" << endl;$/;"	l
+endl	G05_rule_of_three_V2.cpp	/^    ~C()   { tools_log(); cout << "dtor ~C() n=" << n << endl; }$/;"	l
+endl	G07_string_example.cpp	/^    tools_log(); cout << "1) s1=" << s1 << ", s2=" << s2 << ", s3=" << s3 << endl;$/;"	l
+endl	G07_string_example.cpp	/^    tools_log(); cout << "2) s1=" << s1 << ", s2=" << s2 << ", s3=" << s3 << endl << endl;$/;"	l
+endl	G07_string_example.cpp	/^    tools_log(); cout << "3) t1=" << t1 << ", t2=" << t2 << ", t3=" << t3 << endl;$/;"	l
+endl	G07_string_example.cpp	/^    tools_log(); cout << "4) t1=" << t1 << ", t2=" << t2 << ", t3=" << t3 << endl;$/;"	l
+endl	G08_vectors.cpp	/^        tools_log(); cout << "   *it = " << *it << endl;$/;"	l
+endl	G08_vectors.cpp	/^        tools_log(); cout << "   n = " << n << endl;$/;"	l
+endl	G08_vectors.cpp	/^        tools_log(); cout << "   v[" << i << "] = " << v[i] << endl;$/;"	l
+endl	G08_vectors.cpp	/^    tools_log(); cout << "done" << endl << endl;$/;"	l
+endl	G08_vectors.cpp	/^    tools_log(); cout << "loop with 'foreach':" << endl;$/;"	l
+endl	G08_vectors.cpp	/^    tools_log(); cout << "loop with for:" << endl;$/;"	l
+endl	G08_vectors.cpp	/^    tools_log(); cout << "loop with iterators:" << endl;$/;"	l
+endl	G08_vectors.cpp	/^    tools_log(); cout << "v.size = " << v.size() << endl << endl;$/;"	l
+endl	G09_simple_inheritance.cpp	/^		tools_log(); cout << "ctor B(" << n << ")" << endl; $/;"	l
+endl	G09_simple_inheritance.cpp	/^		tools_log(); cout << "dtor B(" << n << ")" << endl; $/;"	l
+endl	G09_simple_inheritance.cpp	/^    A(int N) : n(N) { tools_log(); cout << "ctor A(" << n << ")" << endl; }$/;"	l
+endl	G09_simple_inheritance.cpp	/^    tools_log(); cout << "define objects" << endl;$/;"	l
+endl	G09_simple_inheritance.cpp	/^    ~A()            { tools_log(); cout << "dtor A(" << n << ")" << endl; }$/;"	l
+endl	G10_virtual_functions.cpp	/^    cout << endl;$/;"	l
+endl	G10_virtual_functions.cpp	/^    tools_log(); cout << "  a:" << endl;$/;"	l
+endl	G10_virtual_functions.cpp	/^    tools_log(); cout << "  b:" << endl;$/;"	l
+endl	G10_virtual_functions.cpp	/^    tools_log(); cout << "  pa:" << endl;$/;"	l
+endl	G10_virtual_functions.cpp	/^    tools_log(); cout << "  pb:" << endl;$/;"	l
+endl	G10_virtual_functions.cpp	/^    tools_log(); cout << "example 1" << endl;$/;"	l
+endl	G10_virtual_functions.cpp	/^    tools_log(); cout << "example 2" << endl;$/;"	l
+endl	G10_virtual_functions.cpp	/^    virtual void f2()       { tools_log(); cout << "D::f2" << endl; }$/;"	l
+endl	G10_virtual_functions.cpp	/^    virtual void f3(int n)  { tools_log(); cout << "D::f3 n=" << n << endl; }$/;"	l
+endl	G10_virtual_functions.cpp	/^    virtual void f3(int n) { tools_log(); cout << "E::f3 n=" << n << endl; }$/;"	l
+endl	G10_virtual_functions.cpp	/^    virtual void f4() final { tools_log(); cout << "D::f4" << endl; }$/;"	v
+endl	G10_virtual_functions.cpp	/^    virtual void g()       { tools_log(); cout << "A::g" << endl; }$/;"	l
+endl	G10_virtual_functions.cpp	/^    void f()               { tools_log(); cout << "A::f" << endl; }$/;"	l
+endl	G10_virtual_functions.cpp	/^    void f()               { tools_log(); cout << "B::f" << endl; }$/;"	l
+endl	G10_virtual_functions.cpp	/^    void f1()               { tools_log(); cout << "D::f1" << endl; }$/;"	l
+endl	G10_virtual_functions.cpp	/^    void f1()               { tools_log(); cout << "E::f1" << endl; }$/;"	l
+endl	G10_virtual_functions.cpp	/^    void f2()               { tools_log(); cout << "E::f2" << endl; }$/;"	l
+endl	G10_virtual_functions.cpp	/^    void g()               { tools_log(); cout << "B::g" << endl; }$/;"	l
+endl	G11_abstract_class_interfaces.cpp	/^    void CreateReport() { tools_log(); cout << "report created." << endl; }     \/\/ implementation$/;"	l
+endl	G12_virtual_functions_example.cpp	/^    cout << endl;$/;"	l
+endl	G12_virtual_functions_example.cpp	/^    tools_log(); cout << "example 1" << endl;$/;"	l
+endl	G12_virtual_functions_example.cpp	/^    tools_log(); cout << "example 2" << endl;$/;"	l
+endl	G13_multiple_inheritance_V1.cpp	/^    A(int N) : n(N) { tools_log(); cout << "ctor A(" << n << ")" << endl; }$/;"	l
+endl	G13_multiple_inheritance_V1.cpp	/^    B1(int N) : A(N) { tools_log(); cout << "ctor B1(" << n << ")" << endl; }$/;"	l
+endl	G13_multiple_inheritance_V1.cpp	/^    B2(int N) : A(N) { tools_log(); cout << "ctor B2(" << n << ")" << endl; }$/;"	l
+endl	G13_multiple_inheritance_V1.cpp	/^    C(int N) : B1(N+1),B2(N+2) { tools_log(); cout << "ctor C(" << B1::n << "," << B2::n << ")" << endl; }$/;"	l
+endl	G13_multiple_inheritance_V1.cpp	/^    tools_log(); cout << "b1:" << endl;$/;"	l
+endl	G13_multiple_inheritance_V1.cpp	/^    tools_log(); cout << "b2:" << endl;$/;"	l
+endl	G13_multiple_inheritance_V1.cpp	/^    tools_log(); cout << "c:" << endl;$/;"	l
+endl	G13_multiple_inheritance_V1.cpp	/^    tools_log(); cout << "define objects" << endl;$/;"	l
+endl	G13_multiple_inheritance_V1.cpp	/^    tools_log(); cout << "dstr..." << endl;$/;"	l
+endl	G13_multiple_inheritance_V1.cpp	/^    ~A()            { tools_log(); cout << "dtor A(" << n << ")" << endl; }$/;"	l
+endl	G13_multiple_inheritance_V1.cpp	/^    ~B1()            { tools_log(); cout << "dtor B1(" << n << ")" << endl; }$/;"	l
+endl	G13_multiple_inheritance_V1.cpp	/^    ~B2()            { tools_log(); cout << "dtor B2(" << n << ")" << endl; }$/;"	l
+endl	G13_multiple_inheritance_V1.cpp	/^    ~C()                       { tools_log(); cout << "dtor C(" << B1::n << "," << B2::n << ")" << endl; }$/;"	l
+endl	G14_multiple_inheritance_V2.cpp	/^    A(int N) : n(N) { tools_log(); cout << "ctor A(" << n << ")" << endl; }$/;"	l
+endl	G14_multiple_inheritance_V2.cpp	/^    B1(int N) : A(N) { tools_log(); cout << "ctor B1(" << n << ")" << N << endl; }$/;"	l
+endl	G14_multiple_inheritance_V2.cpp	/^    B2(int N) : A(N) { tools_log(); cout << "ctor B2(" << n << ")" << endl; }$/;"	l
+endl	G14_multiple_inheritance_V2.cpp	/^    C(int N) : A(N), B1(N+1),B2(N+2) { tools_log(); cout << "ctor C(" << B1::n << "," << B2::n << ")" << endl; }$/;"	l
+endl	G14_multiple_inheritance_V2.cpp	/^    tools_log(); cout << "b1:" << endl;$/;"	l
+endl	G14_multiple_inheritance_V2.cpp	/^    tools_log(); cout << "b2:" << endl;$/;"	l
+endl	G14_multiple_inheritance_V2.cpp	/^    tools_log(); cout << "c:" << endl;$/;"	l
+endl	G14_multiple_inheritance_V2.cpp	/^    tools_log(); cout << "define objects" << endl;$/;"	l
+endl	G14_multiple_inheritance_V2.cpp	/^    tools_log(); cout << "dstr..." << endl;$/;"	l
+endl	G14_multiple_inheritance_V2.cpp	/^    ~A()            { tools_log(); cout << "dtor A(" << n << ")" << endl; }$/;"	l
+endl	G14_multiple_inheritance_V2.cpp	/^    ~B1()            { tools_log(); cout << "dtor B1(" << n << ")" << endl; }$/;"	l
+endl	G14_multiple_inheritance_V2.cpp	/^    ~B2()            { tools_log(); cout << "dtor B2(" << n << ")" << endl; }$/;"	l
+endl	G14_multiple_inheritance_V2.cpp	/^    ~C()                       { tools_log(); cout << "dtor C(" << B1::n << "," << B2::n << ")" << endl; }$/;"	l
+endl	G15_line_example_sol.cpp	/^    void Draw() { cout << *this << endl;}$/;"	l
+endl	G16_define_operators_V1.cpp	/^	tools_log(); cout << "b1:" << b1 << ",b2:" << b2 << ",b3:" << b3 << endl;$/;"	l
+endl	G16_define_operators_V1.cpp	/^	tools_log(); cout << "play with operators ..." << endl;$/;"	l
+endl	G17_define_operators_V2.cpp	/^		tools_log(); cout << "op+  " << result << endl;$/;"	l
+endl	G17_define_operators_V2.cpp	/^		tools_log(); cout << "op-  " << result << endl;$/;"	l
+endl	G17_define_operators_V2.cpp	/^	cout << endl;$/;"	l
+endl	G17_define_operators_V2.cpp	/^	tools_log(); cout << "call op+" << endl;$/;"	l
+endl	G17_define_operators_V2.cpp	/^	tools_log(); cout << "call op-" << endl;$/;"	l
+endl	G17_define_operators_V2.cpp	/^	tools_log(); cout << "call op=" << endl;$/;"	l
+endl	G17_define_operators_V2.cpp	/^	tools_log(); cout << "define objects" << endl;$/;"	l
+endl	G18_define_operators_V3.cpp	/^		tools_log(); cout << "op== " << result << endl;$/;"	l
+endl	G18_define_operators_V3.cpp	/^	cout << endl;$/;"	l
+endl	G18_define_operators_V3.cpp	/^	tools_log(); cout << "call op++" << endl;$/;"	l
+endl	G18_define_operators_V3.cpp	/^	tools_log(); cout << "call op==" << endl;$/;"	l
+endl	G18_define_operators_V3.cpp	/^	tools_log(); cout << "call op[]" << endl;$/;"	l
+endl	G18_define_operators_V3.cpp	/^	tools_log(); cout << "define objects" << endl;$/;"	l
+endl	G19_define_operators_V4.cpp	/^	tools_log(); cout << "op+  " << s3 << endl;$/;"	l
+endl	G19_define_operators_V4.cpp	/^	tools_log(); cout << "op+= " << s3 << endl;$/;"	l
+endl	G19_define_operators_V4.cpp	/^    tools_log(); cout << "play with operators ..." << endl;$/;"	l
+endl	G20_define_operators_V5.cpp	/^    tools_log(); cout << "->" << x << endl;$/;"	l
+endl	G20_define_operators_V5.cpp	/^    tools_log(); cout << "self defined operators ..." << endl;$/;"	l
+endl	G21_vtbl_fun.cpp	/^                      << hex << (void*)(p[0]) << dec << endl << endl;$/;"	l
+endl	G21_vtbl_fun.cpp	/^                      << hex << (void*)(p[0]) << dec << endl;$/;"	l
+endl	G21_vtbl_fun.cpp	/^        << hex << this << dec << endl; $/;"	l
+endl	G21_vtbl_fun.cpp	/^    cout << endl;$/;"	l
+endl	G21_vtbl_fun.cpp	/^    tools_log(); cout << "change vtables: " << endl;$/;"	l
+endl	G21_vtbl_fun.cpp	/^    tools_log(); cout << "content of &c1: " << p[0] << endl;$/;"	l
+endl	G21_vtbl_fun.cpp	/^    tools_log(); cout << "define objects" << endl;$/;"	l
+endl	G21_vtbl_fun.cpp	/^    tools_log(); cout << "orig-call c2.f: " << endl;$/;"	l
+endl	G21_vtbl_fun.cpp	/^    tools_log(); cout << "sim.-call c2.f: " << endl;$/;"	l
+endl	G21_vtbl_fun.cpp	/^    tools_log(); cout << "sim.-obj. c3.f: " << hex << (void*)(&c3) << dec << endl;$/;"	l
+endl	G23_ranged_base_for.cpp	/^	cout << "]" << endl << endl;$/;"	l
+endl	G23_ranged_base_for.cpp	/^	cout << "]" << endl;$/;"	l
+endl	G23_ranged_base_for.cpp	/^	tools_log(); cout << "define objects" << endl;$/;"	l
+endl	G23_ranged_base_for.cpp	/^	tools_log(); cout << "n=" << n << ", f=" << f << endl << endl;$/;"	l
+endl	G25_deleted_default_explicit.cpp	/^    B(const B& br) { n=br.n; cout << "B::B(B&) n=" << n << endl; }$/;"	l
+endl	G25_deleted_default_explicit.cpp	/^    B(int n) : n(n) { cout << "B::B(int n) n=" << n << endl; }$/;"	l
+endl	G25_deleted_default_explicit.cpp	/^    C(const char * pc) : C(string(pc))  { tools_log(); cout << "   C(pc) '" << pc << "'" << endl; }$/;"	l
+endl	G25_deleted_default_explicit.cpp	/^    C(const string & s)                 { tools_log(); cout << "   C(s)  '" << s << "'" << endl; }$/;"	l
+endl	G25_deleted_default_explicit.cpp	/^    cout << endl;$/;"	l
+endl	G25_deleted_default_explicit.cpp	/^    explicit C(int n)                   { tools_log(); cout << "   C(n)  '" << n << "'" << endl; }$/;"	l
+endl	G25_deleted_default_explicit.cpp	/^    tools_log(); cout << "A objects" << endl << endl;$/;"	l
+endl	G25_deleted_default_explicit.cpp	/^    tools_log(); cout << "B objects" << endl << endl;$/;"	l
+endl	G25_deleted_default_explicit.cpp	/^    tools_log(); cout << "C objects" << endl << endl;$/;"	l
+endl	G25_deleted_default_explicit.cpp	/^    tools_log(); cout << "ctor n" << endl;$/;"	l
+endl	G25_deleted_default_explicit.cpp	/^    tools_log(); cout << "ctor pc" << endl;$/;"	l
+endl	G25_deleted_default_explicit.cpp	/^    tools_log(); cout << "ctor str" << endl;$/;"	l
+endl	G25_deleted_default_explicit.cpp	/^    tools_log(); cout << "end of main" << endl;$/;"	l
+endl	G26_timing.cpp	/^	tools_log(); cout << "#" << endl;$/;"	l
+endl	G27_fib_bench.cpp	/^		cout << endl << endl << "n: "; cin >> n;$/;"	l
+endl	G27_fib_bench.cpp	/^	tools_log(); cout << "#" << endl;$/;"	l
+endl	G28_test_set.cpp	/^	cout << "Name:     " << name << endl;$/;"	l
+endl	G28_test_set.cpp	/^    cout << "Matr.Nr.: " << matrnr << endl;$/;"	l
+endl	G29_test_set_lsg.cpp	/^	cout << "Name:     " << name << endl;$/;"	l
+endl	G29_test_set_lsg.cpp	/^    cout << "3 in s2? " << s2.contains(3) << endl << endl;$/;"	l
+endl	G29_test_set_lsg.cpp	/^    cout << "Matr.Nr.: " << matrnr << endl;$/;"	l
+endl	G29_test_set_lsg.cpp	/^    cout << "s1: " << s1 << endl;$/;"	l
+endl	G29_test_set_lsg.cpp	/^    cout << "s2: " << s2 << endl << endl;$/;"	l
+endl	G29_test_set_lsg.cpp	/^    cout << "s2: " << s2 << endl;$/;"	l
+endl	G29_test_set_lsg.cpp	/^    cout << "s3: " << s3 << endl << endl;$/;"	l
+endl	G30_lambda_expression_V1.cpp	/^	tools_log(); cout << "add4(8)=" << add4(8) << endl << endl; $/;"	l
+endl	G30_lambda_expression_V1.cpp	/^	tools_log(); cout << "m=" << m << ", addtom(3)=" << addtom(3) << endl << endl; $/;"	l
+endl	G30_lambda_expression_V1.cpp	/^	tools_log(); cout << "m=" << m << endl << endl; $/;"	l
+endl	G30_lambda_expression_V1.cpp	/^	tools_log(); cout << "m=" << m << endl; $/;"	l
+endl	G30_lambda_expression_V1.cpp	/^	tools_log(); cout << "n=" << n << endl << endl; $/;"	l
+endl	G30_lambda_expression_V1.cpp	/^	tools_log(); cout << "pi=" << pi() << endl << endl; $/;"	l
+endl	G31_lambda_expression_V2.cpp	/^    tools_log(); cout << "end of main" << endl;$/;"	l
+endl	G32_lambda_expression_V3.cpp	/^    tools_log(); cout << "integral(x^2)_[a,b] = " << A << endl;$/;"	l
+endl	G32_lambda_expression_V3.cpp	/^    tools_log(); cout << "integral(x^3)_[a,b] = " << A << endl;$/;"	l
+endl	G33_lambda_expression_V4.cpp	/^        cout << "Erste gerade Zahl: " << *result1 << "." << endl;$/;"	l
+endl	G33_lambda_expression_V4.cpp	/^        cout << "Erste gerade Zahl: " << *result2 << "." << endl;$/;"	l
+endl	G33_lambda_expression_V4.cpp	/^        cout << "Keine geraden Zahlen!" << endl;$/;"	l
+endl	G33_lambda_expression_V4.cpp	/^    cout << "A=" << A << endl;$/;"	l
+endl	G34_move_V1.cpp	/^		tools_log(); cout << "ctor C()" << endl; $/;"	l
+endl	G34_move_V1.cpp	/^        tools_log(); cout << "ctor C(&)" << endl; $/;"	l
+endl	G34_move_V1.cpp	/^        tools_log(); cout << "op*" << endl; $/;"	l
+endl	G34_move_V1.cpp	/^        tools_log(); cout << "op+" << endl; $/;"	l
+endl	G34_move_V1.cpp	/^        tools_log(); cout << "op=(&)" << endl; return *this; $/;"	l
+endl	G34_move_V1.cpp	/^    cout << endl;$/;"	l
+endl	G34_move_V1.cpp	/^    tools_log(); cout << "c3=c1*c2" << endl;$/;"	l
+endl	G34_move_V1.cpp	/^    tools_log(); cout << "c3=c1+c2" << endl;$/;"	l
+endl	G34_move_V1.cpp	/^    tools_log(); cout << "start" << endl;$/;"	l
+endl	G35_move_V2.cpp	/^		tools_log(); cout << "ctor C()" << endl; $/;"	l
+endl	G35_move_V2.cpp	/^        tools_log(); cout << "ctor C(&&)" << endl; $/;"	l
+endl	G35_move_V2.cpp	/^        tools_log(); cout << "ctor C(&)" << endl; $/;"	l
+endl	G35_move_V2.cpp	/^        tools_log(); cout << "op*" << endl; $/;"	l
+endl	G35_move_V2.cpp	/^        tools_log(); cout << "op+" << endl; $/;"	l
+endl	G35_move_V2.cpp	/^        tools_log(); cout << "op=(&&)" << endl; $/;"	l
+endl	G35_move_V2.cpp	/^        tools_log(); cout << "op=(&)" << endl; return *this; $/;"	l
+endl	G35_move_V2.cpp	/^    cout << endl;$/;"	l
+endl	G35_move_V2.cpp	/^    tools_log(); cout << "c3=c1*c2" << endl;$/;"	l
+endl	G35_move_V2.cpp	/^    tools_log(); cout << "c3=c1+c2" << endl;$/;"	l
+endl	G35_move_V2.cpp	/^    tools_log(); cout << "start" << endl;$/;"	l
+endl	G36_move_V3.cpp	/^    tools_log(); cout << "assigned n=" << n << ", m=" << m << endl;$/;"	l
+endl	G36_move_V3.cpp	/^    tools_log(); cout << "move f&& s: " << s << endl; $/;"	l
+endl	G36_move_V3.cpp	/^    tools_log(); cout << "ref  f&  s: " << s << endl; $/;"	l
+endl	G36_move_V3.cpp	/^    tools_log(); cout << "start    n=" << n << ", m=" << m << endl;$/;"	l
+eval	G31_lambda_expression_V2.cpp	/^double eval(polynom_t p, double x)$/;"	f	signature:(polynom_t p, double x)
+f	G02a_simple_class.cpp	/^int f();$/;"	p	file:	signature:()
+f	G04_rule_of_three_V1.cpp	/^void f(C)     { tools_log(); cout << "in f" << endl; }$/;"	f	signature:(C)
+f	G05_rule_of_three_V2.cpp	/^void f(C c1, C c2) {$/;"	f	signature:(C c1, C c2)
+f	G10_virtual_functions.cpp	/^    a.f();$/;"	p	file:	signature:()
+f	G10_virtual_functions.cpp	/^    b.f();$/;"	p	file:	signature:()
+f	G10_virtual_functions.cpp	/^    pa->f();$/;"	p	file:	signature:()
+f	G10_virtual_functions.cpp	/^    pb->f();$/;"	p	file:	signature:()
+f	G10_virtual_functions.cpp	/^    void f()               { tools_log(); cout << "A::f" << endl; }$/;"	f	class:A	access:public	signature:()
+f	G10_virtual_functions.cpp	/^    void f()               { tools_log(); cout << "B::f" << endl; }$/;"	f	class:B	access:public	signature:()
+f	G21_vtbl_fun.cpp	/^    sim_func f = (sim_func)(vtable[0]);$/;"	l
+f	G21_vtbl_fun.cpp	/^    virtual void f(int m) { $/;"	f	class:C2	access:public	signature:(int m)
+f	G23_ranged_base_for.cpp	/^	auto f = 2.3f;  \/\/ float etc.$/;"	l
+f	G26_timing.cpp	/^void f()$/;"	f	signature:()
+f	G36_move_V3.cpp	/^void f(const string& s)  { $/;"	f	signature:(const string& s)
+f	G36_move_V3.cpp	/^void f(const string&& s) { $/;"	f	signature:(const string&& s)
+f1	G10_virtual_functions.cpp	/^    void f1()               { tools_log(); cout << "D::f1" << endl; }$/;"	f	class:D	access:public	signature:()
+f1	G10_virtual_functions.cpp	/^    void f1()               { tools_log(); cout << "E::f1" << endl; }$/;"	f	class:final	access:public	signature:()
+f2	G10_virtual_functions.cpp	/^    virtual void f2()       { tools_log(); cout << "D::f2" << endl; }$/;"	f	class:D	access:public	signature:()
+f2	G10_virtual_functions.cpp	/^    void f2()               { tools_log(); cout << "E::f2" << endl; }$/;"	f	class:final	access:public	signature:()
+f3	G10_virtual_functions.cpp	/^    virtual void f3(int n)  { tools_log(); cout << "D::f3 n=" << n << endl; }$/;"	f	class:D	access:public	signature:(int n)
+f3	G10_virtual_functions.cpp	/^    virtual void f3(int n) { tools_log(); cout << "E::f3 n=" << n << endl; }$/;"	f	class:final	access:public	signature:(int n)
+fib_ptr	G27_fib_bench.cpp	/^typedef long (*fib_ptr)(long);$/;"	t	file:
+fib_seriell_alex	G27_fib_bench.cpp	/^long fib_seriell_alex(long n)$/;"	f	signature:(long n)
+fib_static_alex	G27_fib_bench.cpp	/^long fib_static_alex(long n) $/;"	f	signature:(long n)
+final	G10_virtual_functions.cpp	/^class E final : public D$/;"	c	file:	inherits:D
+final::endl	G10_virtual_functions.cpp	/^    virtual void f3(int n) { tools_log(); cout << "E::f3 n=" << n << endl; }$/;"	l
+final::endl	G10_virtual_functions.cpp	/^    void f1()               { tools_log(); cout << "E::f1" << endl; }$/;"	l
+final::endl	G10_virtual_functions.cpp	/^    void f2()               { tools_log(); cout << "E::f2" << endl; }$/;"	l
+final::f1	G10_virtual_functions.cpp	/^    void f1()               { tools_log(); cout << "E::f1" << endl; }$/;"	f	class:final	access:public	signature:()
+final::f2	G10_virtual_functions.cpp	/^    void f2()               { tools_log(); cout << "E::f2" << endl; }$/;"	f	class:final	access:public	signature:()
+final::f3	G10_virtual_functions.cpp	/^    virtual void f3(int n) { tools_log(); cout << "E::f3 n=" << n << endl; }$/;"	f	class:final	access:public	signature:(int n)
+first	G23_ranged_base_for.cpp	/^	bool first = true;$/;"	l
+fn	G27_fib_bench.cpp	/^		long n,fn;$/;"	l
+fn	G27_fib_bench.cpp	/^	long fn = map[n];$/;"	l
+func_x3	G31_lambda_expression_V2.cpp	/^	function<double(double)> func_x3 = [](double x){return x*x*x;};$/;"	l
+g	G04_rule_of_three_V1.cpp	/^void g(C &)   { tools_log(); cout << "in g" << endl; }$/;"	f	signature:(C &)
+g	G10_virtual_functions.cpp	/^    a.g();$/;"	p	file:	signature:()
+g	G10_virtual_functions.cpp	/^    b.g();$/;"	p	file:	signature:()
+g	G10_virtual_functions.cpp	/^    pa->g();$/;"	p	file:	signature:()
+g	G10_virtual_functions.cpp	/^    pb->g();$/;"	p	file:	signature:()
+g	G10_virtual_functions.cpp	/^    virtual void g()       { tools_log(); cout << "A::g" << endl; }$/;"	f	class:A	access:public	signature:()
+g	G10_virtual_functions.cpp	/^    void g()               { tools_log(); cout << "B::g" << endl; }$/;"	f	class:B	access:public	signature:()
+g	G21_vtbl_fun.cpp	/^void g(C2* p,int m)$/;"	f	signature:(C2* p,int m)
+get_cnt	G24_statics.cpp	/^    static int get_cnt() { return cnt; }$/;"	f	class:C	access:public	signature:()
+get_n	G24_statics.cpp	/^    int get_n() const;$/;"	p	class:C	file:	access:public	signature:() const
+get_n	G24_statics.cpp	/^int C::get_n() const { $/;"	f	class:C	signature:() const
+get_name	G36_move_V3.cpp	/^    f(get_name());	\/\/ rvalue-Variante$/;"	p	file:	signature:()
+get_name	G36_move_V3.cpp	/^string get_name() { return "Smith"; }	\/* temp. Objekt$/;"	f	signature:()
+getn	G02_simple_classes.cpp	/^    int getn() { return n; }        $/;"	f	class:C	access:public	signature:()
+getn	G03_const_and_ref.cpp	/^    friend ostream& operator<<(ostream& os, const C& c) { os << c.getn(); return os; }$/;"	p	file:	signature:()
+getn	G03_const_and_ref.cpp	/^    int getn() const { return n; }$/;"	f	class:C	access:public	signature:() const
+getn	G09_simple_inheritance.cpp	/^    int getn() const { return n; }$/;"	f	class:A	access:public	signature:() const
+getn	G13_multiple_inheritance_V1.cpp	/^    int getn() const { return n; }$/;"	f	class:A	access:public	signature:() const
+getn	G14_multiple_inheritance_V2.cpp	/^    int getn() const { return n; }$/;"	f	class:A	access:public	signature:() const
+h	G04_rule_of_three_V1.cpp	/^void h(C *)   { tools_log(); cout << "in h" << endl; }$/;"	f	signature:(C *)
+inc	G30_lambda_expression_V1.cpp	/^	auto inc = [](int & n) {  ++n; };$/;"	l
+index	G23_ranged_base_for.cpp	/^			size_t index;      \/\/ and the position$/;"	m	class:D::myiterator	file:	access:private
+it	G23_ranged_base_for.cpp	/^		cout << *it << " ";$/;"	l
+k	G04_rule_of_three_V1.cpp	/^C k(C c)      { tools_log(); cout << "in k" << endl; return c; }$/;"	f	signature:(C c)
+lambda_x2	G32_lambda_expression_V3.cpp	/^    auto lambda_x2 = [](double x) -> auto {return x*x;};$/;"	l
+lambda_x3	G31_lambda_expression_V2.cpp	/^    auto lambda_x3 = [](double x){return x*x*x;};$/;"	l
+m	G30_lambda_expression_V1.cpp	/^	int m = 12;$/;"	l
+m	G36_move_V3.cpp	/^int m = 42;								\/* glob. variable$/;"	v
+main	G01_sneak_preview.cpp	/^int main()$/;"	f	signature:()
+main	G02_simple_classes.cpp	/^int main()$/;"	f	signature:()
+main	G02a_simple_class.cpp	/^int main()$/;"	f	signature:()
+main	G03_const_and_ref.cpp	/^int main()$/;"	f	signature:()
+main	G04_rule_of_three_V1.cpp	/^int main()$/;"	f	signature:()
+main	G05_rule_of_three_V2.cpp	/^int main()$/;"	f	signature:()
+main	G06_new_and_delete.cpp	/^int main()$/;"	f	signature:()
+main	G07_string_example.cpp	/^int main()$/;"	f	signature:()
+main	G08_vectors.cpp	/^int main()$/;"	f	signature:()
+main	G09_simple_inheritance.cpp	/^int main()$/;"	f	signature:()
+main	G10_virtual_functions.cpp	/^int main()$/;"	f	signature:()
+main	G10_virtual_functions_intro.cpp	/^int main()$/;"	f	signature:()
+main	G11_abstract_class_interfaces.cpp	/^int main()$/;"	f	signature:()
+main	G12_virtual_functions_example.cpp	/^int main()$/;"	f	signature:()
+main	G13_multiple_inheritance_V1.cpp	/^int main()$/;"	f	signature:()
+main	G14_multiple_inheritance_V2.cpp	/^int main()$/;"	f	signature:()
+main	G15_line_example.cpp	/^int main()$/;"	f	signature:()
+main	G15_line_example_sol.cpp	/^int main()$/;"	f	signature:()
+main	G16_define_operators_V1.cpp	/^int main()$/;"	f	signature:()
+main	G17_define_operators_V2.cpp	/^int main()$/;"	f	signature:()
+main	G18_define_operators_V3.cpp	/^int main()$/;"	f	signature:()
+main	G19_define_operators_V4.cpp	/^int main()$/;"	f	signature:()
+main	G20_define_operators_V5.cpp	/^int main()$/;"	f	signature:()
+main	G21_vtbl_fun.cpp	/^int main()$/;"	f	signature:()
+main	G22_initializers.cpp	/^int main()$/;"	f	signature:()
+main	G23_ranged_base_for.cpp	/^int main()$/;"	f	signature:()
+main	G24_statics.cpp	/^int main()$/;"	f	signature:()
+main	G25_deleted_default_explicit.cpp	/^int main()$/;"	f	signature:()
+main	G26_timing.cpp	/^int main()$/;"	f	signature:()
+main	G27_fib_bench.cpp	/^int main()$/;"	f	signature:()
+main	G28_test_set.cpp	/^int main()$/;"	f	signature:()
+main	G29_test_set_lsg.cpp	/^int main()$/;"	f	signature:()
+main	G30_lambda_expression_V1.cpp	/^int main()$/;"	f	signature:()
+main	G31_lambda_expression_V2.cpp	/^int main()$/;"	f	signature:()
+main	G32_lambda_expression_V3.cpp	/^int main()$/;"	f	signature:()
+main	G33_lambda_expression_V4.cpp	/^int main()$/;"	f	signature:()
+main	G34_move_V1.cpp	/^int main()$/;"	f	signature:()
+main	G35_move_V2.cpp	/^int main()$/;"	f	signature:()
+main	G36_move_V3.cpp	/^int main()$/;"	f	signature:()
+map	G27_fib_bench.cpp	/^	static unordered_map<long,long> map;$/;"	l	file:
+matrnr	G28_test_set.cpp	/^const string matrnr = "123456";$/;"	v
+matrnr	G29_test_set_lsg.cpp	/^const string matrnr = "123456";$/;"	v
+max_elements	G29_test_set_lsg.cpp	/^    unsigned int max_elements;$/;"	m	class:set	file:	access:private
+myTable	G21_vtbl_fun.cpp	/^    sim_func myTable[] = { g };$/;"	l
+myiterator	G23_ranged_base_for.cpp	/^			myiterator(const D & _d, size_t _index) : d(_d), index(_index) { }$/;"	f	class:D::myiterator	access:public	signature:(const D & _d, size_t _index)
+myiterator	G23_ranged_base_for.cpp	/^	class myiterator$/;"	c	class:D	file:	access:private
+n	G01_sneak_preview.cpp	/^		int n;$/;"	m	class:C	file:	access:public
+n	G01_sneak_preview.cpp	/^class D { int n; };$/;"	m	class:D	file:	access:private
+n	G02_simple_classes.cpp	/^    int n;$/;"	m	class:C	file:	access:private
+n	G02a_simple_class.cpp	/^    int n;$/;"	m	class:C	file:	access:private
+n	G03_const_and_ref.cpp	/^    int n;$/;"	m	class:C	file:	access:private
+n	G05_rule_of_three_V2.cpp	/^	int n;$/;"	m	class:C	file:	access:public
+n	G06_new_and_delete.cpp	/^    int n;$/;"	m	class:C	file:	access:public
+n	G09_simple_inheritance.cpp	/^    int n;$/;"	m	class:A	file:	access:protected
+n	G10_virtual_functions_intro.cpp	/^int n;$/;"	m	class:Object	file:	access:public
+n	G13_multiple_inheritance_V1.cpp	/^    int n;$/;"	m	class:A	file:	access:public
+n	G14_multiple_inheritance_V2.cpp	/^    int n;$/;"	m	class:A	file:	access:public
+n	G16_define_operators_V1.cpp	/^	int z,n;	\/\/ z\/n$/;"	m	class:Bruch	file:	access:private
+n	G18_define_operators_V3.cpp	/^	int n;$/;"	l
+n	G20_define_operators_V5.cpp	/^    int n;$/;"	m	class:X	file:	access:private
+n	G21_vtbl_fun.cpp	/^    long n = 1; $/;"	m	class:C1	file:	access:public
+n	G21_vtbl_fun.cpp	/^    long n = 2; $/;"	m	class:C2	file:	access:public
+n	G21_vtbl_fun.cpp	/^    struct { long* ptr=0; long n=3; } c3;$/;"	m	struct:__anon2	file:	access:public
+n	G22_initializers.cpp	/^    int n = 23;             \/\/ default value $/;"	m	class:C	file:	access:public
+n	G23_ranged_base_for.cpp	/^	auto n = 12;    \/\/ int$/;"	l
+n	G24_statics.cpp	/^    int n = 23;$/;"	m	class:C	file:	access:private
+n	G25_deleted_default_explicit.cpp	/^    int n;$/;"	m	class:B	file:	access:private
+n	G27_fib_bench.cpp	/^		cout << endl << endl << "n: "; cin >> n;$/;"	l
+n	G27_fib_bench.cpp	/^		long n,fn;$/;"	l
+n	G30_lambda_expression_V1.cpp	/^	int n = 5;$/;"	l
+name	G28_test_set.cpp	/^const string name = "N.N.";$/;"	v
+name	G29_test_set_lsg.cpp	/^const string name = "N.N.";$/;"	v
+operator !=	G20_define_operators_V5.cpp	/^    friend bool operator!=(const X& lhs, const X& rhs)$/;"	f	class:X	access:friend	signature:(const X& lhs, const X& rhs)
+operator !=	G23_ranged_base_for.cpp	/^			bool operator!=(const myiterator& rhs) const$/;"	f	class:D::myiterator	access:public	signature:(const myiterator& rhs) const
+operator ()	G20_define_operators_V5.cpp	/^    int operator()(int y)$/;"	f	class:X	access:public	signature:(int y)
+operator *	G16_define_operators_V1.cpp	/^	friend const Bruch operator*(Bruch lhs, const Bruch & rhs) {	$/;"	f	class:Bruch	access:friend	signature:(Bruch lhs, const Bruch & rhs)
+operator *	G23_ranged_base_for.cpp	/^			double operator*() const { return d.v[index]; }$/;"	f	class:D::myiterator	access:public	signature:() const
+operator *	G34_move_V1.cpp	/^    friend C operator*(C lhs, const C & rhs) { $/;"	f	class:C	access:friend	signature:(C lhs, const C & rhs)
+operator *	G35_move_V2.cpp	/^    friend C operator*(C lhs, const C & rhs) { $/;"	f	class:C	access:friend	signature:(C lhs, const C & rhs)
+operator *=	G16_define_operators_V1.cpp	/^	Bruch & operator*=(const Bruch & b) {$/;"	f	class:Bruch	access:public	signature:(const Bruch & b)
+operator *=	G34_move_V1.cpp	/^    C & operator*=(const C &) { $/;"	f	class:C	access:public	signature:(const C &)
+operator *=	G35_move_V2.cpp	/^    C & operator*=(const C &) { $/;"	f	class:C	access:public	signature:(const C &)
+operator +	G01_sneak_preview.cpp	/^		friend C operator+(const C& c1, const C& c2) {$/;"	f	class:C	access:friend	signature:(const C& c1, const C& c2)
+operator +	G17_define_operators_V2.cpp	/^	Unit operator+(const Unit & u_rhs) $/;"	f	class:Unit	access:public	signature:(const Unit & u_rhs)
+operator +	G19_define_operators_V4.cpp	/^	friend const CStringIII operator+(CStringIII lhs, const CStringIII & rhs) {	$/;"	f	class:CStringIII	access:friend	signature:(CStringIII lhs, const CStringIII & rhs)
+operator +	G20_define_operators_V5.cpp	/^    friend X operator+(X lhs, const X& rhs)$/;"	f	class:X	access:friend	signature:(X lhs, const X& rhs)
+operator +	G29_test_set_lsg.cpp	/^    friend set operator+(const set& s1, const set& s2)$/;"	f	class:set	access:friend	signature:(const set& s1, const set& s2)
+operator +	G34_move_V1.cpp	/^    friend C operator+(const C & lhs, const C & rhs) {  $/;"	f	class:C	access:friend	signature:(const C & lhs, const C & rhs)
+operator +	G35_move_V2.cpp	/^    friend C operator+(const C & lhs, const C & rhs) {  $/;"	f	class:C	access:friend	signature:(const C & lhs, const C & rhs)
+operator ++	G18_define_operators_V3.cpp	/^	Point & operator++()    			\/*	op++() ?$/;"	f	class:Point	access:public	signature:()
+operator ++	G18_define_operators_V3.cpp	/^	Point operator++(int)				\/*	op++(int) ?$/;"	f	class:Point	access:public	signature:(int)
+operator ++	G20_define_operators_V5.cpp	/^    X operator++(int)   \/\/ postfix x++ (dummy argument)$/;"	f	class:X	access:public	signature:(int)
+operator ++	G20_define_operators_V5.cpp	/^    X& operator++()     \/\/ prefix ++x$/;"	f	class:X	access:public	signature:()
+operator ++	G23_ranged_base_for.cpp	/^			const myiterator& operator++()$/;"	f	class:D::myiterator	access:public	signature:()
+operator +=	G19_define_operators_V4.cpp	/^    CStringIII & operator+=(const CStringIII & rhs) {$/;"	f	class:CStringIII	access:public	signature:(const CStringIII & rhs)
+operator +=	G20_define_operators_V5.cpp	/^    X& operator+=(const X& rhs)$/;"	f	class:X	access:public	signature:(const X& rhs)
+operator +=	G34_move_V1.cpp	/^    C & operator+=(const C &) { $/;"	f	class:C	access:public	signature:(const C &)
+operator +=	G35_move_V2.cpp	/^    C & operator+=(const C &) { $/;"	f	class:C	access:public	signature:(const C &)
+operator -	G17_define_operators_V2.cpp	/^	friend Unit operator-(const Unit & u_lhs, const Unit & u_rhs) $/;"	f	class:Unit	access:friend	signature:(const Unit & u_lhs, const Unit & u_rhs)
+operator <	G20_define_operators_V5.cpp	/^    friend bool operator<(const X& lhs, const X& rhs)$/;"	f	class:X	access:friend	signature:(const X& lhs, const X& rhs)
+operator <<	G01_sneak_preview.cpp	/^		friend ostream& operator<<(ostream& os, const C& c){$/;"	f	class:C	access:friend	signature:(ostream& os, const C& c)
+operator <<	G02_simple_classes.cpp	/^    friend std::ostream & operator<<(std::ostream & os, const C  & c ) {$/;"	f	class:C	access:friend	signature:(std::ostream & os, const C & c )
+operator <<	G03_const_and_ref.cpp	/^    friend ostream& operator<<(ostream& os, const C& c) { os << c.getn(); return os; }$/;"	f	class:C	access:friend	signature:(ostream& os, const C& c)
+operator <<	G07_string_example.cpp	/^    friend std::ostream & operator<<(std::ostream & os, CStringI const & s ) {$/;"	f	class:CStringI	access:friend	signature:(std::ostream & os, CStringI const & s )
+operator <<	G07_string_example.cpp	/^    friend std::ostream & operator<<(std::ostream & os, CStringII const & s ) {$/;"	f	class:CStringII	access:friend	signature:(std::ostream & os, CStringII const & s )
+operator <<	G14_multiple_inheritance_V2.cpp	/^    friend ostream& operator<<(ostream& os, const C& c) {$/;"	f	class:C	access:friend	signature:(ostream& os, const C& c)
+operator <<	G15_line_example_sol.cpp	/^    friend std::ostream & operator<<(std::ostream & os, const Line& l ) {$/;"	f	class:Line	access:friend	signature:(std::ostream & os, const Line& l )
+operator <<	G16_define_operators_V1.cpp	/^	friend ostream & operator<<(ostream & os, const Bruch & b ) {$/;"	f	class:Bruch	access:friend	signature:(ostream & os, const Bruch & b )
+operator <<	G17_define_operators_V2.cpp	/^	friend ostream & operator<<(ostream & os, const Unit & u)$/;"	f	class:Unit	access:friend	signature:(ostream & os, const Unit & u)
+operator <<	G18_define_operators_V3.cpp	/^	friend ostream & operator<<(ostream & os, const Point& p)$/;"	f	class:Point	access:friend	signature:(ostream & os, const Point& p)
+operator <<	G19_define_operators_V4.cpp	/^    friend ostream & operator<<(ostream & os, const CStringIII & s ) {$/;"	f	class:CStringIII	access:friend	signature:(ostream & os, const CStringIII & s )
+operator <<	G20_define_operators_V5.cpp	/^    friend ostream & operator<<(ostream & os, const X & x ) {$/;"	f	class:X	access:friend	signature:(ostream & os, const X & x )
+operator <<	G29_test_set_lsg.cpp	/^    friend ostream& operator<<(ostream& os, const set& s)$/;"	f	class:set	access:friend	signature:(ostream& os, const set& s)
+operator <=	G20_define_operators_V5.cpp	/^    friend bool operator<=(const X& lhs, const X& rhs)$/;"	f	class:X	access:friend	signature:(const X& lhs, const X& rhs)
+operator =	G02a_simple_class.cpp	/^    C& operator=(const C & c) { tools_log(); n=c.n; $/;"	f	class:C	access:public	signature:(const C & c)
+operator =	G03_const_and_ref.cpp	/^    C& operator=(const C& c) {  n = c.getn(); return *this; }$/;"	f	class:C	access:public	signature:(const C& c)
+operator =	G04_rule_of_three_V1.cpp	/^    C & operator=(const C & \/*c*\/)  { $/;"	f	class:C	access:public	signature:(const C & )
+operator =	G05_rule_of_three_V2.cpp	/^    C & operator=(const C & c)  { $/;"	f	class:C	access:public	signature:(const C & c)
+operator =	G05_rule_of_three_V2.cpp	/^    c3.operator=(c2.operator=(c1));$/;"	p	file:	signature:(c2.operator=(c1))
+operator =	G07_string_example.cpp	/^    CStringI & operator=(const CStringI & s) {$/;"	f	class:CStringI	access:public	signature:(const CStringI & s)
+operator =	G07_string_example.cpp	/^    CStringII & operator=(CStringII s) {    \/\/ note the copy!$/;"	f	class:CStringII	access:public	signature:(CStringII s)
+operator =	G17_define_operators_V2.cpp	/^	Unit & operator=(const Unit & u)$/;"	f	class:Unit	access:public	signature:(const Unit & u)
+operator =	G19_define_operators_V4.cpp	/^    CStringIII & operator=(CStringIII s) {  \/\/ note the copy!$/;"	f	class:CStringIII	access:public	signature:(CStringIII s)
+operator =	G20_define_operators_V5.cpp	/^    X& operator=(const X& rhs)$/;"	f	class:X	access:public	signature:(const X& rhs)
+operator =	G25_deleted_default_explicit.cpp	/^    A& operator=(const A&) = default;    \/\/ und default assignment$/;"	p	class:A	file:	access:public	signature:(const A&)
+operator =	G25_deleted_default_explicit.cpp	/^    C& operator=(const C&) = delete;$/;"	p	class:C	file:	access:public	signature:(const C&)
+operator =	G34_move_V1.cpp	/^    C & operator=(const C &) {$/;"	f	class:C	access:public	signature:(const C &)
+operator =	G35_move_V2.cpp	/^    C & operator=(const C &&) {$/;"	f	class:C	access:public	signature:(const C &&)
+operator =	G35_move_V2.cpp	/^    C & operator=(const C &) {$/;"	f	class:C	access:public	signature:(const C &)
+operator ==	G18_define_operators_V3.cpp	/^	bool operator==(const Point & p) const $/;"	f	class:Point	access:public	signature:(const Point & p) const
+operator ==	G20_define_operators_V5.cpp	/^    friend bool operator==(const X& lhs, const X& rhs)$/;"	f	class:X	access:friend	signature:(const X& lhs, const X& rhs)
+operator >	G20_define_operators_V5.cpp	/^    friend bool operator>(const X& lhs, const X& rhs)$/;"	f	class:X	access:friend	signature:(const X& lhs, const X& rhs)
+operator >=	G20_define_operators_V5.cpp	/^    friend bool operator>=(const X& lhs, const X& rhs)$/;"	f	class:X	access:friend	signature:(const X& lhs, const X& rhs)
+operator >>	G20_define_operators_V5.cpp	/^    friend istream& operator>>(istream& is, X& obj)$/;"	f	class:X	access:friend	signature:(istream& is, X& obj)
+operator []	G18_define_operators_V3.cpp	/^	const int & operator[](int n) const	\/*	op[] ?$/;"	f	class:Point	access:public	signature:(int n) const
+operator []	G18_define_operators_V3.cpp	/^	int & operator[](int n)				\/*	op[] ?$/;"	f	class:Point	access:public	signature:(int n)
+output	G02_simple_classes.cpp	/^void output(C c) { tools_log(); cout << "c = " << c << endl; }$/;"	f	signature:(C c)
+p	G07_string_example.cpp	/^    char * p;$/;"	m	class:CStringI	file:	access:public
+p	G07_string_example.cpp	/^    char * p;$/;"	m	class:CStringII	file:	access:public
+p	G19_define_operators_V4.cpp	/^    char * p;$/;"	m	class:CStringIII	file:	access:public
+p	G21_vtbl_fun.cpp	/^    long* p;$/;"	l
+p	G22_initializers.cpp	/^    int *p = new int[2] { -2,-3 };  \/\/ auch fuer dynamische arrays$/;"	m	class:C	file:	access:public
+p3	G18_define_operators_V3.cpp	/^	const Point p3(p1);$/;"	p	file:	signature:(p1)
+pa	G10_virtual_functions.cpp	/^    A *pa = new A(), *pb = new B();$/;"	l
+pb	G10_virtual_functions.cpp	/^    A *pa = new A(), *pb = new B();$/;"	l
+pc	G01_sneak_preview.cpp	/^	C* pc = new C(12345);$/;"	l
+pc	G06_new_and_delete.cpp	/^    C* pc;                                      \/\/ an uninitialized ptr$/;"	l
+pf	G21_vtbl_fun.cpp	/^    c2_member_func pf = &C2::f;     \/\/ this is a function pointer to C2::f$/;"	l
+pi	G30_lambda_expression_V1.cpp	/^	auto pi = []() -> double { return 3.1415926; };$/;"	l
+pn	G06_new_and_delete.cpp	/^    int* pn = (int*)malloc( 1*sizeof(int) );    \/\/ no init!$/;"	l
+polynom_t	G31_lambda_expression_V2.cpp	/^typedef double (*polynom_t)(double x);$/;"	t	file:
+ppp	G21_vtbl_fun.cpp	/^    C2* ppp = &c2;  \/\/ indirectly$/;"	l
+ptr	G21_vtbl_fun.cpp	/^    struct { long* ptr=0; long n=3; } c3;$/;"	m	struct:__anon2	file:	access:public
+push_back	G08_vectors.cpp	/^        v.push_back(i);$/;"	p	file:	signature:(i)
+push_back	G12_virtual_functions_example.cpp	/^    v.push_back(a.clone());$/;"	p	file:	signature:(a.clone())
+push_back	G12_virtual_functions_example.cpp	/^    v.push_back(b.clone());$/;"	p	file:	signature:(b.clone())
+push_back	G22_initializers.cpp	/^            v.push_back(x);$/;"	p	file:	signature:(x)
+push_back	G29_test_set_lsg.cpp	/^        data.push_back(n);$/;"	p	file:	signature:(n)
+q	G19_define_operators_V4.cpp	/^		char * q = new char [strlen(p)+strlen(rhs.p)+1];$/;"	l
+r1	G03_const_and_ref.cpp	/^    const C &r1=c2, r2;    \/\/ note: only r1 is a reference, r2 is of type C; see also ptr decl.$/;"	l
+r2	G03_const_and_ref.cpp	/^    const C &r1=c2, r2;    \/\/ note: only r1 is a reference, r2 is of type C; see also ptr decl.$/;"	l
+rc	G29_test_set_lsg.cpp	/^        set rc(s1.max_elements+s2.max_elements);$/;"	p	file:	signature:(s1.max_elements+s2.max_elements)
+read_n	G03_const_and_ref.cpp	/^int read_n(const C & c) { return c.getn(); }     \/\/ here c is considered const!$/;"	f	signature:(const C & c)
+remove	G29_test_set_lsg.cpp	/^        data.erase(remove(data.begin(), data.end(), n), data.end());$/;"	p	file:	signature:(data.begin(), data.end(), n)
+remove_value	G29_test_set_lsg.cpp	/^    void remove_value(unsigned int n)$/;"	f	class:set	access:public	signature:(unsigned int n)
+reserve	G29_test_set_lsg.cpp	/^        data.reserve(max_elements);$/;"	p	file:	signature:(max_elements)
+result	G17_define_operators_V2.cpp	/^		Unit result(u_lhs);$/;"	p	file:	signature:(u_lhs)
+result	G18_define_operators_V3.cpp	/^		bool result = (_x1==p._x1) && (_x2==p._x2);$/;"	l
+result	G34_move_V1.cpp	/^        C result(lhs);$/;"	p	file:	signature:(lhs)
+result	G35_move_V2.cpp	/^        C result(lhs);$/;"	p	file:	signature:(lhs)
+result1	G33_lambda_expression_V4.cpp	/^    auto result1 = find_if(v.begin(), v.end(), test_expression);$/;"	l
+result2	G33_lambda_expression_V4.cpp	/^    auto result2 = find_if(v.begin(), v.end(),[](int n) { return (n % 2) == 0; });$/;"	l
+s	G27_fib_bench.cpp	/^			long s=0;$/;"	l
+s	G36_move_V3.cpp	/^    string s;$/;"	l
+s3	G19_define_operators_V4.cpp	/^	CStringIII s1("one"),s2(two),s3(s1);$/;"	p	file:	signature:(s1)
+s3	G29_test_set_lsg.cpp	/^    set s3 = s1+s2;$/;"	l
+set	G28_test_set.cpp	/^class set {$/;"	c	file:
+set	G29_test_set_lsg.cpp	/^    set(unsigned int max_elements)$/;"	f	class:set	access:public	signature:(unsigned int max_elements)
+set	G29_test_set_lsg.cpp	/^    set(unsigned int max_elements, const initializer_list<unsigned int>& l)$/;"	f	class:set	access:public	signature:(unsigned int max_elements, const initializer_list<unsigned int>& l)
+set	G29_test_set_lsg.cpp	/^class set {$/;"	c	file:
+set::contains	G29_test_set_lsg.cpp	/^    bool contains(unsigned int n) $/;"	f	class:set	access:public	signature:(unsigned int n)
+set::data	G29_test_set_lsg.cpp	/^    vector<unsigned int> data;$/;"	m	class:set	file:	access:private
+set::end	G29_test_set_lsg.cpp	/^        data.erase(remove(data.begin(), data.end(), n), data.end());$/;"	p	file:	signature:()
+set::max_elements	G29_test_set_lsg.cpp	/^    unsigned int max_elements;$/;"	m	class:set	file:	access:private
+set::operator +	G29_test_set_lsg.cpp	/^    friend set operator+(const set& s1, const set& s2)$/;"	f	class:set	access:friend	signature:(const set& s1, const set& s2)
+set::operator <<	G29_test_set_lsg.cpp	/^    friend ostream& operator<<(ostream& os, const set& s)$/;"	f	class:set	access:friend	signature:(ostream& os, const set& s)
+set::push_back	G29_test_set_lsg.cpp	/^        data.push_back(n);$/;"	p	file:	signature:(n)
+set::rc	G29_test_set_lsg.cpp	/^        set rc(s1.max_elements+s2.max_elements);$/;"	p	file:	signature:(s1.max_elements+s2.max_elements)
+set::remove	G29_test_set_lsg.cpp	/^        data.erase(remove(data.begin(), data.end(), n), data.end());$/;"	p	file:	signature:(data.begin(), data.end(), n)
+set::remove_value	G29_test_set_lsg.cpp	/^    void remove_value(unsigned int n)$/;"	f	class:set	access:public	signature:(unsigned int n)
+set::reserve	G29_test_set_lsg.cpp	/^        data.reserve(max_elements);$/;"	p	file:	signature:(max_elements)
+set::set	G29_test_set_lsg.cpp	/^    set(unsigned int max_elements)$/;"	f	class:set	access:public	signature:(unsigned int max_elements)
+set::set	G29_test_set_lsg.cpp	/^    set(unsigned int max_elements, const initializer_list<unsigned int>& l)$/;"	f	class:set	access:public	signature:(unsigned int max_elements, const initializer_list<unsigned int>& l)
+set::set_value	G29_test_set_lsg.cpp	/^            rc.set_value(x);$/;"	p	file:	signature:(x)
+set::set_value	G29_test_set_lsg.cpp	/^    void set_value(unsigned int n)$/;"	f	class:set	access:public	signature:(unsigned int n)
+set::x	G29_test_set_lsg.cpp	/^            os << x << " ";$/;"	l
+set_P1	G15_line_example_sol.cpp	/^    Line& set_P1(int x1,int y1) { $/;"	f	class:Line	access:public	signature:(int x1,int y1)
+set_P2	G15_line_example_sol.cpp	/^    Line& set_P2(int x2,int y2) { $/;"	f	class:Line	access:public	signature:(int x2,int y2)
+set_m	G36_move_V3.cpp	/^int & set_m() { return m; }				\/* ref. auf m$/;"	f	signature:()
+set_n	G24_statics.cpp	/^    void set_n(int N);	\/\/ hier nur Deklarationen; Definitionen ausserhalb$/;"	p	class:C	file:	access:public	signature:(int N)
+set_n	G24_statics.cpp	/^void C::set_n(int N) { $/;"	f	class:C	signature:(int N)
+set_value	G29_test_set_lsg.cpp	/^            rc.set_value(x);$/;"	p	file:	signature:(x)
+set_value	G29_test_set_lsg.cpp	/^        s2.set_value(i);$/;"	p	file:	signature:(i)
+set_value	G29_test_set_lsg.cpp	/^    void set_value(unsigned int n)$/;"	f	class:set	access:public	signature:(unsigned int n)
+setm	G30_lambda_expression_V1.cpp	/^	auto setm = [&](int n) { m=n; };        \/\/ or [&m]$/;"	l
+setn	G03_const_and_ref.cpp	/^    void setn(int n) { this->n = n; } \/\/ (*this).n = n $/;"	f	class:C	access:public	signature:(int n)
+sim_func	G21_vtbl_fun.cpp	/^    typedef void (*sim_func)(C2*,int);$/;"	t	file:
+strcpy	G07_string_example.cpp	/^            std::strcpy(p,s.p); $/;"	p	class:CStringI::std	file:	signature:(p,s.p)
+strcpy	G07_string_example.cpp	/^        std::strcpy(p,Src); $/;"	p	class:CStringI::std	file:	signature:(p,Src)
+strcpy	G07_string_example.cpp	/^        std::strcpy(p,Src); $/;"	p	class:CStringII::std	file:	signature:(p,Src)
+strcpy	G07_string_example.cpp	/^        std::strcpy(p,s.p); $/;"	p	class:CStringI::std	file:	signature:(p,s.p)
+strcpy	G19_define_operators_V4.cpp	/^		strcat(strcpy(q,p),rhs.p);$/;"	p	file:	signature:(q,p)
+swap	G07_string_example.cpp	/^        std::swap(s1.p,s2.p);$/;"	p	class:CStringII::std	file:	signature:(s1.p,s2.p)
+t	G01_sneak_preview.cpp	/^		T t;$/;"	m	class:Memory	file:	access:public
+t1	G26_timing.cpp	/^    auto t1 = std::chrono::high_resolution_clock::now();$/;"	l
+t1	G27_fib_bench.cpp	/^			auto t1 = std::chrono::high_resolution_clock::now();$/;"	l
+t2	G26_timing.cpp	/^    auto t2 = std::chrono::high_resolution_clock::now();$/;"	l
+t2	G27_fib_bench.cpp	/^			auto t2 = std::chrono::high_resolution_clock::now();$/;"	l
+table	G27_fib_bench.cpp	/^fib_ptr table[] = {$/;"	v
+test_expression	G33_lambda_expression_V4.cpp	/^bool test_expression(int n)$/;"	f	signature:(int n)
+toString	G10_virtual_functions_intro.cpp	/^    string toString() const { return "C::toString"; }$/;"	f	class:C	access:public	signature:() const
+toString	G10_virtual_functions_intro.cpp	/^    virtual string toString() const { return "Object::toString"; }$/;"	f	class:Object	access:public	signature:() const
+toString	G12_virtual_functions_example.cpp	/^     virtual string toString() { return "(obj)"; }$/;"	f	class:Object	access:public	signature:()
+toString	G12_virtual_functions_example.cpp	/^    string toString() { return "(I am A)"; }$/;"	f	class:A	access:public	signature:()
+toString	G12_virtual_functions_example.cpp	/^    string toString() { return "(I am B)"; }$/;"	f	class:B	access:public	signature:()
+trapezrule	G32_lambda_expression_V3.cpp	/^    auto trapezrule = [=](function<double(double)> f)$/;"	l
+trapezrule	G33_lambda_expression_V4.cpp	/^    auto trapezrule = [=](function<double(double)>f)->double{return 0.5*(f(x2)+f(x1))*(x2-x1);};$/;"	l
+two	G19_define_operators_V4.cpp	/^	string two="two";$/;"	l
+unit	G17_define_operators_V2.cpp	/^	string unit;$/;"	m	class:Unit	file:	access:private
+v	G01_sneak_preview.cpp	/^	vector<int> v;$/;"	l
+v	G08_vectors.cpp	/^    vector<int> v = { 4,5,6 };     $/;"	l
+v	G12_virtual_functions_example.cpp	/^    vector<Object*> v;$/;"	l
+v	G22_initializers.cpp	/^    vector<double> v;$/;"	m	class:D	file:	access:public
+v	G23_ranged_base_for.cpp	/^	vector<double> v;$/;"	m	class:D	file:	access:private
+v	G23_ranged_base_for.cpp	/^	vector<int> v = { 1,2,3 };$/;"	l
+v	G33_lambda_expression_V4.cpp	/^    vector<int> v = { 1,3,5,6,7,8 };$/;"	l
+vtable	G21_vtbl_fun.cpp	/^    long* vtable = (long*)(p[0]);   \/\/ begin of vtable$/;"	l
+weight3	G17_define_operators_V2.cpp	/^	Unit weight3(weight2);$/;"	p	file:	signature:(weight2)
+x	G20_define_operators_V5.cpp	/^    tools_log(); cout << "Input x.n="; cin >> x;$/;"	l
+x	G23_ranged_base_for.cpp	/^		cout << x << " ";$/;"	l
+x	G29_test_set_lsg.cpp	/^            os << x << " ";$/;"	l
+x1	G15_line_example.cpp	/^    int x1,y1,x2,y2;    \/\/ (2)$/;"	m	class:Line	file:	access:private
+x1	G32_lambda_expression_V3.cpp	/^    double x1=1.0,x2=2.0;$/;"	l
+x1	G33_lambda_expression_V4.cpp	/^    double x1=1.0,x2=2.0;$/;"	l
+x2	G15_line_example.cpp	/^    int x1,y1,x2,y2;    \/\/ (2)$/;"	m	class:Line	file:	access:private
+x2	G32_lambda_expression_V3.cpp	/^    double x1=1.0,x2=2.0;$/;"	l
+x2	G33_lambda_expression_V4.cpp	/^    double x1=1.0,x2=2.0;$/;"	l
+x3	G31_lambda_expression_V2.cpp	/^double x3(double x) { return x*x*x; }$/;"	f	signature:(double x)
+y	G22_initializers.cpp	/^    int y,z{};              \/\/ y nicht initialisiert, z ist Null (0) $/;"	m	class:C	file:	access:public
+y1	G15_line_example.cpp	/^    int x1,y1,x2,y2;    \/\/ (2)$/;"	m	class:Line	file:	access:private
+y2	G15_line_example.cpp	/^    int x1,y1,x2,y2;    \/\/ (2)$/;"	m	class:Line	file:	access:private
+z	G16_define_operators_V1.cpp	/^	int z,n;	\/\/ z\/n$/;"	m	class:Bruch	file:	access:private
+~A	G09_simple_inheritance.cpp	/^    ~A()            { tools_log(); cout << "dtor A(" << n << ")" << endl; }$/;"	f	class:A	access:public	signature:()
+~A	G13_multiple_inheritance_V1.cpp	/^    ~A()            { tools_log(); cout << "dtor A(" << n << ")" << endl; }$/;"	f	class:A	access:public	signature:()
+~A	G14_multiple_inheritance_V2.cpp	/^    ~A()            { tools_log(); cout << "dtor A(" << n << ")" << endl; }$/;"	f	class:A	access:public	signature:()
+~B	G09_simple_inheritance.cpp	/^    ~B()                    { $/;"	f	class:B	access:public	signature:()
+~B1	G13_multiple_inheritance_V1.cpp	/^    ~B1()            { tools_log(); cout << "dtor B1(" << n << ")" << endl; }$/;"	f	class:B1	access:public	signature:()
+~B1	G14_multiple_inheritance_V2.cpp	/^    ~B1()            { tools_log(); cout << "dtor B1(" << n << ")" << endl; }$/;"	f	class:B1	access:public	signature:()
+~B2	G13_multiple_inheritance_V1.cpp	/^    ~B2()            { tools_log(); cout << "dtor B2(" << n << ")" << endl; }$/;"	f	class:B2	access:public	signature:()
+~B2	G14_multiple_inheritance_V2.cpp	/^    ~B2()            { tools_log(); cout << "dtor B2(" << n << ")" << endl; }$/;"	f	class:B2	access:public	signature:()
+~C	G01_sneak_preview.cpp	/^		~C() {$/;"	f	class:C	access:public	signature:()
+~C	G02_simple_classes.cpp	/^    ~C()            { tools_log(); cout << "dtor ~C() n=" << n << endl; }$/;"	f	class:C	access:public	signature:()
+~C	G02a_simple_class.cpp	/^    ~C()            { tools_log(); cout << "dtor ~C() n=" << n << endl; }$/;"	f	class:C	access:public	signature:()
+~C	G04_rule_of_three_V1.cpp	/^    ~C()   { tools_log(); cout << "dtor ~C()" << endl; }$/;"	f	class:C	access:public	signature:()
+~C	G05_rule_of_three_V2.cpp	/^    ~C()   { tools_log(); cout << "dtor ~C() n=" << n << endl; }$/;"	f	class:C	access:public	signature:()
+~C	G13_multiple_inheritance_V1.cpp	/^    ~C()                       { tools_log(); cout << "dtor C(" << B1::n << "," << B2::n << ")" << endl; }$/;"	f	class:C	access:public	signature:()
+~C	G14_multiple_inheritance_V2.cpp	/^    ~C()                       { tools_log(); cout << "dtor C(" << B1::n << "," << B2::n << ")" << endl; }$/;"	f	class:C	access:public	signature:()
+~C	G22_initializers.cpp	/^    ~C() { delete [] p; }$/;"	f	class:C	access:public	signature:()
+~C	G24_statics.cpp	/^    ~C() { --cnt; }$/;"	f	class:C	access:public	signature:()
+~CStringI	G07_string_example.cpp	/^    ~CStringI() { delete [] p; }$/;"	f	class:CStringI	access:public	signature:()
+~CStringII	G07_string_example.cpp	/^    ~CStringII() { delete [] p; }$/;"	f	class:CStringII	access:public	signature:()
+~CStringIII	G19_define_operators_V4.cpp	/^    ~CStringIII() { delete [] p; }$/;"	f	class:CStringIII	access:public	signature:()
