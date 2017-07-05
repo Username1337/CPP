@@ -1,6 +1,7 @@
 # Wichtige Notizen
 
 ## Wichtige Elemente
+- [CPP References](reference/en/cpp.html)
 
 - Hello World
 	```cpp
@@ -46,7 +47,7 @@
 		```
 
 - CPP Arrays
-	- [CPP References](file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/container/array.html)
+	- [CPP References](reference/en/cpp/container/array.html)
 
 - Vector
 	- `#include <vector>`
@@ -68,7 +69,7 @@
 		//count vector elements if lambda expression returns true
 		int cnt1 = count_if (v.begin(), v.end(), [](int k){ return (0==k%2);});
 		```
-	- [CPP References](file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/container/vector.html)
+	- [CPP References](reference/en/cpp/container/vector.html)
 
 - Set
 	- `#include <set>`
@@ -80,7 +81,7 @@
 		s.insert(3);
 		s.size();
 		```
-	- [CPP References](file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/container/set.html)
+	- [CPP References](reference/en/cpp/container/set.html)
 
 - Unordered Map
 	- `#include <unordered_map>`
@@ -89,24 +90,24 @@
 		```cpp
 		unordered_map<long,long> map;
 		```
-	- [CPP References](file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/container/unordered_map.html)
+	- [CPP References](reference/en/cpp/container/unordered_map.html)
 
 - Chrono
 	- `#include <chrono>`
 	- Für die Zeitmessung
 	- `G_classes/G26_timing.cpp`
 	- how to use
-	```cpp
-	void f(){
-		this_thread::sleep_for(chrono::milliseconds(2134));		//sleep 2134 ms
-		this_thread::sleep_for(chrono::seconds(2));				//sleep    2 s
-	}
-	auto t1 = chrono::high_resolution_clock::now();
-	f();
-	auto t2 = chrono::high_resolution_clock::now();
-	cout << chrono::duration_cast<chrono::milliseconds>(t2-t1).count() << "ms";
-	```
-	- [CPP References](file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/chrono.html)
+		```cpp
+		void f(){
+			this_thread::sleep_for(chrono::milliseconds(2134));		//sleep 2134 ms
+			this_thread::sleep_for(chrono::seconds(2));				//sleep    2 s
+		}
+		auto t1 = chrono::high_resolution_clock::now();
+		f();
+		auto t2 = chrono::high_resolution_clock::now();
+		cout << chrono::duration_cast<chrono::milliseconds>(t2-t1).count() << "ms";
+		```
+	- [CPP References](reference/en/cpp/chrono.html)
 
 - Math
 	- `#include <cmath>`
@@ -429,7 +430,7 @@
 - mutex / kritische regionen
 	- `#include <condition_variable>`
 	- sperrt threads vor dem zugriff auf variablen, oder ganze bereiche eines codes
-	- [CPP References](file:///home/bergiu/workspace/Vorlesungen/CPP/reference/en/cpp/thread/mutex.html)
+	- [CPP References](reference/en/cpp/thread/mutex.html)
 
 	- unsichere methode
 		```cpp
