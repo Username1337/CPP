@@ -1,7 +1,8 @@
-syn keyword CTagsLocalVariable endl
-syn keyword CTagsStructure Punkte
-syn keyword CTagsMember y x
-syn keyword CTagsFunction setY Punkt getY main getX setX
+syn keyword CTagsLocalVariable ggt menge leer tmp endl zaehler i f nenner out c max
+syn keyword CTagsStructure Punkte s_Bruch
+syn keyword CTagsMember name x zaehler sixpack inhalt menge zutaten y v nenner
+syn keyword CTagsEnumerationValue v
+syn keyword CTagsFunction setNenner Flasche getName getX trink getMenge meinPack out setZaehler getY Sixpack setX getInhalt Complex main konjugiere Bier invertiere istLeer trinkNaechsteVolleFlasche getGGT getNenner push_back getInverse normalisiere setY getZaehler Punkt Bruch b3
 syn keyword CTagsType value_type
-syn keyword CTagsClass Punkt
+syn keyword CTagsClass Bruch Complex Punkt Getraenke Flasche Potenz Sixpack Bier
 

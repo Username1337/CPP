@@ -227,6 +227,7 @@
 	```cpp
 	friend ostream& operator<<(ostream& os, const Bruch& b){
 		os << b.zaehler << "/" << b.nenner;
+		return os;
 	}
 	```
 
