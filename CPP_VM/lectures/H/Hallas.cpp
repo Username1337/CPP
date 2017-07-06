@@ -25,14 +25,14 @@ class Bruch {
 		}
 
 	public:
-		Bruch(): zaehler(1), nenner(1){}
-		Bruch(const T& zaehler, const T& nenner): zaehler(zaehler), nenner(nenner){}
-		Bruch(const Bruch<T>& bruch): Bruch(bruch.zaehler, bruch.nenner){}
+		Bruch(): zaehler(1), nenner(1){cout<<"ctor "<<endl;}
+		Bruch(const T& zaehler, const T& nenner): zaehler(zaehler), nenner(nenner){cout<<"ctor "<<endl;}
+		Bruch(const Bruch<T>& bruch): zaehler(bruch.zaehler), nenner(bruch.nenner){cout<<"ctor Br"<<endl;}
 		/* Bruch(initializer_list<T>& list): zaehler(list[0]), nenner(list[1]){} */
-		Bruch(const initializer_list<T>& l): Bruch(*(l.begin()),*(l.end()-1)){}
-		Bruch(const s_Bruch<T>& b): zaehler(b.zaehler), nenner(b.nenner){}
+		Bruch(const initializer_list<T>& l): Bruch(*(l.begin()),*(l.end()-1)){cout<<"ctor "<<endl;}
+		Bruch(const s_Bruch<T>& b): zaehler(b.zaehler), nenner(b.nenner){cout<<"ctor "<<endl;}
 
-		~Bruch(){}
+		~Bruch(){cout<<"dtor "<<endl;}
 
 		Bruch<T>& invertiere(){
 			T tmp = new T(this->zaehler);
@@ -117,49 +117,49 @@ class Bruch {
 		/**
 		 * Bruch * Bruch
 		 **/
-		friend const Bruch<T>& operator*(const Bruch<T>& links, const Bruch<T>& rechts){
-			Bruch<T>* out = new Bruch(links);
-			(*out) *= rechts;
-			return *out;
+		friend Bruch<T> operator*(Bruch<T> links, const Bruch<T>& rechts){
+			/* Bruch<T>* out = new Bruch(links); */
+			(links) *= rechts;
+			return links;
 		}
-		friend const Bruch<T>& operator/(const Bruch<T>& links, const Bruch<T>& rechts){
-			Bruch<T>* out = new Bruch(links);
-			(*out) /= rechts;
-			return *out;
+		friend Bruch<T> operator/(Bruch<T> links, const Bruch<T>& rechts){
+			/* Bruch<T>* out = new Bruch(links); */
+			(links) /= rechts;
+			return links;
 		}
-		friend const Bruch<T>& operator+(const Bruch<T>& links, const Bruch<T>& rechts){
-			Bruch<T>* out = new Bruch(links);
-			(*out) += rechts;
-			return *out;
+		friend Bruch<T> operator+(Bruch<T> links, const Bruch<T>& rechts){
+			/* Bruch<T>* out = new Bruch(links); */
+			(links) += rechts;
+			return links;
 		}
-		friend const Bruch<T>& operator-(const Bruch<T>& links, const Bruch<T>& rechts){
-			Bruch<T>* out = new Bruch(links);
-			(*out) -= rechts;
-			return *out;
+		friend Bruch<T> operator-(Bruch<T> links, const Bruch<T>& rechts){
+			/* Bruch<T>* out = new Bruch(links); */
+			(links) -= rechts;
+			return links;
 		}
 
 		/**
 		 * Bruch * T
 		 **/
-		friend const Bruch<T>& operator*(const Bruch<T>& links, const T& rechts){
-			Bruch<T>* out = new Bruch(links);
-			(*out) *= rechts;
-			return *out;
+		friend Bruch<T> operator*(Bruch<T> links, const T& rechts){
+			/* Bruch<T>* out = new Bruch(links); */
+			(links) *= rechts;
+			return links;
 		}
-		friend const Bruch<T>& operator/(const Bruch<T>& links, const T& rechts){
-			Bruch<T>* out = new Bruch(links);
-			(*out) /= rechts;
-			return *out;
+		friend Bruch<T> operator/(Bruch<T> links, const T& rechts){
+			/* Bruch<T>* out = new Bruch(links); */
+			(links) /= rechts;
+			return links;
 		}
-		friend const Bruch<T>& operator+(const Bruch<T>& links, const T& rechts){
-			Bruch<T>* out = new Bruch(links);
-			(*out) += rechts;
-			return *out;
+		friend Bruch<T> operator+(Bruch<T> links, const T& rechts){
+			/* Bruch<T>* out = new Bruch(links); */
+			(links) += rechts;
+			return links;
 		}
-		friend const Bruch<T>& operator-(const Bruch<T>& links, const T& rechts){
-			Bruch<T>* out = new Bruch(links);
-			(*out) -= rechts;
-			return *out;
+		friend Bruch<T> operator-(Bruch<T> links, const T& rechts){
+			/* Bruch<T>* out = new Bruch(links); */
+			(links) -= rechts;
+			return links;
 		}
 
 		/**
@@ -220,12 +220,21 @@ int Bruch<int>::getGGT(){
 /* } */
 
 int main(){
-	Bruch<int> b1(2,3);
-	Bruch<long> b2{4,9};
-	s_Bruch<double> b{ 6.5,7 };
-	Bruch<double> b3(b);
-	cout << b1 << endl;
-	cout << b2 << endl;
-	cout << b3 << endl;
+	/* Bruch<int> b1(2,3); */
+	/* Bruch<long> b2{4,9}; */
+	/* s_Bruch<double> b{ 6.5,7 }; */
+	/* Bruch<double> b3(b); */
+	/* cout << b1 << endl; */
+	/* cout << b2 << endl; */
+	/* cout << b3 << endl; */
+	/* cout << endl; */
+	Bruch<long> b4(1,2);
+	Bruch<long> b5(1,2);
+	Bruch<long> b6;
+	cout << "rechnung"<<endl;
+	b6=b4*b4;
+	cout <<b4<<endl;
+	cout <<b5<<endl;
+	cout <<b6<<endl;
 	return 0;
 }

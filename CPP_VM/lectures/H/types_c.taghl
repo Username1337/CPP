@@ -1,7 +1,8 @@
-syn keyword CTagsLocalVariable endl
-syn keyword CTagsStructure Punkte
-syn keyword CTagsMember y x
-syn keyword CTagsFunction setY Punkt getY main getX setX
+syn keyword CTagsLocalVariable max out endl zaehler b6 tmp ggt nenner
+syn keyword CTagsStructure s_Bruch Punkte
+syn keyword CTagsMember zaehler v x y nenner
+syn keyword CTagsEnumerationValue v
+syn keyword CTagsFunction getY setX main invertiere setNenner getX setZaehler getZaehler setY Punkt getNenner normalisiere getGGT Bruch getInverse
 syn keyword CTagsType value_type
-syn keyword CTagsClass Punkt
+syn keyword CTagsClass Bruch Punkt Potenz
 

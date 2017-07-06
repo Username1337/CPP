@@ -4,6 +4,62 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Bruch	Hallas.cpp	/^		Bruch(): zaehler(1), nenner(1){cout<<"ctor "<<endl;}$/;"	f	class:Bruch	access:public	signature:()
+Bruch	Hallas.cpp	/^		Bruch(const Bruch<T>& bruch): Bruch(bruch.zaehler, bruch.nenner){cout<<"ctor "<<endl;}$/;"	f	class:Bruch	access:public	signature:(const Bruch<T>& bruch)
+Bruch	Hallas.cpp	/^		Bruch(const T& zaehler, const T& nenner): zaehler(zaehler), nenner(nenner){cout<<"ctor "<<endl;}$/;"	f	class:Bruch	access:public	signature:(const T& zaehler, const T& nenner)
+Bruch	Hallas.cpp	/^		Bruch(const initializer_list<T>& l): Bruch(*(l.begin()),*(l.end()-1)){cout<<"ctor "<<endl;}$/;"	f	class:Bruch	access:public	signature:(const initializer_list<T>& l)
+Bruch	Hallas.cpp	/^		Bruch(const s_Bruch<T>& b): zaehler(b.zaehler), nenner(b.nenner){cout<<"ctor "<<endl;}$/;"	f	class:Bruch	access:public	signature:(const s_Bruch<T>& b)
+Bruch	Hallas.cpp	/^class Bruch {$/;"	c	file:
+Bruch::Bruch	Hallas.cpp	/^		Bruch(): zaehler(1), nenner(1){cout<<"ctor "<<endl;}$/;"	f	class:Bruch	access:public	signature:()
+Bruch::Bruch	Hallas.cpp	/^		Bruch(const Bruch<T>& bruch): Bruch(bruch.zaehler, bruch.nenner){cout<<"ctor "<<endl;}$/;"	f	class:Bruch	access:public	signature:(const Bruch<T>& bruch)
+Bruch::Bruch	Hallas.cpp	/^		Bruch(const T& zaehler, const T& nenner): zaehler(zaehler), nenner(nenner){cout<<"ctor "<<endl;}$/;"	f	class:Bruch	access:public	signature:(const T& zaehler, const T& nenner)
+Bruch::Bruch	Hallas.cpp	/^		Bruch(const initializer_list<T>& l): Bruch(*(l.begin()),*(l.end()-1)){cout<<"ctor "<<endl;}$/;"	f	class:Bruch	access:public	signature:(const initializer_list<T>& l)
+Bruch::Bruch	Hallas.cpp	/^		Bruch(const s_Bruch<T>& b): zaehler(b.zaehler), nenner(b.nenner){cout<<"ctor "<<endl;}$/;"	f	class:Bruch	access:public	signature:(const s_Bruch<T>& b)
+Bruch::endl	Hallas.cpp	/^		Bruch(): zaehler(1), nenner(1){cout<<"ctor "<<endl;}$/;"	l
+Bruch::endl	Hallas.cpp	/^		Bruch(const Bruch<T>& bruch): Bruch(bruch.zaehler, bruch.nenner){cout<<"ctor "<<endl;}$/;"	l
+Bruch::endl	Hallas.cpp	/^		Bruch(const T& zaehler, const T& nenner): zaehler(zaehler), nenner(nenner){cout<<"ctor "<<endl;}$/;"	l
+Bruch::endl	Hallas.cpp	/^		Bruch(const initializer_list<T>& l): Bruch(*(l.begin()),*(l.end()-1)){cout<<"ctor "<<endl;}$/;"	l
+Bruch::endl	Hallas.cpp	/^		Bruch(const s_Bruch<T>& b): zaehler(b.zaehler), nenner(b.nenner){cout<<"ctor "<<endl;}$/;"	l
+Bruch::endl	Hallas.cpp	/^		~Bruch(){cout<<"dtor "<<endl;}$/;"	l
+Bruch::getGGT	Hallas.cpp	/^		T getGGT(){$/;"	f	class:Bruch	access:public	signature:()
+Bruch::getGGT	Hallas.cpp	/^int Bruch<int>::getGGT(){$/;"	f	class:Bruch	signature:()
+Bruch::getInverse	Hallas.cpp	/^		static Bruch<T>& getInverse(Bruch<T> b){$/;"	f	class:Bruch	access:public	signature:(Bruch<T> b)
+Bruch::getNenner	Hallas.cpp	/^		T getNenner (){ return this->nenner;  }$/;"	f	class:Bruch	access:public	signature:()
+Bruch::getZaehler	Hallas.cpp	/^		T getZaehler(){ return this->zaehler; }$/;"	f	class:Bruch	access:public	signature:()
+Bruch::ggt	Hallas.cpp	/^			T ggt = this->getGGT();$/;"	l
+Bruch::invertiere	Hallas.cpp	/^			out->invertiere();$/;"	p	file:	signature:()
+Bruch::invertiere	Hallas.cpp	/^		Bruch<T>& invertiere(){$/;"	f	class:Bruch	access:public	signature:()
+Bruch::nenner	Hallas.cpp	/^		T nenner;$/;"	m	class:Bruch	file:	access:private
+Bruch::normalisiere	Hallas.cpp	/^		void normalisiere(){$/;"	f	class:Bruch	file:	access:private	signature:()
+Bruch::operator *	Hallas.cpp	/^		friend Bruch<T> operator*(Bruch<T> links, const Bruch<T>& rechts){$/;"	f	class:Bruch	access:friend	signature:(Bruch<T> links, const Bruch<T>& rechts)
+Bruch::operator *	Hallas.cpp	/^		friend Bruch<T> operator*(Bruch<T> links, const T& rechts){$/;"	f	class:Bruch	access:friend	signature:(Bruch<T> links, const T& rechts)
+Bruch::operator *	Hallas.cpp	/^		friend const Bruch<T>& operator*(const T& links, const Bruch<T>& rechts){ return rechts*links; }$/;"	f	class:Bruch	access:friend	signature:(const T& links, const Bruch<T>& rechts)
+Bruch::operator *=	Hallas.cpp	/^		Bruch<T>& operator*=(const Bruch<T>& rechts){$/;"	f	class:Bruch	access:public	signature:(const Bruch<T>& rechts)
+Bruch::operator *=	Hallas.cpp	/^		Bruch<T>& operator*=(const T& rechts){$/;"	f	class:Bruch	access:public	signature:(const T& rechts)
+Bruch::operator +	Hallas.cpp	/^		friend Bruch<T> operator+(Bruch<T> links, const Bruch<T>& rechts){$/;"	f	class:Bruch	access:friend	signature:(Bruch<T> links, const Bruch<T>& rechts)
+Bruch::operator +	Hallas.cpp	/^		friend Bruch<T> operator+(Bruch<T> links, const T& rechts){$/;"	f	class:Bruch	access:friend	signature:(Bruch<T> links, const T& rechts)
+Bruch::operator +	Hallas.cpp	/^		friend const Bruch<T>& operator+(const T& links, const Bruch<T>& rechts){ return rechts+links; }$/;"	f	class:Bruch	access:friend	signature:(const T& links, const Bruch<T>& rechts)
+Bruch::operator +=	Hallas.cpp	/^		Bruch<T>& operator+=(const Bruch<T>& rechts){$/;"	f	class:Bruch	access:public	signature:(const Bruch<T>& rechts)
+Bruch::operator +=	Hallas.cpp	/^		Bruch<T>& operator+=(const T& rechts){$/;"	f	class:Bruch	access:public	signature:(const T& rechts)
+Bruch::operator -	Hallas.cpp	/^		friend Bruch<T> operator-(Bruch<T> links, const Bruch<T>& rechts){$/;"	f	class:Bruch	access:friend	signature:(Bruch<T> links, const Bruch<T>& rechts)
+Bruch::operator -	Hallas.cpp	/^		friend Bruch<T> operator-(Bruch<T> links, const T& rechts){$/;"	f	class:Bruch	access:friend	signature:(Bruch<T> links, const T& rechts)
+Bruch::operator -	Hallas.cpp	/^		friend const Bruch<T>& operator-(const T& links, const Bruch<T>& rechts){ return (rechts-links)*=(-1); }$/;"	f	class:Bruch	access:friend	signature:(const T& links, const Bruch<T>& rechts)
+Bruch::operator -=	Hallas.cpp	/^		Bruch<T>& operator-=(const Bruch<T>& rechts){$/;"	f	class:Bruch	access:public	signature:(const Bruch<T>& rechts)
+Bruch::operator -=	Hallas.cpp	/^		Bruch<T>& operator-=(const T& rechts){$/;"	f	class:Bruch	access:public	signature:(const T& rechts)
+Bruch::operator /	Hallas.cpp	/^		friend Bruch<T> operator\/(Bruch<T> links, const Bruch<T>& rechts){$/;"	f	class:Bruch	access:friend	signature:(Bruch<T> links, const Bruch<T>& rechts)
+Bruch::operator /	Hallas.cpp	/^		friend Bruch<T> operator\/(Bruch<T> links, const T& rechts){$/;"	f	class:Bruch	access:friend	signature:(Bruch<T> links, const T& rechts)
+Bruch::operator /	Hallas.cpp	/^		friend const Bruch<T>& operator\/(const T& links, const Bruch<T>& rechts){ return Bruch::getInverse(rechts)*=links; }$/;"	f	class:Bruch	access:friend	signature:(const T& links, const Bruch<T>& rechts)
+Bruch::operator /=	Hallas.cpp	/^		Bruch<T>& operator\/=(const Bruch<T>& rechts){$/;"	f	class:Bruch	access:public	signature:(const Bruch<T>& rechts)
+Bruch::operator /=	Hallas.cpp	/^		Bruch<T>& operator\/=(const T& rechts){$/;"	f	class:Bruch	access:public	signature:(const T& rechts)
+Bruch::operator <<	Hallas.cpp	/^		friend ostream& operator<<(ostream& os, const Bruch<T>& b){$/;"	f	class:Bruch	access:friend	signature:(ostream& os, const Bruch<T>& b)
+Bruch::out	Hallas.cpp	/^			Bruch* out = new Bruch(b);$/;"	l
+Bruch::setNenner	Hallas.cpp	/^		void setNenner (T nenner) { this->nenner  = nenner;  }$/;"	f	class:Bruch	access:public	signature:(T nenner)
+Bruch::setZaehler	Hallas.cpp	/^		void setZaehler(T zaehler){ this->zaehler = zaehler; }$/;"	f	class:Bruch	access:public	signature:(T zaehler)
+Bruch::tmp	Hallas.cpp	/^			T tmp = new T(this->zaehler);$/;"	l
+Bruch::tmp	Hallas.cpp	/^			T tmp = this->zaehler;$/;"	l
+Bruch::value_type	Hallas.cpp	/^		typedef T value_type;$/;"	t	class:Bruch	file:	access:private
+Bruch::zaehler	Hallas.cpp	/^		T zaehler;$/;"	m	class:Bruch	file:	access:private
+Bruch::~Bruch	Hallas.cpp	/^		~Bruch(){cout<<"dtor "<<endl;}$/;"	f	class:Bruch	access:public	signature:()
 CC	makefile	/^CC = gcc$/;"	m
 CEXAMPLES	makefile	/^CEXAMPLES = $(shell find . -name '*.c' -print -type f)$/;"	m
 CFLAGS	makefile	/^CFLAGS = -ansi -pedantic -Wall -Wextra -Wconversion -O3$/;"	m
@@ -13,11 +69,18 @@ CXXEXAMPLES	makefile	/^CXXEXAMPLES = $(shell find . -name '*.cpp' -print -type f
 CXXFLAGS	makefile	/^CXXFLAGS = -ansi -pedantic -Wall -Wextra -Wconversion$/;"	m
 CXXTARGETS	makefile	/^CXXTARGETS = $(CXXEXAMPLES:.cpp=.out) $/;"	m
 LDFLAGS	makefile	/^LDFLAGS = -lm$/;"	m
-Punkt	Hador.cpp	/^		Punkt(T n, T z): x(x), y(y){}$/;"	f	class:Punkt	access:public	signature:(T n, T z)
+Potenz	Hyarmendacil.cpp	/^class Potenz {$/;"	c	file:
+Potenz	Hyarmendacil.cpp	/^class Potenz<b, 0> {$/;"	c	file:
+Potenz	Hyarmendacil.cpp	/^class Potenz<b, 1> {$/;"	c	file:
+Potenz::v	Hyarmendacil.cpp	/^		enum { v = 1 };$/;"	e	enum:Potenz::__anon3	file:
+Potenz::v	Hyarmendacil.cpp	/^		enum { v = Potenz<b, n-1>::v * b };$/;"	e	enum:Potenz::__anon1	file:
+Potenz::v	Hyarmendacil.cpp	/^		enum { v = b };$/;"	e	enum:Potenz::__anon2	file:
+Potenz::v	Hyarmendacil.cpp	/^	cout << Potenz<1,200>::v;$/;"	m	class:Potenz	file:
+Punkt	Hador.cpp	/^		Punkt(T x, T y): x(x), y(y){}$/;"	f	class:Punkt	access:public	signature:(T x, T y)
 Punkt	Hador.cpp	/^		Punkt(const Punkt<T>& p): x(p.x), y(p.y){}$/;"	f	class:Punkt	access:public	signature:(const Punkt<T>& p)
 Punkt	Hador.cpp	/^		Punkt(struct Punkte<T>& p): x(p.x), y(p.y){}$/;"	f	class:Punkt	access:public	signature:(struct Punkte<T>& p)
 Punkt	Hador.cpp	/^class Punkt {$/;"	c	file:
-Punkt::Punkt	Hador.cpp	/^		Punkt(T n, T z): x(x), y(y){}$/;"	f	class:Punkt	access:public	signature:(T n, T z)
+Punkt::Punkt	Hador.cpp	/^		Punkt(T x, T y): x(x), y(y){}$/;"	f	class:Punkt	access:public	signature:(T x, T y)
 Punkt::Punkt	Hador.cpp	/^		Punkt(const Punkt<T>& p): x(p.x), y(p.y){}$/;"	f	class:Punkt	access:public	signature:(const Punkt<T>& p)
 Punkt::Punkt	Hador.cpp	/^		Punkt(struct Punkte<T>& p): x(p.x), y(p.y){}$/;"	f	class:Punkt	access:public	signature:(struct Punkte<T>& p)
 Punkt::getX	Hador.cpp	/^		int getX() const {$/;"	f	class:Punkt	access:public	signature:() const
@@ -32,16 +95,81 @@ Punkt::~Punkt	Hador.cpp	/^		~Punkt(){}$/;"	f	class:Punkt	access:public	signature
 Punkte	Hador.cpp	/^struct Punkte{$/;"	s	file:
 Punkte::x	Hador.cpp	/^	T x;$/;"	m	struct:Punkte	file:	access:public
 Punkte::y	Hador.cpp	/^	T y;$/;"	m	struct:Punkte	file:	access:public
-endl	Hador.cpp	/^	cout <<p <<endl;$/;"	l
+b6	Hallas.cpp	/^	Bruch<long> b6 = b4*b5*b5*b5;$/;"	l
+endl	Hador.cpp	/^	cout <<d <<endl;$/;"	l
+endl	Hador.cpp	/^	cout <<i <<endl;$/;"	l
+endl	Hallas.cpp	/^		Bruch(): zaehler(1), nenner(1){cout<<"ctor "<<endl;}$/;"	l
+endl	Hallas.cpp	/^		Bruch(const Bruch<T>& bruch): Bruch(bruch.zaehler, bruch.nenner){cout<<"ctor "<<endl;}$/;"	l
+endl	Hallas.cpp	/^		Bruch(const T& zaehler, const T& nenner): zaehler(zaehler), nenner(nenner){cout<<"ctor "<<endl;}$/;"	l
+endl	Hallas.cpp	/^		Bruch(const initializer_list<T>& l): Bruch(*(l.begin()),*(l.end()-1)){cout<<"ctor "<<endl;}$/;"	l
+endl	Hallas.cpp	/^		Bruch(const s_Bruch<T>& b): zaehler(b.zaehler), nenner(b.nenner){cout<<"ctor "<<endl;}$/;"	l
+endl	Hallas.cpp	/^		~Bruch(){cout<<"dtor "<<endl;}$/;"	l
+endl	Hallas.cpp	/^	cout <<b4<<endl;$/;"	l
+endl	Hallas.cpp	/^	cout <<b5<<endl;$/;"	l
+endl	Hallas.cpp	/^	cout <<b6<<endl;$/;"	l
+getGGT	Hallas.cpp	/^		T getGGT(){$/;"	f	class:Bruch	access:public	signature:()
+getGGT	Hallas.cpp	/^int Bruch<int>::getGGT(){$/;"	f	class:Bruch	signature:()
+getInverse	Hallas.cpp	/^		static Bruch<T>& getInverse(Bruch<T> b){$/;"	f	class:Bruch	access:public	signature:(Bruch<T> b)
+getNenner	Hallas.cpp	/^		T getNenner (){ return this->nenner;  }$/;"	f	class:Bruch	access:public	signature:()
 getX	Hador.cpp	/^		int getX() const {$/;"	f	class:Punkt	access:public	signature:() const
 getY	Hador.cpp	/^		int getY() const {$/;"	f	class:Punkt	access:public	signature:() const
+getZaehler	Hallas.cpp	/^		T getZaehler(){ return this->zaehler; }$/;"	f	class:Bruch	access:public	signature:()
+ggt	Hallas.cpp	/^			T ggt = this->getGGT();$/;"	l
+ggt	Hallas.cpp	/^	int ggt=1;$/;"	l
+invertiere	Hallas.cpp	/^			out->invertiere();$/;"	p	file:	signature:()
+invertiere	Hallas.cpp	/^		Bruch<T>& invertiere(){$/;"	f	class:Bruch	access:public	signature:()
 main	Hador.cpp	/^int main(){$/;"	f	signature:()
+main	Hallas.cpp	/^int main(){$/;"	f	signature:()
+main	Hyarmendacil.cpp	/^int main(){$/;"	f	signature:()
+max	Hallas.cpp	/^	int max;$/;"	l
+nenner	Hallas.cpp	/^		T nenner;$/;"	m	class:Bruch	file:	access:private
+nenner	Hallas.cpp	/^	T nenner;$/;"	m	struct:s_Bruch	file:	access:public
+nenner	Hallas.cpp	/^	int nenner = this->nenner;$/;"	l
+normalisiere	Hallas.cpp	/^		void normalisiere(){$/;"	f	class:Bruch	file:	access:private	signature:()
+operator *	Hallas.cpp	/^		friend Bruch<T> operator*(Bruch<T> links, const Bruch<T>& rechts){$/;"	f	class:Bruch	access:friend	signature:(Bruch<T> links, const Bruch<T>& rechts)
+operator *	Hallas.cpp	/^		friend Bruch<T> operator*(Bruch<T> links, const T& rechts){$/;"	f	class:Bruch	access:friend	signature:(Bruch<T> links, const T& rechts)
+operator *	Hallas.cpp	/^		friend const Bruch<T>& operator*(const T& links, const Bruch<T>& rechts){ return rechts*links; }$/;"	f	class:Bruch	access:friend	signature:(const T& links, const Bruch<T>& rechts)
+operator *=	Hallas.cpp	/^		Bruch<T>& operator*=(const Bruch<T>& rechts){$/;"	f	class:Bruch	access:public	signature:(const Bruch<T>& rechts)
+operator *=	Hallas.cpp	/^		Bruch<T>& operator*=(const T& rechts){$/;"	f	class:Bruch	access:public	signature:(const T& rechts)
+operator +	Hallas.cpp	/^		friend Bruch<T> operator+(Bruch<T> links, const Bruch<T>& rechts){$/;"	f	class:Bruch	access:friend	signature:(Bruch<T> links, const Bruch<T>& rechts)
+operator +	Hallas.cpp	/^		friend Bruch<T> operator+(Bruch<T> links, const T& rechts){$/;"	f	class:Bruch	access:friend	signature:(Bruch<T> links, const T& rechts)
+operator +	Hallas.cpp	/^		friend const Bruch<T>& operator+(const T& links, const Bruch<T>& rechts){ return rechts+links; }$/;"	f	class:Bruch	access:friend	signature:(const T& links, const Bruch<T>& rechts)
+operator +=	Hallas.cpp	/^		Bruch<T>& operator+=(const Bruch<T>& rechts){$/;"	f	class:Bruch	access:public	signature:(const Bruch<T>& rechts)
+operator +=	Hallas.cpp	/^		Bruch<T>& operator+=(const T& rechts){$/;"	f	class:Bruch	access:public	signature:(const T& rechts)
+operator -	Hallas.cpp	/^		friend Bruch<T> operator-(Bruch<T> links, const Bruch<T>& rechts){$/;"	f	class:Bruch	access:friend	signature:(Bruch<T> links, const Bruch<T>& rechts)
+operator -	Hallas.cpp	/^		friend Bruch<T> operator-(Bruch<T> links, const T& rechts){$/;"	f	class:Bruch	access:friend	signature:(Bruch<T> links, const T& rechts)
+operator -	Hallas.cpp	/^		friend const Bruch<T>& operator-(const T& links, const Bruch<T>& rechts){ return (rechts-links)*=(-1); }$/;"	f	class:Bruch	access:friend	signature:(const T& links, const Bruch<T>& rechts)
+operator -=	Hallas.cpp	/^		Bruch<T>& operator-=(const Bruch<T>& rechts){$/;"	f	class:Bruch	access:public	signature:(const Bruch<T>& rechts)
+operator -=	Hallas.cpp	/^		Bruch<T>& operator-=(const T& rechts){$/;"	f	class:Bruch	access:public	signature:(const T& rechts)
+operator /	Hallas.cpp	/^		friend Bruch<T> operator\/(Bruch<T> links, const Bruch<T>& rechts){$/;"	f	class:Bruch	access:friend	signature:(Bruch<T> links, const Bruch<T>& rechts)
+operator /	Hallas.cpp	/^		friend Bruch<T> operator\/(Bruch<T> links, const T& rechts){$/;"	f	class:Bruch	access:friend	signature:(Bruch<T> links, const T& rechts)
+operator /	Hallas.cpp	/^		friend const Bruch<T>& operator\/(const T& links, const Bruch<T>& rechts){ return Bruch::getInverse(rechts)*=links; }$/;"	f	class:Bruch	access:friend	signature:(const T& links, const Bruch<T>& rechts)
+operator /=	Hallas.cpp	/^		Bruch<T>& operator\/=(const Bruch<T>& rechts){$/;"	f	class:Bruch	access:public	signature:(const Bruch<T>& rechts)
+operator /=	Hallas.cpp	/^		Bruch<T>& operator\/=(const T& rechts){$/;"	f	class:Bruch	access:public	signature:(const T& rechts)
 operator <<	Hador.cpp	/^		friend ostream& operator<<(ostream & os, const Punkt<T>& p){$/;"	f	class:Punkt	access:friend	signature:(ostream & os, const Punkt<T>& p)
+operator <<	Hallas.cpp	/^		friend ostream& operator<<(ostream& os, const Bruch<T>& b){$/;"	f	class:Bruch	access:friend	signature:(ostream& os, const Bruch<T>& b)
+out	Hallas.cpp	/^			Bruch* out = new Bruch(b);$/;"	l
+s_Bruch	Hallas.cpp	/^struct s_Bruch {$/;"	s	file:
+s_Bruch::nenner	Hallas.cpp	/^	T nenner;$/;"	m	struct:s_Bruch	file:	access:public
+s_Bruch::zaehler	Hallas.cpp	/^	T zaehler;$/;"	m	struct:s_Bruch	file:	access:public
+setNenner	Hallas.cpp	/^		void setNenner (T nenner) { this->nenner  = nenner;  }$/;"	f	class:Bruch	access:public	signature:(T nenner)
 setX	Hador.cpp	/^		void setX(const T& x){$/;"	f	class:Punkt	access:public	signature:(const T& x)
 setY	Hador.cpp	/^		void setY(const T& y){$/;"	f	class:Punkt	access:public	signature:(const T& y)
+setZaehler	Hallas.cpp	/^		void setZaehler(T zaehler){ this->zaehler = zaehler; }$/;"	f	class:Bruch	access:public	signature:(T zaehler)
+tmp	Hallas.cpp	/^			T tmp = new T(this->zaehler);$/;"	l
+tmp	Hallas.cpp	/^			T tmp = this->zaehler;$/;"	l
+v	Hyarmendacil.cpp	/^		enum { v = 1 };$/;"	e	enum:Potenz::__anon3	file:
+v	Hyarmendacil.cpp	/^		enum { v = Potenz<b, n-1>::v * b };$/;"	e	enum:Potenz::__anon1	file:
+v	Hyarmendacil.cpp	/^		enum { v = b };$/;"	e	enum:Potenz::__anon2	file:
+v	Hyarmendacil.cpp	/^	cout << Potenz<1,200>::v;$/;"	m	class:Potenz	file:
 value_type	Hador.cpp	/^		typedef T value_type;$/;"	t	class:Punkt	file:	access:private
+value_type	Hallas.cpp	/^		typedef T value_type;$/;"	t	class:Bruch	file:	access:private
 x	Hador.cpp	/^		T x;$/;"	m	class:Punkt	file:	access:private
 x	Hador.cpp	/^	T x;$/;"	m	struct:Punkte	file:	access:public
 y	Hador.cpp	/^		T y;$/;"	m	class:Punkt	file:	access:private
 y	Hador.cpp	/^	T y;$/;"	m	struct:Punkte	file:	access:public
+zaehler	Hallas.cpp	/^		T zaehler;$/;"	m	class:Bruch	file:	access:private
+zaehler	Hallas.cpp	/^	T zaehler;$/;"	m	struct:s_Bruch	file:	access:public
+zaehler	Hallas.cpp	/^	int zaehler = this->zaehler;$/;"	l
+~Bruch	Hallas.cpp	/^		~Bruch(){cout<<"dtor "<<endl;}$/;"	f	class:Bruch	access:public	signature:()
 ~Punkt	Hador.cpp	/^		~Punkt(){}$/;"	f	class:Punkt	access:public	signature:()

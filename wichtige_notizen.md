@@ -159,7 +159,7 @@
 	v[0](4);								//ausführen, liefert 16
 	```
 
-## Operatoren / Konstruktoren
+## Konstruktoren
 
 - `Constructor mit: a(a)`
 	```cpp
@@ -194,6 +194,9 @@
 		}
 		```
 
+## Operatoren
+- [Stackoverflow](reference/operatoren.html)
+
 - `Operatoren: == !=`
 	```cpp
 	bool operator==(const Queue& rechts){
@@ -215,12 +218,15 @@
 	```
 
 - `Operatoren: * + / -`
+	- links ist eine copy und das return auch
+
 	```cpp
-	friend const Queue& operator+(const Queue& links, const Queue& rechts){
-		Queue* neu = new Queue(links);
-		neu+=rechts;
-		return *neu;
+	friend Queue operator+(Queue links, const Queue& rechts){
+		links+=rechts;
+		return links;
 	}
+	//oneliner
+	friend Queue operator+(Queue links, const Queue& rechts){ return links+=rechts; }
 	```
 
 - `Operator: <<`
@@ -236,8 +242,15 @@
 	```
 
 - `Operator: []`
+	- you should always provide both methods
+
 	```cpp
-	int& operator[](size_t idx){ 
+	//setter
+	value_type& operator[](index_type idx){		//index_type is for example size_t
+		return this->elemente[idx];
+	}
+	//getter
+	const value_type& operator[](index_type idx) const{
 		return this->elemente[idx];
 	}
 	```
@@ -323,6 +336,54 @@ class C {
 };
 int C::cnt = 0;					//es muss außerhalb initialisiert werden
 ```
+
+## Consts
+- rückwärts lesen!
+- das erste kann auf beiden seiten stehen
+- const vars
+	```cpp
+	//lets you change all
+	int*											//pointer to int
+	//lets you change what it points to, but not the value
+	int const *										//pointer to constant int
+	//lets you change the value, but not what it points to
+	int * const										//constant pointer to int
+	//lets you change nothing
+	int const * const								//constant pointer to constant int
+	//das erste kann auf beiden seiten stehen
+	const int * == int const *
+	const int * const == int const * const
+	```
+
+- const functions
+	//TODO check if this is richtig
+	- normal
+		```cpp
+		const int getX() {}
+		int const getX() {}
+		int getX() const {}			//this wird nicht geändert
+		```
+
+	- referenz
+		```cpp
+		const Queue & getQueue() {}
+		Queue const & getQueue() {}
+		Queue & const getQueue() {}
+		und macht eine int referenz eigentlich sinn?
+		const int & getQueue() {}
+		int const & getQueue() {}
+		int & const getQueue() {}
+		```
+	
+	- pointer
+		```cpp
+		const Queue * getQueue() {}
+		Queue const * getQueue() {}
+		Queue * const getQueue() {}
+		const int * getQueue() {}
+		int const * getQueue() {}
+		int * const getQueue() {}
+		```
 
 ## Vererbung
 - Einfache Vererbung
