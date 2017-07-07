@@ -1,10 +1,21 @@
 # Fragen
 
 - delete normale objekte und ints und co
+	- man kann nur sachen deleten aus dem heap
+```
+int* c = new int;
+*c = 5;
+delete c;
+int* arr = new int[4];
+delete [] arr;
+```
 - delete Array element
+	- geht nicht
 - delete vector element
+	- erase remove kack, ist in der cpp gruppe
 - G29 erase/remove reserve
 	- was macht das?
+	- ist in der cpp gruppe
 - structs
 - enums
 	- grundlegend, wie funktionieren die?
@@ -12,9 +23,6 @@
 		- in einer klasse, warum kann man dim direkt als member verwenden über this->dim?
 	- enum a { dim = 4 }
 		- ohne klasse, kann man das auch ohne a machen?
-- unions
-	- was ist das?
-- constant functions
 - vererbung
 	- was macht das public für nen unterschied?
 	- friend ostream

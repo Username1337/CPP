@@ -1,0 +1,2 @@
+E 
+	structs enums arrays
