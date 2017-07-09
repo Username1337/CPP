@@ -1,0 +1,43 @@
+C++ SS15 Klausur II
+
+Diesmal gab es kein vorgegebenes Grundgerüst, sondern alles musste selber implementiert werden.
+
+Aufgabe 1:
+
+Es geht darum, eine Klasse set für die Speicherung von unsigned ints zu implementieren, set- und map-Klassen aus der STL dürfen nicht verwendet werden.
+
+a)	Konstruktor set(unsigned int max_size) erstellen, wobei max_size die maximal im Set zu speichernde Anzahl an Elementen is
+	Aufruf z. B. set s1(5);
+
+b)	Konstruktor erstellen, der auch eine max_size und eine variable Anzahl an Elementen übergeben bekommt, die direkt eingefügt werden sollen.
+	Aufruf z. B. set s2(7, {1, 2});
+
+c)	bool contains(unsigned int n) - true zurückgeben wenn n in set
+
+d) 	void set_value(unsigned int n) implementieren, die Wert einfügt
+
+e)	Exception beim Einfügen werfen, wenn neue Größe nicht mehr okay
+
+f)	void remove_value(unsigned int n) zum entfernen von Werten implementieren
+
+g)	+ Operator für zwei Mengen, der eine dritte Menge zurückgibt, deren max. Größe addiert wird und die alle Zahlen der beiden Mengen enthält
+	doppelte Zahlen müssen nicht beachtet werden
+
+h)	Operator für Ausgabe in ostream zufügen
+
+i) 	set_value aus d threadsafe machen, mit 2 Threads testen, die parallel 100 zufällige Zahlen einfügen
+
+j)	Klasse templatisieren, so dass alle Typen übergeben werden können
+
+
+Aufgabe 2:
+
+Hier ging es um die Trapezregel (Integral für f(x) in [a, b] lässt sich durch (b-a)*f((a+b)/2) annähern).
+
+a) 	Quad(a, b) schreiben, die den Wert für die Funktion f(x) = x+1 annähert
+
+b)  Quad(a, b, f) schreiben, die mit einem geeigneten Typen Trapezregel für verschiedene Funktionen berechnen kann
+
+c)	f(x) = x+1 als Lambda in einer Variable g speichern und mit der Funktion aus b aufrufen
+
+Hierfür sollen selber Tests implementiert werden und jeweils in einem Kommentar beschrieben werden, um welchen Aufgabenteil es sich handelt.

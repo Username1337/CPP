@@ -1,0 +1,14 @@
+Hey zusammen,
+ich habe alle Klausuraufgaben einmal als .rar Datei hochgeladen.
+
+Leider sind die Aufgabenstellungen nicht dabei.
+Die Testfälle die wir in der Klausur machen mussten, laufen alle bei mir.
+Ich gebe jedoch keine Garantie dafür, dass die alle richtig bzw. gut programmiert sind,
+hatte in der Klausur mit kleinigkeiten zu kämpfen, die vorher mal funktioniert hatten und während 
+der Klausur dann nicht -.-
+
+Ansonsten hoffe ich, dass das euch helfen wird.
+
+Lg
+
+Carsten Haidl

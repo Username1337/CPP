@@ -39,6 +39,7 @@
 
 - Arrays
 	- beim übergeben an Funktionen die Länge mit geben!
+	- löschen eines elementes geht nicht
 	- wichtige befehle
 		```cpp
 		size_t length = 3;				//size
@@ -47,8 +48,6 @@
 		//sonstiges
 		cout << arr[2];					//get
 		arr[2] = 5;						//set
-		//TODO geht nicht
-		arr[2] = nullptr;				//remove
 		//iterate
 		for(int x: arr){ ... }
 		for(size_t i=0; i<sizeof(arr)/sizeof(int); ++i){ ... }
@@ -60,6 +59,7 @@
 - Vector
 	- `#include <vector>`
 	- Arraylist
+	- Objekte die hier rein kommen sollten einen Copy Constructor haben und einen == operator
 	- how to use
 		```cpp
 		vector<int> v();			//stack
@@ -70,8 +70,6 @@
 		v.push_back(3);				//append
 		v[3];						//get
 		v[3] = 2;					//set
-		//TODO remove
-		v.erase(remove(...)) ??? (G29)
 		v.size();					//size
 		//iterate
 		for(auto x: v){...}
@@ -80,6 +78,44 @@
 		auto result1 = find_if(v.begin(), v.end(), [](int k){ return (0==k%2);});
 		```
 	- [CPP References](reference/en/cpp/container/vector.html)
+
+- Remove/erase
+	- `#include <algorithm>`
+
+	- `remove(begin_iterator, end_iterator, object)`
+		- verschiebt alle elemente die nicht == object sind nach vorne
+		- löscht quasi alle die == sind
+	- `remove_if(begin_iterator, end_iterator, lambda)`
+		- verschiebt alle elemente wo das lambda nicht true returnt nach vorne
+		- löscht quasi alle die true sind
+	- remove iterator
+		- `auto it = remove_if(begin_iterator, end_iterator, lambda)`
+		- remove und remove_if returnen einen iterator auf das erste "gelöschte" element
+	- `erase(begin_iterator, end_iterator)`
+		- löscht alles zwischen begin und end
+	- to use:
+		```cpp
+		vector<double> v {2.5, 2.5, 4.6, 7.8, 2.5};
+
+		//remove:
+		remove(v.begin(), v.end(), 2.5);
+		//dann ist v danach {4.6, 7.8, 4.6, 7.8, 2.5}
+
+		//remove if
+		remove_if(v.begin(), v.end(), [](int x){ return x==2.5});
+		//dann ist v danach {4.6, 7.8, 4.6, 7.8, 2.5}
+
+		//erase
+		v.erase(v.begin(), v.end()-2);
+		//löscht alle elemente außer die letzten beiden
+
+		//remove and erase
+		auto it = remove_if(v.begin(), v.end(), [](int x){ return x==2.5});
+		//dann ist v danach {4.6, 7.8, 4.6, 7.8, 2.5}
+		//und it zeigt auf das 3. element
+		v.erase(it, v.end());
+		```
+
 
 - Set
 	- `#include <set>`
@@ -126,21 +162,50 @@
 
 - Structs
 	- Klassen ohne Funktionen mit nur public members
+
 	```cpp
-	//TODO
+	//normaler struct
+	struct A {
+		double n;
+		bool m;
+	};
+	//struct mit standart werten
+	struct B {
+		int n;
+		int m=3;
+	};
+	//struct, der structs enthält
+	struct C {
+		A a1;
+		A a2;
+	};
+	int main(){
+		A a {3.14, true};								//stack mit {} ctor
+		A* ap = new A{2,true};							//heap
+		cout << a.n << " " << a.m << endl;				//"3.15 1"
+		B b;											//bei std werten gibts keinen {} ctor mehr
+		b.n=5;
+		cout << b.n << " " << b.m << endl;				//"5 3"
+		C c{ {1, true}, {4.5, false} };
+		cout << c.a1.n << " " << c.a1.m << endl;		//"1 1"
+		cout << c.a2.n << " " << c.a2.m << endl;		//"4.5 0"
+		return 1;
+	}
 	```
 
 - Enums
-	//TODO
+	- TODO, war das schon alles?
 	- Liste mit Konstanten
 	- wird zur Compilezeit festgelegt
-	- How to use
-	```cpp
-	enum { dim = 4 };
-	```
 
-- Unions
-	//TODO
+	```cpp
+	enum A {a=2,b=3,c=4};			//kann man über A::a oder nur a aufrufen
+	enum B {d,e,f};					//man muss andere namen nehmen als in a
+	cout << d;						//"0" standart auf 0
+	class B{
+		enum { dim = 4 };			//in klassen
+	}
+	```
 
 ## Funktions Pointer
 
@@ -356,34 +421,40 @@ int C::cnt = 0;					//es muss außerhalb initialisiert werden
 	const int * const == int const * const
 	```
 
-- const functions
-	//TODO check if this is richtig
+- const functions and referenzen
 	- normal
 		```cpp
-		const int getX() {}
-		int const getX() {}
-		int getX() const {}			//this wird nicht geändert
+		const int getX() {}					//returnt constantes int
+		int const getX() {}					//returnt constantes int
+		int getX() const {}					//this wird nicht geändert
 		```
 
 	- referenz
 		```cpp
-		const Queue & getQueue() {}
-		Queue const & getQueue() {}
-		Queue & const getQueue() {}
-		und macht eine int referenz eigentlich sinn?
-		const int & getQueue() {}
-		int const & getQueue() {}
-		int & const getQueue() {}
+		const Queue & getQueue() {}			//returnt constantes queue
+		Queue const & getQueue() {}			//returnt constantes queue
+		Queue & const getQueue() {}			//ergibt keinen sinn
+		const int & getX() {}				//returnt eine referenz zu einem const x
+		int const & getX() {}				//returnt eine referenz zu einem const x
+		int & const getX() {}				//ergibt keine sinn
+		int & getX() {}						//returnt eine referenz zu x
+		getX() = 4;							//sets x to 4
+		void setX(int& x) {}				//int referenz
+		int y = 3;							//lvalue erzeugen
+		setX(y);							//geht
+		setX(2);							//geht nicht, da 2 es ein rvalue ist
+		void setX(const int& x) {}			//const int referenz
+		setX(2);							//geht aber kp warum (vllt wird es zur compile zeit festgelegt)
 		```
 	
 	- pointer
 		```cpp
-		const Queue * getQueue() {}
-		Queue const * getQueue() {}
-		Queue * const getQueue() {}
-		const int * getQueue() {}
-		int const * getQueue() {}
-		int * const getQueue() {}
+		const Queue * getQueue() {}			//cont Queue
+		Queue const * getQueue() {}			//cont Queue
+		Queue * const getQueue() {}			//cont Pointer
+		const int * getQueue() {}			//cont int
+		int const * getQueue() {}			//cont int
+		int * const getQueue() {}			//cont Pointer
 		```
 
 ## Vererbung
@@ -398,6 +469,11 @@ int C::cnt = 0;					//es muss außerhalb initialisiert werden
 		- A ist der dynamische Type, da er sich ändern kann
 		- B ist der statische Type, da er sich nicht ändern kann
 	- `virtual` muss in Basis-Klasse stehen
+	- private/public
+		- `class B: public A`
+		- wenn es private ist, kann man von außen nur auf Methoden von B zugreifen
+		- bei public kann man auch die Methoden von A mit benutzen
+	- friend Methoden müssen eventuell doppelt geschrieben werden(?)
 
 	```cpp
 	class A {
@@ -586,6 +662,18 @@ int C::cnt = 0;					//es muss außerhalb initialisiert werden
 	};
 	//Vector der Dimension 3
 	MyVector<int, 3> mv;
+	```
+
+- Template, welches nur Typen nimmt, welche von einer bestimmten Klasse geerbt haben
+	- eine leere Klasse machen und dann für "Getraenke" spezialisieren
+
+	```cpp
+	template<typename T>
+	class A {}
+	template<>
+	class A<Getraenke>{
+		...
+	}
 	```
 
 ## Lambdas
