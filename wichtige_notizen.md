@@ -809,3 +809,6 @@ int C::cnt = 0;					//es muss außerhalb initialisiert werden
 - condition variablen
 	- wartet auf ein ereignis
 	- TODO
+
+- Files
+	- TODO
