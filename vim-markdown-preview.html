@@ -50,19 +50,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ul>
 <li><p><a href="reference/en/cpp.html">CPP References</a></p></li>
 <li><p>Hello World</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="ot">#include &lt;iostream&gt;</span>
-<span class="ot">#include &lt;string&gt;</span>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span>
+<span class="pp">#include </span><span class="im">&lt;string&gt;</span>
 
 <span class="kw">using</span> <span class="kw">namespace</span> std;
 
 <span class="dt">int</span> main(){
     cout &lt;&lt; <span class="st">&quot;Hello World&quot;</span> &lt;&lt; endl;
-    <span class="kw">return</span> <span class="dv">0</span>;
+    <span class="cf">return</span> <span class="dv">0</span>;
 }</code></pre></div></li>
 <li><p>Ein/Ausgabe</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> i;
 cin &gt;&gt; i;
 cout &lt;&lt; i;</code></pre></div></li>
+<li><p>andere coole sachen</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> x{}, y{};           <span class="co">//initialisiert x und y mit 0</span></code></pre></div></li>
 </ul>
 <h2 id="datentypen">Datentypen</h2>
 <ul>
@@ -80,18 +82,17 @@ cout &lt;&lt; i;</code></pre></div></li>
 <li>Arrays
 <ul>
 <li>beim übergeben an Funktionen die Länge mit geben!</li>
+<li>löschen eines elementes geht nicht</li>
 <li><p>wichtige befehle</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">size_t length = <span class="dv">3</span>;              <span class="co">//size</span>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">size_t</span> length = <span class="dv">3</span>;              <span class="co">//size</span>
 <span class="dt">int</span> arr[length];                <span class="co">//stack</span>
 <span class="dt">int</span>* arr = <span class="kw">new</span> <span class="dt">int</span>[length];     <span class="co">//heap</span>
 <span class="co">//sonstiges</span>
 cout &lt;&lt; arr[<span class="dv">2</span>];                 <span class="co">//get</span>
 arr[<span class="dv">2</span>] = <span class="dv">5</span>;                     <span class="co">//set</span>
-<span class="co">//TODO geht nicht</span>
-arr[<span class="dv">2</span>] = <span class="kw">nullptr</span>;               <span class="co">//remove</span>
 <span class="co">//iterate</span>
-<span class="kw">for</span>(<span class="dt">int</span> x: arr){ ... }
-<span class="kw">for</span>(size_t i=<span class="dv">0</span>; i&lt;<span class="kw">sizeof</span>(arr)/<span class="kw">sizeof</span>(<span class="dt">int</span>); ++i){ ... }</code></pre></div></li>
+<span class="cf">for</span>(<span class="dt">int</span> x: arr){ ... }
+<span class="cf">for</span>(<span class="dt">size_t</span> i=<span class="dv">0</span>; i&lt;<span class="kw">sizeof</span>(arr)/<span class="kw">sizeof</span>(<span class="dt">int</span>); ++i){ ... }</code></pre></div></li>
 </ul></li>
 <li>CPP Arrays
 <ul>
@@ -101,6 +102,7 @@ arr[<span class="dv">2</span>] = <span class="kw">nullptr</span>;               
 <ul>
 <li><code>#include &lt;vector&gt;</code></li>
 <li>Arraylist</li>
+<li>Objekte die hier rein kommen sollten einen Copy Constructor haben und einen == operator</li>
 <li><p>how to use</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">vector&lt;<span class="dt">int</span>&gt; v();            <span class="co">//stack</span>
 vector&lt;<span class="dt">int</span>&gt; v{<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>};       <span class="co">//stack</span>
@@ -110,14 +112,56 @@ vector&lt;<span class="dt">int</span>&gt;* v = <span class="kw">new</span> vecto
 v.push_back(<span class="dv">3</span>);             <span class="co">//append</span>
 v[<span class="dv">3</span>];                       <span class="co">//get</span>
 v[<span class="dv">3</span>] = <span class="dv">2</span>;                   <span class="co">//set</span>
-<span class="co">//TODO remove</span>
 v.size();                   <span class="co">//size</span>
 <span class="co">//iterate</span>
-<span class="kw">for</span>(<span class="kw">auto</span> x: v){...}
+<span class="cf">for</span>(<span class="kw">auto</span> x: v){...}
 <span class="co">//count vector elements if lambda expression returns true</span>
-<span class="dt">int</span> cnt1 = count_if (v.begin(), v.end(), [](<span class="dt">int</span> k){ <span class="kw">return</span> (<span class="dv">0</span>==k%<span class="dv">2</span>);});
-<span class="kw">auto</span> result1 = find_if(v.begin(), v.end(), [](<span class="dt">int</span> k){ <span class="kw">return</span> (<span class="dv">0</span>==k%<span class="dv">2</span>);});</code></pre></div></li>
+<span class="dt">int</span> cnt1 = count_if (v.begin(), v.end(), [](<span class="dt">int</span> k){ <span class="cf">return</span> (<span class="dv">0</span>==k%<span class="dv">2</span>);});
+<span class="kw">auto</span> result1 = find_if(v.begin(), v.end(), [](<span class="dt">int</span> k){ <span class="cf">return</span> (<span class="dv">0</span>==k%<span class="dv">2</span>);});</code></pre></div></li>
 <li><p><a href="reference/en/cpp/container/vector.html">CPP References</a></p></li>
+</ul></li>
+<li>Remove/erase
+<ul>
+<li><p><code>#include &lt;algorithm&gt;</code></p></li>
+<li><code>remove(begin_iterator, end_iterator, object)</code>
+<ul>
+<li>verschiebt alle elemente die nicht == object sind nach vorne</li>
+<li>löscht quasi alle die == sind</li>
+</ul></li>
+<li><code>remove_if(begin_iterator, end_iterator, lambda)</code>
+<ul>
+<li>verschiebt alle elemente wo das lambda nicht true returnt nach vorne</li>
+<li>löscht quasi alle die true sind</li>
+</ul></li>
+<li>remove iterator
+<ul>
+<li><code>auto it = remove_if(begin_iterator, end_iterator, lambda)</code></li>
+<li>remove und remove_if returnen einen iterator auf das erste “gelöschte” element</li>
+</ul></li>
+<li><code>erase(begin_iterator, end_iterator)</code>
+<ul>
+<li>löscht alles zwischen begin und end</li>
+</ul></li>
+<li><p>to use:</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">vector&lt;<span class="dt">double</span>&gt; v {<span class="fl">2.5</span>, <span class="fl">2.5</span>, <span class="fl">4.6</span>, <span class="fl">7.8</span>, <span class="fl">2.5</span>};
+
+<span class="co">//remove:</span>
+remove(v.begin(), v.end(), <span class="fl">2.5</span>);
+<span class="co">//dann ist v danach {4.6, 7.8, 4.6, 7.8, 2.5}</span>
+
+<span class="co">//remove if</span>
+remove_if(v.begin(), v.end(), [](<span class="dt">int</span> x){ <span class="cf">return</span> x==<span class="fl">2.5</span>});
+<span class="co">//dann ist v danach {4.6, 7.8, 4.6, 7.8, 2.5}</span>
+
+<span class="co">//erase</span>
+v.erase(v.begin(), v.end()<span class="dv">-2</span>);
+<span class="co">//löscht alle elemente außer die letzten beiden</span>
+
+<span class="co">//remove and erase</span>
+<span class="kw">auto</span> it = remove_if(v.begin(), v.end(), [](<span class="dt">int</span> x){ <span class="cf">return</span> x==<span class="fl">2.5</span>});
+<span class="co">//dann ist v danach {4.6, 7.8, 4.6, 7.8, 2.5}</span>
+<span class="co">//und it zeigt auf das 3. element</span>
+v.erase(it, v.end());</code></pre></div></li>
 </ul></li>
 <li>Set
 <ul>
@@ -165,36 +209,66 @@ cout &lt;&lt; chrono::duration_cast&lt;chrono::milliseconds&gt;(t2-t1).count() &
 <ul>
 <li>Structs
 <ul>
-<li><p>Klassen ohne Funktionen mit nur public members</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//TODO</span></code></pre></div></li>
-</ul></li>
-<li>Enums //TODO
+<li>Klassen ohne Funktionen mit nur public members</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//normaler struct</span>
+<span class="kw">struct</span> A {
+    <span class="dt">double</span> n;
+    <span class="dt">bool</span> m;
+};
+<span class="co">//struct mit standart werten</span>
+<span class="kw">struct</span> B {
+    <span class="dt">int</span> n;
+    <span class="dt">int</span> m=<span class="dv">3</span>;
+};
+<span class="co">//struct, der structs enthält</span>
+<span class="kw">struct</span> C {
+    A a1;
+    A a2;
+};
+<span class="dt">int</span> main(){
+    A a {<span class="fl">3.14</span>, <span class="kw">true</span>};                               <span class="co">//stack mit {} ctor</span>
+    A* ap = <span class="kw">new</span> A{<span class="dv">2</span>,<span class="kw">true</span>};                          <span class="co">//heap</span>
+    cout &lt;&lt; a.n &lt;&lt; <span class="st">&quot; &quot;</span> &lt;&lt; a.m &lt;&lt; endl;              <span class="co">//&quot;3.15 1&quot;</span>
+    B b;                                            <span class="co">//bei std werten gibts keinen {} ctor mehr</span>
+    b.n=<span class="dv">5</span>;
+    cout &lt;&lt; b.n &lt;&lt; <span class="st">&quot; &quot;</span> &lt;&lt; b.m &lt;&lt; endl;              <span class="co">//&quot;5 3&quot;</span>
+    C c{ {<span class="dv">1</span>, <span class="kw">true</span>}, {<span class="fl">4.5</span>, <span class="kw">false</span>} };
+    cout &lt;&lt; c.a1.n &lt;&lt; <span class="st">&quot; &quot;</span> &lt;&lt; c.a1.m &lt;&lt; endl;        <span class="co">//&quot;1 1&quot;</span>
+    cout &lt;&lt; c.a2.n &lt;&lt; <span class="st">&quot; &quot;</span> &lt;&lt; c.a2.m &lt;&lt; endl;        <span class="co">//&quot;4.5 0&quot;</span>
+    <span class="cf">return</span> <span class="dv">1</span>;
+}</code></pre></div></li>
+<li>Enums
 <ul>
+<li>TODO, war das schon alles?</li>
 <li>Liste mit Konstanten</li>
 <li>wird zur Compilezeit festgelegt</li>
-<li><p>How to use</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">enum</span> { dim = <span class="dv">4</span> };</code></pre></div></li>
-</ul></li>
-<li>Unions //TODO</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">enum</span> A {a=<span class="dv">2</span>,b=<span class="dv">3</span>,c=<span class="dv">4</span>};           <span class="co">//kann man über A::a oder nur a aufrufen</span>
+<span class="kw">enum</span> B {d,e,f};                 <span class="co">//man muss andere namen nehmen als in a</span>
+cout &lt;&lt; d;                      <span class="co">//&quot;0&quot; standart auf 0</span>
+<span class="kw">class</span> B{
+    <span class="kw">enum</span> { dim = <span class="dv">4</span> };           <span class="co">//in klassen</span>
+}</code></pre></div></li>
 </ul>
 <h2 id="funktions-pointer">Funktions Pointer</h2>
 <ul>
 <li><p>Type Definition</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">double</span>(*func_t)(<span class="dt">double</span>);
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> <span class="dt">double</span>(*<span class="dt">func_t</span>)(<span class="dt">double</span>);
 <span class="co">//func_t ist jetzt der Name für Funktionen dieses Aufbaus</span></code></pre></div></li>
 <li><p>wichtige Befehle</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">vector&lt;func_t&gt; v;                       <span class="co">//vector der diese Funktionen enthält</span>
-<span class="dt">double</span> quad(<span class="dt">double</span> x){ <span class="kw">return</span> x*x }     <span class="co">//neue func_t Funktion</span>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">vector&lt;<span class="dt">func_t</span>&gt; v;                       <span class="co">//vector der diese Funktionen enthält</span>
+<span class="dt">double</span> quad(<span class="dt">double</span> x){ <span class="cf">return</span> x*x }     <span class="co">//neue func_t Funktion</span>
 v.push_back(quad);                      <span class="co">//Funktion zu vector hinzufügen</span>
 v.push_back(&amp;quad);                     <span class="co">//das selbe</span>
 v[<span class="dv">0</span>](<span class="dv">4</span>);                                <span class="co">//ausführen, liefert 16</span></code></pre></div></li>
 </ul>
-<h2 id="operatoren-konstruktoren">Operatoren / Konstruktoren</h2>
+<h2 id="konstruktoren">Konstruktoren</h2>
 <ul>
 <li><p><code>Constructor mit: a(a)</code></p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Bruch(<span class="dt">int</span> zaehler, <span class="dt">int</span> nenner): zaehler(zaehler), nenner(nenner){}</code></pre></div></li>
 <li><p><code>Copy Constructor</code></p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Bruch(<span class="dt">const</span> Bruch&amp; alt): zaehler(alt.zaehler), nenner(alt.nenner){}</code></pre></div></li>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Bruch(<span class="at">const</span> Bruch&amp; alt): zaehler(alt.zaehler), nenner(alt.nenner){}</code></pre></div></li>
 <li><p><code>Destructor</code></p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">~Bruch(){}</code></pre></div></li>
 <li><code>{} Constructor</code>
@@ -204,41 +278,58 @@ v[<span class="dv">0</span>](<span class="dv">4</span>);                        
 <li><p>Heap</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Queue* q = <span class="kw">new</span> Queue{<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>}</code></pre></div></li>
 <li><p>Constructor:</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Queue(<span class="dt">const</span> initializer_list&lt;<span class="dt">int</span>&gt;&amp; liste){
-    <span class="kw">for</span>(<span class="dt">int</span> x: liste){
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Queue(<span class="at">const</span> initializer_list&lt;<span class="dt">int</span>&gt;&amp; liste){
+    <span class="cf">for</span>(<span class="dt">int</span> x: liste){
         <span class="kw">this</span>-&gt;elemente.push_back(x);
     }
 }</code></pre></div></li>
 </ul></li>
+</ul>
+<h2 id="operatoren">Operatoren</h2>
+<ul>
+<li><p><a href="reference/operatoren.html">Stackoverflow</a></p></li>
 <li><p><code>Operatoren: == !=</code></p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">bool</span> <span class="kw">operator</span>==(<span class="dt">const</span> Queue&amp; rechts){
-    <span class="kw">return</span> <span class="kw">this</span>-&gt;elemente == rechts.elemente;
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">bool</span> <span class="kw">operator</span>==(<span class="at">const</span> Queue&amp; rechts){
+    <span class="cf">return</span> <span class="kw">this</span>-&gt;elemente == rechts.elemente;
 }
-<span class="dt">bool</span> <span class="kw">operator</span>!=(<span class="dt">const</span> Queue&amp; rechts){
-    <span class="kw">return</span> !(*<span class="kw">this</span>==rechts);
+<span class="dt">bool</span> <span class="kw">operator</span>!=(<span class="at">const</span> Queue&amp; rechts){
+    <span class="cf">return</span> !(*<span class="kw">this</span>==rechts);
 }</code></pre></div></li>
 <li><p><code>Operatoren: *= += /= -=</code></p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Queue&amp; opertator+=(<span class="dt">const</span> Queue&amp; rechts){
-    <span class="kw">for</span>(<span class="dt">int</span> i: rechts.elemente){
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Queue&amp; opertator+=(<span class="at">const</span> Queue&amp; rechts){
+    <span class="cf">for</span>(<span class="dt">int</span> i: rechts.elemente){
         <span class="kw">this</span>-&gt;elemente.push_back(i);
     }
-    <span class="kw">return</span> *<span class="kw">this</span>;
+    <span class="cf">return</span> *<span class="kw">this</span>;
 }</code></pre></div></li>
-<li><p><code>Operatoren: * + / -</code></p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">friend</span> <span class="dt">const</span> Queue&amp; <span class="kw">operator</span>+(<span class="dt">const</span> Queue&amp; links, <span class="dt">const</span> Queue&amp; rechts){
-    Queue* neu = <span class="kw">new</span> Queue(links);
-    neu+=rechts;
-    <span class="kw">return</span> *neu;
-}</code></pre></div></li>
+<li><code>Operatoren: * + / -</code>
+<ul>
+<li>links ist eine copy und das return auch</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">friend</span> Queue <span class="kw">operator</span>+(Queue links, <span class="at">const</span> Queue&amp; rechts){
+    links+=rechts;
+    <span class="cf">return</span> links;
+}
+<span class="co">//oneliner</span>
+<span class="kw">friend</span> Queue <span class="kw">operator</span>+(Queue links, <span class="at">const</span> Queue&amp; rechts){ <span class="cf">return</span> links+=rechts; }</code></pre></div></li>
 <li><p><code>Operator: &lt;&lt;</code></p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">friend</span> ostream&amp; <span class="kw">operator</span>&lt;&lt;(ostream&amp; os, <span class="dt">const</span> Bruch&amp; b){
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">friend</span> ostream&amp; <span class="kw">operator</span>&lt;&lt;(ostream&amp; os, <span class="at">const</span> Bruch&amp; b){
     os &lt;&lt; b.zaehler &lt;&lt; <span class="st">&quot;/&quot;</span> &lt;&lt; b.nenner;
+    <span class="cf">return</span> os;
 }</code></pre></div></li>
 <li><p><code>Operator: &gt;&gt;</code></p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">friend</span> istream&amp; <span class="kw">operator</span>&gt;&gt; (istream&amp; istr, complex&amp; a){}</code></pre></div></li>
-<li><p><code>Operator: []</code></p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span>&amp; <span class="kw">operator</span>[](size_t idx){ 
-    <span class="kw">return</span> <span class="kw">this</span>-&gt;elemente[idx];
+<li><code>Operator: []</code>
+<ul>
+<li>you should always provide both methods</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//setter</span>
+<span class="dt">value_type</span>&amp; <span class="kw">operator</span>[](<span class="dt">index_type</span> idx){     <span class="co">//index_type is for example size_t</span>
+    <span class="cf">return</span> <span class="kw">this</span>-&gt;elemente[idx];
+}
+<span class="co">//getter</span>
+<span class="at">const</span> <span class="dt">value_type</span>&amp; <span class="kw">operator</span>[](<span class="dt">index_type</span> idx) <span class="at">const</span>{
+    <span class="cf">return</span> <span class="kw">this</span>-&gt;elemente[idx];
 }</code></pre></div></li>
 <li><code>Operator: ++a</code>
 <ul>
@@ -246,7 +337,7 @@ v[<span class="dv">0</span>](<span class="dv">4</span>);                        
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Bruch&amp; <span class="kw">operator</span>++(){
     ++zaehler; ++nenner;
-    <span class="kw">return</span> *<span class="kw">this</span>;
+    <span class="cf">return</span> *<span class="kw">this</span>;
 }</code></pre></div></li>
 <li><code>Operator: a++</code>
 <ul>
@@ -255,15 +346,15 @@ v[<span class="dv">0</span>](<span class="dv">4</span>);                        
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Bruch <span class="kw">operator</span>++(<span class="dt">int</span>){
     Bruch tmp(*<span class="kw">this</span>);
     ++zaehler; ++nenner;
-    <span class="kw">return</span> tmp;
+    <span class="cf">return</span> tmp;
 }</code></pre></div></li>
 <li><p><code>Operatoren später überladen</code></p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> Bruch {
     <span class="kw">public</span>:
-        <span class="kw">friend</span> <span class="dt">const</span> Bruch&amp; <span class="kw">operator</span>+(<span class="dt">const</span> Bruch&amp; links, <span class="dt">const</span> Bruch&amp; rechts);
+        <span class="kw">friend</span> <span class="at">const</span> Bruch&amp; <span class="kw">operator</span>+(<span class="at">const</span> Bruch&amp; links, <span class="at">const</span> Bruch&amp; rechts);
 };
 
-<span class="dt">const</span> Bruch&amp; Bruch::<span class="kw">operator</span>+(<span class="dt">const</span> Bruch&amp; links, <span class="dt">const</span> Bruch&amp; rechts){
+<span class="at">const</span> Bruch&amp; Bruch::<span class="kw">operator</span>+(<span class="at">const</span> Bruch&amp; links, <span class="at">const</span> Bruch&amp; rechts){
     ...
 }</code></pre></div></li>
 </ul>
@@ -277,41 +368,87 @@ v[<span class="dv">0</span>](<span class="dv">4</span>);                        
     <span class="kw">class</span> myiterator
     {
         <span class="kw">private</span>:
-            <span class="dt">const</span> D &amp; d;            <span class="co">// we need to know which iterator we traverse</span>
-            size_t index;           <span class="co">// and the position</span>
+            <span class="at">const</span> D &amp; d;            <span class="co">// we need to know which iterator we traverse</span>
+            <span class="dt">size_t</span> index;           <span class="co">// and the position</span>
         <span class="kw">public</span>:
-            myiterator(<span class="dt">const</span> D &amp; _d, size_t _index) : d(_d), index(_index) { }
+            myiterator(<span class="at">const</span> D &amp; _d, <span class="dt">size_t</span> _index) : d(_d), index(_index) { }
             <span class="co">// for simplicity, compare identity and indices only</span>
-            <span class="dt">bool</span> <span class="kw">operator</span>!=(<span class="dt">const</span> myiterator&amp; rhs) <span class="dt">const</span>{
+            <span class="dt">bool</span> <span class="kw">operator</span>!=(<span class="at">const</span> myiterator&amp; rhs) <span class="at">const</span>{
                 <span class="co">//die beiden listen müssen gleich sein, aber die position anders</span>
-                <span class="kw">return</span> (&amp;d==&amp;rhs.d) &amp;&amp; (index!=rhs.index);
+                <span class="cf">return</span> (&amp;d==&amp;rhs.d) &amp;&amp; (index!=rhs.index);
             }
-            <span class="dt">double</span> <span class="kw">operator</span>*() <span class="dt">const</span> {
-                <span class="kw">return</span> d.v[index];
+            <span class="dt">double</span> <span class="kw">operator</span>*() <span class="at">const</span> {
+                <span class="cf">return</span> d.v[index];
             }
-            <span class="dt">const</span> myiterator&amp; <span class="kw">operator</span>++(){
+            <span class="at">const</span> myiterator&amp; <span class="kw">operator</span>++(){
                 ++index;
-                <span class="kw">return</span> *<span class="kw">this</span>;       <span class="co">// standard return value</span>
+                <span class="cf">return</span> *<span class="kw">this</span>;       <span class="co">// standard return value</span>
             }
     };
     <span class="kw">private</span>:
         vector&lt;<span class="dt">double</span>&gt; v;
     <span class="kw">public</span>:
         <span class="co">// use initializer_list from vector</span>
-        D(<span class="dt">const</span> initializer_list&lt;<span class="dt">double</span>&gt;&amp; l) : v(l) { }
-        myiterator begin () <span class="dt">const</span> { <span class="kw">return</span> myiterator(*<span class="kw">this</span>, <span class="dv">0</span>); }
-        myiterator end () <span class="dt">const</span>   { <span class="kw">return</span> myiterator(*<span class="kw">this</span>, v.size()); }
+        D(<span class="at">const</span> initializer_list&lt;<span class="dt">double</span>&gt;&amp; l) : v(l) { }
+        myiterator begin () <span class="at">const</span> { <span class="cf">return</span> myiterator(*<span class="kw">this</span>, <span class="dv">0</span>); }
+        myiterator end () <span class="at">const</span>   { <span class="cf">return</span> myiterator(*<span class="kw">this</span>, v.size()); }
 };</code></pre></div></li>
 </ul>
 <h2 id="statics">Statics</h2>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> C {
     <span class="kw">private</span>:
-        <span class="dt">static</span> <span class="dt">int</span> cnt;         <span class="co">//direkte initialisierung mit &quot;=0&quot; ist nicht erlaubt</span>
+        <span class="at">static</span> <span class="dt">int</span> cnt;         <span class="co">//direkte initialisierung mit &quot;=0&quot; ist nicht erlaubt</span>
     <span class="kw">public</span>:
         C() { ++cnt; }
-        <span class="dt">static</span> <span class="dt">int</span> get_cnt(){ <span class="kw">return</span> cnt; }
+        <span class="at">static</span> <span class="dt">int</span> get_cnt(){ <span class="cf">return</span> cnt; }
 };
 <span class="dt">int</span> C::cnt = <span class="dv">0</span>;                 <span class="co">//es muss außerhalb initialisiert werden</span></code></pre></div>
+<h2 id="consts">Consts</h2>
+<ul>
+<li>rückwärts lesen!</li>
+<li>das erste kann auf beiden seiten stehen</li>
+<li><p>const vars</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//lets you change all</span>
+<span class="dt">int</span>*                                            <span class="co">//pointer to int</span>
+<span class="co">//lets you change what it points to, but not the value</span>
+<span class="dt">int</span> <span class="at">const</span> *                                     <span class="co">//pointer to constant int</span>
+<span class="co">//lets you change the value, but not what it points to</span>
+<span class="dt">int</span> * <span class="at">const</span>                                     <span class="co">//constant pointer to int</span>
+<span class="co">//lets you change nothing</span>
+<span class="dt">int</span> <span class="at">const</span> * <span class="at">const</span>                               <span class="co">//constant pointer to constant int</span>
+<span class="co">//das erste kann auf beiden seiten stehen</span>
+<span class="at">const</span> <span class="dt">int</span> * == <span class="dt">int</span> <span class="at">const</span> *
+<span class="at">const</span> <span class="dt">int</span> * <span class="at">const</span> == <span class="dt">int</span> <span class="at">const</span> * <span class="at">const</span></code></pre></div></li>
+<li>const functions and referenzen
+<ul>
+<li><p>normal</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="at">const</span> <span class="dt">int</span> getX() {}                 <span class="co">//returnt constantes int</span>
+<span class="dt">int</span> <span class="at">const</span> getX() {}                 <span class="co">//returnt constantes int</span>
+<span class="dt">int</span> getX() <span class="at">const</span> {}                 <span class="co">//this wird nicht geändert</span></code></pre></div></li>
+<li><p>referenz</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="at">const</span> Queue &amp; getQueue() {}         <span class="co">//returnt constantes queue</span>
+Queue <span class="at">const</span> &amp; getQueue() {}         <span class="co">//returnt constantes queue</span>
+Queue &amp; <span class="at">const</span> getQueue() {}         <span class="co">//ergibt keinen sinn</span>
+<span class="at">const</span> <span class="dt">int</span> &amp; getX() {}               <span class="co">//returnt eine referenz zu einem const x</span>
+<span class="dt">int</span> <span class="at">const</span> &amp; getX() {}               <span class="co">//returnt eine referenz zu einem const x</span>
+<span class="dt">int</span> &amp; <span class="at">const</span> getX() {}               <span class="co">//ergibt keine sinn</span>
+<span class="dt">int</span> &amp; getX() {}                     <span class="co">//returnt eine referenz zu x</span>
+getX() = <span class="dv">4</span>;                         <span class="co">//sets x to 4</span>
+<span class="dt">void</span> setX(<span class="dt">int</span>&amp; x) {}                <span class="co">//int referenz</span>
+<span class="dt">int</span> y = <span class="dv">3</span>;                          <span class="co">//lvalue erzeugen</span>
+setX(y);                            <span class="co">//geht</span>
+setX(<span class="dv">2</span>);                            <span class="co">//geht nicht, da 2 es ein rvalue ist</span>
+<span class="dt">void</span> setX(<span class="at">const</span> <span class="dt">int</span>&amp; x) {}          <span class="co">//const int referenz</span>
+setX(<span class="dv">2</span>);                            <span class="co">//geht aber kp warum (vllt wird es zur compile zeit festgelegt)</span></code></pre></div></li>
+<li><p>pointer</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="at">const</span> Queue * getQueue() {}         <span class="co">//cont Queue</span>
+Queue <span class="at">const</span> * getQueue() {}         <span class="co">//cont Queue</span>
+Queue * <span class="at">const</span> getQueue() {}         <span class="co">//cont Pointer</span>
+<span class="at">const</span> <span class="dt">int</span> * getQueue() {}           <span class="co">//cont int</span>
+<span class="dt">int</span> <span class="at">const</span> * getQueue() {}           <span class="co">//cont int</span>
+<span class="dt">int</span> * <span class="at">const</span> getQueue() {}           <span class="co">//cont Pointer</span></code></pre></div></li>
+</ul></li>
+</ul>
 <h2 id="vererbung">Vererbung</h2>
 <ul>
 <li>Einfache Vererbung
@@ -332,6 +469,13 @@ v[<span class="dv">0</span>](<span class="dv">4</span>);                        
 <li>B ist der statische Type, da er sich nicht ändern kann</li>
 </ul></li>
 <li><code>virtual</code> muss in Basis-Klasse stehen</li>
+<li>private/public
+<ul>
+<li><code>class B: public A</code></li>
+<li>wenn es private ist, kann man von außen nur auf Methoden von B zugreifen</li>
+<li>bei public kann man auch die Methoden von A mit benutzen</li>
+</ul></li>
+<li>friend Methoden müssen eventuell doppelt geschrieben werden(?)</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> A {
     <span class="kw">protected</span>:
@@ -413,10 +557,10 @@ bp-&gt;h();            <span class="co">//gibt B::h() aus, obwohl in B nicht vir
     <span class="kw">public</span>:
         C(<span class="dt">int</span> N): B1(N<span class="dv">+1</span>), B2(N<span class="dv">+2</span>) {}
         <span class="dt">int</span> getB1N(){
-            <span class="kw">return</span> B1::n;
+            <span class="cf">return</span> B1::n;
         }
         <span class="dt">int</span> getB2N(){
-            <span class="kw">return</span> B2::n;
+            <span class="cf">return</span> B2::n;
         }
 };
 B1 b1;      <span class="co">//zuerst wird A erstellt, dann B1</span>
@@ -446,7 +590,7 @@ C c;        <span class="co">//zuerst A, B1, dann A, B2, dann C</span>
     <span class="kw">public</span>:
         C(<span class="dt">int</span> N): A(N), B1(N<span class="dv">+1</span>), B2(N<span class="dv">+2</span>) {}         <span class="co">//A muss vor den anderen erstellt werden</span>
         <span class="dt">int</span> getN(){
-            <span class="kw">return</span> n;
+            <span class="cf">return</span> n;
         }
 };
 B1 b1(<span class="dv">1</span>);       <span class="co">//zuerst wird A erstellt, dann B1 (n ist 1)</span>
@@ -462,9 +606,9 @@ C c(<span class="dv">1</span>);         <span class="co">//zuerst A, B1, B2, dan
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
 <span class="kw">class</span> Point {
     <span class="kw">public</span>:
-        <span class="kw">typedef</span> T value_type;           <span class="co">//type of the value</span>
-        <span class="kw">typedef</span> T key_type;             <span class="co">//type of the key</span>
-        <span class="kw">typedef</span> T size_type;            <span class="co">//type of the size</span>
+        <span class="kw">typedef</span> T <span class="dt">value_type</span>;           <span class="co">//type of the value</span>
+        <span class="kw">typedef</span> T <span class="dt">key_type</span>;             <span class="co">//type of the key</span>
+        <span class="kw">typedef</span> T <span class="dt">size_type</span>;            <span class="co">//type of the size</span>
         <span class="co">//setzt value_type auf T, damit man von außerhalb den Type erfahren kann</span>
         T x;
         T y;
@@ -497,22 +641,32 @@ C c(<span class="dv">1</span>);         <span class="co">//zuerst A, B1, B2, dan
     T data[dim];
     <span class="co">//einen vorgegebenen type nutzen und einen anderen</span>
     <span class="kw">template</span> &lt;<span class="kw">typename</span> S&gt;
-    MyVector&amp; <span class="kw">operator</span>=(<span class="dt">const</span> MyVector&lt;S,N&gt;&amp; v){ ... }
+    MyVector&amp; <span class="kw">operator</span>=(<span class="at">const</span> MyVector&lt;S,N&gt;&amp; v){ ... }
 };
 <span class="co">//Vector der Dimension 3</span>
 MyVector&lt;<span class="dt">int</span>, <span class="dv">3</span>&gt; mv;</code></pre></div></li>
+<li>Template, welches nur Typen nimmt, welche von einer bestimmten Klasse geerbt haben
+<ul>
+<li>eine leere Klasse machen und dann für “Getraenke” spezialisieren</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">template</span>&lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> A {}
+<span class="kw">template</span>&lt;&gt;
+<span class="kw">class</span> A&lt;Getraenke&gt;{
+    ...
+}</code></pre></div></li>
 </ul>
 <h2 id="lambdas">Lambdas</h2>
 <ul>
 <li><p>normal</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">auto</span> add = [](<span class="dt">int</span> n) { <span class="kw">return</span> n<span class="dv">+4</span>; };
-<span class="kw">auto</span> inc = [](<span class="dt">int</span>&amp; n) { <span class="kw">return</span> ++n; };
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">auto</span> add = [](<span class="dt">int</span> n) { <span class="cf">return</span> n<span class="dv">+4</span>; };
+<span class="kw">auto</span> inc = [](<span class="dt">int</span>&amp; n) { <span class="cf">return</span> ++n; };
 add(<span class="dv">4</span>);     <span class="co">//returns 8</span>
 <span class="dt">int</span> x=<span class="dv">7</span>;
 inc(x);     <span class="co">//increases x</span></code></pre></div></li>
 <li><p>copy outer vars</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> m = <span class="dv">12</span>;
-<span class="kw">auto</span> addToM = [=](<span class="dt">int</span> n) { <span class="kw">return</span> m+n; };
+<span class="kw">auto</span> addToM = [=](<span class="dt">int</span> n) { <span class="cf">return</span> m+n; };
 addToM(<span class="dv">4</span>);  <span class="co">//returnt die summe aus m und 4</span></code></pre></div></li>
 <li>reference outer vars
 <ul>
@@ -521,12 +675,12 @@ addToM(<span class="dv">4</span>);  <span class="co">//returnt die summe aus m u
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">auto</span> setM = [&amp;](<span class="dt">int</span> n) { m=n };
 setM(<span class="dv">5</span>);    <span class="co">//setzt m auf 5</span></code></pre></div></li>
 <li><p>andere syntaxe</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">auto</span> pi = []() -&gt; <span class="dt">double</span> { <span class="kw">return</span> <span class="fl">3.1415926</span>; };
-<span class="kw">typedef</span> <span class="dt">double</span> (*polynome_t)(<span class="dt">double</span> x);
-polynome_t quad = [](<span class="dt">double</span> x) { <span class="kw">return</span> x*x; };
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">auto</span> pi = []() -&gt; <span class="dt">double</span> { <span class="cf">return</span> <span class="fl">3.1415926</span>; };
+<span class="kw">typedef</span> <span class="dt">double</span> (*<span class="dt">polynome_t</span>)(<span class="dt">double</span> x);
+<span class="dt">polynome_t</span> quad = [](<span class="dt">double</span> x) { <span class="cf">return</span> x*x; };
 <span class="co">//count vector elements if lambda expression returns true</span>
-<span class="dt">int</span> cnt1 = count_if (v.begin(), v.end(), [](<span class="dt">int</span> k){ <span class="kw">return</span> (<span class="dv">0</span>==k%<span class="dv">2</span>);});
-<span class="kw">auto</span> result1 = find_if(v.begin(), v.end(), [](<span class="dt">int</span> k){ <span class="kw">return</span> (<span class="dv">0</span>==k%<span class="dv">2</span>);});</code></pre></div></li>
+<span class="dt">int</span> cnt1 = count_if (v.begin(), v.end(), [](<span class="dt">int</span> k){ <span class="cf">return</span> (<span class="dv">0</span>==k%<span class="dv">2</span>);});
+<span class="kw">auto</span> result1 = find_if(v.begin(), v.end(), [](<span class="dt">int</span> k){ <span class="cf">return</span> (<span class="dv">0</span>==k%<span class="dv">2</span>);});</code></pre></div></li>
 </ul>
 <h2 id="smart-pointer">Smart Pointer</h2>
 <ul>
@@ -578,7 +732,7 @@ thread t1(Work, ref(<span class="dv">4</span>));</code></pre></div></li>
 <li><p><a href="reference/en/cpp/thread/mutex.html">CPP References</a></p></li>
 <li><p>unsichere methode</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> Work(<span class="dt">int</span>* sum, mutex* mutex_sum){
-    <span class="kw">for</span> (<span class="dt">int</span> i=<span class="dv">0</span>; i&lt;n; ++i){
+    <span class="cf">for</span> (<span class="dt">int</span> i=<span class="dv">0</span>; i&lt;n; ++i){
         mutex_sum-&gt;lock();
         (*sum) += <span class="dv">1</span>;
         mutex_sum-&gt;unlock();
@@ -589,7 +743,7 @@ mutex mutex_sum;                <span class="co">//erstelle einen mutex</span>
 thread t1(Work, &amp;x, &amp;mutex_sum)</code></pre></div></li>
 <li><p>sichere methode</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> Work(<span class="dt">int</span>* sum, mutex* mutex_sum){
-    <span class="kw">for</span> (<span class="dt">int</span> i=<span class="dv">0</span>; i&lt;n; ++i){
+    <span class="cf">for</span> (<span class="dt">int</span> i=<span class="dv">0</span>; i&lt;n; ++i){
         loack_guard&lt;mutex&gt; lk(*mutex_sum);
         (*sum) += <span class="dv">1</span>;
     }
@@ -607,7 +761,7 @@ thread t1(Work, &amp;x, &amp;mutex_sum)</code></pre></div></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//zählt solange hoch, bis signal geunlocked wird</span>
 <span class="co">//und lockt es direkt wieder, geht aber aus der schleife raus</span>
-<span class="kw">while</span> (!signal.try_lock()){
+<span class="cf">while</span> (!signal.try_lock()){
     ++cnt;
 }
 <span class="co">//jetzt wieder unlocken</span>
