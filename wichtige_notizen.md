@@ -114,6 +114,10 @@
 		//dann ist v danach {4.6, 7.8, 4.6, 7.8, 2.5}
 		//und it zeigt auf das 3. element
 		v.erase(it, v.end());
+		//mit strings
+		string s = "Hallo Welt";
+		auto it = remove(s.begin(), s.end(), ' ');
+		s.erase(it, s.end());
 		```
 
 
