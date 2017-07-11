@@ -63,6 +63,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> i;
 cin &gt;&gt; i;
 cout &lt;&lt; i;</code></pre></div></li>
+<li>Objekte löschen
+<ul>
+<li>delete löscht objekte hinter pointern</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span>* i = <span class="kw">new</span> <span class="dt">int</span>(<span class="dv">3</span>)
+<span class="kw">delete</span> i;</code></pre></div></li>
 <li><p>andere coole sachen</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> x{}, y{};           <span class="co">//initialisiert x und y mit 0</span></code></pre></div></li>
 </ul>
@@ -77,7 +83,15 @@ cout &lt;&lt; i;</code></pre></div></li>
 </ul></li>
 <li>Casts
 <ul>
-<li>TODO</li>
+<li><p>TODO</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="at">const</span> A* a = <span class="kw">new</span> A{<span class="dv">5</span>};
+<span class="at">const</span> A&amp; ar = *a;
+cout &lt;&lt; a-&gt;value;
+cout &lt;&lt; ar.value;
+A* b = <span class="kw">const_cast</span>&lt;A*&gt;(a);
+A&amp; br = <span class="kw">const_cast</span>&lt;A&amp;&gt;(ar);
+cout &lt;&lt; b-&gt;value;
+cout &lt;&lt; br.value;</code></pre></div></li>
 </ul></li>
 <li>Arrays
 <ul>
@@ -161,7 +175,11 @@ v.erase(v.begin(), v.end()<span class="dv">-2</span>);
 <span class="kw">auto</span> it = remove_if(v.begin(), v.end(), [](<span class="dt">int</span> x){ <span class="cf">return</span> x==<span class="fl">2.5</span>});
 <span class="co">//dann ist v danach {4.6, 7.8, 4.6, 7.8, 2.5}</span>
 <span class="co">//und it zeigt auf das 3. element</span>
-v.erase(it, v.end());</code></pre></div></li>
+v.erase(it, v.end());
+<span class="co">//mit strings</span>
+string s = <span class="st">&quot;Hallo Welt&quot;</span>;
+<span class="kw">auto</span> it = remove(s.begin(), s.end(), <span class="st">&#39; &#39;</span>);
+s.erase(it, s.end());</code></pre></div></li>
 </ul></li>
 <li>Set
 <ul>
@@ -297,7 +315,7 @@ v[<span class="dv">0</span>](<span class="dv">4</span>);                        
     <span class="cf">return</span> !(*<span class="kw">this</span>==rechts);
 }</code></pre></div></li>
 <li><p><code>Operatoren: *= += /= -=</code></p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Queue&amp; opertator+=(<span class="at">const</span> Queue&amp; rechts){
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">Queue&amp; <span class="kw">operator</span>+=(<span class="at">const</span> Queue&amp; rechts){
     <span class="cf">for</span>(<span class="dt">int</span> i: rechts.elemente){
         <span class="kw">this</span>-&gt;elemente.push_back(i);
     }
@@ -395,6 +413,13 @@ v[<span class="dv">0</span>](<span class="dv">4</span>);                        
         myiterator end () <span class="at">const</span>   { <span class="cf">return</span> myiterator(*<span class="kw">this</span>, v.size()); }
 };</code></pre></div></li>
 </ul>
+<h2 id="exceptions">Exceptions</h2>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="cf">try</span>{
+    <span class="cf">throw</span> <span class="dv">30</span>;
+}
+<span class="cf">catch</span> (<span class="dt">int</span> e){
+    cout &lt;&lt; <span class="st">&quot;An exception occurred. Exception Nr. &quot;</span> &lt;&lt; e &lt;&lt; <span class="st">&#39;</span><span class="sc">\n</span><span class="st">&#39;</span>;
+}</code></pre></div>
 <h2 id="statics">Statics</h2>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> C {
     <span class="kw">private</span>:
@@ -449,6 +474,13 @@ Queue * <span class="at">const</span> getQueue() {}         <span class="co">//c
 <span class="dt">int</span> <span class="at">const</span> * getQueue() {}           <span class="co">//cont int</span>
 <span class="dt">int</span> * <span class="at">const</span> getQueue() {}           <span class="co">//cont Pointer</span></code></pre></div></li>
 </ul></li>
+<li><p>const in klassen mit pointern</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> Node {
+    <span class="kw">private</span>:
+        T* el;
+    <span class="kw">public</span>:
+        Node(<span class="at">const</span> T&amp; el): el(<span class="kw">const_cast</span>&lt;<span class="dt">int</span>&gt;(&amp;el)){}
+}</code></pre></div></li>
 </ul>
 <h2 id="vererbung">Vererbung</h2>
 <ul>
@@ -726,7 +758,8 @@ t1.join();              <span class="co">//wait for t1</span></code></pre></div>
     this_thread::sleep_for(chrono::seconds(sec));
 }
 thread t1(Work, ref(<span class="dv">4</span>));</code></pre></div></li>
-<li>mutex / kritische regionen
+</ul>
+<h3 id="mutex-kritische-regionen">mutex / kritische regionen</h3>
 <ul>
 <li><code>#include &lt;condition_variable&gt;</code></li>
 <li>sperrt threads vor dem zugriff auf variablen, oder ganze bereiche eines codes</li>
@@ -767,16 +800,72 @@ thread t1(Work, &amp;x, &amp;mutex_sum)</code></pre></div></li>
 }
 <span class="co">//jetzt wieder unlocken</span>
 signal.unlock();</code></pre></div></li>
-</ul></li>
-<li>condition variablen
+</ul>
+<h3 id="condition-variablen">condition variablen</h3>
 <ul>
 <li>wartet auf ein ereignis</li>
 <li>TODO</li>
-</ul></li>
-<li>Files
+</ul>
+<h2 id="streams">Streams</h2>
+<h3 id="stringstreams">StringStreams</h3>
 <ul>
-<li>TODO</li>
+<li><p>Stringstreams</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">stringstream ss;
+ss &lt;&lt; <span class="dv">89</span> &lt;&lt; <span class="st">&quot;Hallo Welt&quot;</span> &lt;&lt; endl;
+cout &lt;&lt; ss.str();</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//</span><span class="al">TODO</span><span class="co"> learn this</span>
+string::substr
+string::find</code></pre></div></li>
+</ul>
+<h3 id="files">Files</h3>
+<ul>
+<li><code>#include &lt;fstream&gt;</code></li>
+<li><p>immer in einen eigenen Gültigkeitsbereich setzen mit:</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">{
+    code...
+}</code></pre></div>
+<ul>
+<li>dadurch muss man die Filestreams nicht öffnen oder schließen</li>
 </ul></li>
+<li>read a file
+<ul>
+<li>short and good way
+<ul>
+<li><code>#include &lt;streambuf&gt;</code></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">ifstream t(<span class="st">&quot;MyLog.txt&quot;</span>);
+string str( (istreambuf_iterator&lt;<span class="dt">char</span>&gt;(t)), istreambuf_iterator&lt;<span class="dt">char</span>&gt;() );
+cout &lt;&lt;str;</code></pre></div></li>
+<li><p>error handling</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">ifstream inFile(<span class="st">&quot;MyLog.txt&quot;</span>);
+<span class="co">//check for error</span>
+<span class="cf">if</span>(inFile.fail()){
+    cerr &lt;&lt; <span class="st">&quot;error opening file&quot;</span> &lt;&lt; endl;
+    <span class="cf">return</span> <span class="dv">1</span>;
+}</code></pre></div></li>
+<li><p>Wörter einzeln einlesen</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> count=<span class="dv">0</span>;
+string items;
+stringstream ss;
+<span class="cf">while</span>(!inFile.eof()){       <span class="co">//lies die ganze datei</span>
+    inFile &gt;&gt; items;        <span class="co">//items ist immer das aktuelle wort</span>
+    ss&lt;&lt;items;              <span class="co">//füge items dem stringstream hinzu</span>
+    <span class="co">//in ss sind die wörter ohne leerzeichen oder zeilenumbrüche</span>
+    <span class="co">//count how many oranges are in the file</span>
+    <span class="cf">if</span>(items==<span class="st">&quot;orange&quot;</span>){
+        count++;
+    }
+}</code></pre></div></li>
+</ul></li>
+<li><p>write to a file</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> main(){
+    { <span class="co">//einen eigenen gültigkeitsbereich für die file machen</span>
+        ofstream of(<span class="st">&quot;MyLog.txt&quot;</span>);
+        of &lt;&lt; <span class="st">&quot;Blablabla&quot;</span> &lt;&lt; endl;
+        of &lt;&lt; <span class="dv">99</span> &lt;&lt; endl;
+    } <span class="co">//file wird hier automatisch geschlossen</span>
+    <span class="cf">return</span> <span class="dv">1</span>;
+}</code></pre></div></li>
 </ul>
 </body>
 </html>
