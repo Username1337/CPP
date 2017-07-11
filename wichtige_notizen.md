@@ -44,6 +44,16 @@
 
 - Casts
 	- TODO
+	```cpp
+	const A* a = new A{5};
+	const A& ar = *a;
+	cout << a->value;
+	cout << ar.value;
+	A* b = const_cast<A*>(a);
+	A& br = const_cast<A&>(ar);
+	cout << b->value;
+	cout << br.value;
+	```
 
 - Arrays
 	- beim übergeben an Funktionen die Länge mit geben!
@@ -127,7 +137,6 @@
 		auto it = remove(s.begin(), s.end(), ' ');
 		s.erase(it, s.end());
 		```
-
 
 - Set
 	- `#include <set>`
@@ -404,6 +413,16 @@
 	};
 	```
 
+## Exceptions
+```cpp
+try{
+	throw 30;
+}
+catch (int e){
+	cout << "An exception occurred. Exception Nr. " << e << '\n';
+}
+```
+
 ## Statics
 ```cpp
 class C {
@@ -476,7 +495,6 @@ int C::cnt = 0;					//es muss außerhalb initialisiert werden
 		private:
 			T* el;
 		public:
-			//TODO const  cast zu casts hinzufügen
 			Node(const T& el): el(const_cast<int>(&el)){}
 	}
 	```
@@ -782,87 +800,126 @@ int C::cnt = 0;					//es muss außerhalb initialisiert werden
 	thread t1(Work, ref(4));
 	```
 
-- mutex / kritische regionen
-	- `#include <condition_variable>`
-	- sperrt threads vor dem zugriff auf variablen, oder ganze bereiche eines codes
-	- [CPP References](reference/en/cpp/thread/mutex.html)
+### mutex / kritische regionen
+- `#include <condition_variable>`
+- sperrt threads vor dem zugriff auf variablen, oder ganze bereiche eines codes
+- [CPP References](reference/en/cpp/thread/mutex.html)
 
-	- unsichere methode
-		```cpp
-		void Work(int* sum, mutex* mutex_sum){
-			for (int i=0; i<n; ++i){
-				mutex_sum->lock();
-				(*sum) += 1;
-				mutex_sum->unlock();
-			}
+- unsichere methode
+	```cpp
+	void Work(int* sum, mutex* mutex_sum){
+		for (int i=0; i<n; ++i){
+			mutex_sum->lock();
+			(*sum) += 1;
+			mutex_sum->unlock();
 		}
-		mutex mutex_sum;				//erstelle einen mutex
-		int x = 0;
-		thread t1(Work, &x, &mutex_sum)
+	}
+	mutex mutex_sum;				//erstelle einen mutex
+	int x = 0;
+	thread t1(Work, &x, &mutex_sum)
+	```
+
+- sichere methode
+	```cpp
+	void Work(int* sum, mutex* mutex_sum){
+		for (int i=0; i<n; ++i){
+			loack_guard<mutex> lk(*mutex_sum);
+			(*sum) += 1;
+		}
+	}
+	mutex mutex_sum;				//erstelle einen mutex
+	int x = 0;
+	thread t1(Work, &x, &mutex_sum)
+	```
+
+- wait until unlock
+	- `mutex.try_lock()`
+		- returnt false, wenn es gelocked ist
+		- wenn es nicht gelocked ist, wird es gelocked und true returnt
+
+	```cpp
+	//zählt solange hoch, bis signal geunlocked wird
+	//und lockt es direkt wieder, geht aber aus der schleife raus
+	while (!signal.try_lock()){
+		++cnt;
+	}
+	//jetzt wieder unlocken
+	signal.unlock();
+	```
+
+### condition variablen
+- wartet auf ein ereignis
+- TODO
+
+
+## Streams
+### StringStreams
+- Stringstreams
+	```cpp
+	stringstream ss;
+	ss << 89 << "Hallo Welt" << endl;
+	cout << ss.str();
+	```
+	```cpp
+	//TODO learn this
+	string::substr
+	string::find
+	```
+
+### Files
+- `#include <fstream>`
+- immer in einen eigenen Gültigkeitsbereich setzen mit:
+	```cpp
+	{
+		code...
+	}
+	```
+	- dadurch muss man die Filestreams nicht öffnen oder schließen
+
+- read a file
+	- short and good way
+		- `#include <streambuf>`
+
+		```cpp
+		ifstream t("MyLog.txt");
+		string str( (istreambuf_iterator<char>(t)), istreambuf_iterator<char>() );
+		cout <<str;
 		```
 
-	- sichere methode
+	- error handling
 		```cpp
-		void Work(int* sum, mutex* mutex_sum){
-			for (int i=0; i<n; ++i){
-				loack_guard<mutex> lk(*mutex_sum);
-				(*sum) += 1;
-			}
-		}
-		mutex mutex_sum;				//erstelle einen mutex
-		int x = 0;
-		thread t1(Work, &x, &mutex_sum)
-		```
-
-	- wait until unlock
-		- `mutex.try_lock()`
-			- returnt false, wenn es gelocked ist
-			- wenn es nicht gelocked ist, wird es gelocked und true returnt
-
-		```cpp
-		//zählt solange hoch, bis signal geunlocked wird
-		//und lockt es direkt wieder, geht aber aus der schleife raus
-		while (!signal.try_lock()){
-			++cnt;
-		}
-		//jetzt wieder unlocken
-		signal.unlock();
-		```
-
-- condition variablen
-	- wartet auf ein ereignis
-	- TODO
-
-- Files
-	- TODO
-	- `#include <fstream>`
-	- write to a file
-		```cpp
-		int main(){
-			{ //einen eigenen gültigkeitsbereich für die file machen
-				ofstream of("MyLog.txt");
-				of << "Blablabla" << endl;
-				of << 99 << endl;
-			} //file wird hier automatisch geschlossen
+		ifstream inFile("MyLog.txt");
+		//check for error
+		if(inFile.fail()){
+			cerr << "error opening file" << endl;
 			return 1;
 		}
 		```
 
-- Exceptions
-	- TODO
+	- Wörter einzeln einlesen
+		```cpp
+		int count=0;
+		string items;
+		stringstream ss;
+		while(!inFile.eof()){		//lies die ganze datei
+			inFile >> items;		//items ist immer das aktuelle wort
+			ss<<items;				//füge items dem stringstream hinzu
+			//in ss sind die wörter ohne leerzeichen oder zeilenumbrüche
+			//count how many oranges are in the file
+			if(items=="orange"){
+				count++;
+			}
+		}
+		```
+
+- write to a file
 	```cpp
-	try{
-		throw 30;
-	}
-	catch (int e){
-		cout << "An exception occurred. Exception Nr. " << e << '\n';
+	int main(){
+		{ //einen eigenen gültigkeitsbereich für die file machen
+			ofstream of("MyLog.txt");
+			of << "Blablabla" << endl;
+			of << 99 << endl;
+		} //file wird hier automatisch geschlossen
+		return 1;
 	}
 	```
-
-- Stream
-	- ostream
-	- ofstream
-	- ifstream
-	- stringstream
-	- TODO
-
