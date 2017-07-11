@@ -1,0 +1,9 @@
+syn keyword CTagsLocalVariable hund w3 b w1 k ap hund2 w4 a w6 l1 noname x p w5 t endl w2 d out s1 c kind
+syn keyword CTagsStructure A C B
+syn keyword CTagsMember next name el Ladung prev Farbe a a2 level kraft x MaxLadung n y endl alter d Energie a1 last m first leben kind
+syn keyword CTagsEnumeratorName E D
+syn keyword CTagsEnumerationValue b c a f e d
+syn keyword CTagsFunction Hund BasisRaumschiff getNext printVector MyWrap ZeigeInfos get getY Entladen setName Koordinaten setPrev Krieger getX swap Laden Node getPrev LinkedList append remove Starten Landen main altern erase setNext setX setY print strucs enums
+syn keyword CTagsType value_type
+syn keyword CTagsClass Hund Node BasisRaumschiff TransportRaumschiff LinkedList Koordinaten Test Krieger MyWrap
+

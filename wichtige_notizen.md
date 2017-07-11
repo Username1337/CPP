@@ -23,6 +23,14 @@
 	cout << i;
 	```
 
+- Objekte löschen
+	- delete löscht objekte hinter pointern
+
+	```cpp
+	int* i = new int(3)
+	delete i;
+	```
+
 - andere coole sachen
 	```cpp
 	int x{}, y{};			//initialisiert x und y mit 0
@@ -279,7 +287,7 @@
 
 - `Operatoren: *= += /= -=`
 	```cpp
-	Queue& opertator+=(const Queue& rechts){
+	Queue& operator+=(const Queue& rechts){
 		for(int i: rechts.elemente){
 			this->elemente.push_back(i);
 		}
@@ -461,6 +469,17 @@ int C::cnt = 0;					//es muss außerhalb initialisiert werden
 		int const * getQueue() {}			//cont int
 		int * const getQueue() {}			//cont Pointer
 		```
+
+- const in klassen mit pointern
+	```cpp
+	class Node {
+		private:
+			T* el;
+		public:
+			//TODO const  cast zu casts hinzufügen
+			Node(const T& el): el(const_cast<int>(&el)){}
+	}
+	```
 
 ## Vererbung
 - Einfache Vererbung
@@ -816,3 +835,34 @@ int C::cnt = 0;					//es muss außerhalb initialisiert werden
 
 - Files
 	- TODO
+	- `#include <fstream>`
+	- write to a file
+		```cpp
+		int main(){
+			{ //einen eigenen gültigkeitsbereich für die file machen
+				ofstream of("MyLog.txt");
+				of << "Blablabla" << endl;
+				of << 99 << endl;
+			} //file wird hier automatisch geschlossen
+			return 1;
+		}
+		```
+
+- Exceptions
+	- TODO
+	```cpp
+	try{
+		throw 30;
+	}
+	catch (int e){
+		cout << "An exception occurred. Exception Nr. " << e << '\n';
+	}
+	```
+
+- Stream
+	- ostream
+	- ofstream
+	- ifstream
+	- stringstream
+	- TODO
+

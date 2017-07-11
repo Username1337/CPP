@@ -1,0 +1,308 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+A	structsEnums.cpp	/^struct A {$/;"	s	file:
+A::m	structsEnums.cpp	/^	bool m;$/;"	m	struct:A	file:	access:public
+A::n	structsEnums.cpp	/^	double n;$/;"	m	struct:A	file:	access:public
+B	structsEnums.cpp	/^struct B {$/;"	s	file:
+B::m	structsEnums.cpp	/^	int m=3;$/;"	m	struct:B	file:	access:public
+B::n	structsEnums.cpp	/^	int n;$/;"	m	struct:B	file:	access:public
+BasisRaumschiff	raumschiff/main.cpp	/^		BasisRaumschiff(){$/;"	f	class:BasisRaumschiff	access:public	signature:()
+BasisRaumschiff	raumschiff/main.cpp	/^class BasisRaumschiff {$/;"	c	file:
+BasisRaumschiff::BasisRaumschiff	raumschiff/main.cpp	/^		BasisRaumschiff(){$/;"	f	class:BasisRaumschiff	access:public	signature:()
+BasisRaumschiff::Energie	raumschiff/main.cpp	/^		int Energie;$/;"	m	class:BasisRaumschiff	file:	access:public
+BasisRaumschiff::Farbe	raumschiff/main.cpp	/^		int Farbe;$/;"	m	class:BasisRaumschiff	file:	access:public
+BasisRaumschiff::Landen	raumschiff/main.cpp	/^		void Landen() {$/;"	f	class:BasisRaumschiff	access:public	signature:()
+BasisRaumschiff::Starten	raumschiff/main.cpp	/^		void Starten() {$/;"	f	class:BasisRaumschiff	access:public	signature:()
+BasisRaumschiff::std::endl	raumschiff/main.cpp	/^			std::cout << "Ein neues BasisRaumschiff wurde erstellt!" << std::endl;$/;"	m	class:BasisRaumschiff::std	file:
+BasisRaumschiff::std::endl	raumschiff/main.cpp	/^			std::cout << "Raumschiff landet" << std::endl;$/;"	m	class:BasisRaumschiff::std	file:
+BasisRaumschiff::std::endl	raumschiff/main.cpp	/^			std::cout << "Raumschiff startet" << std::endl;$/;"	m	class:BasisRaumschiff::std	file:
+C	structsEnums.cpp	/^struct C {$/;"	s	file:
+C::a1	structsEnums.cpp	/^	A a1;$/;"	m	struct:C	file:	access:public
+C::a2	structsEnums.cpp	/^	A a2;$/;"	m	struct:C	file:	access:public
+CC	makefile	/^CC = gcc$/;"	m
+CC	raumschiff/makefile	/^CC = gcc$/;"	m
+CEXAMPLES	makefile	/^CEXAMPLES = $(shell find . -name '*.c' -print -type f)$/;"	m
+CEXAMPLES	raumschiff/makefile	/^CEXAMPLES = $(shell find . -name '*.c' -print -type f)$/;"	m
+CFLAGS	makefile	/^CFLAGS = -ansi -pedantic -Wall -Wextra -Wconversion -O3$/;"	m
+CFLAGS	raumschiff/makefile	/^CFLAGS = -ansi -pedantic -Wall -Wextra -Wconversion -O3$/;"	m
+CTARGETS	makefile	/^CTARGETS = $(CEXAMPLES:.c=.out)$/;"	m
+CTARGETS	raumschiff/makefile	/^CTARGETS = $(CEXAMPLES:.c=.out)$/;"	m
+CXX	makefile	/^CXX = g++$/;"	m
+CXX	raumschiff/makefile	/^CXX = g++$/;"	m
+CXXEXAMPLES	makefile	/^CXXEXAMPLES = $(shell find . -name '*.cpp' -print -type f)$/;"	m
+CXXEXAMPLES	raumschiff/makefile	/^CXXEXAMPLES = $(shell find . -name '*.cpp' -print -type f)$/;"	m
+CXXFLAGS	makefile	/^CXXFLAGS = -ansi -pedantic -Wall -Wextra -Wconversion$/;"	m
+CXXFLAGS	raumschiff/makefile	/^CXXFLAGS = -ansi -pedantic -Wall -Wextra -Wconversion$/;"	m
+CXXTARGETS	makefile	/^CXXTARGETS = $(CXXEXAMPLES:.cpp=.out) $/;"	m
+CXXTARGETS	raumschiff/makefile	/^CXXTARGETS = $(CXXEXAMPLES:.cpp=.out) $/;"	m
+D	structsEnums.cpp	/^enum D{a=3,b=3,c=3};$/;"	g	file:
+D::a	structsEnums.cpp	/^	cout << D::a;$/;"	m	class:D	file:
+E	structsEnums.cpp	/^enum E {d,e,f};$/;"	g	file:
+E::d	structsEnums.cpp	/^	cout <<E::d;$/;"	m	class:E	file:
+Energie	raumschiff/main.cpp	/^		int Energie;$/;"	m	class:BasisRaumschiff	file:	access:public
+Entladen	raumschiff/main.cpp	/^		void Entladen(){$/;"	f	class:TransportRaumschiff	access:public	signature:()
+Entladen	raumschiff/main.cpp	/^	s1.Entladen();$/;"	p	file:	signature:()
+Farbe	raumschiff/main.cpp	/^		int Farbe;$/;"	m	class:BasisRaumschiff	file:	access:public
+Hund	klassen2.cpp	/^		Hund(){$/;"	f	class:Hund	access:public	signature:()
+Hund	klassen2.cpp	/^		Hund(string name){$/;"	f	class:Hund	access:public	signature:(string name)
+Hund	klassen2.cpp	/^class Hund {$/;"	c	file:
+Hund::Hund	klassen2.cpp	/^		Hund(){$/;"	f	class:Hund	access:public	signature:()
+Hund::Hund	klassen2.cpp	/^		Hund(string name){$/;"	f	class:Hund	access:public	signature:(string name)
+Hund::alter	klassen2.cpp	/^		int alter;$/;"	m	class:Hund	file:	access:private
+Hund::altern	klassen2.cpp	/^		void altern(int jahre){$/;"	f	class:Hund	access:public	signature:(int jahre)
+Hund::endl	klassen2.cpp	/^			cout << "Oh wie schön ein neuer Hund wurde geboren :)" << endl;$/;"	l
+Hund::kind	klassen2.cpp	/^		Hund* kind;$/;"	m	class:Hund	file:	access:private
+Hund::name	klassen2.cpp	/^		string name;$/;"	m	class:Hund	file:	access:private
+Hund::operator +	klassen2.cpp	/^		friend Hund* operator+(Hund& c1, Hund& c2){$/;"	f	class:Hund	access:friend	signature:(Hund& c1, Hund& c2)
+Hund::operator <<	klassen2.cpp	/^		friend ostream& operator<<(ostream& os, const Hund& c){$/;"	f	class:Hund	access:friend	signature:(ostream& os, const Hund& c)
+Hund::out	klassen2.cpp	/^			Hund* out = new Hund();$/;"	l
+Hund::setName	klassen2.cpp	/^		void setName(string name){$/;"	f	class:Hund	access:public	signature:(string name)
+Koordinaten	tausche.cpp	/^		Koordinaten() : x(0), y(0){$/;"	f	class:Koordinaten	access:public	signature:()
+Koordinaten	tausche.cpp	/^		Koordinaten(int x, int y) : x(x), y(y){$/;"	f	class:Koordinaten	access:public	signature:(int x, int y)
+Koordinaten	tausche.cpp	/^class Koordinaten {$/;"	c	file:
+Koordinaten::Koordinaten	tausche.cpp	/^		Koordinaten() : x(0), y(0){$/;"	f	class:Koordinaten	access:public	signature:()
+Koordinaten::Koordinaten	tausche.cpp	/^		Koordinaten(int x, int y) : x(x), y(y){$/;"	f	class:Koordinaten	access:public	signature:(int x, int y)
+Koordinaten::getX	tausche.cpp	/^		int getX(){$/;"	f	class:Koordinaten	access:public	signature:()
+Koordinaten::getY	tausche.cpp	/^		int getY(){$/;"	f	class:Koordinaten	access:public	signature:()
+Koordinaten::print	tausche.cpp	/^		void print(){$/;"	f	class:Koordinaten	access:public	signature:()
+Koordinaten::setX	tausche.cpp	/^		void setX(int x){$/;"	f	class:Koordinaten	access:public	signature:(int x)
+Koordinaten::setY	tausche.cpp	/^		void setY(int y){$/;"	f	class:Koordinaten	access:public	signature:(int y)
+Koordinaten::x	tausche.cpp	/^		int x;$/;"	m	class:Koordinaten	file:	access:private
+Koordinaten::y	tausche.cpp	/^		int y;$/;"	m	class:Koordinaten	file:	access:private
+Krieger	klassen.cpp	/^		Krieger(){$/;"	f	class:Krieger	access:public	signature:()
+Krieger	klassen.cpp	/^class Krieger {$/;"	c	file:
+Krieger::Krieger	klassen.cpp	/^		Krieger(){$/;"	f	class:Krieger	access:public	signature:()
+Krieger::ZeigeInfos	klassen.cpp	/^		void ZeigeInfos();$/;"	p	class:Krieger	file:	access:public	signature:()
+Krieger::ZeigeInfos	klassen.cpp	/^void Krieger::ZeigeInfos(){$/;"	f	class:Krieger	signature:()
+Krieger::kraft	klassen.cpp	/^		int kraft;$/;"	m	class:Krieger	file:	access:private
+Krieger::leben	klassen.cpp	/^		int leben;$/;"	m	class:Krieger	file:	access:private
+Krieger::level	klassen.cpp	/^		int level;$/;"	m	class:Krieger	file:	access:private
+Krieger::std::endl	klassen.cpp	/^			std::cout << "Aua!!" << std::endl;$/;"	m	class:Krieger::std	file:
+Krieger::~Krieger	klassen.cpp	/^		~Krieger(){$/;"	f	class:Krieger	access:public	signature:()
+LDFLAGS	makefile	/^LDFLAGS = -lm$/;"	m
+LDFLAGS	raumschiff/makefile	/^LDFLAGS = -lm$/;"	m
+Laden	raumschiff/main.cpp	/^		void Laden(){$/;"	f	class:TransportRaumschiff	access:public	signature:()
+Laden	raumschiff/main.cpp	/^	s1.Laden();$/;"	p	file:	signature:()
+Ladung	raumschiff/main.cpp	/^		int Ladung;$/;"	m	class:TransportRaumschiff	file:	access:public
+Landen	raumschiff/main.cpp	/^		virtual void Landen() {$/;"	f	class:TransportRaumschiff	access:public	signature:()
+Landen	raumschiff/main.cpp	/^		void Landen() {$/;"	f	class:BasisRaumschiff	access:public	signature:()
+Landen	raumschiff/main.cpp	/^	s1.Landen();$/;"	p	file:	signature:()
+LinkedList	LinkedList.cpp	/^		LinkedList(): first(nullptr), last(nullptr){ cout<<"ctor std"<<endl; }$/;"	f	class:LinkedList	access:public	signature:()
+LinkedList	LinkedList.cpp	/^		LinkedList(const LinkedList<T>& ll): first(ll.first), last(ll.last){ cout<<"ctor copy"<<endl; }$/;"	f	class:LinkedList	access:public	signature:(const LinkedList<T>& ll)
+LinkedList	LinkedList.cpp	/^class LinkedList {$/;"	c	file:
+LinkedList::LinkedList	LinkedList.cpp	/^		LinkedList(): first(nullptr), last(nullptr){ cout<<"ctor std"<<endl; }$/;"	f	class:LinkedList	access:public	signature:()
+LinkedList::LinkedList	LinkedList.cpp	/^		LinkedList(const LinkedList<T>& ll): first(ll.first), last(ll.last){ cout<<"ctor copy"<<endl; }$/;"	f	class:LinkedList	access:public	signature:(const LinkedList<T>& ll)
+LinkedList::Node	LinkedList.cpp	/^		class Node{$/;"	c	class:LinkedList	file:	access:public
+LinkedList::Node::Node	LinkedList.cpp	/^				Node(): el(nullptr), next(nullptr), prev(nullptr){ cout<<"Node ctor std"<<endl; }$/;"	f	class:LinkedList::Node	access:public	signature:()
+LinkedList::Node::Node	LinkedList.cpp	/^				Node(T el): el(&el), next(nullptr), prev(nullptr){ cout<<"Node ctor el "<<el<<endl; }$/;"	f	class:LinkedList::Node	access:public	signature:(T el)
+LinkedList::Node::Node	LinkedList.cpp	/^				Node(const Node& n): el(&n.el), next(&n.next), prev(&n.prev){ cout<<"Node ctor copy"<<endl; }$/;"	f	class:LinkedList::Node	access:public	signature:(const Node& n)
+LinkedList::Node::el	LinkedList.cpp	/^				T* el;$/;"	m	class:LinkedList::Node	file:	access:private
+LinkedList::Node::endl	LinkedList.cpp	/^				Node(): el(nullptr), next(nullptr), prev(nullptr){ cout<<"Node ctor std"<<endl; }$/;"	l
+LinkedList::Node::endl	LinkedList.cpp	/^				Node(T el): el(&el), next(nullptr), prev(nullptr){ cout<<"Node ctor el "<<el<<endl; }$/;"	l
+LinkedList::Node::endl	LinkedList.cpp	/^				Node(const Node& n): el(&n.el), next(&n.next), prev(&n.prev){ cout<<"Node ctor copy"<<endl; }$/;"	l
+LinkedList::Node::endl	LinkedList.cpp	/^				~Node(){ cout<<"Node dtor"<<endl; }$/;"	l
+LinkedList::Node::getNext	LinkedList.cpp	/^				const Node* getNext()const{ return this->next; }$/;"	f	class:LinkedList::Node	access:public	signature:() const
+LinkedList::Node::getPrev	LinkedList.cpp	/^				const Node* getPrev()const{ return this->prev; }$/;"	f	class:LinkedList::Node	access:public	signature:() const
+LinkedList::Node::next	LinkedList.cpp	/^				Node* next;$/;"	m	class:LinkedList::Node	file:	access:private
+LinkedList::Node::operator *	LinkedList.cpp	/^				const T& operator*()const{$/;"	f	class:LinkedList::Node	access:public	signature:() const
+LinkedList::Node::prev	LinkedList.cpp	/^				Node* prev;$/;"	m	class:LinkedList::Node	file:	access:private
+LinkedList::Node::setNext	LinkedList.cpp	/^				void setNext(const Node& n){ this->next=n; }$/;"	f	class:LinkedList::Node	access:public	signature:(const Node& n)
+LinkedList::Node::setPrev	LinkedList.cpp	/^				void setPrev(const Node& n){ this->prev=n; }$/;"	f	class:LinkedList::Node	access:public	signature:(const Node& n)
+LinkedList::Node::~Node	LinkedList.cpp	/^				~Node(){ cout<<"Node dtor"<<endl; }$/;"	f	class:LinkedList::Node	access:public	signature:()
+LinkedList::append	LinkedList.cpp	/^		void append(const T& el){$/;"	f	class:LinkedList	access:public	signature:(const T& el)
+LinkedList::endl	LinkedList.cpp	/^		LinkedList(): first(nullptr), last(nullptr){ cout<<"ctor std"<<endl; }$/;"	l
+LinkedList::endl	LinkedList.cpp	/^		LinkedList(const LinkedList<T>& ll): first(ll.first), last(ll.last){ cout<<"ctor copy"<<endl; }$/;"	l
+LinkedList::endl	LinkedList.cpp	/^		~LinkedList(){ cout<<"dtor"<<endl; }$/;"	l
+LinkedList::first	LinkedList.cpp	/^		Node* first;$/;"	m	class:LinkedList	file:	access:private
+LinkedList::get	LinkedList.cpp	/^		const T& get(size_t index)const;$/;"	p	class:LinkedList	file:	access:public	signature:(size_t index) const
+LinkedList::last	LinkedList.cpp	/^		Node* last;$/;"	m	class:LinkedList	file:	access:private
+LinkedList::operator <<	LinkedList.cpp	/^		friend ostream& operator<<(ostream& os, const LinkedList& ll){$/;"	f	class:LinkedList	access:friend	signature:(ostream& os, const LinkedList& ll)
+LinkedList::remove	LinkedList.cpp	/^		void remove(size_t index);$/;"	p	class:LinkedList	file:	access:public	signature:(size_t index)
+LinkedList::value_type	LinkedList.cpp	/^		typedef T value_type;$/;"	t	class:LinkedList	file:	access:private
+LinkedList::~LinkedList	LinkedList.cpp	/^		~LinkedList(){ cout<<"dtor"<<endl; }$/;"	f	class:LinkedList	access:public	signature:()
+MaxLadung	raumschiff/main.cpp	/^		int MaxLadung;$/;"	m	class:TransportRaumschiff	file:	access:public
+MyWrap	vectors.cpp	/^		MyWrap(): x(1){$/;"	f	class:MyWrap	access:public	signature:()
+MyWrap	vectors.cpp	/^		MyWrap(const MyWrap& w): x(w.x){$/;"	f	class:MyWrap	access:public	signature:(const MyWrap& w)
+MyWrap	vectors.cpp	/^		MyWrap(const int x): x(x){$/;"	f	class:MyWrap	access:public	signature:(const int x)
+MyWrap	vectors.cpp	/^class MyWrap{$/;"	c	file:
+MyWrap::MyWrap	vectors.cpp	/^		MyWrap(): x(1){$/;"	f	class:MyWrap	access:public	signature:()
+MyWrap::MyWrap	vectors.cpp	/^		MyWrap(const MyWrap& w): x(w.x){$/;"	f	class:MyWrap	access:public	signature:(const MyWrap& w)
+MyWrap::MyWrap	vectors.cpp	/^		MyWrap(const int x): x(x){$/;"	f	class:MyWrap	access:public	signature:(const int x)
+MyWrap::getX	vectors.cpp	/^		int getX() const{$/;"	f	class:MyWrap	access:public	signature:() const
+MyWrap::operator <<	vectors.cpp	/^		friend ostream& operator<<(ostream& os, const MyWrap& w){$/;"	f	class:MyWrap	access:friend	signature:(ostream& os, const MyWrap& w)
+MyWrap::operator ==	vectors.cpp	/^		bool operator==(const MyWrap& w){$/;"	f	class:MyWrap	access:public	signature:(const MyWrap& w)
+MyWrap::setX	vectors.cpp	/^		void setX(const int x){$/;"	f	class:MyWrap	access:public	signature:(const int x)
+MyWrap::x	vectors.cpp	/^		int x;$/;"	m	class:MyWrap	file:	access:private
+Node	LinkedList.cpp	/^				Node(): el(nullptr), next(nullptr), prev(nullptr){ cout<<"Node ctor std"<<endl; }$/;"	f	class:LinkedList::Node	access:public	signature:()
+Node	LinkedList.cpp	/^				Node(T el): el(&el), next(nullptr), prev(nullptr){ cout<<"Node ctor el "<<el<<endl; }$/;"	f	class:LinkedList::Node	access:public	signature:(T el)
+Node	LinkedList.cpp	/^				Node(const Node& n): el(&n.el), next(&n.next), prev(&n.prev){ cout<<"Node ctor copy"<<endl; }$/;"	f	class:LinkedList::Node	access:public	signature:(const Node& n)
+Node	LinkedList.cpp	/^		class Node{$/;"	c	class:LinkedList	file:	access:public
+Starten	raumschiff/main.cpp	/^		virtual void Starten(){$/;"	f	class:TransportRaumschiff	access:public	signature:()
+Starten	raumschiff/main.cpp	/^		void Starten() {$/;"	f	class:BasisRaumschiff	access:public	signature:()
+Starten	raumschiff/main.cpp	/^	s1.Starten();$/;"	p	file:	signature:()
+Test	structsEnums.cpp	/^class Test {$/;"	c	file:
+Test::getX	structsEnums.cpp	/^	const int& getX(){$/;"	f	class:Test	access:public	signature:()
+Test::setX	structsEnums.cpp	/^	void setX(const int& x){$/;"	f	class:Test	access:public	signature:(const int& x)
+Test::x	structsEnums.cpp	/^	int x;$/;"	m	class:Test	file:	access:private
+TransportRaumschiff	raumschiff/main.cpp	/^class TransportRaumschiff : public BasisRaumschiff {$/;"	c	file:	inherits:BasisRaumschiff
+TransportRaumschiff::Entladen	raumschiff/main.cpp	/^		void Entladen(){$/;"	f	class:TransportRaumschiff	access:public	signature:()
+TransportRaumschiff::Laden	raumschiff/main.cpp	/^		void Laden(){$/;"	f	class:TransportRaumschiff	access:public	signature:()
+TransportRaumschiff::Ladung	raumschiff/main.cpp	/^		int Ladung;$/;"	m	class:TransportRaumschiff	file:	access:public
+TransportRaumschiff::Landen	raumschiff/main.cpp	/^		virtual void Landen() {$/;"	f	class:TransportRaumschiff	access:public	signature:()
+TransportRaumschiff::MaxLadung	raumschiff/main.cpp	/^		int MaxLadung;$/;"	m	class:TransportRaumschiff	file:	access:public
+TransportRaumschiff::Starten	raumschiff/main.cpp	/^		virtual void Starten(){$/;"	f	class:TransportRaumschiff	access:public	signature:()
+TransportRaumschiff::std::endl	raumschiff/main.cpp	/^			std::cout << "Raumschiff ladet ein" << std::endl;$/;"	m	class:TransportRaumschiff::std	file:
+TransportRaumschiff::std::endl	raumschiff/main.cpp	/^			std::cout << "Raumschiff lädt aus" << std::endl;$/;"	m	class:TransportRaumschiff::std	file:
+TransportRaumschiff::std::endl	raumschiff/main.cpp	/^			std::cout << "TransportRaumschiff ladet ein" << std::endl;$/;"	m	class:TransportRaumschiff::std	file:
+TransportRaumschiff::std::endl	raumschiff/main.cpp	/^			std::cout << "TransportRaumschiff landet" << std::endl;$/;"	m	class:TransportRaumschiff::std	file:
+ZeigeInfos	klassen.cpp	/^		void ZeigeInfos();$/;"	p	class:Krieger	file:	access:public	signature:()
+ZeigeInfos	klassen.cpp	/^	k.ZeigeInfos();$/;"	p	file:	signature:()
+ZeigeInfos	klassen.cpp	/^void Krieger::ZeigeInfos(){$/;"	f	class:Krieger	signature:()
+a	LinkedList.cpp	/^	int a = 4;$/;"	l
+a	structsEnums.cpp	/^	cout << D::a;$/;"	m	class:D	file:
+a	structsEnums.cpp	/^enum D{a=3,b=3,c=3};$/;"	e	enum:D	file:
+a	tausche.cpp	/^	Koordinaten a;$/;"	l
+a1	structsEnums.cpp	/^	A a1;$/;"	m	struct:C	file:	access:public
+a2	structsEnums.cpp	/^	A a2;$/;"	m	struct:C	file:	access:public
+alter	klassen2.cpp	/^		int alter;$/;"	m	class:Hund	file:	access:private
+altern	klassen2.cpp	/^		void altern(int jahre){$/;"	f	class:Hund	access:public	signature:(int jahre)
+ap	structsEnums.cpp	/^	A* ap = new A{2,true};$/;"	l
+append	LinkedList.cpp	/^		void append(const T& el){$/;"	f	class:LinkedList	access:public	signature:(const T& el)
+append	LinkedList.cpp	/^	l1.append(a);$/;"	p	file:	signature:(a)
+b	structsEnums.cpp	/^	B b;$/;"	l
+b	structsEnums.cpp	/^	cout << b;$/;"	l
+b	structsEnums.cpp	/^enum D{a=3,b=3,c=3};$/;"	e	enum:D	file:
+b	tausche.cpp	/^	Koordinaten *b = new Koordinaten();$/;"	l
+c	delete.cpp	/^	cout <<c[2];$/;"	l
+c	delete.cpp	/^	int*c = new int[4];$/;"	l
+c	structsEnums.cpp	/^enum D{a=3,b=3,c=3};$/;"	e	enum:D	file:
+c	tausche.cpp	/^	Koordinaten *c = new Koordinaten(2,3);$/;"	l
+c	tausche.cpp	/^	Koordinaten c = *b;$/;"	l
+d	delete.cpp	/^	int * d = new int[4];$/;"	l
+d	structsEnums.cpp	/^	cout <<E::d;$/;"	m	class:E	file:
+d	structsEnums.cpp	/^enum E {d,e,f};$/;"	e	enum:E	file:
+e	structsEnums.cpp	/^enum E {d,e,f};$/;"	e	enum:E	file:
+el	LinkedList.cpp	/^				T* el;$/;"	m	class:LinkedList::Node	file:	access:private
+endl	LinkedList.cpp	/^				Node(): el(nullptr), next(nullptr), prev(nullptr){ cout<<"Node ctor std"<<endl; }$/;"	l
+endl	LinkedList.cpp	/^				Node(T el): el(&el), next(nullptr), prev(nullptr){ cout<<"Node ctor el "<<el<<endl; }$/;"	l
+endl	LinkedList.cpp	/^				Node(const Node& n): el(&n.el), next(&n.next), prev(&n.prev){ cout<<"Node ctor copy"<<endl; }$/;"	l
+endl	LinkedList.cpp	/^				~Node(){ cout<<"Node dtor"<<endl; }$/;"	l
+endl	LinkedList.cpp	/^		LinkedList(): first(nullptr), last(nullptr){ cout<<"ctor std"<<endl; }$/;"	l
+endl	LinkedList.cpp	/^		LinkedList(const LinkedList<T>& ll): first(ll.first), last(ll.last){ cout<<"ctor copy"<<endl; }$/;"	l
+endl	LinkedList.cpp	/^		~LinkedList(){ cout<<"dtor"<<endl; }$/;"	l
+endl	LinkedList.cpp	/^	cout << l1 << endl;$/;"	l
+endl	LinkedList.cpp	/^	cout <<"Hello World"<<endl;$/;"	l
+endl	klassen.cpp	/^			std::cout << "Aua!!" << std::endl;$/;"	m	class:Krieger::std	file:
+endl	klassen.cpp	/^	std::cout << "Kraft: " << kraft << std::endl;$/;"	m	class:std	file:
+endl	klassen.cpp	/^	std::cout << "Leben: " << leben << std::endl;$/;"	m	class:std	file:
+endl	klassen.cpp	/^	std::cout << "Level: " << level << std::endl;$/;"	m	class:std	file:
+endl	klassen2.cpp	/^			cout << "Oh wie schön ein neuer Hund wurde geboren :)" << endl;$/;"	l
+endl	klassen2.cpp	/^	cout << *hund2 << endl;$/;"	l
+endl	klassen2.cpp	/^	cout << hund << endl;$/;"	l
+endl	klassen2.cpp	/^	cout << noname << endl;$/;"	l
+endl	pointers.cpp	/^	std::cout << p << " - " << &p << " : " << *p << std::endl;$/;"	m	class:std	file:
+endl	pointers.cpp	/^	std::cout << x << " - " << &x << std::endl;$/;"	m	class:std	file:
+endl	raumschiff/main.cpp	/^			std::cout << "Ein neues BasisRaumschiff wurde erstellt!" << std::endl;$/;"	m	class:BasisRaumschiff::std	file:
+endl	raumschiff/main.cpp	/^			std::cout << "Raumschiff ladet ein" << std::endl;$/;"	m	class:TransportRaumschiff::std	file:
+endl	raumschiff/main.cpp	/^			std::cout << "Raumschiff landet" << std::endl;$/;"	m	class:BasisRaumschiff::std	file:
+endl	raumschiff/main.cpp	/^			std::cout << "Raumschiff lädt aus" << std::endl;$/;"	m	class:TransportRaumschiff::std	file:
+endl	raumschiff/main.cpp	/^			std::cout << "Raumschiff startet" << std::endl;$/;"	m	class:BasisRaumschiff::std	file:
+endl	raumschiff/main.cpp	/^			std::cout << "TransportRaumschiff ladet ein" << std::endl;$/;"	m	class:TransportRaumschiff::std	file:
+endl	raumschiff/main.cpp	/^			std::cout << "TransportRaumschiff landet" << std::endl;$/;"	m	class:TransportRaumschiff::std	file:
+endl	structsEnums.cpp	/^	cout <<endl;$/;"	l
+endl	structsEnums.cpp	/^	cout <<x<<endl;$/;"	l
+endl	tausche.cpp	/^	std::cout << "hallo" << std::endl;$/;"	m	class:std	file:
+endl	vectors.cpp	/^	cout << endl;$/;"	l
+endl	vectors.cpp	/^	cout <<"remove"<<endl;$/;"	l
+enums	structsEnums.cpp	/^int enums(){$/;"	f	signature:()
+erase	vectors.cpp	/^	v.erase(v.begin(), v.end()-2);$/;"	p	file:	signature:(v.begin(), v.end()-2)
+f	structsEnums.cpp	/^enum E {d,e,f};$/;"	e	enum:E	file:
+first	LinkedList.cpp	/^		Node* first;$/;"	m	class:LinkedList	file:	access:private
+get	LinkedList.cpp	/^		const T& get(size_t index)const;$/;"	p	class:LinkedList	file:	access:public	signature:(size_t index) const
+getNext	LinkedList.cpp	/^				const Node* getNext()const{ return this->next; }$/;"	f	class:LinkedList::Node	access:public	signature:() const
+getPrev	LinkedList.cpp	/^				const Node* getPrev()const{ return this->prev; }$/;"	f	class:LinkedList::Node	access:public	signature:() const
+getX	structsEnums.cpp	/^	const int& getX(){$/;"	f	class:Test	access:public	signature:()
+getX	tausche.cpp	/^		int getX(){$/;"	f	class:Koordinaten	access:public	signature:()
+getX	vectors.cpp	/^		cout << el.getX() << " ";$/;"	p	file:	signature:()
+getX	vectors.cpp	/^		int getX() const{$/;"	f	class:MyWrap	access:public	signature:() const
+getY	tausche.cpp	/^		int getY(){$/;"	f	class:Koordinaten	access:public	signature:()
+hund	klassen2.cpp	/^	Hund& hund = *new Hund("anton");$/;"	l
+hund2	klassen2.cpp	/^	Hund* hund2 = new Hund("benno");$/;"	l
+k	klassen.cpp	/^	Krieger k;$/;"	l
+kind	klassen2.cpp	/^		Hund* kind;$/;"	m	class:Hund	file:	access:private
+kind	klassen2.cpp	/^	Hund* kind = hund + *hund2;$/;"	l
+kraft	klassen.cpp	/^		int kraft;$/;"	m	class:Krieger	file:	access:private
+l1	LinkedList.cpp	/^	LinkedList<int> l1;$/;"	l
+last	LinkedList.cpp	/^		Node* last;$/;"	m	class:LinkedList	file:	access:private
+leben	klassen.cpp	/^		int leben;$/;"	m	class:Krieger	file:	access:private
+level	klassen.cpp	/^		int level;$/;"	m	class:Krieger	file:	access:private
+m	structsEnums.cpp	/^	bool m;$/;"	m	struct:A	file:	access:public
+m	structsEnums.cpp	/^	int m=3;$/;"	m	struct:B	file:	access:public
+main	LinkedList.cpp	/^int main(){$/;"	f	signature:()
+main	delete.cpp	/^int main (){$/;"	f	signature:()
+main	klassen.cpp	/^int main(){$/;"	f	signature:()
+main	klassen2.cpp	/^int main(){$/;"	f	signature:()
+main	pointers.cpp	/^int main(){$/;"	f	signature:()
+main	raumschiff/main.cpp	/^int main(){$/;"	f	signature:()
+main	structsEnums.cpp	/^int main(){$/;"	f	signature:()
+main	tausche.cpp	/^int main(){$/;"	f	signature:()
+main	vectors.cpp	/^int main() {$/;"	f	signature:()
+n	structsEnums.cpp	/^	double n;$/;"	m	struct:A	file:	access:public
+n	structsEnums.cpp	/^	int n;$/;"	m	struct:B	file:	access:public
+name	klassen2.cpp	/^		string name;$/;"	m	class:Hund	file:	access:private
+next	LinkedList.cpp	/^				Node* next;$/;"	m	class:LinkedList::Node	file:	access:private
+noname	klassen2.cpp	/^	Hund& noname = *new Hund();$/;"	l
+operator *	LinkedList.cpp	/^				const T& operator*()const{$/;"	f	class:LinkedList::Node	access:public	signature:() const
+operator +	klassen2.cpp	/^		friend Hund* operator+(Hund& c1, Hund& c2){$/;"	f	class:Hund	access:friend	signature:(Hund& c1, Hund& c2)
+operator <<	LinkedList.cpp	/^		friend ostream& operator<<(ostream& os, const LinkedList& ll){$/;"	f	class:LinkedList	access:friend	signature:(ostream& os, const LinkedList& ll)
+operator <<	klassen2.cpp	/^		friend ostream& operator<<(ostream& os, const Hund& c){$/;"	f	class:Hund	access:friend	signature:(ostream& os, const Hund& c)
+operator <<	vectors.cpp	/^		friend ostream& operator<<(ostream& os, const MyWrap& w){$/;"	f	class:MyWrap	access:friend	signature:(ostream& os, const MyWrap& w)
+operator ==	vectors.cpp	/^		bool operator==(const MyWrap& w){$/;"	f	class:MyWrap	access:public	signature:(const MyWrap& w)
+out	klassen2.cpp	/^			Hund* out = new Hund();$/;"	l
+p	pointers.cpp	/^	int* p = &x;$/;"	l
+prev	LinkedList.cpp	/^				Node* prev;$/;"	m	class:LinkedList::Node	file:	access:private
+print	tausche.cpp	/^		void print(){$/;"	f	class:Koordinaten	access:public	signature:()
+print	tausche.cpp	/^	(*b).print();$/;"	p	file:	signature:()
+print	tausche.cpp	/^	a.print();$/;"	p	file:	signature:()
+print	tausche.cpp	/^	c->print();$/;"	p	file:	signature:()
+printVector	vectors.cpp	/^void printVector(vector<MyWrap>& v){$/;"	f	signature:(vector<MyWrap>& v)
+remove	LinkedList.cpp	/^		void remove(size_t index);$/;"	p	class:LinkedList	file:	access:public	signature:(size_t index)
+s1	raumschiff/main.cpp	/^	TransportRaumschiff s1;$/;"	l
+setName	klassen2.cpp	/^		void setName(string name){$/;"	f	class:Hund	access:public	signature:(string name)
+setNext	LinkedList.cpp	/^				void setNext(const Node& n){ this->next=n; }$/;"	f	class:LinkedList::Node	access:public	signature:(const Node& n)
+setPrev	LinkedList.cpp	/^				void setPrev(const Node& n){ this->prev=n; }$/;"	f	class:LinkedList::Node	access:public	signature:(const Node& n)
+setX	structsEnums.cpp	/^	t.setX(x);$/;"	p	file:	signature:(x)
+setX	structsEnums.cpp	/^	void setX(const int& x){$/;"	f	class:Test	access:public	signature:(const int& x)
+setX	tausche.cpp	/^		void setX(int x){$/;"	f	class:Koordinaten	access:public	signature:(int x)
+setX	vectors.cpp	/^		void setX(const int x){$/;"	f	class:MyWrap	access:public	signature:(const int x)
+setY	tausche.cpp	/^		void setY(int y){$/;"	f	class:Koordinaten	access:public	signature:(int y)
+std::endl	klassen.cpp	/^	std::cout << "Kraft: " << kraft << std::endl;$/;"	m	class:std	file:
+std::endl	klassen.cpp	/^	std::cout << "Leben: " << leben << std::endl;$/;"	m	class:std	file:
+std::endl	klassen.cpp	/^	std::cout << "Level: " << level << std::endl;$/;"	m	class:std	file:
+std::endl	pointers.cpp	/^	std::cout << p << " - " << &p << " : " << *p << std::endl;$/;"	m	class:std	file:
+std::endl	pointers.cpp	/^	std::cout << x << " - " << &x << std::endl;$/;"	m	class:std	file:
+std::endl	tausche.cpp	/^	std::cout << "hallo" << std::endl;$/;"	m	class:std	file:
+strucs	structsEnums.cpp	/^int strucs(){$/;"	f	signature:()
+swap	tausche.cpp	/^void swap(Koordinaten* a, Koordinaten* b);$/;"	p	file:	signature:(Koordinaten* a, Koordinaten* b)
+swap	tausche.cpp	/^void swap(Koordinaten* a, Koordinaten* b){$/;"	f	signature:(Koordinaten* a, Koordinaten* b)
+t	structsEnums.cpp	/^	Test t;$/;"	l
+value_type	LinkedList.cpp	/^		typedef T value_type;$/;"	t	class:LinkedList	file:	access:private
+w1	vectors.cpp	/^	MyWrap w1,w2,w3,w4,w5,w6;$/;"	l
+w2	vectors.cpp	/^	MyWrap w1,w2,w3,w4,w5,w6;$/;"	l
+w3	vectors.cpp	/^	MyWrap w1,w2,w3,w4,w5,w6;$/;"	l
+w4	vectors.cpp	/^	MyWrap w1,w2,w3,w4,w5,w6;$/;"	l
+w5	vectors.cpp	/^	MyWrap w1,w2,w3,w4,w5,w6;$/;"	l
+w6	vectors.cpp	/^	MyWrap w1,w2,w3,w4,w5,w6;$/;"	l
+x	pointers.cpp	/^	int x = 5;$/;"	l
+x	structsEnums.cpp	/^	int x = 4;$/;"	l
+x	structsEnums.cpp	/^	int x;$/;"	m	class:Test	file:	access:private
+x	tausche.cpp	/^		int x;$/;"	m	class:Koordinaten	file:	access:private
+x	vectors.cpp	/^		int x;$/;"	m	class:MyWrap	file:	access:private
+y	tausche.cpp	/^		int y;$/;"	m	class:Koordinaten	file:	access:private
+~Krieger	klassen.cpp	/^		~Krieger(){$/;"	f	class:Krieger	access:public	signature:()
+~LinkedList	LinkedList.cpp	/^		~LinkedList(){ cout<<"dtor"<<endl; }$/;"	f	class:LinkedList	access:public	signature:()
+~Node	LinkedList.cpp	/^				~Node(){ cout<<"Node dtor"<<endl; }$/;"	f	class:LinkedList::Node	access:public	signature:()
