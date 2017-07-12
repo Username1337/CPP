@@ -23,6 +23,33 @@
 	cout << i;
 	```
 
+- Kontrollstrukturen
+	- `if(...) {  } else if(...) {  } else {  }`
+	- switch
+		```cpp
+		switch (x){
+			case 0:
+				cout << 0 <<endl;
+				//ohne break, macht das nächste auch noch
+			case 1:
+				cout << 1 <<endl;
+				break;
+			case 2:
+			case 3:
+				cout << "2 oder 3" <<endl;
+				break;
+			default:
+				cout << "default" <<endl;
+		}
+		```
+	- goto
+		```cpp
+		goto label;
+		cout << "hallo"; //wird übersprungen
+		label:
+			dosmth();
+		```
+
 - Objekte löschen
 	- delete löscht objekte hinter pointern
 
@@ -404,12 +431,10 @@
 	```cpp
 	class Bruch {
 		public:
-			friend const Bruch& operator+(const Bruch& links, const Bruch& rechts);
+			friend Bruch operator+(Bruch links, const Bruch& rechts);
 	};
 
-	const Bruch& Bruch::operator+(const Bruch& links, const Bruch& rechts){
-		...
-	}
+	Bruch Bruch::operator+(Bruch links, const Bruch& rechts){ return links+=rechts; }
 	```
 
 ## Iterator
@@ -930,6 +955,8 @@ int C::cnt = 0;					//es muss außerhalb initialisiert werden
 			cerr << "error opening file" << endl;
 			return 1;
 		}
+		//oder
+		if(!inFile.is_open()){ ... }
 		```
 
 	- Wörter einzeln einlesen
@@ -937,9 +964,11 @@ int C::cnt = 0;					//es muss außerhalb initialisiert werden
 		int count=0;
 		stringstream ss;
 		vector<Obst> korb;
+		//after all lines there is another round befor eof
 		while(!inFile.eof()){		//lies die ganze datei
 			string item;			//init string items, here to not have duplicates
-			inFile >> item;			//items ist immer das aktuelle wort
+			inFile >> item;			//items ist das nächste wort, wird bei " " gesplittet
+			getline(inFile, item);	//items ist  die ganze zeile
 			ss<<item;				//füge items dem stringstream hinzu
 			//in ss sind die wörter ohne leerzeichen oder zeilenumbrüche
 			//count how many oranges are in the file
