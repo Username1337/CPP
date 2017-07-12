@@ -43,17 +43,44 @@
 		- positiver int
 
 - Casts
-	- TODO
-	```cpp
-	const A* a = new A{5};
-	const A& ar = *a;
-	cout << a->value;
-	cout << ar.value;
-	A* b = const_cast<A*>(a);
-	A& br = const_cast<A&>(ar);
-	cout << b->value;
-	cout << br.value;
-	```
+	- implizit/explizit
+		- Reihenfolge
+			- `bool -> char -> int -> float -> double`
+		- Implizit von int in float gibt Warning aus, da es zu Ungenauigkeiten kommen kann
+
+		```cpp
+		//implizit
+		bool   i1 = true;
+		char   i2 = i1;
+		//explizit
+		double e1 = 777.88;
+		int    e2 = (int)e1;				//wird zu 777
+		int    e3 = int(e1);				//wird zu 777
+		int    e4 = static_cast<int>(e1);	//wird zu 777
+		//double runden
+		int    e5 = lround(e1);				//wird zu 778
+		```
+
+	- string to number
+		```cpp
+		string   s = "88.99";
+		int      i = stoi(s);		//wird zu 88
+		long int l = stol(s);		//wird zu 88
+		double   d = stod(s);		//wird zu 88.99
+		float    f = stof(s);		//wird zu 88.99
+		```
+
+	- const cast
+		```cpp
+		const A* a = new A{5};
+		const A& ar = *a;
+		cout << a->value;
+		cout << ar.value;
+		A* b = const_cast<A*>(a);
+		A& br = const_cast<A&>(ar);
+		cout << b->value;
+		cout << br.value;
+		```
 
 - Arrays
 	- beim übergeben an Funktionen die Länge mit geben!
@@ -69,6 +96,14 @@
 		//iterate
 		for(int x: arr){ ... }
 		for(size_t i=0; i<sizeof(arr)/sizeof(int); ++i){ ... }
+		//doppelte Arrays
+		double d[4][2] = {
+			{1,1},
+			{2,2},
+			{3,3},
+			{4,4}
+		};
+		int length = sizeof(d) / sizeof(double);
 		```
 
 - CPP Arrays
@@ -85,10 +120,11 @@
 		vector<int>* v = new vector<int>();			//heap
 		vector<int>* v = new vector<int>{1,2,3};	//heap
 		//sonstiges
-		v.push_back(3);				//append
+		v.push_back(3);				//append, legt eine Kopie an
 		v[3];						//get
 		v[3] = 2;					//set
 		v.size();					//size
+		v.capacity();				//kapazität
 		//iterate
 		for(auto x: v){...}
 		//count vector elements if lambda expression returns true
@@ -899,16 +935,20 @@ int C::cnt = 0;					//es muss außerhalb initialisiert werden
 	- Wörter einzeln einlesen
 		```cpp
 		int count=0;
-		string items;
 		stringstream ss;
+		vector<Obst> korb;
 		while(!inFile.eof()){		//lies die ganze datei
-			inFile >> items;		//items ist immer das aktuelle wort
-			ss<<items;				//füge items dem stringstream hinzu
+			string item;			//init string items, here to not have duplicates
+			inFile >> item;			//items ist immer das aktuelle wort
+			ss<<item;				//füge items dem stringstream hinzu
 			//in ss sind die wörter ohne leerzeichen oder zeilenumbrüche
 			//count how many oranges are in the file
-			if(items=="orange"){
+			if(item=="orange"){
 				count++;
 			}
+			//füge obst dem korb hinzu
+			Obst obst(item);
+			korb.push_back(obst);
 		}
 		```
 
